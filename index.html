@@ -16,8 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/prism.css?t=1784317280569">
-    <link rel="stylesheet" href="styles.css?t=1784317280569">
+    <link rel="stylesheet" href="./assets/prism.css?t=1784320991532">
+    <link rel="stylesheet" href="styles.css?t=1784320991532">
     <title>Home | Layouts</title>
   </head>
   <body class="home" itemscope itemtype="http://schema.org/WebPage">
@@ -331,6 +331,533 @@
           </div>
         </div>
       </section>
+      <section class="newsletter-banner">
+        <div class="newsletter-banner__inner">
+          <div class="newsletter-banner__card">
+            <div class="newsletter-banner__intro"><span class="newsletter-banner__icon" aria-hidden="true">
+                <svg class="newsletter-banner__icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 8l8 5 8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"></rect>
+                  <path d="M9 11h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                </svg></span>
+              <p class="newsletter-banner__text">Recibí novedades, guías y consejos para sentirte mejor todos los días.</p>
+            </div>
+            <div class="newsletter-banner__form-wrap">
+              <form class="newsletter-banner__form" action="#" method="post">
+                <label class="newsletter-banner__sr-only" for="newsletterEmail">Tu correo electrónico</label>
+                <div class="newsletter-banner__field">
+                  <input class="newsletter-banner__input" id="newsletterEmail" type="email" name="email" placeholder="Tu correo electrónico" required>
+                  <button class="newsletter-banner__submit" type="submit">Suscribirme</button>
+                </div>
+              </form>
+              <p class="newsletter-banner__note">Nada de spam. Solo información útil para tu bienestar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="allies-slider">
+        <div class="allies-slider__inner">
+          <h2 class="allies-slider__title">También disponibles en nuestros aliados</h2>
+          <div class="allies-slider__slider">
+            <div class="allies-slider__swiper swiper">
+              <div class="allies-slider__wrapper swiper-wrapper">
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+                <article class="allies-slider__slide swiper-slide">
+                  <div class="allies-slider__card"><img class="allies-slider__logo" src="./assets/logoAM.svg" alt="Aliado" width="120" height="80" loading="lazy"></div>
+                </article>
+              </div>
+              <div class="allies-slider__pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="store-locator">
+        <div class="store-locator__inner">
+          <header class="store-locator__header">
+            <h2 class="store-locator__title">Encontranos cerca de vos</h2>
+            <p class="store-locator__subtitle">Buscá tu tienda más cercana.</p>
+          </header>
+          <div class="store-locator__layout">
+            <div class="store-locator__panel">
+              <form class="store-locator__search" action="#" method="get">
+                <label class="store-locator__sr-only" for="storeLocatorQuery">Buscar ubicación</label>
+                <input class="store-locator__input" id="storeLocatorQuery" type="search" name="q" placeholder="Ingresá tu ubicación o código postal">
+                <button class="store-locator__search-btn" type="submit" aria-label="Buscar">
+                  <svg class="store-locator__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"></circle>
+                    <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                  </svg>
+                </button>
+              </form>
+              <ul class="store-locator__list">
+                <li class="store-locator__item is-active" data-store="0">
+                  <button class="store-locator__item-btn" type="button"><span class="store-locator__item-icon" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.6"></path>
+                        <circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"></circle>
+                      </svg></span><span class="store-locator__item-content"><span class="store-locator__item-name">Auto Mercado</span><span class="store-locator__item-place">Escazú, San José</span></span><span class="store-locator__item-meta"><span class="store-locator__item-distance">1.2 km</span><span class="store-locator__item-arrow" aria-hidden="true">→</span></span></button>
+                </li>
+                <li class="store-locator__item" data-store="1">
+                  <button class="store-locator__item-btn" type="button"><span class="store-locator__item-icon" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.6"></path>
+                        <circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"></circle>
+                      </svg></span><span class="store-locator__item-content"><span class="store-locator__item-name">GNC Multiplaza</span><span class="store-locator__item-place">Escazú, San José</span></span><span class="store-locator__item-meta"><span class="store-locator__item-distance">2.7 km</span><span class="store-locator__item-arrow" aria-hidden="true">→</span></span></button>
+                </li>
+                <li class="store-locator__item" data-store="2">
+                  <button class="store-locator__item-btn" type="button"><span class="store-locator__item-icon" aria-hidden="true">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.6"></path>
+                        <circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"></circle>
+                      </svg></span><span class="store-locator__item-content"><span class="store-locator__item-name">Macrobióticas</span><span class="store-locator__item-place">Curridabat, San José</span></span><span class="store-locator__item-meta"><span class="store-locator__item-distance">3.1 km</span><span class="store-locator__item-arrow" aria-hidden="true">→</span></span></button>
+                </li>
+              </ul><a class="store-locator__more" href="#">Ver más tiendas →</a>
+            </div>
+            <div class="store-locator__map" aria-label="Mapa de tiendas">
+              <iframe class="store-locator__map-frame" title="Mapa de tiendas en San José" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=-84.170%2C9.900%2C-84.000%2C9.980&amp;layer=mapnik"></iframe>
+              <div class="store-locator__pins" aria-hidden="true"><span class="store-locator__pin store-locator__pin--green is-active" style="top: 42%; left: 28%;"></span><span class="store-locator__pin store-locator__pin--orange" style="top: 48%; left: 46%;"></span><span class="store-locator__pin store-locator__pin--purple" style="top: 55%; left: 68%;"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ways-slider">
+        <div class="ways-slider__inner">
+          <h2 class="ways-slider__title">3 formas simples de conseguir tus productos</h2>
+          <div class="ways-slider__slider">
+            <button class="ways-slider__nav ways-slider__nav--prev" type="button" aria-label="Anterior"></button>
+            <button class="ways-slider__nav ways-slider__nav--next" type="button" aria-label="Siguiente"></button>
+            <div class="ways-slider__swiper swiper">
+              <div class="ways-slider__wrapper swiper-wrapper">
+                <article class="ways-slider__slide swiper-slide">
+                  <div class="ways-slider__card">
+                    <div class="ways-slider__content"><span class="ways-slider__icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.8"></path>
+                          <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                        </svg></span>
+                      <h3 class="ways-slider__name">1. Comprá online</h3>
+                      <p class="ways-slider__text">Elegí tus productos y recibilos en la puerta de tu casa.</p><a class="ways-slider__cta" href="#">Ir a la tienda →</a>
+                    </div>
+                    <div class="ways-slider__media"><img class="ways-slider__image" src="./assets/img1.jpg" alt="" width="280" height="360" loading="lazy"></div>
+                  </div>
+                </article>
+                <article class="ways-slider__slide swiper-slide">
+                  <div class="ways-slider__card">
+                    <div class="ways-slider__content"><span class="ways-slider__icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.8"></path>
+                          <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                        </svg></span>
+                      <h3 class="ways-slider__name">2. Pedí por WhatsApp</h3>
+                      <p class="ways-slider__text">Escribinos y te ayudamos a armar tu pedido en minutos.</p><a class="ways-slider__cta" href="#">Escribir por WhatsApp →</a>
+                    </div>
+                    <div class="ways-slider__media"><img class="ways-slider__image" src="./assets/img2.jpg" alt="" width="280" height="360" loading="lazy"></div>
+                  </div>
+                </article>
+                <article class="ways-slider__slide swiper-slide">
+                  <div class="ways-slider__card">
+                    <div class="ways-slider__content"><span class="ways-slider__icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.8"></path>
+                          <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                        </svg></span>
+                      <h3 class="ways-slider__name">3. Puntos de venta</h3>
+                      <p class="ways-slider__text">Encontranos en tiendas y comercios seleccionados en todo el país.</p><a class="ways-slider__cta" href="#">Ver puntos de venta →</a>
+                    </div>
+                    <div class="ways-slider__media"><img class="ways-slider__image" src="./assets/img3.jpg" alt="" width="280" height="360" loading="lazy"></div>
+                  </div>
+                </article>
+                <article class="ways-slider__slide swiper-slide">
+                  <div class="ways-slider__card">
+                    <div class="ways-slider__content"><span class="ways-slider__icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.8"></path>
+                          <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                        </svg></span>
+                      <h3 class="ways-slider__name">1. Comprá online</h3>
+                      <p class="ways-slider__text">Elegí tus productos y recibilos en la puerta de tu casa.</p><a class="ways-slider__cta" href="#">Ir a la tienda →</a>
+                    </div>
+                    <div class="ways-slider__media"><img class="ways-slider__image" src="./assets/img4.jpg" alt="" width="280" height="360" loading="lazy"></div>
+                  </div>
+                </article>
+                <article class="ways-slider__slide swiper-slide">
+                  <div class="ways-slider__card">
+                    <div class="ways-slider__content"><span class="ways-slider__icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.8"></path>
+                          <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                        </svg></span>
+                      <h3 class="ways-slider__name">2. Pedí por WhatsApp</h3>
+                      <p class="ways-slider__text">Escribinos y te ayudamos a armar tu pedido en minutos.</p><a class="ways-slider__cta" href="#">Escribir por WhatsApp →</a>
+                    </div>
+                    <div class="ways-slider__media"><img class="ways-slider__image" src="./assets/img1.jpg" alt="" width="280" height="360" loading="lazy"></div>
+                  </div>
+                </article>
+                <article class="ways-slider__slide swiper-slide">
+                  <div class="ways-slider__card">
+                    <div class="ways-slider__content"><span class="ways-slider__icon" aria-hidden="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                          <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.8"></path>
+                          <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"></circle>
+                        </svg></span>
+                      <h3 class="ways-slider__name">3. Puntos de venta</h3>
+                      <p class="ways-slider__text">Encontranos en tiendas y comercios seleccionados en todo el país.</p><a class="ways-slider__cta" href="#">Ver puntos de venta →</a>
+                    </div>
+                    <div class="ways-slider__media"><img class="ways-slider__image" src="./assets/img2.jpg" alt="" width="280" height="360" loading="lazy"></div>
+                  </div>
+                </article>
+              </div>
+              <div class="ways-slider__pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews-slider">
+        <div class="reviews-slider__inner">
+          <h2 class="reviews-slider__title">Personas que ya sumaron Recupé Plus a su rutina.</h2>
+          <div class="reviews-slider__slider">
+            <button class="reviews-slider__nav reviews-slider__nav--prev" type="button" aria-label="Anterior"></button>
+            <button class="reviews-slider__nav reviews-slider__nav--next" type="button" aria-label="Siguiente"></button>
+            <div class="reviews-slider__swiper swiper">
+              <div class="reviews-slider__wrapper swiper-wrapper">
+                <article class="reviews-slider__slide swiper-slide">
+                  <div class="reviews-slider__card">
+                    <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/img1.jpg" alt="" width="120" height="120" loading="lazy"></div>
+                    <div class="reviews-slider__body">
+                      <blockquote class="reviews-slider__quote">“Me encanta porque es rico y fácil de tomar todos los días.”</blockquote>
+                      <p class="reviews-slider__author">— Mariana, 38</p>
+                      <div class="reviews-slider__rating" aria-label="5 de 5 estrellas">
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="reviews-slider__slide swiper-slide">
+                  <div class="reviews-slider__card">
+                    <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/img2.jpg" alt="" width="120" height="120" loading="lazy"></div>
+                    <div class="reviews-slider__body">
+                      <blockquote class="reviews-slider__quote">“Serenity se volvió parte de mi rutina de noche.”</blockquote>
+                      <p class="reviews-slider__author">— Andrés, 45</p>
+                      <div class="reviews-slider__rating" aria-label="5 de 5 estrellas">
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="reviews-slider__slide swiper-slide">
+                  <div class="reviews-slider__card">
+                    <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/img3.jpg" alt="" width="120" height="120" loading="lazy"></div>
+                    <div class="reviews-slider__body">
+                      <blockquote class="reviews-slider__quote">“Memento me acompaña en días de mucho trabajo.”</blockquote>
+                      <p class="reviews-slider__author">— Carolina, 34</p>
+                      <div class="reviews-slider__rating" aria-label="5 de 5 estrellas">
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="reviews-slider__slide swiper-slide">
+                  <div class="reviews-slider__card">
+                    <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/img4.jpg" alt="" width="120" height="120" loading="lazy"></div>
+                    <div class="reviews-slider__body">
+                      <blockquote class="reviews-slider__quote">“Me encanta porque es rico y fácil de tomar todos los días.”</blockquote>
+                      <p class="reviews-slider__author">— Mariana, 38</p>
+                      <div class="reviews-slider__rating" aria-label="5 de 5 estrellas">
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="reviews-slider__slide swiper-slide">
+                  <div class="reviews-slider__card">
+                    <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/img1.jpg" alt="" width="120" height="120" loading="lazy"></div>
+                    <div class="reviews-slider__body">
+                      <blockquote class="reviews-slider__quote">“Serenity se volvió parte de mi rutina de noche.”</blockquote>
+                      <p class="reviews-slider__author">— Andrés, 45</p>
+                      <div class="reviews-slider__rating" aria-label="5 de 5 estrellas">
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="reviews-slider__slide swiper-slide">
+                  <div class="reviews-slider__card">
+                    <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/img2.jpg" alt="" width="120" height="120" loading="lazy"></div>
+                    <div class="reviews-slider__body">
+                      <blockquote class="reviews-slider__quote">“Memento me acompaña en días de mucho trabajo.”</blockquote>
+                      <p class="reviews-slider__author">— Carolina, 34</p>
+                      <div class="reviews-slider__rating" aria-label="5 de 5 estrellas">
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                        <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                          <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="reviews-slider__pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="start-banner">
+        <div class="start-banner__inner">
+          <div class="start-banner__card">
+            <div class="start-banner__content">
+              <h2 class="start-banner__title">¿No sabés por dónde empezar?</h2>
+              <p class="start-banner__text">Te ayudamos a encontrar el producto ideal según el momento del día que querés mejorar.</p>
+              <div class="start-banner__actions"><a class="start-banner__cta start-banner__cta--whatsapp" href="#">
+                  <svg class="start-banner__cta-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 3a9 9 0 0 0-7.8 13.4L3.5 20.5l4.2-.7A9 9 0 1 0 12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+                    <path d="M9.2 9.4c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.3l.7 1.7c.1.2 0 .4-.1.5l-.4.5c-.1.1-.1.3 0 .5.4.7 1.1 1.4 1.9 1.9.2.1.4.1.5 0l.5-.4c.2-.1.4-.2.5-.1l1.7.7c.3.1.3.3.3.5v.5c0 .2 0 .4-.4.6A5.4 5.4 0 0 1 12 16.8 5.5 5.5 0 0 1 9.2 9.4z" fill="currentColor"></path>
+                  </svg><span>Escribir por WhatsApp</span></a><a class="start-banner__cta start-banner__cta--secondary" href="#">Ver productos</a></div>
+            </div>
+            <div class="start-banner__media"><img class="start-banner__image" src="./assets/img3.jpg" alt="" width="720" height="480" loading="lazy"></div>
+          </div>
+        </div>
+      </section>
+      <section class="brand-story">
+        <div class="brand-story__inner">
+          <div class="brand-story__layout">
+            <div class="brand-story__media"><img class="brand-story__image" src="./assets/img2.jpg" alt="" width="720" height="540" loading="lazy"></div>
+            <div class="brand-story__content">
+              <h2 class="brand-story__title">Una marca costarricense creada para hacer más simple cuidarte.</h2>
+              <p class="brand-story__text">Recupé Plus nace con una idea clara: ayudar a las personas a sentirse mejor todos los días con productos ricos, prácticos y fáciles de sumar a su rutina.</p>
+              <p class="brand-story__text">Detrás de la marca hay fundadoras comprometidas con educar, acompañar y crear una comunidad alrededor de hábitos simples de bienestar.</p><a class="brand-story__cta" href="#">Conocé nuestra historia</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="guide-slider">
+        <div class="guide-slider__inner">
+          <div class="guide-slider__slider">
+            <button class="guide-slider__nav guide-slider__nav--prev" type="button" aria-label="Anterior"></button>
+            <button class="guide-slider__nav guide-slider__nav--next" type="button" aria-label="Siguiente"></button>
+            <div class="guide-slider__swiper swiper">
+              <div class="guide-slider__wrapper swiper-wrapper">
+                <article class="guide-slider__slide swiper-slide">
+                  <div class="guide-slider__card">
+                    <div class="guide-slider__icon"><img class="guide-slider__icon-img" src="./assets/img1.jpg" alt="" width="96" height="96" loading="lazy"></div>
+                    <h3 class="guide-slider__name">Al empezar el día</h3>
+                    <p class="guide-slider__text">Para sumar bienestar desde temprano.</p>
+                    <p class="guide-slider__product">Productos: Vitamin - C-Magnific Antiox</p>
+                  </div>
+                </article>
+                <article class="guide-slider__slide swiper-slide">
+                  <div class="guide-slider__card">
+                    <div class="guide-slider__icon"><img class="guide-slider__icon-img" src="./assets/img2.jpg" alt="" width="96" height="96" loading="lazy"></div>
+                    <h3 class="guide-slider__name">Cuando trabajás o estudiás</h3>
+                    <p class="guide-slider__text">Para enfocarte, concentrarte o volver a ordenar tu mente.</p>
+                    <p class="guide-slider__product">Producto: Memento</p>
+                  </div>
+                </article>
+                <article class="guide-slider__slide swiper-slide">
+                  <div class="guide-slider__card">
+                    <div class="guide-slider__icon"><img class="guide-slider__icon-img" src="./assets/img3.jpg" alt="" width="96" height="96" loading="lazy"></div>
+                    <h3 class="guide-slider__name">Antes de entrenar o moverte</h3>
+                    <p class="guide-slider__text">Para activar tu energía antes de caminar, entrenar o empezar una actividad.</p>
+                    <p class="guide-slider__product">Producto: Activity</p>
+                  </div>
+                </article>
+                <article class="guide-slider__slide swiper-slide">
+                  <div class="guide-slider__card">
+                    <div class="guide-slider__icon"><img class="guide-slider__icon-img" src="./assets/img4.jpg" alt="" width="96" height="96" loading="lazy"></div>
+                    <h3 class="guide-slider__name">Después de hacer ejercicio</h3>
+                    <p class="guide-slider__text">Para acompañar tu recuperación después de moverte o entrenar.</p>
+                    <p class="guide-slider__product">Producto: Recovery</p>
+                  </div>
+                </article>
+                <article class="guide-slider__slide swiper-slide">
+                  <div class="guide-slider__card">
+                    <div class="guide-slider__icon"><img class="guide-slider__icon-img" src="./assets/img1.jpg" alt="" width="96" height="96" loading="lazy"></div>
+                    <h3 class="guide-slider__name">Todos los días</h3>
+                    <p class="guide-slider__text">Para apoyar tus defensas y sumar bienestar diario.</p>
+                    <p class="guide-slider__product">Productos: Vitamin - Are More Antiox</p>
+                  </div>
+                </article>
+                <article class="guide-slider__slide swiper-slide">
+                  <div class="guide-slider__card">
+                    <div class="guide-slider__icon"><img class="guide-slider__icon-img" src="./assets/img2.jpg" alt="" width="96" height="96" loading="lazy"></div>
+                    <h3 class="guide-slider__name">Antes de dormir</h3>
+                    <p class="guide-slider__text">Para bajar revoluciones y crear tu ritual de descanso.</p>
+                    <p class="guide-slider__product">Producto: Serenity</p>
+                  </div>
+                </article>
+                <article class="guide-slider__slide swiper-slide">
+                  <div class="guide-slider__card">
+                    <div class="guide-slider__icon"><img class="guide-slider__icon-img" src="./assets/img3.jpg" alt="" width="96" height="96" loading="lazy"></div>
+                    <h3 class="guide-slider__name">Al empezar el día</h3>
+                    <p class="guide-slider__text">Para sumar bienestar desde temprano.</p>
+                    <p class="guide-slider__product">Productos: Vitamin - C-Magnific Antiox</p>
+                  </div>
+                </article>
+                <article class="guide-slider__slide swiper-slide">
+                  <div class="guide-slider__card">
+                    <div class="guide-slider__icon"><img class="guide-slider__icon-img" src="./assets/img4.jpg" alt="" width="96" height="96" loading="lazy"></div>
+                    <h3 class="guide-slider__name">Cuando trabajás o estudiás</h3>
+                    <p class="guide-slider__text">Para enfocarte, concentrarte o volver a ordenar tu mente.</p>
+                    <p class="guide-slider__product">Producto: Memento</p>
+                  </div>
+                </article>
+              </div>
+              <div class="guide-slider__pagination swiper-pagination"></div>
+            </div>
+          </div>
+          <p class="guide-slider__note">Algunos productos pueden acompañarte en más de un momento.<br>Esta guía te ayuda a elegir por dónde empezar.</p>
+        </div>
+      </section>
+      <section class="blog-slider">
+        <div class="blog-slider__inner">
+          <h2 class="blog-slider__title">Guías para sentirte mejor</h2>
+          <div class="blog-slider__slider">
+            <button class="blog-slider__nav blog-slider__nav--prev" type="button" aria-label="Anterior"></button>
+            <button class="blog-slider__nav blog-slider__nav--next" type="button" aria-label="Siguiente"></button>
+            <div class="blog-slider__swiper swiper">
+              <div class="blog-slider__wrapper swiper-wrapper">
+                <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                    <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/img1.jpg" alt="" width="320" height="200" loading="lazy"></div>
+                    <h3 class="blog-slider__name">¿Cómo elegir tu Recupé Plus según tu rutina?</h3></a></article>
+                <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                    <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/img2.jpg" alt="" width="320" height="200" loading="lazy"></div>
+                    <h3 class="blog-slider__name">Hongos medicinales: qué son y cómo sumarlos a tu día.</h3></a></article>
+                <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                    <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/img3.jpg" alt="" width="320" height="200" loading="lazy"></div>
+                    <h3 class="blog-slider__name">Cómo crear un ritual simple antes de dormir.</h3></a></article>
+                <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                    <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/img4.jpg" alt="" width="320" height="200" loading="lazy"></div>
+                    <h3 class="blog-slider__name">Vitamina C, magnesio y antioxidantes: cuándo elegir cada uno.</h3></a></article>
+                <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                    <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/img2.jpg" alt="" width="320" height="200" loading="lazy"></div>
+                    <h3 class="blog-slider__name">¿Cómo elegir tu Recupé Plus según tu rutina?</h3></a></article>
+                <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                    <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/img3.jpg" alt="" width="320" height="200" loading="lazy"></div>
+                    <h3 class="blog-slider__name">Hongos medicinales: qué son y cómo sumarlos a tu día.</h3></a></article>
+                <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                    <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/img4.jpg" alt="" width="320" height="200" loading="lazy"></div>
+                    <h3 class="blog-slider__name">Cómo crear un ritual simple antes de dormir.</h3></a></article>
+                <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                    <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/img1.jpg" alt="" width="320" height="200" loading="lazy"></div>
+                    <h3 class="blog-slider__name">Vitamina C, magnesio y antioxidantes: cuándo elegir cada uno.</h3></a></article>
+              </div>
+              <div class="blog-slider__pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__inner">
@@ -448,6 +975,6 @@
       </div>
     </footer><a class="floating-button" href="style-guide.html">Style Guide</a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="index.js?t=1784317280569"></script>
+    <script src="index.js?t=1784320991532"></script>
   </body>
 </html>
