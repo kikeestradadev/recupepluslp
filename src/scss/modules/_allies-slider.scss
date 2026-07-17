@@ -1,0 +1,117 @@
+@use "breakpoints" as *;
+
+.allies-slider {
+	--allies-slider-card-width: 8.5rem;
+	padding: 2.5rem 0;
+	background: #fff;
+	overflow: hidden;
+
+	&__inner {
+		width: 100%;
+		max-width: var(--container);
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+
+	&__title {
+		margin: 0 0 1.75rem;
+		padding: 0 15px;
+		color: var(--header-color);
+		font-size: clamp(1.125rem, 2.2vw, 1.5rem);
+		font-weight: 700;
+		line-height: 1.3;
+		text-align: center;
+	}
+
+	&__slider {
+		position: relative;
+	}
+
+	&__swiper {
+		overflow: visible;
+	}
+
+	&__wrapper {
+		align-items: stretch;
+	}
+
+	&__slide {
+		width: var(--allies-slider-card-width);
+		height: auto;
+	}
+
+	&__card {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		min-height: 4.5rem;
+		padding: 0.75rem 1rem;
+		border: 1px solid #e6e6e6;
+		border-radius: 0.75rem;
+		background: #fff;
+	}
+
+	&__logo {
+		display: block;
+		width: 100%;
+		max-width: 5.5rem;
+		height: auto;
+		max-height: 2.5rem;
+		object-fit: contain;
+	}
+
+	&__pagination {
+		display: flex;
+		justify-content: center;
+		gap: 0.35rem;
+		margin-top: 1.25rem;
+		position: static;
+
+		@media (width >= $l) {
+			display: none;
+		}
+
+		.swiper-pagination-bullet {
+			width: 0.5rem;
+			height: 0.5rem;
+			margin: 0 !important;
+			background: #cfcfcf;
+			opacity: 1;
+		}
+
+		.swiper-pagination-bullet-active {
+			background: var(--color-orange);
+		}
+	}
+
+	@media (width >= $m) {
+		--allies-slider-card-width: 9.5rem;
+		padding: 3rem 0;
+
+		&__card {
+			min-height: 5rem;
+			padding: 0.875rem 1.1rem;
+		}
+
+		&__logo {
+			max-width: 6rem;
+			max-height: 2.75rem;
+		}
+	}
+
+	@media (width >= $l) {
+		--allies-slider-card-width: 10.5rem;
+		padding: 3.5rem 0;
+
+		&__card {
+			min-height: 5.25rem;
+			border-radius: 0.875rem;
+		}
+
+		&__logo {
+			max-width: 6.5rem;
+			max-height: 3rem;
+		}
+	}
+}

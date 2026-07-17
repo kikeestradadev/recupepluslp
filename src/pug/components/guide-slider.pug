@@ -1,0 +1,23 @@
+section(class='guide-slider')
+	div(class='guide-slider__inner')
+		div(class='guide-slider__slider')
+			button(class='guide-slider__nav guide-slider__nav--prev' type='button' aria-label='Anterior')
+			button(class='guide-slider__nav guide-slider__nav--next' type='button' aria-label='Siguiente')
+
+			div(class='guide-slider__swiper swiper')
+				div(class='guide-slider__wrapper swiper-wrapper')
+					- const guides = [{ title: 'Al empezar el día', text: 'Para sumar bienestar desde temprano.', product: 'Productos: Vitamin - C-Magnific Antiox', img: './assets/img1.jpg' }, { title: 'Cuando trabajás o estudiás', text: 'Para enfocarte, concentrarte o volver a ordenar tu mente.', product: 'Producto: Memento', img: './assets/img2.jpg' }, { title: 'Antes de entrenar o moverte', text: 'Para activar tu energía antes de caminar, entrenar o empezar una actividad.', product: 'Producto: Activity', img: './assets/img3.jpg' }, { title: 'Después de hacer ejercicio', text: 'Para acompañar tu recuperación después de moverte o entrenar.', product: 'Producto: Recovery', img: './assets/img4.jpg' }, { title: 'Todos los días', text: 'Para apoyar tus defensas y sumar bienestar diario.', product: 'Productos: Vitamin - Are More Antiox', img: './assets/img1.jpg' }, { title: 'Antes de dormir', text: 'Para bajar revoluciones y crear tu ritual de descanso.', product: 'Producto: Serenity', img: './assets/img2.jpg' }, { title: 'Al empezar el día', text: 'Para sumar bienestar desde temprano.', product: 'Productos: Vitamin - C-Magnific Antiox', img: './assets/img3.jpg' }, { title: 'Cuando trabajás o estudiás', text: 'Para enfocarte, concentrarte o volver a ordenar tu mente.', product: 'Producto: Memento', img: './assets/img4.jpg' }]
+					each guide in guides
+						article(class='guide-slider__slide swiper-slide')
+							div(class='guide-slider__card')
+								div(class='guide-slider__icon')
+									img(class='guide-slider__icon-img' src=guide.img alt='' width='96' height='96' loading='lazy')
+								h3(class='guide-slider__name')= guide.title
+								p(class='guide-slider__text')= guide.text
+								p(class='guide-slider__product')= guide.product
+
+				div(class='guide-slider__pagination swiper-pagination')
+
+		p(class='guide-slider__note') Algunos productos pueden acompañarte en más de un momento.
+			br
+			| Esta guía te ayuda a elegir por dónde empezar.
