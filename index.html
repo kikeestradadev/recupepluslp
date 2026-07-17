@@ -16,18 +16,438 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/prism.css?t=1784312957821">
-    <link rel="stylesheet" href="styles.css?t=1784312957821">
+    <link rel="stylesheet" href="./assets/prism.css?t=1784315912907">
+    <link rel="stylesheet" href="styles.css?t=1784315912907">
     <title>Home | Layouts</title>
   </head>
   <body class="home" itemscope itemtype="http://schema.org/WebPage">
     <header class="main-header">
+      <nav class="main-menu" aria-label="Navegación principal">
+        <div class="main-menu__inner"><a class="main-menu__logo" href="#"><img class="main-menu__logo-img" src="./assets/logo.avif" alt="Recupé Plus" width="140" height="32"></a>
+          <div class="main-menu__panel" id="mainMenuNav">
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a class="main-menu__link" href="#">Lorem</a></li>
+              <li class="main-menu__item main-menu__item--has-children"><a class="main-menu__link" href="#">Ipsum</a>
+                <ul class="main-menu__sub-menu">
+                  <li class="main-menu__item"><a class="main-menu__link" href="#">Dolor sit amet</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="#">Consectetur</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="#">Adipiscing elit</a></li>
+                </ul>
+              </li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#">Dolor</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#">Sit amet</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#">Consectetur</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#">Adipiscing</a></li>
+            </ul>
+          </div>
+          <div class="main-menu__actions"><a class="main-menu__cta" href="#">Comprar ahora</a><a class="main-menu__cart" href="#" aria-label="Carrito de compras">
+              <svg class="main-menu__cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 8h12l-1 12H7L6 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                <path d="M9 8V7a3 3 0 0 1 6 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              </svg></a>
+            <button class="main-menu__hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainMenuNav"><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span></button>
+          </div>
+        </div>
+      </nav>
     </header>
     <main class="main-container">
+      <section class="moment-slider">
+        <div class="moment-slider__inner">
+          <header class="moment-slider__header">
+            <h2 class="moment-slider__title">¿Qué momento del día querés mejorar?</h2>
+            <p class="moment-slider__subtitle">Sin sabés por dónde empezar, elegí el momento de tu rutina donde querés sentirte mejor.</p>
+          </header>
+          <div class="moment-slider__slider">
+            <button class="moment-slider__nav moment-slider__nav--prev" type="button" aria-label="Anterior"></button>
+            <button class="moment-slider__nav moment-slider__nav--next" type="button" aria-label="Siguiente"></button>
+            <div class="moment-slider__swiper swiper">
+              <div class="moment-slider__wrapper swiper-wrapper">
+                <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="#">
+                    <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/img1.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                    <div class="moment-slider__body">
+                      <h3 class="moment-slider__card-title">Al empezar el día</h3>
+                      <p class="moment-slider__card-text">C•Maglife - Antiox Vitamin</p>
+                    </div></a></article>
+                <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="#">
+                    <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/img2.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                    <div class="moment-slider__body">
+                      <h3 class="moment-slider__card-title">Cuando trabajás o estudiás</h3>
+                      <p class="moment-slider__card-text">Memotre - Antiox Vitamin</p>
+                    </div></a></article>
+                <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="#">
+                    <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/img3.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                    <div class="moment-slider__body">
+                      <h3 class="moment-slider__card-title">Antes de entrenar o moverte</h3>
+                      <p class="moment-slider__card-text">Activity - Memotre</p>
+                    </div></a></article>
+                <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="#">
+                    <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/img4.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                    <div class="moment-slider__body">
+                      <h3 class="moment-slider__card-title">Después de hacer ejercicio</h3>
+                      <p class="moment-slider__card-text">Recovery - Antiox Vitamin</p>
+                    </div></a></article>
+                <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="#">
+                    <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/img1.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                    <div class="moment-slider__body">
+                      <h3 class="moment-slider__card-title">Todos los días</h3>
+                      <p class="moment-slider__card-text">C•Maglife - Vitamin Antiox - Memotre</p>
+                    </div></a></article>
+                <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="#">
+                    <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/img2.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                    <div class="moment-slider__body">
+                      <h3 class="moment-slider__card-title">Antes de dormir</h3>
+                      <p class="moment-slider__card-text">Serenity - Memotre</p>
+                    </div></a></article>
+                <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="#">
+                    <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/img3.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                    <div class="moment-slider__body">
+                      <h3 class="moment-slider__card-title">En la mañana</h3>
+                      <p class="moment-slider__card-text">Vitamin - C•Maglife</p>
+                    </div></a></article>
+                <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="#">
+                    <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/img4.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                    <div class="moment-slider__body">
+                      <h3 class="moment-slider__card-title">En la tarde</h3>
+                      <p class="moment-slider__card-text">Activity - Recovery</p>
+                    </div></a></article>
+                <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="#">
+                    <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/img1.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                    <div class="moment-slider__body">
+                      <h3 class="moment-slider__card-title">En la noche</h3>
+                      <p class="moment-slider__card-text">Serenity - Antiox</p>
+                    </div></a></article>
+              </div>
+              <div class="moment-slider__pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="format-cards">
+        <div class="format-cards__inner">
+          <h2 class="format-cards__title">Dos formas simples de sumar bienestar a tu rutina.</h2>
+          <div class="format-cards__grid">
+            <article class="format-cards__card format-cards__card--gomitas">
+              <div class="format-cards__content">
+                <h3 class="format-cards__name">Gomitas</h3>
+                <p class="format-cards__text">Ricas, prácticas y fáciles de sumar todos los días.</p>
+                <ul class="format-cards__list">
+                  <li class="format-cards__item">Vitamin - Antiox</li>
+                  <li class="format-cards__item">C+Maglife - Serenity</li>
+                </ul><a class="format-cards__cta" href="#">Ver gomitas</a>
+              </div>
+              <div class="format-cards__media"><img class="format-cards__image" src="./assets/l_products.jpeg" alt="Gomitas Recupé Plus" width="480" height="360" loading="lazy"></div>
+            </article>
+            <article class="format-cards__card format-cards__card--capsulas">
+              <div class="format-cards__content">
+                <h3 class="format-cards__name">Cápsulas</h3>
+                <p class="format-cards__text">Productos especializados con ingredientes clínicamente respaldados para tu recuperación e inmunidad.</p>
+                <ul class="format-cards__list">
+                  <li class="format-cards__item">Memotre - Activity</li>
+                  <li class="format-cards__item">Recovery - Ave More</li>
+                </ul><a class="format-cards__cta" href="#">Ver cápsulas</a>
+              </div>
+              <div class="format-cards__media"><img class="format-cards__image" src="./assets/r_products.jpeg" alt="Cápsulas Recupé Plus" width="480" height="360" loading="lazy"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="product-slider">
+        <div class="product-slider__group product-slider__group--gomitas">
+          <div class="product-slider__inner">
+            <header class="product-slider__header">
+              <h2 class="product-slider__title">Gomitas</h2>
+              <p class="product-slider__subtitle">Ricas, prácticas y deliciosas. Ideales para sumar bienestar todos los días.</p>
+            </header>
+            <div class="product-slider__slider">
+              <button class="product-slider__nav product-slider__nav--prev" type="button" aria-label="Anterior"></button>
+              <button class="product-slider__nav product-slider__nav--next" type="button" aria-label="Siguiente"></button>
+              <div class="product-slider__swiper swiper">
+                <div class="product-slider__wrapper swiper-wrapper">
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--vitamin">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/gomitas.jpeg" alt="Vitamin" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Vitamin</h3>
+                        <p class="product-slider__text">Mora + vitamina C para cuidar tus defensas todos los días.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--antiox">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/gomitas.jpeg" alt="Antiox" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Antiox</h3>
+                        <p class="product-slider__text">Para sumar antioxidantes a tu rutina.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--cmagnific">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/gomitas.jpeg" alt="C-Magnific" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">C-Magnific</h3>
+                        <p class="product-slider__text">Magnesio + vitamina C para tu bienestar diario.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--serenity">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/gomitas.jpeg" alt="Serenity" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Serenity</h3>
+                        <p class="product-slider__text">Para bajar revoluciones y crear tu ritual de descanso.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--vitamin">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/gomitas.jpeg" alt="Vitamin Plus" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Vitamin Plus</h3>
+                        <p class="product-slider__text">Extra defensas para tu rutina diaria.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--antiox">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/gomitas.jpeg" alt="Antiox Daily" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Antiox Daily</h3>
+                        <p class="product-slider__text">Antioxidantes para cada día.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--cmagnific">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/gomitas.jpeg" alt="C-Magnific Soft" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">C-Magnific Soft</h3>
+                        <p class="product-slider__text">Magnesio suave para tu bienestar.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--serenity">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/gomitas.jpeg" alt="Serenity Night" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Serenity Night</h3>
+                        <p class="product-slider__text">Ritual de descanso para la noche.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="product-slider__pagination swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-slider__group product-slider__group--capsulas">
+          <div class="product-slider__inner">
+            <header class="product-slider__header">
+              <h2 class="product-slider__title">Cápsulas</h2>
+              <p class="product-slider__subtitle">Productos especializados con hongos y activos naturales para acompañar tu energía, enfoque, recuperación e inmunidad.</p>
+            </header>
+            <div class="product-slider__slider">
+              <button class="product-slider__nav product-slider__nav--prev" type="button" aria-label="Anterior"></button>
+              <button class="product-slider__nav product-slider__nav--next" type="button" aria-label="Siguiente"></button>
+              <div class="product-slider__swiper swiper">
+                <div class="product-slider__wrapper swiper-wrapper">
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--memento">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Memento" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Memento</h3>
+                        <p class="product-slider__text">Para acompañar tus momentos de enfoque.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--activity">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Activity" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Activity</h3>
+                        <p class="product-slider__text">Para activar tu energía antes de moverte.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--recovery">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Recovery" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Recovery</h3>
+                        <p class="product-slider__text">Para acompañar tu recuperación después de hacer ejercicio.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--aremore">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Are More" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Are More</h3>
+                        <p class="product-slider__text">Hongos funcionales + vitamina C para tu bienestar diario.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--memento">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Memento Focus" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Memento Focus</h3>
+                        <p class="product-slider__text">Enfoque prolongado para tu día.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--activity">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Activity Boost" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Activity Boost</h3>
+                        <p class="product-slider__text">Energía extra antes de entrenar.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--recovery">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Recovery Soft" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Recovery Soft</h3>
+                        <p class="product-slider__text">Recuperación suave post ejercicio.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="product-slider__slide swiper-slide">
+                    <div class="product-slider__card product-slider__card--aremore">
+                      <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Are More Daily" width="280" height="180" loading="lazy"></div>
+                      <div class="product-slider__body">
+                        <h3 class="product-slider__name">Are More Daily</h3>
+                        <p class="product-slider__text">Bienestar diario con hongos funcionales.</p><a class="product-slider__link" href="#">Conocer más →</a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="product-slider__pagination swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="main-footer">
+      <div class="main-footer__inner">
+        <div class="main-footer__grid">
+          <div class="main-footer__brand"><a class="main-footer__logo" href="#"><img class="main-footer__logo-img" src="./assets/logo.avif" alt="Recupé Plus" width="140" height="32"></a>
+            <p class="main-footer__slogan">Recuperá tu bienestar.</p>
+            <p class="main-footer__text">Productos naturales, ricos y fáciles de sumar a tu rutina diaria. Gomitas y cápsulas funcionales hechas en Costa Rica.</p>
+            <ul class="main-footer__social">
+              <li class="main-footer__social-item"><a class="main-footer__social-link" href="#" aria-label="Instagram">
+                  <svg class="main-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect>
+                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle>
+                  </svg></a></li>
+              <li class="main-footer__social-item"><a class="main-footer__social-link" href="#" aria-label="Facebook">
+                  <svg class="main-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.2l.8-3H13V9c0-.6.4-1 1-1z" fill="currentColor"></path>
+                  </svg></a></li>
+              <li class="main-footer__social-item"><a class="main-footer__social-link" href="#" aria-label="TikTok">
+                  <svg class="main-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M14 4c.4 2.2 1.8 3.8 4 4.2v2.4c-1.4-.1-2.7-.6-4-1.4v5.5A5.5 5.5 0 1 1 9.8 9.3v2.5a3 3 0 1 0 2.2 2.9V4h2z" fill="currentColor"></path>
+                  </svg></a></li>
+              <li class="main-footer__social-item"><a class="main-footer__social-link" href="#" aria-label="YouTube">
+                  <svg class="main-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="2" y="6" width="20" height="12" rx="3" stroke="currentColor" stroke-width="1.5"></rect>
+                    <path d="M10 9.5v5l5-2.5-5-2.5z" fill="currentColor"></path>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <nav class="main-footer__col" aria-label="Navegación">
+            <h2 class="main-footer__title">Navegación</h2>
+            <ul class="main-footer__list">
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Inicio</a></li>
+              <li class="main-footer__item main-footer__item--has-children"><a class="main-footer__link" href="#">Suplementos</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">¿Qué momento del día querés mejorar?</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Gomitas</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Cápsulas</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Dónde comprar</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Guías</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Nosotros</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Contacto</a></li>
+            </ul>
+          </nav>
+          <nav class="main-footer__col" aria-label="Suplementos">
+            <h2 class="main-footer__title">Suplementos</h2>
+            <h3 class="main-footer__subtitle">Gomitas</h3>
+            <ul class="main-footer__list">
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Vitamin</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Antiox</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">C-Magnific</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Serenity</a></li>
+            </ul>
+            <h3 class="main-footer__subtitle">Cápsulas</h3>
+            <ul class="main-footer__list">
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Memento</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Activity</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Recovery</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Are More</a></li>
+            </ul>
+          </nav>
+          <nav class="main-footer__col" aria-label="Ayuda">
+            <h2 class="main-footer__title">Ayuda</h2>
+            <ul class="main-footer__list">
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Preguntas frecuentes</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Envíos y pagos</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Cambios y devoluciones</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Términos y condiciones</a></li>
+              <li class="main-footer__item"><a class="main-footer__link" href="#">Política de privacidad</a></li>
+            </ul>
+          </nav>
+          <div class="main-footer__col main-footer__col--contact">
+            <h2 class="main-footer__title">Contacto</h2>
+            <ul class="main-footer__contact">
+              <li class="main-footer__contact-item"><a class="main-footer__contact-link" href="#">
+                  <svg class="main-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                  </svg><span>Escribinos por WhatsApp</span></a></li>
+              <li class="main-footer__contact-item"><a class="main-footer__contact-link" href="mailto:hola@recupeplus.com">
+                  <svg class="main-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
+                    <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                  </svg><span>hola@recupeplus.com</span></a></li>
+              <li class="main-footer__contact-item"><a class="main-footer__contact-link" href="tel:+50612345678">
+                  <svg class="main-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 4h3l1 4-2 1a10 10 0 0 0 5 5l1-2 4 1v3a2 2 0 0 1-2 2A14 14 0 0 1 4 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                  </svg><span>+506 1234 5678</span></a></li>
+              <li class="main-footer__contact-item"><span class="main-footer__contact-link">
+                  <svg class="main-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.5"></path>
+                    <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"></circle>
+                  </svg><span>San José, Costa Rica</span></span></li>
+            </ul>
+            <div class="main-footer__newsletter">
+              <h2 class="main-footer__title">Recibí novedades y consejos</h2>
+              <p class="main-footer__text">Suscribite y recibí contenido para sentirte mejor todos los días.</p>
+              <form class="main-footer__form" action="#" method="post">
+                <label class="main-footer__sr-only" for="footerEmail">Tu correo electrónico</label>
+                <input class="main-footer__input" id="footerEmail" type="email" name="email" placeholder="Tu correo electrónico" required>
+                <button class="main-footer__submit" type="submit">Suscribirme</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="main-footer__bottom">
+          <p class="main-footer__copy">© 2024 Recupé Plus. Todos los derechos reservados.</p>
+          <p class="main-footer__meta">
+            <svg class="main-footer__meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
+              <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.5"></path>
+            </svg><span>Sitio seguro y protegido</span>
+          </p>
+          <p class="main-footer__payments">VISA Mastercard AMEX sinpemóvil</p>
+          <p class="main-footer__made"><span class="main-footer__flag" aria-hidden="true"></span><span>Hecho en Costa Rica</span></p>
+        </div>
+      </div>
     </footer><a class="floating-button" href="style-guide.html">Style Guide</a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="index.js?t=1784312957821"></script>
+    <script src="index.js?t=1784315912907"></script>
   </body>
 </html>

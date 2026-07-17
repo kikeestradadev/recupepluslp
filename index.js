@@ -1952,14 +1952,20 @@ Prism.languages.js = Prism.languages.javascript;
 "use strict";
 
 var _internalModule = _interopRequireDefault(require("./modules/internalModule"));
+var _mainMenu = _interopRequireDefault(require("./modules/mainMenu"));
+var _momentSlider = _interopRequireDefault(require("./modules/momentSlider"));
+var _productSlider = _interopRequireDefault(require("./modules/productSlider"));
 var _prismjs = _interopRequireDefault(require("prismjs"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 (function () {
   (0, _internalModule["default"])();
+  (0, _mainMenu["default"])();
+  (0, _momentSlider["default"])();
+  (0, _productSlider["default"])();
   _prismjs["default"].highlightAll(); // Corrected: Use Prism.highlightAll() instead of undefined prismjs()
 })();
 
-},{"./modules/internalModule":3,"prismjs":1}],3:[function(require,module,exports){
+},{"./modules/internalModule":3,"./modules/mainMenu":4,"./modules/momentSlider":5,"./modules/productSlider":6,"prismjs":1}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1970,6 +1976,166 @@ var internalModule = function internalModule() {
   console.log('Hola internal Module');
 };
 var _default = exports["default"] = internalModule;
+
+},{}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var mainMenu = function mainMenu() {
+  var menu = document.querySelector('.main-menu');
+  if (!menu) return;
+  var hamburger = menu.querySelector('.main-menu__hamburger');
+  var dropdownItems = menu.querySelectorAll('.main-menu__item--has-children');
+  var desktopQuery = window.matchMedia('(min-width: 960px)');
+  var isDesktop = function isDesktop() {
+    return desktopQuery.matches;
+  };
+  var closeMenu = function closeMenu() {
+    menu.classList.remove('main-menu--open');
+    if (hamburger) {
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Abrir menú');
+    }
+  };
+  var openMenu = function openMenu() {
+    menu.classList.add('main-menu--open');
+    if (hamburger) {
+      hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'Cerrar menú');
+    }
+  };
+  var closeDropdowns = function closeDropdowns() {
+    dropdownItems.forEach(function (item) {
+      item.classList.remove('is-open');
+    });
+  };
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      if (menu.classList.contains('main-menu--open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+  dropdownItems.forEach(function (item) {
+    var trigger = item.querySelector('.main-menu__link');
+    if (!trigger) return;
+    trigger.addEventListener('click', function (event) {
+      if (isDesktop()) return;
+      event.preventDefault();
+      var isOpen = item.classList.contains('is-open');
+      closeDropdowns();
+      if (!isOpen) {
+        item.classList.add('is-open');
+      }
+    });
+  });
+  document.addEventListener('click', function (event) {
+    if (!menu.contains(event.target)) {
+      closeDropdowns();
+    }
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeMenu();
+      closeDropdowns();
+    }
+  });
+  desktopQuery.addEventListener('change', function () {
+    if (isDesktop()) {
+      closeMenu();
+      closeDropdowns();
+    }
+  });
+};
+var _default = exports["default"] = mainMenu;
+
+},{}],5:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var momentSlider = function momentSlider() {
+  var root = document.querySelector('.moment-slider');
+  if (!root || typeof Swiper === 'undefined') return;
+  var swiperEl = root.querySelector('.moment-slider__swiper');
+  var prevEl = root.querySelector('.moment-slider__nav--prev');
+  var nextEl = root.querySelector('.moment-slider__nav--next');
+  var paginationEl = root.querySelector('.moment-slider__pagination');
+  if (!swiperEl) return;
+  new Swiper(swiperEl, {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    grabCursor: true,
+    freeMode: true,
+    pagination: {
+      el: paginationEl,
+      clickable: true
+    },
+    navigation: {
+      prevEl: prevEl,
+      nextEl: nextEl
+    },
+    breakpoints: {
+      640: {
+        spaceBetween: 20
+      },
+      960: {
+        spaceBetween: 24
+      }
+    }
+  });
+};
+var _default = exports["default"] = momentSlider;
+
+},{}],6:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+var productSlider = function productSlider() {
+  var root = document.querySelector('.product-slider');
+  if (!root || typeof Swiper === 'undefined') return;
+  var groups = root.querySelectorAll('.product-slider__slider');
+  groups.forEach(function (group) {
+    var swiperEl = group.querySelector('.product-slider__swiper');
+    var prevEl = group.querySelector('.product-slider__nav--prev');
+    var nextEl = group.querySelector('.product-slider__nav--next');
+    var paginationEl = group.querySelector('.product-slider__pagination');
+    if (!swiperEl) return;
+    new Swiper(swiperEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      grabCursor: true,
+      freeMode: true,
+      pagination: {
+        el: paginationEl,
+        clickable: true
+      },
+      navigation: {
+        prevEl: prevEl,
+        nextEl: nextEl
+      },
+      breakpoints: {
+        640: {
+          spaceBetween: 16
+        },
+        960: {
+          spaceBetween: 20
+        }
+      }
+    });
+  });
+};
+var _default = exports["default"] = productSlider;
 
 },{}]},{},[2]);
 
