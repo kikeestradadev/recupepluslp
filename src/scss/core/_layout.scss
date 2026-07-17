@@ -16,7 +16,7 @@
 	--xxl: #{$xxl};
 	--xxxl: #{$xxxl};
 	--xxxxl: #{$xxxxl};
-	--header-height: 3rem;
+	--header-height: 3.5rem;
 	--main-container: 3500px;
 	--container: 1600px;
 
@@ -34,13 +34,13 @@
 	
 
 	@media (width >= $l) {
-		--header-height: 4rem;
+		--header-height: 4.5rem;
 	}
 
 	//native color vars
-	--header-bg: #007BDF;
+	--header-bg: #ffffff;
 	--body-bg: #ffffff;
-	--footer-bg: #007BDF;
+	--footer-bg: #0B3D2E;
 }
 
 *,
@@ -71,7 +71,9 @@ body {
 	min-height: var(--header-height);
 	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
+	z-index: 1000;
 }
 
 .main-container {
@@ -88,9 +90,5 @@ body {
 }
 
 .main-footer {
-	background: var(--footer-bg);
-	color: #FFF;
-	padding: 2rem 0;
-	font-size: fontSize(small);
 	margin-top: auto;
 }

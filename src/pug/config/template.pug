@@ -28,6 +28,7 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 	body(class=currentPage, itemscope itemtype="http://schema.org/WebPage")
 		//- here start the Main Header
 		header(class='main-header')
+			include ../components/main-menu
 			block main-header
 		//- here ends the Main Header
 		//- here start the Main Container
@@ -36,6 +37,7 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 		//- here ends the Main Container
 		//- here start the Main Footer
 		footer(class='main-footer')
+			include ../components/main-footer
 			block main-footer
 		//- here ends the Main Footer
 		if currentPage === 'home'
