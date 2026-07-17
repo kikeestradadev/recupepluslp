@@ -3,15 +3,12 @@
 .blog-slider {
 	--blog-slider-card-width: 14rem;
 	--blog-slider-title-min-height: 3.5rem;
-	padding: 2.5rem 0;
+	padding-block: 2.5rem;
 	background: #f7f4ef;
 	overflow: hidden;
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	&__title {
@@ -167,7 +164,7 @@
 	@media (width >= $m) {
 		--blog-slider-card-width: 16rem;
 		--blog-slider-title-min-height: 3.75rem;
-		padding: 3.25rem 0;
+		padding-block: 3.25rem;
 
 		&__name {
 			font-size: 1rem;
@@ -177,7 +174,7 @@
 	@media (width >= $l) {
 		--blog-slider-card-width: 18rem;
 		--blog-slider-title-min-height: 4rem;
-		padding: 4rem 0;
+		padding-block: 4rem;
 
 		&__swiper {
 			padding-inline: 2.75rem;

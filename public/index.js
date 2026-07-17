@@ -1961,6 +1961,7 @@ var _waysSlider = _interopRequireDefault(require("./modules/waysSlider"));
 var _reviewsSlider = _interopRequireDefault(require("./modules/reviewsSlider"));
 var _guideSlider = _interopRequireDefault(require("./modules/guideSlider"));
 var _blogSlider = _interopRequireDefault(require("./modules/blogSlider"));
+var _blogFilter = _interopRequireDefault(require("./modules/blogFilter"));
 var _prismjs = _interopRequireDefault(require("prismjs"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 (function () {
@@ -1974,10 +1975,11 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
   (0, _reviewsSlider["default"])();
   (0, _guideSlider["default"])();
   (0, _blogSlider["default"])();
+  (0, _blogFilter["default"])();
   _prismjs["default"].highlightAll(); // Corrected: Use Prism.highlightAll() instead of undefined prismjs()
 })();
 
-},{"./modules/alliesSlider":3,"./modules/blogSlider":4,"./modules/guideSlider":5,"./modules/internalModule":6,"./modules/mainMenu":7,"./modules/momentSlider":8,"./modules/productSlider":9,"./modules/reviewsSlider":10,"./modules/storeLocator":11,"./modules/waysSlider":12,"prismjs":1}],3:[function(require,module,exports){
+},{"./modules/alliesSlider":3,"./modules/blogFilter":4,"./modules/blogSlider":5,"./modules/guideSlider":6,"./modules/internalModule":7,"./modules/mainMenu":8,"./modules/momentSlider":9,"./modules/productSlider":10,"./modules/reviewsSlider":11,"./modules/storeLocator":12,"./modules/waysSlider":13,"prismjs":1}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1994,7 +1996,6 @@ var alliesSlider = function alliesSlider() {
     slidesPerView: 'auto',
     spaceBetween: 12,
     grabCursor: true,
-    loop: true,
     autoplay: {
       delay: 2500,
       disableOnInteraction: false,
@@ -2023,6 +2024,181 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+var blogFilter = function blogFilter() {
+  var root = document.querySelector('.blog-filter');
+  if (!root || typeof Swiper === 'undefined') return;
+  var perPage = Number(root.dataset.perPage) || 6;
+  var chips = _toConsumableArray(root.querySelectorAll('.blog-filter__chip'));
+  var gridCards = _toConsumableArray(root.querySelectorAll('[data-blog-grid] .blog-filter__card'));
+  var mobileSlides = _toConsumableArray(root.querySelectorAll('[data-blog-mobile-track] .blog-filter__slide'));
+  var paginationEl = root.querySelector('[data-blog-pagination]');
+  var filtersSwiperEl = root.querySelector('.blog-filter__filters-swiper');
+  var filtersPrev = root.querySelector('.blog-filter__filters-nav--prev');
+  var filtersNext = root.querySelector('.blog-filter__filters-nav--next');
+  var postsSwiperEl = root.querySelector('[data-blog-swiper]');
+  var bulletsEl = root.querySelector('.blog-filter__bullets');
+  var desktopQuery = window.matchMedia('(min-width: 960px)');
+  var activeFilter = 'all';
+  var currentPage = 1;
+  var filtersSwiper = null;
+  var postsSwiper = null;
+  var getFiltered = function getFiltered(items) {
+    return items.filter(function (item) {
+      return activeFilter === 'all' || item.dataset.category === activeFilter;
+    });
+  };
+  var setChipState = function setChipState() {
+    chips.forEach(function (chip) {
+      chip.classList.toggle('blog-filter__chip--active', chip.dataset.filter === activeFilter);
+    });
+  };
+  var renderPagination = function renderPagination(totalPages) {
+    if (!paginationEl) return;
+    paginationEl.innerHTML = '';
+    if (totalPages <= 1) return;
+    var addButton = function addButton(label, page) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = "blog-filter__page".concat(options.active ? ' blog-filter__page--active' : '').concat(options.nav ? ' blog-filter__page--nav' : '');
+      btn.textContent = label;
+      btn.disabled = Boolean(options.disabled || options.active);
+      if (!options.active && !options.disabled) {
+        btn.addEventListener('click', function () {
+          currentPage = page;
+          updateView();
+        });
+      }
+      paginationEl.appendChild(btn);
+    };
+    addButton('‹', Math.max(1, currentPage - 1), {
+      nav: true,
+      disabled: currentPage === 1
+    });
+    for (var page = 1; page <= totalPages; page += 1) {
+      addButton(String(page), page, {
+        active: page === currentPage
+      });
+    }
+    addButton('›', Math.min(totalPages, currentPage + 1), {
+      nav: true,
+      disabled: currentPage === totalPages
+    });
+  };
+  var updateDesktopGrid = function updateDesktopGrid() {
+    var filtered = getFiltered(gridCards);
+    var totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+    if (currentPage > totalPages) currentPage = totalPages;
+    var start = (currentPage - 1) * perPage;
+    var end = start + perPage;
+    gridCards.forEach(function (card) {
+      card.hidden = true;
+    });
+    filtered.slice(start, end).forEach(function (card) {
+      card.hidden = false;
+    });
+    renderPagination(totalPages);
+  };
+  var destroyPostsSwiper = function destroyPostsSwiper() {
+    if (postsSwiper) {
+      postsSwiper.destroy(true, true);
+      postsSwiper = null;
+    }
+  };
+  var updateMobileSlider = function updateMobileSlider() {
+    var track = root.querySelector('[data-blog-mobile-track]');
+    if (!postsSwiperEl || !track) return;
+    destroyPostsSwiper();
+    var filtered = getFiltered(mobileSlides);
+    track.innerHTML = '';
+    filtered.forEach(function (slide) {
+      slide.hidden = false;
+      slide.style.display = '';
+      track.appendChild(slide);
+    });
+    if (filtered.length === 0) return;
+    postsSwiper = new Swiper(postsSwiperEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      grabCursor: true,
+      watchOverflow: true,
+      pagination: {
+        el: bulletsEl,
+        clickable: true
+      },
+      breakpoints: {
+        640: {
+          spaceBetween: 20
+        }
+      }
+    });
+  };
+  var updateView = function updateView() {
+    setChipState();
+    if (desktopQuery.matches) {
+      destroyPostsSwiper();
+      updateDesktopGrid();
+    } else {
+      if (paginationEl) paginationEl.innerHTML = '';
+      updateMobileSlider();
+    }
+  };
+  var initFiltersSwiper = function initFiltersSwiper() {
+    if (!filtersSwiperEl) return;
+    if (desktopQuery.matches) {
+      if (filtersSwiper) {
+        filtersSwiper.destroy(true, true);
+        filtersSwiper = null;
+      }
+      return;
+    }
+    if (filtersSwiper) return;
+    filtersSwiper = new Swiper(filtersSwiperEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      freeMode: true,
+      grabCursor: true,
+      watchOverflow: true,
+      navigation: {
+        prevEl: filtersPrev,
+        nextEl: filtersNext
+      }
+    });
+  };
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      activeFilter = chip.dataset.filter || 'all';
+      currentPage = 1;
+      updateView();
+    });
+  });
+  var onViewportChange = function onViewportChange() {
+    initFiltersSwiper();
+    updateView();
+  };
+  if (typeof desktopQuery.addEventListener === 'function') {
+    desktopQuery.addEventListener('change', onViewportChange);
+  } else {
+    desktopQuery.addListener(onViewportChange);
+  }
+  initFiltersSwiper();
+  updateView();
+};
+var _default = exports["default"] = blogFilter;
+
+},{}],5:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
 var blogSlider = function blogSlider() {
   var root = document.querySelector('.blog-slider');
   if (!root || typeof Swiper === 'undefined') return;
@@ -2035,7 +2211,6 @@ var blogSlider = function blogSlider() {
     slidesPerView: 'auto',
     spaceBetween: 16,
     grabCursor: true,
-    loop: true,
     autoplay: {
       delay: 3500,
       disableOnInteraction: false,
@@ -2061,7 +2236,7 @@ var blogSlider = function blogSlider() {
 };
 var _default = exports["default"] = blogSlider;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2080,7 +2255,6 @@ var guideSlider = function guideSlider() {
     slidesPerView: 'auto',
     spaceBetween: 12,
     grabCursor: true,
-    loop: true,
     autoplay: {
       delay: 3200,
       disableOnInteraction: false,
@@ -2106,7 +2280,7 @@ var guideSlider = function guideSlider() {
 };
 var _default = exports["default"] = guideSlider;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2118,7 +2292,7 @@ var internalModule = function internalModule() {
 };
 var _default = exports["default"] = internalModule;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2195,7 +2369,7 @@ var mainMenu = function mainMenu() {
 };
 var _default = exports["default"] = mainMenu;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2235,7 +2409,7 @@ var momentSlider = function momentSlider() {
 };
 var _default = exports["default"] = momentSlider;
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2278,7 +2452,7 @@ var productSlider = function productSlider() {
 };
 var _default = exports["default"] = productSlider;
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2297,7 +2471,6 @@ var reviewsSlider = function reviewsSlider() {
     slidesPerView: 'auto',
     spaceBetween: 16,
     grabCursor: true,
-    loop: true,
     autoplay: {
       delay: 3500,
       disableOnInteraction: false,
@@ -2323,7 +2496,7 @@ var reviewsSlider = function reviewsSlider() {
 };
 var _default = exports["default"] = reviewsSlider;
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2359,7 +2532,7 @@ var storeLocator = function storeLocator() {
 };
 var _default = exports["default"] = storeLocator;
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2378,7 +2551,6 @@ var waysSlider = function waysSlider() {
     slidesPerView: 'auto',
     spaceBetween: 16,
     grabCursor: true,
-    loop: true,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,

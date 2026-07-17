@@ -3,15 +3,12 @@
 .ways-slider {
 	--ways-slider-card-width: 18rem;
 	--ways-slider-card-height: 17rem;
-	padding: 2.5rem 0;
+	padding-block: 2.5rem;
 	background: #fff;
 	overflow: hidden;
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	&__title {
@@ -206,7 +203,7 @@
 	@media (width >= $m) {
 		--ways-slider-card-width: 22rem;
 		--ways-slider-card-height: 18.5rem;
-		padding: 3.25rem 0;
+		padding-block: 3.25rem;
 
 		&__content {
 			padding: 1.5rem 1.25rem;
@@ -230,7 +227,7 @@
 	@media (width >= $l) {
 		--ways-slider-card-width: 26rem;
 		--ways-slider-card-height: 20rem;
-		padding: 4rem 0;
+		padding-block: 4rem;
 
 		&__swiper {
 			padding-inline: 2.75rem;

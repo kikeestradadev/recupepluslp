@@ -9,9 +9,6 @@
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem 0;
 	}
 
 	&__grid {
@@ -49,7 +46,6 @@
 		display: block;
 		width: auto;
 		height: 2rem;
-		filter: brightness(0) invert(1);
 	}
 
 	&__slogan {
@@ -277,7 +273,7 @@
 		grid-template-columns: 1fr;
 		gap: 1rem;
 		margin-top: 2.5rem;
-		padding: 1.25rem 0 1.5rem;
+		padding-block: 1.25rem 1.5rem;
 		border-top: 1px solid rgba(255, 255, 255, 0.2);
 		color: rgba(255, 255, 255, 0.9);
 		font-size: 0.75rem;

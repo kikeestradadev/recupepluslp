@@ -1,14 +1,11 @@
 @use "breakpoints" as *;
 
 .format-cards {
-	padding: 3rem 0;
+	padding-block: 3rem;
 	background: #fff;
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	&__title {
@@ -177,7 +174,7 @@
 	}
 
 	@media (width >= $l) {
-		padding: 4rem 0;
+		padding-block: 4rem;
 
 		&__title {
 			margin-bottom: 2.5rem;

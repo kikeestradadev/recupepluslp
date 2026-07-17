@@ -12,7 +12,6 @@ const waysSlider = () => {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
 		grabCursor: true,
-		loop: true,
 		autoplay: {
 			delay: 3000,
 			disableOnInteraction: false,

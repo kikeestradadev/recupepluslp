@@ -62,12 +62,10 @@ $grid-gap: 1.25rem;
 // --- Demo del modulo ---
 .grid-module {
 	width: 100%;
-	padding: 2.5rem 0;
+	padding-block: 2.5rem;
 
 	&__container {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
 	}
 
 	&__title {

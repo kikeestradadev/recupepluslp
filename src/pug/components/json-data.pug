@@ -9,11 +9,12 @@ mixin example2(slideImage, slideTitle, sport, league)
 		p=sport
 		p=league
 section
-	div
-		-for (var i = 0; i < slider1.length; i++)
-			-var item = slider1[i]
-			+example1(item.img, item.title)
+	div(class='main-container')
+		div(class='container')
+			-for (var i = 0; i < slider1.length; i++)
+				-var item = slider1[i]
+				+example1(item.img, item.title)
 
-		-for (var i = 0; i < example2.length; i++)
-			-var item = example2[i]
-			+example2(item.img, item.title, item.category.cat1, item.category.cat2)
+			-for (var i = 0; i < example2.length; i++)
+				-var item = example2[i]
+				+example2(item.img, item.title, item.category.cat1, item.category.cat2)

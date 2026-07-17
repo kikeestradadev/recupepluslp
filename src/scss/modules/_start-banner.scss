@@ -2,14 +2,11 @@
 
 .start-banner {
 	--start-banner-bg: #f6f1ea;
-	padding: 2.5rem 0;
+	padding-block: 2.5rem;
 	background: #fff;
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	&__card {
@@ -163,7 +160,7 @@
 	}
 
 	@media (width >= $l) {
-		padding: 3.5rem 0;
+		padding-block: 3.5rem;
 
 		&__card {
 			grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);

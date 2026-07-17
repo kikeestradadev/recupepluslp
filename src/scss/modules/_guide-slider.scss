@@ -3,15 +3,12 @@
 .guide-slider {
 	--guide-slider-card-width: 11.5rem;
 	--guide-slider-card-min-height: 17.5rem;
-	padding: 2.5rem 0;
+	padding-block: 2.5rem;
 	background: #fff;
 	overflow: hidden;
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	&__slider {
@@ -182,7 +179,7 @@
 	@media (width >= $m) {
 		--guide-slider-card-width: 13rem;
 		--guide-slider-card-min-height: 19rem;
-		padding: 3.25rem 0;
+		padding-block: 3.25rem;
 
 		&__card {
 			gap: 0.85rem;
@@ -209,7 +206,7 @@
 	@media (width >= $l) {
 		--guide-slider-card-width: 14.5rem;
 		--guide-slider-card-min-height: 21rem;
-		padding: 4rem 0;
+		padding-block: 4rem;
 
 		&__swiper {
 			padding-inline: 2.75rem;

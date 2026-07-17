@@ -1,14 +1,11 @@
 @use "breakpoints" as *;
 
 .brand-story {
-	padding: 2.5rem 0;
+	padding-block: 2.5rem;
 	background: #fff;
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	&__layout {
@@ -92,7 +89,7 @@
 	}
 
 	@media (width >= $l) {
-		padding: 3.5rem 0;
+		padding-block: 3.5rem;
 
 		&__layout {
 			grid-template-columns: 1fr;
@@ -113,7 +110,7 @@
 	}
 
 	@media (width >= $lg) {
-		padding: 4rem 0;
+		padding-block: 4rem;
 
 		&__layout {
 			grid-template-columns: auto minmax(0, 1fr);

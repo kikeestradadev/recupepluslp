@@ -2,15 +2,12 @@
 
 .allies-slider {
 	--allies-slider-card-width: 8.5rem;
-	padding: 2.5rem 0;
+	padding-block: 2.5rem;
 	background: #fff;
 	overflow: hidden;
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	&__title {
@@ -87,7 +84,7 @@
 
 	@media (width >= $m) {
 		--allies-slider-card-width: 9.5rem;
-		padding: 3rem 0;
+		padding-block: 3rem;
 
 		&__card {
 			min-height: 5rem;
@@ -102,7 +99,7 @@
 
 	@media (width >= $l) {
 		--allies-slider-card-width: 10.5rem;
-		padding: 3.5rem 0;
+		padding-block: 3.5rem;
 
 		&__card {
 			min-height: 5.25rem;

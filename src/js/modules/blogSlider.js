@@ -12,7 +12,6 @@ const blogSlider = () => {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
 		grabCursor: true,
-		loop: true,
 		autoplay: {
 			delay: 3500,
 			disableOnInteraction: false,

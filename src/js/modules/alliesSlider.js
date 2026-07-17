@@ -10,7 +10,6 @@ const alliesSlider = () => {
 		slidesPerView: 'auto',
 		spaceBetween: 12,
 		grabCursor: true,
-		loop: true,
 		autoplay: {
 			delay: 2500,
 			disableOnInteraction: false,

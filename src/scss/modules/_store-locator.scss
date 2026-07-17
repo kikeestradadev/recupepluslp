@@ -1,14 +1,11 @@
 @use "breakpoints" as *;
 
 .store-locator {
-	padding: 2.5rem 0;
+	padding-block: 2.5rem;
 	background: #fff;
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	&__header {
@@ -282,7 +279,7 @@
 	}
 
 	@media (width >= $l) {
-		padding: 3.5rem 0;
+		padding-block: 3.5rem;
 
 		&__panel {
 			padding: 1.5rem;

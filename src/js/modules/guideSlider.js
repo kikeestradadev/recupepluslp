@@ -12,7 +12,6 @@ const guideSlider = () => {
 		slidesPerView: 'auto',
 		spaceBetween: 12,
 		grabCursor: true,
-		loop: true,
 		autoplay: {
 			delay: 3200,
 			disableOnInteraction: false,

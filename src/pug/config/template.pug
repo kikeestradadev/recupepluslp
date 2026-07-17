@@ -32,9 +32,11 @@ html(lang='en' prefix='og: http://ogp.me/ns#', class='no-js')
 			block main-header
 		//- here ends the Main Header
 		//- here start the Main Container
-		main(class='main-container')
+		main
 			block main-container
 		//- here ends the Main Container
+		//- Footer alternativo (claro) para comparar con main-footer
+		include ../components/alt-footer
 		//- here start the Main Footer
 		footer(class='main-footer')
 			include ../components/main-footer

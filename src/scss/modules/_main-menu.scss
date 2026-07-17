@@ -12,10 +12,7 @@
 		justify-content: space-between;
 		gap: 1rem;
 		width: 100%;
-		max-width: var(--container);
 		min-height: var(--header-height);
-		margin: 0 auto;
-		padding: 0 1rem;
 
 		@media (width >= $l) {
 			display: grid;
@@ -41,10 +38,10 @@
 	&__logo-img {
 		display: block;
 		width: auto;
-		height: 1.75rem;
+		height: 2.5rem;
 
 		@media (width >= $l) {
-			height: 2rem;
+			height: 3rem;
 		}
 	}
 
@@ -174,7 +171,7 @@
 		display: flex;
 		align-items: center;
 		width: 100%;
-		padding: 0.875rem 0;
+		padding-block: 0.875rem;
 		color: var(--header-color);
 		font-size: 1rem;
 		font-weight: 500;
@@ -190,7 +187,7 @@
 
 		@media (width >= $l) {
 			width: auto;
-			padding: 0.5rem 0;
+			padding-block: 0.5rem;
 			font-size: 0.9375rem;
 		}
 	}
@@ -206,7 +203,7 @@
 			top: 100%;
 			left: 50%;
 			min-width: 13rem;
-			padding: 0.5rem 0;
+			padding-block: 0.5rem;
 			background: #fff;
 			border-radius: 0.5rem;
 			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -228,7 +225,7 @@
 		}
 
 		.main-menu__link {
-			padding: 0.625rem 0;
+			padding-block: 0.625rem;
 			font-size: 0.9375rem;
 			font-weight: 400;
 

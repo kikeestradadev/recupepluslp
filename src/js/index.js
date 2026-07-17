@@ -8,6 +8,7 @@ import waysSlider from './modules/waysSlider';
 import reviewsSlider from './modules/reviewsSlider';
 import guideSlider from './modules/guideSlider';
 import blogSlider from './modules/blogSlider';
+import blogFilter from './modules/blogFilter';
 import Prism from 'prismjs';
 (() => {
 	internalModule();
@@ -20,5 +21,6 @@ import Prism from 'prismjs';
 	reviewsSlider();
 	guideSlider();
 	blogSlider();
+	blogFilter();
 	Prism.highlightAll(); // Corrected: Use Prism.highlightAll() instead of undefined prismjs()
 })();

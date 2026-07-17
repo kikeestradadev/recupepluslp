@@ -6,7 +6,7 @@
 	overflow: hidden;
 
 	&__group {
-		padding: 2.5rem 0;
+		padding-block: 2.5rem;
 		overflow: hidden;
 
 		&--gomitas {
@@ -29,9 +29,6 @@
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	&__header {
@@ -258,7 +255,7 @@
 		--product-slider-card-gap: 1rem;
 
 		&__group {
-			padding: 3.25rem 0;
+			padding-block: 3.25rem;
 		}
 
 		&__body {
@@ -284,7 +281,7 @@
 		--product-slider-card-gap: 1.5rem;
 
 		&__group {
-			padding: 4rem 0;
+			padding-block: 4rem;
 
 			&--capsulas {
 				border-radius: 2rem 2rem 0 0;

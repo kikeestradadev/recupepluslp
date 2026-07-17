@@ -2,15 +2,12 @@
 
 .reviews-slider {
 	--reviews-slider-card-width: 17rem;
-	padding: 2.5rem 0;
+	padding-block: 2.5rem;
 	background: #f7f7f7;
 	overflow: hidden;
 
 	&__inner {
 		width: 100%;
-		max-width: var(--container);
-		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	&__title {
@@ -188,7 +185,7 @@
 
 	@media (width >= $m) {
 		--reviews-slider-card-width: 20rem;
-		padding: 3.25rem 0;
+		padding-block: 3.25rem;
 
 		&__card {
 			grid-template-columns: 6.25rem minmax(0, 1fr);
@@ -204,7 +201,7 @@
 
 	@media (width >= $l) {
 		--reviews-slider-card-width: 22rem;
-		padding: 4rem 0;
+		padding-block: 4rem;
 
 		&__swiper {
 			padding-inline: 2.75rem;

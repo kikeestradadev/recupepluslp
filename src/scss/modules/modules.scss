@@ -5,10 +5,13 @@
 @use "typography-module";
 @use "main-menu";
 @use "main-footer";
+@use "alt-footer";
 @use "moment-slider";
 @use "format-cards";
 @use "product-slider";
 @use "newsletter-banner";
+@use "community-banner";
+@use "community-split";
 @use "allies-slider";
 @use "store-locator";
 @use "ways-slider";
@@ -17,3 +20,8 @@
 @use "brand-story";
 @use "guide-slider";
 @use "blog-slider";
+@use "blog-filter";
+@use "help-guides";
+@use "main-banner";
+@use "believe-cards";
+@use "founders-cards";
