@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/prism.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.0.1">
     <title>Style-guide | Style Guide</title>
   </head>
   <body class="style-guide" itemscope itemtype="http://schema.org/WebPage">
@@ -41,7 +41,19 @@
                 <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
               </ul>
             </div>
-            <div class="main-menu__actions"><a class="main-menu__cta" href="#">Comprar ahora</a><a class="main-menu__cart" href="#" aria-label="Carrito de compras">
+            <div class="main-menu__actions"><a class="main-menu__cta" href="#">Comprar ahora</a>
+              <details class="main-menu__language">
+                <summary class="main-menu__language-toggle" aria-label="Cambiar idioma">
+                  <svg class="main-menu__language-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"></circle>
+                    <path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                  </svg><span class="main-menu__language-label">ES / EN</span>
+                </summary>
+                <ul class="main-menu__language-list">
+                  <li class="main-menu__language-item"><a class="main-menu__language-link main-menu__language-link--active" href="#" lang="es" aria-current="page">ES</a></li>
+                  <li class="main-menu__language-item"><a class="main-menu__language-link" href="#" lang="en">EN</a></li>
+                </ul>
+              </details><a class="main-menu__cart" href="#" aria-label="Carrito de compras">
                 <svg class="main-menu__cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M6 8h12l-1 12H7L6 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
                   <path d="M9 8V7a3 3 0 0 1 6 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
@@ -573,9 +585,12 @@
           </div>
         </div>
       </div>
-    </footer><a class="floating-button" href="index.html">Home</a>
+    </footer><a class="whatsapp-button" href="https://wa.me/50600000000?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Recup%C3%A9%20Plus." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+      <svg class="whatsapp-button__icon" width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path fill="currentColor" d="M16.03 3C8.84 3 3 8.78 3 15.91c0 2.5.72 4.93 2.08 7.01L3.7 28l5.23-1.36a13.08 13.08 0 0 0 7.1 2.04C23.22 28.68 29 22.9 29 15.91S23.22 3 16.03 3Zm0 23.5c-2.22 0-4.38-.65-6.22-1.88l-.45-.27-3.1.8.83-3.01-.3-.47a10.6 10.6 0 0 1-1.64-5.76c0-5.9 4.88-10.72 10.88-10.72 6 0 10.82 4.82 10.82 10.72 0 5.9-4.82 10.59-10.82 10.59Zm5.95-7.94c-.33-.16-1.92-.94-2.22-1.05-.3-.11-.52-.16-.74.16-.22.33-.85 1.05-1.04 1.27-.19.22-.38.24-.71.08-.33-.16-1.38-.5-2.63-1.6a9.78 9.78 0 0 1-1.82-2.24c-.19-.32-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.43-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.1-1.14 2.68s1.17 3.12 1.33 3.33c.16.22 2.3 3.48 5.57 4.88.78.33 1.39.53 1.86.68.78.24 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.53.27-.76.27-1.4.19-1.54-.08-.13-.3-.21-.63-.37Z"></path>
+      </svg></a><a class="floating-button" href="index.html">Home</a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js?v=1.0.1"></script>
   </body>
 </html>
