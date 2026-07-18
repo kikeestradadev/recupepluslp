@@ -1,0 +1,54 @@
+-
+	const typography = {
+		family: 'Inter',
+		fallback: 'system-ui, sans-serif',
+		source: 'Google Fonts / local',
+		weights: [
+			{ name: 'Regular', value: 400 },
+			{ name: 'Medium', value: 500 },
+			{ name: 'Semibold', value: 600 },
+			{ name: 'Bold', value: 700 },
+		],
+	}
+
+section(class='typography-module')
+	div(class='main-container typography-module__shell')
+		div(class='container typography-module__container')
+			h2(class='typography-module__title') Tipografia
+			p(class='typography-module__lead') Familia tipografica principal del proyecto.
+
+			article(class='typography-module__specimen')
+				p(class='typography-module__family-name')= typography.family
+				p(class='typography-module__meta') Stack: #{typography.family}, #{typography.fallback}
+				p(class='typography-module__alphabet')
+					| ABCDEFGHIJKLMNOPQRSTUVWXYZ
+					br
+					| abcdefghijklmnopqrstuvwxyz
+					br
+					| 0123456789 !@#$%&*()
+				p(class='typography-module__pangram') El veloz murcielago hindu comia feliz cardillo y kiwi.
+
+			div(class='typography-module__weights')
+				each weight in typography.weights
+					p(class='typography-module__weight' style=`font-weight: ${weight.value}`)
+						span(class='typography-module__weight-label') #{weight.name} (#{weight.value})
+						span(class='typography-module__weight-sample') The quick brown fox jumps over the lazy dog.
+
+			hr(class='typography-module__divider')
+
+			div(class='typography-module__scale')
+				h3(class='typography-module__scale-title') Escala tipografica
+				h1(class='typography-module__scale-heading') h1 — Heading 1
+				h2(class='typography-module__scale-heading') h2 — Heading 2
+				h3(class='typography-module__scale-heading') h3 — Heading 3
+				h4(class='typography-module__scale-heading') h4 — Heading 4
+				h5(class='typography-module__scale-heading') h5 — Heading 5
+				h6(class='typography-module__scale-heading') h6 — Heading 6
+				ul(class='typography-module__scale-list')
+					li(class='typography-module__scale-item') Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+					li(class='typography-module__scale-item') Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+				p(class='typography-module__scale-text')
+					| Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
+					| dolorem autem maiores quis dolor, reprehenderit delectus quia dolore,
+					| incidunt obcaecati sequi labore hic? Soluta doloremque vitae explicabo
+					| assumenda fugit tenetur.

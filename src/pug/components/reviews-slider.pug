@@ -1,0 +1,27 @@
+include ../data/reviews-slider-data
+
+section(class='reviews-slider')
+	div(class='main-container reviews-slider__shell')
+		div(class='container reviews-slider__container reviews-slider__inner')
+			h2(class='reviews-slider__title')= reviewsSliderData.title
+
+			div(class='reviews-slider__slider')
+				button(class='reviews-slider__nav reviews-slider__nav--prev' type='button' aria-label='Anterior')
+				button(class='reviews-slider__nav reviews-slider__nav--next' type='button' aria-label='Siguiente')
+
+				div(class='reviews-slider__swiper swiper')
+					div(class='reviews-slider__wrapper swiper-wrapper')
+						each review in reviewsSliderData.items
+							article(class='reviews-slider__slide swiper-slide')
+								div(class='reviews-slider__card')
+									div(class='reviews-slider__media')
+										img(class='reviews-slider__image' src=review.image alt='' width='120' height='120' loading='lazy')
+									div(class='reviews-slider__body')
+										blockquote(class='reviews-slider__quote')= `“${review.quote}”`
+										p(class='reviews-slider__author')= `— ${review.author}`
+										div(class='reviews-slider__rating' aria-label=`${review.rating} de 5 estrellas`)
+											- for (let star = 0; star < review.rating; star++)
+												svg(class='reviews-slider__star' width='16' height='16' viewBox='0 0 24 24' aria-hidden='true')
+													path(d='M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z' fill='currentColor')
+
+					div(class='reviews-slider__pagination swiper-pagination')

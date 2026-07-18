@@ -1,0 +1,44 @@
+include ../data/main-slider-data
+
+section(class='main-slider' aria-label=mainSliderData.ariaLabel data-main-slider)
+	div(class='main-slider__swiper swiper')
+		div(class='main-slider__wrapper swiper-wrapper')
+			each slide, index in mainSliderData.items
+				article(class=['main-slider__slide', `main-slider__slide--${slide.theme}`, 'swiper-slide'])
+					img(
+						class='main-slider__image'
+						src=slide.image
+						alt=slide.alt
+						width='1024'
+						height='683'
+						loading=index === 0 ? 'eager' : 'lazy'
+						fetchpriority=index === 0 ? 'high' : 'auto'
+					)
+					div(class='main-slider__overlay' aria-hidden='true')
+					div(class='main-container main-slider__content')
+						div(class='container main-slider__content-inner')
+							div(class='main-slider__copy')
+								p(class='main-slider__eyebrow')= slide.eyebrow
+								if index === 0
+									h1(class='main-slider__title')
+										span(class='main-slider__title-line')= slide.title
+										span(class='main-slider__title-line main-slider__title-line--accent')= slide.accent
+								else
+									h2(class='main-slider__title')
+										span(class='main-slider__title-line')= slide.title
+										span(class='main-slider__title-line main-slider__title-line--accent')= slide.accent
+								p(class='main-slider__text')= slide.text
+								div(class='main-slider__actions')
+									a(class='main-slider__button main-slider__button--primary' href=slide.primaryCta.href)= slide.primaryCta.label
+									a(class='main-slider__button main-slider__button--secondary' href=slide.secondaryCta.href)= slide.secondaryCta.label
+
+		button(class='main-slider__nav main-slider__nav--prev' type='button' aria-label='Diapositiva anterior')
+			span(class='main-slider__nav-icon' aria-hidden='true') ←
+		button(class='main-slider__nav main-slider__nav--next' type='button' aria-label='Diapositiva siguiente')
+			span(class='main-slider__nav-icon' aria-hidden='true') →
+
+		div(class='main-slider__footer')
+			div(class='main-slider__pagination swiper-pagination')
+			button(class='main-slider__autoplay' type='button' aria-label='Pausar reproducción automática' aria-pressed='false' data-main-slider-autoplay)
+				span(class='main-slider__autoplay-icon' aria-hidden='true') Ⅱ
+				span(class='main-slider__autoplay-label') Pausar

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#0096D9">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/icon_1024.png">
+    <link rel="apple-touch-icon" href="./assets/img/icon_1024.png">
+    <meta name="description" content="Breve descripción del sitio web que ayuda en el SEO.">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/prism.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Style-guide | Style Guide</title>
+  </head>
+  <body class="style-guide" itemscope itemtype="http://schema.org/WebPage">
+    <header class="main-header">
+      <nav class="main-menu" aria-label="Navegación principal" data-main-menu>
+        <div class="main-container main-menu__shell">
+          <div class="container main-menu__container main-menu__inner"><a class="main-menu__logo" href="#"><img class="main-menu__logo-img" src="./assets/logonegro.png" alt="Recupé Plus" width="120" height="68"></a>
+            <div class="main-menu__panel" data-main-menu-panel>
+              <ul class="main-menu__list">
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item main-menu__item--has-children"><a class="main-menu__link" href="#" aria-expanded="false" data-main-menu-submenu-toggle>lorem Ipsum Dolor</a>
+                  <ul class="main-menu__sub-menu" data-main-menu-submenu>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                  </ul>
+                </li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+              </ul>
+            </div>
+            <div class="main-menu__actions"><a class="main-menu__cta" href="#">Comprar ahora</a><a class="main-menu__cart" href="#" aria-label="Carrito de compras">
+                <svg class="main-menu__cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6 8h12l-1 12H7L6 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                  <path d="M9 8V7a3 3 0 0 1 6 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                </svg></a>
+              <button class="main-menu__hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" data-main-menu-toggle><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="color-table">
+        <div class="main-container color-table__shell">
+          <div class="container color-table__container">
+            <h2 class="color-table__title">Paleta de colores</h2>
+            <div class="color-table__grid">
+              <article class="color-table__card">
+                <div class="color-table__swatch" style="background-color: var(--color-yellow)"></div>
+                <div class="color-table__body">
+                  <h3 class="color-table__name">Amarillo</h3>
+                  <p class="color-table__hex">var(--color-yellow)</p>
+                </div>
+              </article>
+              <article class="color-table__card">
+                <div class="color-table__swatch" style="background-color: var(--color-orange)"></div>
+                <div class="color-table__body">
+                  <h3 class="color-table__name">Naranja claro</h3>
+                  <p class="color-table__hex">var(--color-orange)</p>
+                </div>
+              </article>
+              <article class="color-table__card">
+                <div class="color-table__swatch" style="background-color: var(--color-orange-light)"></div>
+                <div class="color-table__body">
+                  <h3 class="color-table__name">Naranja</h3>
+                  <p class="color-table__hex">var(--color-orange-light)</p>
+                </div>
+              </article>
+              <article class="color-table__card">
+                <div class="color-table__swatch" style="background-color: var(--color-magenta)"></div>
+                <div class="color-table__body">
+                  <h3 class="color-table__name">Magenta</h3>
+                  <p class="color-table__hex">var(--color-magenta)</p>
+                </div>
+              </article>
+              <article class="color-table__card">
+                <div class="color-table__swatch" style="background-color: var(--color-green)"></div>
+                <div class="color-table__body">
+                  <h3 class="color-table__name">Verde</h3>
+                  <p class="color-table__hex">var(--color-green)</p>
+                </div>
+              </article>
+              <article class="color-table__card">
+                <div class="color-table__swatch" style="background-color: var(--color-green-dark)"></div>
+                <div class="color-table__body">
+                  <h3 class="color-table__name">Verde oscuro</h3>
+                  <p class="color-table__hex">var(--color-green-dark)</p>
+                </div>
+              </article>
+              <article class="color-table__card">
+                <div class="color-table__swatch" style="background-color: var(--color-green-deep)"></div>
+                <div class="color-table__body">
+                  <h3 class="color-table__name">Verde profundo</h3>
+                  <p class="color-table__hex">var(--color-green-deep)</p>
+                </div>
+              </article>
+              <article class="color-table__card">
+                <div class="color-table__swatch" style="background-color: var(--color-blue)"></div>
+                <div class="color-table__body">
+                  <h3 class="color-table__name">Azul</h3>
+                  <p class="color-table__hex">var(--color-blue)</p>
+                </div>
+              </article>
+              <article class="color-table__card">
+                <div class="color-table__swatch" style="background-color: var(--color-purple)"></div>
+                <div class="color-table__body">
+                  <h3 class="color-table__name">Morado</h3>
+                  <p class="color-table__hex">var(--color-purple)</p>
+                </div>
+              </article>
+              <article class="color-table__card">
+                <div class="color-table__swatch" style="background-color: var(--color-fuchsia)"></div>
+                <div class="color-table__body">
+                  <h3 class="color-table__name">Fucsia</h3>
+                  <p class="color-table__hex">var(--color-fuchsia)</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="typography-module">
+        <div class="main-container typography-module__shell">
+          <div class="container typography-module__container">
+            <h2 class="typography-module__title">Tipografia</h2>
+            <p class="typography-module__lead">Familia tipografica principal del proyecto.</p>
+            <article class="typography-module__specimen">
+              <p class="typography-module__family-name">Inter</p>
+              <p class="typography-module__meta">Stack: Inter, system-ui, sans-serif</p>
+              <p class="typography-module__alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 !@#$%&*()</p>
+              <p class="typography-module__pangram">El veloz murcielago hindu comia feliz cardillo y kiwi.</p>
+            </article>
+            <div class="typography-module__weights">
+              <p class="typography-module__weight" style="font-weight: 400"><span class="typography-module__weight-label">Regular (400)</span><span class="typography-module__weight-sample">The quick brown fox jumps over the lazy dog.</span></p>
+              <p class="typography-module__weight" style="font-weight: 500"><span class="typography-module__weight-label">Medium (500)</span><span class="typography-module__weight-sample">The quick brown fox jumps over the lazy dog.</span></p>
+              <p class="typography-module__weight" style="font-weight: 600"><span class="typography-module__weight-label">Semibold (600)</span><span class="typography-module__weight-sample">The quick brown fox jumps over the lazy dog.</span></p>
+              <p class="typography-module__weight" style="font-weight: 700"><span class="typography-module__weight-label">Bold (700)</span><span class="typography-module__weight-sample">The quick brown fox jumps over the lazy dog.</span></p>
+            </div>
+            <hr class="typography-module__divider">
+            <div class="typography-module__scale">
+              <h3 class="typography-module__scale-title">Escala tipografica</h3>
+              <h1 class="typography-module__scale-heading">h1 — Heading 1</h1>
+              <h2 class="typography-module__scale-heading">h2 — Heading 2</h2>
+              <h3 class="typography-module__scale-heading">h3 — Heading 3</h3>
+              <h4 class="typography-module__scale-heading">h4 — Heading 4</h4>
+              <h5 class="typography-module__scale-heading">h5 — Heading 5</h5>
+              <h6 class="typography-module__scale-heading">h6 — Heading 6</h6>
+              <ul class="typography-module__scale-list">
+                <li class="typography-module__scale-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</li>
+                <li class="typography-module__scale-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</li>
+              </ul>
+              <p class="typography-module__scale-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
+                dolorem autem maiores quis dolor, reprehenderit delectus quia dolore,
+                incidunt obcaecati sequi labore hic? Soluta doloremque vitae explicabo
+                assumenda fugit tenetur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="grid-module">
+        <div class="main-container grid-module__shell">
+          <div class="container grid-module__container">
+            <h2 class="grid-module__title">Grid system</h2>
+            <p class="grid-module__lead">Cuadricula de 12 columnas con CSS Grid (mobile-first).</p>
+            <div class="grid-module__example">
+              <h3 class="grid-module__example-title">12 columnas iguales</h3>
+              <div class="grid-module__grid">
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">1</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">2</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">3</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">4</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">5</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">6</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">7</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">8</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">9</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">10</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">11</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">12</div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-module__example">
+              <h3 class="grid-module__example-title">Responsive: 12 / sm-6 / l-4 / lg-3</h3>
+              <div class="grid-module__grid">
+                <div class="grid-module__col grid-module__col--12 grid-module__col--sm-6 grid-module__col--l-4 grid-module__col--lg-3">
+                  <div class="grid-module__cell">Col 1</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--sm-6 grid-module__col--l-4 grid-module__col--lg-3">
+                  <div class="grid-module__cell">Col 2</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--sm-6 grid-module__col--l-4 grid-module__col--lg-3">
+                  <div class="grid-module__cell">Col 3</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--sm-6 grid-module__col--l-4 grid-module__col--lg-3">
+                  <div class="grid-module__cell">Col 4</div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-module__example">
+              <h3 class="grid-module__example-title">Layout mixto: 8 + 4</h3>
+              <div class="grid-module__grid">
+                <div class="grid-module__col grid-module__col--12 grid-module__col--l-8">
+                  <div class="grid-module__cell">Main (8)</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--l-4">
+                  <div class="grid-module__cell">Sidebar (4)</div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-module__example">
+              <h3 class="grid-module__example-title">Tercios: 4 + 4 + 4</h3>
+              <div class="grid-module__grid">
+                <div class="grid-module__col grid-module__col--12 grid-module__col--m-4">
+                  <div class="grid-module__cell">1/3 — 1</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--m-4">
+                  <div class="grid-module__cell">1/3 — 2</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--m-4">
+                  <div class="grid-module__cell">1/3 — 3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="main-container">
+          <div class="container">
+            <table>
+              <thead>
+                <tr>
+                  <th>lorem1</th>
+                  <th>lorem2</th>
+                  <th>lorem3</th>
+                  <th>lorem4</th>
+                  <th>lorem5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>lorem1</td>
+                  <td>lorem2</td>
+                  <td>lorem3</td>
+                  <td>lorem4</td>
+                  <td>lorem5</td>
+                </tr>
+                <tr>
+                  <td>lorem1</td>
+                  <td>lorem2</td>
+                  <td>lorem3</td>
+                  <td>lorem4</td>
+                  <td>lorem5</td>
+                </tr>
+                <tr>
+                  <td>lorem1</td>
+                  <td>lorem2</td>
+                  <td>lorem3</td>
+                  <td>lorem4</td>
+                  <td>lorem5</td>
+                </tr>
+                <tr>
+                  <td>lorem1</td>
+                  <td>lorem2</td>
+                  <td>lorem3</td>
+                  <td>lorem4</td>
+                  <td>lorem5</td>
+                </tr>
+                <tr>
+                  <td>lorem1</td>
+                  <td>lorem2</td>
+                  <td>lorem3</td>
+                  <td>lorem4</td>
+                  <td>lorem5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="main-container">
+          <div class="container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
+              dolorem autem maiores quis dolor, reprehenderit delectus quia dolore,
+              incidunt obcaecati sequi labore hic? Soluta doloremque vitae explicabo
+              assumenda fugit tenetur.
+            </p>
+            <p></p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
+            dolorem autem maiores quis dolor, reprehenderit delectus quia dolore,
+            incidunt obcaecati sequi labore hic? Soluta doloremque vitae explicabo
+            assumenda fugit tenetur.
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="main-container">
+          <div class="container">
+            <ul>
+              <li>lorem1</li>
+              <li>lorem2</li>
+              <li>lorem3</li>
+              <li>lorem4</li>
+              <li>lorem5</li>
+            </ul>
+            <ol>
+              <li>lorem1</li>
+              <li>lorem2</li>
+              <li>lorem3</li>
+              <li>lorem4</li>
+              <li>lorem5</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="main-container">
+          <div class="container">
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#twitch"></use>
+            </svg>
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#github"></use>
+            </svg>
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#instagram"></use>
+            </svg>
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#youtube"></use>
+            </svg>
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#x"> </use>
+            </svg>
+            <svg width="28" height="28">
+              <use xlink:href="./assets/sprite.svg#linkedin"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="alt-footer">
+      <div class="main-container alt-footer__shell">
+        <div class="container alt-footer__container alt-footer__inner">
+          <div class="alt-footer__grid">
+            <div class="alt-footer__brand"><a class="alt-footer__logo" href="#"><img class="alt-footer__logo-img" src="./assets/logonegro.png" alt="Recupé Plus" width="140" height="80"></a>
+              <p class="alt-footer__text">Suplementos naturales en gomitas y cápsulas para cada momento de tu día.</p>
+              <ul class="alt-footer__social">
+                <li class="alt-footer__social-item"><a class="alt-footer__social-link" href="#" aria-label="Instagram">
+                    <svg class="alt-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect>
+                      <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle>
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle>
+                    </svg></a></li>
+                <li class="alt-footer__social-item"><a class="alt-footer__social-link" href="#" aria-label="Facebook">
+                    <svg class="alt-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.2l.8-3H13V9c0-.6.4-1 1-1z" fill="currentColor"></path>
+                    </svg></a></li>
+                <li class="alt-footer__social-item"><a class="alt-footer__social-link" href="#" aria-label="TikTok">
+                    <svg class="alt-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M14 4c.4 2.2 1.8 3.8 4 4.2v2.4c-1.4-.1-2.7-.6-4-1.4v5.5A5.5 5.5 0 1 1 9.8 9.3v2.5a3 3 0 1 0 2.2 2.9V4h2z" fill="currentColor"></path>
+                    </svg></a></li>
+                <li class="alt-footer__social-item"><a class="alt-footer__social-link" href="#" aria-label="YouTube">
+                    <svg class="alt-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="2" y="6" width="20" height="12" rx="3" stroke="currentColor" stroke-width="1.5"></rect>
+                      <path d="M10 9.5v5l5-2.5-5-2.5z" fill="currentColor"></path>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <nav class="alt-footer__col" aria-label="Suplementos">
+              <h2 class="alt-footer__title">Suplementos</h2>
+              <ul class="alt-footer__list">
+                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Elegí según tu momento</a></li>
+                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Gomitas</a></li>
+                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Cápsulas</a></li>
+              </ul>
+            </nav>
+            <nav class="alt-footer__col" aria-label="Ayuda">
+              <h2 class="alt-footer__title">Ayuda</h2>
+              <ul class="alt-footer__list">
+                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Preguntas frecuentes</a></li>
+                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Envíos y pagos</a></li>
+                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Cambios y devoluciones</a></li>
+              </ul>
+            </nav>
+            <nav class="alt-footer__col" aria-label="Empresa">
+              <h2 class="alt-footer__title">Empresa</h2>
+              <ul class="alt-footer__list">
+                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Nosotros</a></li>
+                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Ingredientes</a></li>
+                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Registro sanitario</a></li>
+              </ul>
+            </nav>
+            <div class="alt-footer__col alt-footer__col--contact">
+              <h2 class="alt-footer__title">Contacto</h2>
+              <ul class="alt-footer__contact">
+                <li class="alt-footer__contact-item"><a class="alt-footer__contact-link" href="#">
+                    <svg class="alt-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 3.2a8.3 8.3 0 0 0-7.2 12.4L4 20.8l5.4-.8A8.3 8.3 0 1 0 12 3.2Z" stroke="currentColor" stroke-width="1.5"></path>
+                      <path d="M9.2 9.4c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.6l-.4.5c-.1.2-.1.3 0 .5.4.7 1.1 1.4 1.8 1.8.2.1.3.1.5 0l.5-.4c.2-.1.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7A5 5 0 0 1 12 16.5 5 5 0 0 1 9.2 9.4Z" fill="currentColor"></path>
+                    </svg><span>Escribinos por WhatsApp</span></a></li>
+                <li class="alt-footer__contact-item"><a class="alt-footer__contact-link" href="mailto:hola@recupeplus.com">
+                    <svg class="alt-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
+                      <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg><span>hola@recupeplus.com</span></a></li>
+                <li class="alt-footer__contact-item"><a class="alt-footer__contact-link" href="tel:+50612345678">
+                    <svg class="alt-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M6 4h3l1 4-2 1a10 10 0 0 0 5 5l1-2 4 1v3a2 2 0 0 1-2 2A14 14 0 0 1 4 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                    </svg><span>+506 1234 5678</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="alt-footer__bottom">
+            <p class="alt-footer__copy">© 2024 Recupe Plus. Todos los derechos reservados.</p>
+            <p class="alt-footer__legal"><a class="alt-footer__legal-link" href="#">Términos y condiciones</a><span class="alt-footer__legal-sep" aria-hidden="true">|</span><a class="alt-footer__legal-link" href="#">Política de privacidad</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="main-footer">
+      <div class="main-container main-footer__shell">
+        <div class="container main-footer__container main-footer__inner">
+          <div class="main-footer__grid">
+            <div class="main-footer__brand"><a class="main-footer__logo" href="#"><img class="main-footer__logo-img" src="./assets/logoblanco.png" alt="Recupé Plus" width="140" height="32"></a>
+              <p class="main-footer__slogan">Recuperá tu bienestar.</p>
+              <p class="main-footer__text">Productos naturales, ricos y fáciles de sumar a tu rutina diaria. Gomitas y cápsulas funcionales hechas en Costa Rica.</p>
+              <ul class="main-footer__social">
+                <li class="main-footer__social-item"><a class="main-footer__social-link" href="#" aria-label="Instagram">
+                    <svg class="main-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect>
+                      <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle>
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle>
+                    </svg></a></li>
+                <li class="main-footer__social-item"><a class="main-footer__social-link" href="#" aria-label="Facebook">
+                    <svg class="main-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.2l.8-3H13V9c0-.6.4-1 1-1z" fill="currentColor"></path>
+                    </svg></a></li>
+                <li class="main-footer__social-item"><a class="main-footer__social-link" href="#" aria-label="TikTok">
+                    <svg class="main-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M14 4c.4 2.2 1.8 3.8 4 4.2v2.4c-1.4-.1-2.7-.6-4-1.4v5.5A5.5 5.5 0 1 1 9.8 9.3v2.5a3 3 0 1 0 2.2 2.9V4h2z" fill="currentColor"></path>
+                    </svg></a></li>
+                <li class="main-footer__social-item"><a class="main-footer__social-link" href="#" aria-label="YouTube">
+                    <svg class="main-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="2" y="6" width="20" height="12" rx="3" stroke="currentColor" stroke-width="1.5"></rect>
+                      <path d="M10 9.5v5l5-2.5-5-2.5z" fill="currentColor"></path>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <nav class="main-footer__col" aria-label="Navegación">
+              <h2 class="main-footer__title">Navegación</h2>
+              <ul class="main-footer__list">
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Inicio</a></li>
+                <li class="main-footer__item main-footer__item--has-children"><a class="main-footer__link" href="#">Suplementos</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">¿Qué momento del día querés mejorar?</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Gomitas</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Cápsulas</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Dónde comprar</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Guías</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Nosotros</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Contacto</a></li>
+              </ul>
+            </nav>
+            <nav class="main-footer__col" aria-label="Suplementos">
+              <h2 class="main-footer__title">Suplementos</h2>
+              <h3 class="main-footer__subtitle">Gomitas</h3>
+              <ul class="main-footer__list">
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Vitamin</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Antiox</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">C-Magnific</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Serenity</a></li>
+              </ul>
+              <h3 class="main-footer__subtitle">Cápsulas</h3>
+              <ul class="main-footer__list">
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Memento</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Activity</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Recovery</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Are More</a></li>
+              </ul>
+            </nav>
+            <nav class="main-footer__col" aria-label="Ayuda">
+              <h2 class="main-footer__title">Ayuda</h2>
+              <ul class="main-footer__list">
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Preguntas frecuentes</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Envíos y pagos</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Cambios y devoluciones</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Términos y condiciones</a></li>
+                <li class="main-footer__item"><a class="main-footer__link" href="#">Política de privacidad</a></li>
+              </ul>
+            </nav>
+            <div class="main-footer__col main-footer__col--contact">
+              <h2 class="main-footer__title">Contacto</h2>
+              <ul class="main-footer__contact">
+                <li class="main-footer__contact-item"><a class="main-footer__contact-link" href="#">
+                    <svg class="main-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                    </svg><span>Escribinos por WhatsApp</span></a></li>
+                <li class="main-footer__contact-item"><a class="main-footer__contact-link" href="mailto:hola@recupeplus.com">
+                    <svg class="main-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
+                      <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg><span>hola@recupeplus.com</span></a></li>
+                <li class="main-footer__contact-item"><a class="main-footer__contact-link" href="tel:+50612345678">
+                    <svg class="main-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M6 4h3l1 4-2 1a10 10 0 0 0 5 5l1-2 4 1v3a2 2 0 0 1-2 2A14 14 0 0 1 4 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                    </svg><span>+506 1234 5678</span></a></li>
+                <li class="main-footer__contact-item"><span class="main-footer__contact-link">
+                    <svg class="main-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.5"></path>
+                      <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"></circle>
+                    </svg><span>San José, Costa Rica</span></span></li>
+              </ul>
+              <div class="main-footer__newsletter">
+                <h2 class="main-footer__title">Recibí novedades y consejos</h2>
+                <p class="main-footer__text">Suscribite y recibí contenido para sentirte mejor todos los días.</p>
+                <form class="main-footer__form" action="#" method="post">
+                  <label class="main-footer__sr-only" for="footerEmail">Tu correo electrónico</label>
+                  <input class="main-footer__input" id="footerEmail" type="email" name="email" placeholder="Tu correo electrónico" required>
+                  <button class="main-footer__submit" type="submit">Suscribirme</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="main-footer__bottom">
+            <p class="main-footer__copy">© 2024 Recupé Plus. Todos los derechos reservados.</p>
+            <p class="main-footer__meta">
+              <svg class="main-footer__meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
+                <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.5"></path>
+              </svg><span>Sitio seguro y protegido</span>
+            </p>
+            <p class="main-footer__payments">VISA Mastercard AMEX sinpemóvil</p>
+            <p class="main-footer__made"><span class="main-footer__flag" aria-hidden="true"></span><span>Hecho en Costa Rica</span></p>
+          </div>
+        </div>
+      </div>
+    </footer><a class="floating-button" href="index.html">Home</a>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

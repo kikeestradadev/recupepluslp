@@ -1,0 +1,21 @@
+include ../data/blog-slider-data
+
+section(class='blog-slider')
+	div(class='main-container blog-slider__shell')
+		div(class='container blog-slider__container blog-slider__inner')
+			h2(class='blog-slider__title')= blogSliderData.title
+
+			div(class='blog-slider__slider')
+				button(class='blog-slider__nav blog-slider__nav--prev' type='button' aria-label='Anterior')
+				button(class='blog-slider__nav blog-slider__nav--next' type='button' aria-label='Siguiente')
+
+				div(class='blog-slider__swiper swiper')
+					div(class='blog-slider__wrapper swiper-wrapper')
+						each post in blogSliderData.items
+							article(class='blog-slider__slide swiper-slide')
+								a(class='blog-slider__card' href=post.href)
+									div(class='blog-slider__media')
+										img(class='blog-slider__image' src=post.image alt='' width='320' height='200' loading='lazy')
+									h3(class='blog-slider__name')= post.title
+
+					div(class='blog-slider__pagination swiper-pagination')

@@ -1,0 +1,29 @@
+include ../data/product-slider-data
+
+section(class='product-slider')
+	div(class='main-container product-slider__shell')
+		div(class='container product-slider__container')
+			each group in productSliderData.groups
+				div(class=['product-slider__group', `product-slider__group--${group.key}`])
+					div(class='product-slider__inner')
+						header(class='product-slider__header')
+							h2(class='product-slider__title')= group.title
+							p(class='product-slider__subtitle')= group.subtitle
+
+						div(class='product-slider__slider')
+							button(class='product-slider__nav product-slider__nav--prev' type='button' aria-label='Anterior')
+							button(class='product-slider__nav product-slider__nav--next' type='button' aria-label='Siguiente')
+
+							div(class='product-slider__swiper swiper')
+								div(class='product-slider__wrapper swiper-wrapper')
+									each product in group.items
+										article(class='product-slider__slide swiper-slide')
+											div(class=['product-slider__card', `product-slider__card--${product.modifier}`])
+												div(class='product-slider__media')
+													img(class='product-slider__image' src=product.image alt=product.name width='280' height='180' loading='lazy')
+												div(class='product-slider__body')
+													h3(class='product-slider__name')= product.name
+													p(class='product-slider__text')= product.text
+													a(class='product-slider__link' href=product.href) Conocer más →
+
+								div(class='product-slider__pagination swiper-pagination')

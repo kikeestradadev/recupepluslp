@@ -1,0 +1,18 @@
+section(class='founders-cards')
+	div(class='main-container founders-cards__shell')
+		div(class='container founders-cards__container founders-cards__inner')
+			header(class='founders-cards__header')
+				h2(class='founders-cards__title') Detrás de Recupé Plus
+				p(class='founders-cards__subtitle') Dos amigas. Una misión compartida.
+
+			- const founders = [{ name: 'María P.', role: 'Co-fundadora', text: 'Amante de la naturaleza y la nutrición. Creo en el poder de los ingredientes naturales para apoyar nuestro cuerpo desde adentro. Me apasiona investigar, aprender y compartir conocimiento útil que realmente marque la diferencia.', img: './assets/img2.jpg' }, { name: 'Ana J.', role: 'Co-fundadora', text: 'Organizada, curiosa y creativa. Me enfoco en que cada persona encuentre herramientas simples para cuidar de su bienestar. Me mueve crear experiencias bonitas y cercanas para nuestra comunidad.', img: './assets/img3.jpg' }]
+
+			div(class='founders-cards__grid')
+				each person in founders
+					article(class='founders-cards__card')
+						div(class='founders-cards__media')
+							img(class='founders-cards__image' src=person.img alt=person.name width='320' height='400' loading='lazy')
+						div(class='founders-cards__body')
+							h3(class='founders-cards__name')= person.name
+							p(class='founders-cards__role')= person.role
+							p(class='founders-cards__text')= person.text

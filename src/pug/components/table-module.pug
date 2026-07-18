@@ -1,0 +1,15 @@
+section
+	div(class='main-container')
+		div(class='container')
+			table
+				thead
+					tr
+						-for(let i = 1; i<=5; i++)
+							th lorem
+								| #{i}
+				tbody
+					-for(let i = 1; i<=5; i++)
+						tr
+							-for(let i = 1; i<=5; i++)
+								td lorem
+									| #{i}

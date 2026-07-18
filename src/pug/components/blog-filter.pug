@@ -1,0 +1,79 @@
+section(class='blog-filter' data-blog-filter data-per-page='6')
+	div(class='main-container blog-filter__shell')
+		div(class='container blog-filter__container blog-filter__inner')
+			div(class='blog-filter__header')
+				h2(class='blog-filter__title') Guías
+				a(class='blog-filter__more' href='#')
+					span Ver más
+					span(class='blog-filter__more-arrow' aria-hidden='true') →
+
+			div(class='blog-filter__filters')
+				button(class='blog-filter__filters-nav blog-filter__filters-nav--prev' type='button' aria-label='Filtros anteriores')
+				button(class='blog-filter__filters-nav blog-filter__filters-nav--next' type='button' aria-label='Filtros siguientes')
+				div(class='blog-filter__filters-fade blog-filter__filters-fade--start' aria-hidden='true')
+				div(class='blog-filter__filters-fade blog-filter__filters-fade--end' aria-hidden='true')
+
+				div(class='blog-filter__filters-swiper swiper')
+					div(class='blog-filter__filters-wrapper swiper-wrapper')
+						div(class='blog-filter__filters-slide swiper-slide')
+							button(class='blog-filter__chip blog-filter__chip--active' type='button' data-filter='all' aria-pressed='true') Todas
+						div(class='blog-filter__filters-slide swiper-slide')
+							button(class='blog-filter__chip' type='button' data-filter='rutina' aria-pressed='false')
+								svg(class='blog-filter__chip-icon' width='16' height='16' viewBox='0 0 24 24' fill='none' aria-hidden='true')
+									circle(cx='12' cy='12' r='9' stroke='currentColor' stroke-width='1.6')
+									path(d='M12 7v5l3 2' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round')
+								span Rutina
+						div(class='blog-filter__filters-slide swiper-slide')
+							button(class='blog-filter__chip' type='button' data-filter='descanso' aria-pressed='false')
+								svg(class='blog-filter__chip-icon' width='16' height='16' viewBox='0 0 24 24' fill='none' aria-hidden='true')
+									path(d='M18 14.5A7.5 7.5 0 0 1 9.5 6 6.5 6.5 0 1 0 18 14.5Z' stroke='currentColor' stroke-width='1.6' stroke-linejoin='round')
+								span Descanso
+						div(class='blog-filter__filters-slide swiper-slide')
+							button(class='blog-filter__chip' type='button' data-filter='ingredientes' aria-pressed='false')
+								svg(class='blog-filter__chip-icon' width='16' height='16' viewBox='0 0 24 24' fill='none' aria-hidden='true')
+									path(d='M5 19c4-1 6-5 7-10 1 5 3 9 7 10-3 2-11 2-14 0Z' stroke='currentColor' stroke-width='1.6' stroke-linejoin='round')
+									path(d='M12 9V4' stroke='currentColor' stroke-width='1.6' stroke-linecap='round')
+								span Ingredientes
+						div(class='blog-filter__filters-slide swiper-slide')
+							button(class='blog-filter__chip' type='button' data-filter='hongos' aria-pressed='false')
+								svg(class='blog-filter__chip-icon' width='16' height='16' viewBox='0 0 24 24' fill='none' aria-hidden='true')
+									path(d='M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8H4Z' stroke='currentColor' stroke-width='1.6' stroke-linejoin='round')
+									path(d='M10 12v6a2 2 0 0 0 4 0v-6' stroke='currentColor' stroke-width='1.6' stroke-linecap='round')
+								span Hongos
+						div(class='blog-filter__filters-slide swiper-slide')
+							button(class='blog-filter__chip' type='button' data-filter='bienestar' aria-pressed='false')
+								svg(class='blog-filter__chip-icon' width='16' height='16' viewBox='0 0 24 24' fill='none' aria-hidden='true')
+									path(d='M12 19s-7-4.4-7-9a3.8 3.8 0 0 1 7-2 3.8 3.8 0 0 1 7 2c0 4.6-7 9-7 9Z' stroke='currentColor' stroke-width='1.6' stroke-linejoin='round')
+								span Bienestar diario
+
+			- const blogPosts = [{ category: 'rutina', label: 'Rutina', title: '¿Cómo elegir tu Recupé Plus según tu rutina?', img: './assets/img1.jpg' }, { category: 'hongos', label: 'Hongos', title: 'Hongos medicinales: qué son y cómo sumarlos a tu día.', img: './assets/img2.jpg' }, { category: 'descanso', label: 'Descanso', title: 'Cómo crear un ritual simple antes de dormir.', img: './assets/img3.jpg' }, { category: 'ingredientes', label: 'Ingredientes', title: 'Vitamina C, magnesio y antioxidantes: cuándo elegir cada uno.', img: './assets/img4.jpg' }, { category: 'rutina', label: 'Rutina', title: 'Rutinas cortas para días intensos.', img: './assets/img2.jpg' }, { category: 'hongos', label: 'Hongos', title: 'Qué hongos funcionan mejor según tu objetivo.', img: './assets/img3.jpg' }, { category: 'descanso', label: 'Descanso', title: 'Rituales de descanso que sí puedes mantener.', img: './assets/img4.jpg' }, { category: 'ingredientes', label: 'Ingredientes', title: 'Cómo leer una etiqueta de suplementos sin volverte loco.', img: './assets/img1.jpg' }, { category: 'bienestar', label: 'Bienestar diario', title: 'Hábitos simples para recuperar energía cada mañana.', img: './assets/img3.jpg' }, { category: 'rutina', label: 'Rutina', title: 'Cómo armar tu kit de recuperación para la semana.', img: './assets/img4.jpg' }, { category: 'bienestar', label: 'Bienestar diario', title: 'Pequeños cambios que mejoran tu bienestar diario.', img: './assets/img1.jpg' }, { category: 'hongos', label: 'Hongos', title: 'Guía rápida de hongos funcionales para principiantes.', img: './assets/img2.jpg' }]
+
+			div(class='blog-filter__grid' data-blog-grid)
+				each post in blogPosts
+					article(class='blog-filter__card' data-category=post.category)
+						a(class='blog-filter__media' href='#')
+							img(class='blog-filter__image' src=post.img alt='' width='400' height='260' loading='lazy')
+						p(class='blog-filter__category')= post.label
+						h3(class='blog-filter__name')
+							a(href='#')= post.title
+						a(class='blog-filter__link' href='#')
+							span Leer guía
+							span(class='blog-filter__link-arrow' aria-hidden='true') →
+
+			div(class='blog-filter__mobile')
+				div(class='blog-filter__swiper swiper' data-blog-swiper)
+					div(class='blog-filter__wrapper swiper-wrapper' data-blog-mobile-track)
+						each post in blogPosts
+							article(class='blog-filter__slide swiper-slide' data-category=post.category)
+								div(class='blog-filter__card')
+									a(class='blog-filter__media' href='#')
+										img(class='blog-filter__image' src=post.img alt='' width='400' height='260' loading='lazy')
+									p(class='blog-filter__category')= post.label
+									h3(class='blog-filter__name')
+										a(href='#')= post.title
+									a(class='blog-filter__link' href='#')
+										span Leer guía
+										span(class='blog-filter__link-arrow' aria-hidden='true') →
+				div(class='blog-filter__bullets swiper-pagination')
+
+			nav(class='blog-filter__pagination' data-blog-pagination aria-label='Paginación del blog')

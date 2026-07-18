@@ -1,0 +1,16 @@
+include ../data/allies-slider-data
+
+section(class='allies-slider')
+	div(class='main-container allies-slider__shell')
+		div(class='container allies-slider__container allies-slider__inner')
+			h2(class='allies-slider__title')= alliesSliderData.title
+
+			div(class='allies-slider__slider')
+				div(class='allies-slider__swiper swiper')
+					div(class='allies-slider__wrapper swiper-wrapper')
+						each ally in alliesSliderData.items
+							article(class='allies-slider__slide swiper-slide')
+								div(class='allies-slider__card')
+									img(class='allies-slider__logo' src=ally.logo alt=ally.alt width='120' height='80' loading='lazy')
+
+					div(class='allies-slider__pagination swiper-pagination')

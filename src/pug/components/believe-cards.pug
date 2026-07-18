@@ -1,0 +1,37 @@
+section(class='believe-cards')
+	div(class='main-container believe-cards__shell')
+		div(class='container believe-cards__container believe-cards__inner')
+			header(class='believe-cards__header')
+				h2(class='believe-cards__title') Lo que creemos
+				p(class='believe-cards__subtitle') Nuestros principios guían cada decisión que tomamos.
+
+			- const beliefs = [{ title: 'Ingredientes elegidos con intención', text: 'Seleccionamos ingredientes naturales y de calidad, con respaldo científico y propósito real.', img: './assets/img1.jpg', icon: 'leaf' }, { title: 'Fácil de sumar a tu rutina', text: 'Productos prácticos, deliciosos y pensados para adaptarse a tu día, sin complicaciones.', img: './assets/img2.jpg', icon: 'calendar' }, { title: 'Bienestar para todos los días', text: 'Creemos en hábitos simples que generan cambios reales y sostenibles en el tiempo.', img: './assets/img3.jpg', icon: 'heart' }, { title: 'Hecho en Costa Rica', text: 'Orgullosamente costarricenses. Apoyamos lo local y producimos con altos estándares de calidad.', img: './assets/img4.jpg', icon: 'map' }]
+
+			div(class='believe-cards__grid')
+				each item in beliefs
+					article(class='believe-cards__card')
+						div(class='believe-cards__body')
+							if item.icon === 'leaf'
+								span(class='believe-cards__icon' aria-hidden='true')
+									svg(width='22' height='22' viewBox='0 0 24 24' fill='none')
+										path(d='M5 19c4-1 6-5 7-10 1 5 3 9 7 10-3 2-11 2-14 0Z' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round')
+										path(d='M12 9V4' stroke='currentColor' stroke-width='1.5' stroke-linecap='round')
+							else if item.icon === 'calendar'
+								span(class='believe-cards__icon' aria-hidden='true')
+									svg(width='22' height='22' viewBox='0 0 24 24' fill='none')
+										rect(x='3' y='5' width='18' height='16' rx='2' stroke='currentColor' stroke-width='1.5')
+										path(d='M8 3v4M16 3v4M3 10h18' stroke='currentColor' stroke-width='1.5' stroke-linecap='round')
+										path(d='M12 14l1.2 1.2L15.5 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round')
+							else if item.icon === 'heart'
+								span(class='believe-cards__icon' aria-hidden='true')
+									svg(width='22' height='22' viewBox='0 0 24 24' fill='none')
+										path(d='M12 19s-7-4.4-7-9a3.8 3.8 0 0 1 7-2 3.8 3.8 0 0 1 7 2c0 4.6-7 9-7 9Z' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round')
+							else if item.icon === 'map'
+								span(class='believe-cards__icon' aria-hidden='true')
+									svg(width='22' height='22' viewBox='0 0 24 24' fill='none')
+										path(d='M8 4l-4 2v14l4-2 4 2 4-2 4 2V6l-4-2-4 2-4-2z' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round')
+										path(d='M8 4v14M12 6v14M16 4v14' stroke='currentColor' stroke-width='1.5' stroke-linecap='round')
+							h3(class='believe-cards__name')= item.title
+							p(class='believe-cards__text')= item.text
+						div(class='believe-cards__media')
+							img(class='believe-cards__image' src=item.img alt='' width='400' height='260' loading='lazy')

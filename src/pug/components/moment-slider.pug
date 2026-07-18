@@ -1,0 +1,25 @@
+include ../data/moment-slider-data
+
+section(class='moment-slider')
+	div(class='main-container moment-slider__shell')
+		div(class='container moment-slider__container moment-slider__inner')
+			header(class='moment-slider__header')
+				h2(class='moment-slider__title')= momentSliderData.title
+				p(class='moment-slider__subtitle')= momentSliderData.subtitle
+
+			div(class='moment-slider__slider')
+				button(class='moment-slider__nav moment-slider__nav--prev' type='button' aria-label='Anterior')
+				button(class='moment-slider__nav moment-slider__nav--next' type='button' aria-label='Siguiente')
+
+				div(class='moment-slider__swiper swiper')
+					div(class='moment-slider__wrapper swiper-wrapper')
+						each moment in momentSliderData.items
+							article(class='moment-slider__slide swiper-slide')
+								a(class='moment-slider__card' href=moment.href)
+									div(class='moment-slider__media')
+										img(class='moment-slider__image' src=moment.image alt='' width='280' height='180' loading='lazy')
+									div(class='moment-slider__body')
+										h3(class='moment-slider__card-title')= moment.title
+										p(class='moment-slider__card-text')= moment.text
+
+					div(class='moment-slider__pagination swiper-pagination')

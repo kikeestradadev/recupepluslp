@@ -1,0 +1,28 @@
+include ../data/ways-slider-data
+
+section(class='ways-slider')
+	div(class='main-container ways-slider__shell')
+		div(class='container ways-slider__container ways-slider__inner')
+			h2(class='ways-slider__title')= waysSliderData.title
+
+			div(class='ways-slider__slider')
+				button(class='ways-slider__nav ways-slider__nav--prev' type='button' aria-label='Anterior')
+				button(class='ways-slider__nav ways-slider__nav--next' type='button' aria-label='Siguiente')
+
+				div(class='ways-slider__swiper swiper')
+					div(class='ways-slider__wrapper swiper-wrapper')
+						each way in waysSliderData.items
+							article(class='ways-slider__slide swiper-slide')
+								div(class='ways-slider__card')
+									div(class='ways-slider__content')
+										span(class='ways-slider__icon' aria-hidden='true')
+											svg(width='28' height='28' viewBox='0 0 24 24' fill='none')
+												path(d='M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z' stroke='currentColor' stroke-width='1.8')
+												circle(cx='12' cy='10' r='2.5' stroke='currentColor' stroke-width='1.8')
+										h3(class='ways-slider__name')= way.title
+										p(class='ways-slider__text')= way.text
+										a(class='ways-slider__cta' href=way.href)= way.cta
+									div(class='ways-slider__media')
+										img(class='ways-slider__image' src=way.image alt='' width='280' height='360' loading='lazy')
+
+					div(class='ways-slider__pagination swiper-pagination')

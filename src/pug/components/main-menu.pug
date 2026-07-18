@@ -1,0 +1,34 @@
+include ../data/main-menu-data.pug
+
+nav(class='main-menu' aria-label='Navegación principal' data-main-menu)
+	div(class='main-container main-menu__shell')
+		div(class='container main-menu__container main-menu__inner')
+			a(class='main-menu__logo' href='#')
+				img(class='main-menu__logo-img' src='./assets/logonegro.png' alt='Recupé Plus' width='120' height='68')
+
+			div(class='main-menu__panel' data-main-menu-panel)
+				//- WordPress: reemplazar este ul con wp_get_nav_menu_items / wp_nav_menu
+				ul(class='main-menu__list')
+					each item in mainMenuItems
+						if item.children
+							li(class='main-menu__item main-menu__item--has-children')
+								a(class='main-menu__link' href=item.href aria-expanded='false' data-main-menu-submenu-toggle)= item.label
+								ul(class='main-menu__sub-menu' data-main-menu-submenu)
+									each child in item.children
+										li(class='main-menu__item')
+											a(class='main-menu__link' href=child.href)= child.label
+						else
+							li(class='main-menu__item')
+								a(class='main-menu__link' href=item.href)= item.label
+
+			div(class='main-menu__actions')
+				a(class='main-menu__cta' href='#') Comprar ahora
+				a(class='main-menu__cart' href='#' aria-label='Carrito de compras')
+					svg(class='main-menu__cart-icon' width='24' height='24' viewBox='0 0 24 24' fill='none' aria-hidden='true')
+						path(d='M6 8h12l-1 12H7L6 8z' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round')
+						path(d='M9 8V7a3 3 0 0 1 6 0v1' stroke='currentColor' stroke-width='1.5' stroke-linecap='round')
+
+				button(class='main-menu__hamburger' type='button' aria-label='Abrir menú' aria-expanded='false' data-main-menu-toggle)
+					span(class='main-menu__hamburger-line')
+					span(class='main-menu__hamburger-line')
+					span(class='main-menu__hamburger-line')
