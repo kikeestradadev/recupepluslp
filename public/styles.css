@@ -1802,6 +1802,7 @@ img {
 }
 .moment-slider__inner {
   width: 100%;
+  overflow: hidden;
 }
 .moment-slider__header {
   max-width: 40rem;
@@ -2979,6 +2980,7 @@ img {
 }
 .allies-slider__inner {
   width: 100%;
+  overflow: hidden;
 }
 .allies-slider__title {
   margin: 0 0 1.75rem;
@@ -3340,6 +3342,7 @@ img {
 }
 .ways-slider__inner {
   width: 100%;
+  overflow: hidden;
 }
 .ways-slider__title {
   max-width: 36rem;
@@ -3555,6 +3558,7 @@ img {
 }
 .reviews-slider__inner {
   width: 100%;
+  overflow: hidden;
 }
 .reviews-slider__title {
   max-width: 40rem;
@@ -4019,6 +4023,7 @@ img {
 }
 .guide-slider__inner {
   width: 100%;
+  overflow: hidden;
 }
 .guide-slider__slider {
   position: relative;
@@ -4227,6 +4232,7 @@ img {
 }
 .blog-slider__inner {
   width: 100%;
+  overflow: hidden;
 }
 .blog-slider__title {
   margin: 0 0 1.5rem;
