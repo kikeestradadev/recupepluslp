@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#"> 
+<html class="no-js" lang="es" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#0096D9">
     <link rel="shortcut icon" type="image/png" href="./assets/img/icon_1024.png">
@@ -16,29 +16,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/prism.css?t=1784394079247">
-    <link rel="stylesheet" href="styles.css?t=1784394079247">
+    <link rel="stylesheet" href="./assets/prism.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Style-guide | Style Guide</title>
   </head>
   <body class="style-guide" itemscope itemtype="http://schema.org/WebPage">
     <header class="main-header">
-      <nav class="main-menu" aria-label="Navegación principal">
-        <div class="main-container">
-          <div class="container main-menu__inner"><a class="main-menu__logo" href="#"><img class="main-menu__logo-img" src="./assets/logonegro.png" alt="Recupé Plus" width="120" height="68"></a>
-            <div class="main-menu__panel" id="mainMenuNav">
+      <nav class="main-menu" aria-label="Navegación principal" data-main-menu>
+        <div class="main-container main-menu__shell">
+          <div class="container main-menu__container main-menu__inner"><a class="main-menu__logo" href="#"><img class="main-menu__logo-img" src="./assets/logonegro.png" alt="Recupé Plus" width="120" height="68"></a>
+            <div class="main-menu__panel" data-main-menu-panel>
               <ul class="main-menu__list">
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Lorem</a></li>
-                <li class="main-menu__item main-menu__item--has-children"><a class="main-menu__link" href="#">Ipsum</a>
-                  <ul class="main-menu__sub-menu">
-                    <li class="main-menu__item"><a class="main-menu__link" href="#">Dolor sit amet</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link" href="#">Consectetur</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link" href="#">Adipiscing elit</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item main-menu__item--has-children"><a class="main-menu__link" href="#" aria-expanded="false" data-main-menu-submenu-toggle>lorem Ipsum Dolor</a>
+                  <ul class="main-menu__sub-menu" data-main-menu-submenu>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
                   </ul>
                 </li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Dolor</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Sit amet</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Consectetur</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Adipiscing</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
               </ul>
             </div>
             <div class="main-menu__actions"><a class="main-menu__cta" href="#">Comprar ahora</a><a class="main-menu__cart" href="#" aria-label="Carrito de compras">
@@ -46,7 +46,7 @@
                   <path d="M6 8h12l-1 12H7L6 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
                   <path d="M9 8V7a3 3 0 0 1 6 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
                 </svg></a>
-              <button class="main-menu__hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainMenuNav"><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span></button>
+              <button class="main-menu__hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" data-main-menu-toggle><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span></button>
             </div>
           </div>
         </div>
@@ -54,9 +54,9 @@
     </header>
     <main>
       <section class="color-table">
-        <div class="main-container">
+        <div class="main-container color-table__shell">
           <div class="container color-table__container">
-            <h2 class="color-table__title">Paleta de colores </h2>
+            <h2 class="color-table__title">Paleta de colores</h2>
             <div class="color-table__grid">
               <article class="color-table__card">
                 <div class="color-table__swatch" style="background-color: var(--color-yellow)"></div>
@@ -133,7 +133,7 @@
         </div>
       </section>
       <section class="typography-module">
-        <div class="main-container">
+        <div class="main-container typography-module__shell">
           <div class="container typography-module__container">
             <h2 class="typography-module__title">Tipografia</h2>
             <p class="typography-module__lead">Familia tipografica principal del proyecto.</p>
@@ -152,22 +152,113 @@
             <hr class="typography-module__divider">
             <div class="typography-module__scale">
               <h3 class="typography-module__scale-title">Escala tipografica</h3>
-              <h1>h1 — Heading 1</h1>
-              <h2>h2 — Heading 2</h2>
-              <h3>h3 — Heading 3</h3>
-              <h4>h4 — Heading 4</h4>
-              <h5>h5 — Heading 5</h5>
-              <h6>h6 — Heading 6</h6>
-              <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</li>
+              <h1 class="typography-module__scale-heading">h1 — Heading 1</h1>
+              <h2 class="typography-module__scale-heading">h2 — Heading 2</h2>
+              <h3 class="typography-module__scale-heading">h3 — Heading 3</h3>
+              <h4 class="typography-module__scale-heading">h4 — Heading 4</h4>
+              <h5 class="typography-module__scale-heading">h5 — Heading 5</h5>
+              <h6 class="typography-module__scale-heading">h6 — Heading 6</h6>
+              <ul class="typography-module__scale-list">
+                <li class="typography-module__scale-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</li>
+                <li class="typography-module__scale-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</li>
               </ul>
-              <p>
+              <p class="typography-module__scale-text">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
                 dolorem autem maiores quis dolor, reprehenderit delectus quia dolore,
                 incidunt obcaecati sequi labore hic? Soluta doloremque vitae explicabo
                 assumenda fugit tenetur.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="grid-module">
+        <div class="main-container grid-module__shell">
+          <div class="container grid-module__container">
+            <h2 class="grid-module__title">Grid system</h2>
+            <p class="grid-module__lead">Cuadricula de 12 columnas con CSS Grid (mobile-first).</p>
+            <div class="grid-module__example">
+              <h3 class="grid-module__example-title">12 columnas iguales</h3>
+              <div class="grid-module__grid">
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">1</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">2</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">3</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">4</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">5</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">6</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">7</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">8</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">9</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">10</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">11</div>
+                </div>
+                <div class="grid-module__col grid-module__col--1">
+                  <div class="grid-module__cell">12</div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-module__example">
+              <h3 class="grid-module__example-title">Responsive: 12 / sm-6 / l-4 / lg-3</h3>
+              <div class="grid-module__grid">
+                <div class="grid-module__col grid-module__col--12 grid-module__col--sm-6 grid-module__col--l-4 grid-module__col--lg-3">
+                  <div class="grid-module__cell">Col 1</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--sm-6 grid-module__col--l-4 grid-module__col--lg-3">
+                  <div class="grid-module__cell">Col 2</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--sm-6 grid-module__col--l-4 grid-module__col--lg-3">
+                  <div class="grid-module__cell">Col 3</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--sm-6 grid-module__col--l-4 grid-module__col--lg-3">
+                  <div class="grid-module__cell">Col 4</div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-module__example">
+              <h3 class="grid-module__example-title">Layout mixto: 8 + 4</h3>
+              <div class="grid-module__grid">
+                <div class="grid-module__col grid-module__col--12 grid-module__col--l-8">
+                  <div class="grid-module__cell">Main (8)</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--l-4">
+                  <div class="grid-module__cell">Sidebar (4)</div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-module__example">
+              <h3 class="grid-module__example-title">Tercios: 4 + 4 + 4</h3>
+              <div class="grid-module__grid">
+                <div class="grid-module__col grid-module__col--12 grid-module__col--m-4">
+                  <div class="grid-module__cell">1/3 — 1</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--m-4">
+                  <div class="grid-module__cell">1/3 — 2</div>
+                </div>
+                <div class="grid-module__col grid-module__col--12 grid-module__col--m-4">
+                  <div class="grid-module__cell">1/3 — 3</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -245,44 +336,6 @@
       <section>
         <div class="main-container">
           <div class="container">
-                  <div><img src="assets/img4.jpg" style="width:100px">
-                    <p>slider_item_1</p>
-                  </div>
-                  <div><img src="assets/img2.jpg" style="width:100px">
-                    <p>slider_item_2</p>
-                  </div>
-                  <div><img src="assets/img3.jpg" style="width:100px">
-                    <p>slider_item_3</p>
-                  </div>
-                  <div><img src="assets/img4.jpg" style="width:100px">
-                    <p>slider_item_4</p>
-                  </div>
-                  <div><img src="assets/img4.jpg" style="width:100px">
-                    <p>example2 - item 1</p>
-                    <p>cat1</p>
-                    <p>cat2</p>
-                  </div>
-                  <div><img src="assets/img2.jpg" style="width:100px">
-                    <p>example2 - item 2</p>
-                    <p>cat1</p>
-                    <p>cat2</p>
-                  </div>
-                  <div><img src="assets/img3.jpg" style="width:100px">
-                    <p>example2 - item 3</p>
-                    <p>cat1</p>
-                    <p>cat2</p>
-                  </div>
-                  <div><img src="assets/img4.jpg" style="width:100px">
-                    <p>example2 - item 4</p>
-                    <p>cat1</p>
-                    <p>cat2</p>
-                  </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="main-container">
-          <div class="container">
             <ul>
               <li>lorem1</li>
               <li>lorem2</li>
@@ -326,8 +379,8 @@
       </section>
     </main>
     <footer class="alt-footer">
-      <div class="main-container">
-        <div class="container alt-footer__inner">
+      <div class="main-container alt-footer__shell">
+        <div class="container alt-footer__container alt-footer__inner">
           <div class="alt-footer__grid">
             <div class="alt-footer__brand"><a class="alt-footer__logo" href="#"><img class="alt-footer__logo-img" src="./assets/logonegro.png" alt="Recupé Plus" width="140" height="80"></a>
               <p class="alt-footer__text">Suplementos naturales en gomitas y cápsulas para cada momento de tu día.</p>
@@ -405,8 +458,8 @@
       </div>
     </footer>
     <footer class="main-footer">
-      <div class="main-container">
-        <div class="container main-footer__inner">
+      <div class="main-container main-footer__shell">
+        <div class="container main-footer__container main-footer__inner">
           <div class="main-footer__grid">
             <div class="main-footer__brand"><a class="main-footer__logo" href="#"><img class="main-footer__logo-img" src="./assets/logoblanco.png" alt="Recupé Plus" width="140" height="32"></a>
               <p class="main-footer__slogan">Recuperá tu bienestar.</p>
@@ -522,6 +575,7 @@
       </div>
     </footer><a class="floating-button" href="index.html">Home</a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="index.js?t=1784394079247"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

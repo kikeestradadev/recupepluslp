@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#"> 
+<html class="no-js" lang="es" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#0096D9">
     <link rel="shortcut icon" type="image/png" href="./assets/img/icon_1024.png">
@@ -16,29 +16,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/prism.css?t=1784394079198">
-    <link rel="stylesheet" href="styles.css?t=1784394079198">
+    <link rel="stylesheet" href="./assets/prism.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Home | Layouts</title>
   </head>
   <body class="home" itemscope itemtype="http://schema.org/WebPage">
     <header class="main-header">
-      <nav class="main-menu" aria-label="Navegación principal">
-        <div class="main-container">
-          <div class="container main-menu__inner"><a class="main-menu__logo" href="#"><img class="main-menu__logo-img" src="./assets/logonegro.png" alt="Recupé Plus" width="120" height="68"></a>
-            <div class="main-menu__panel" id="mainMenuNav">
+      <nav class="main-menu" aria-label="Navegación principal" data-main-menu>
+        <div class="main-container main-menu__shell">
+          <div class="container main-menu__container main-menu__inner"><a class="main-menu__logo" href="#"><img class="main-menu__logo-img" src="./assets/logonegro.png" alt="Recupé Plus" width="120" height="68"></a>
+            <div class="main-menu__panel" data-main-menu-panel>
               <ul class="main-menu__list">
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Lorem</a></li>
-                <li class="main-menu__item main-menu__item--has-children"><a class="main-menu__link" href="#">Ipsum</a>
-                  <ul class="main-menu__sub-menu">
-                    <li class="main-menu__item"><a class="main-menu__link" href="#">Dolor sit amet</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link" href="#">Consectetur</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link" href="#">Adipiscing elit</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item main-menu__item--has-children"><a class="main-menu__link" href="#" aria-expanded="false" data-main-menu-submenu-toggle>lorem Ipsum Dolor</a>
+                  <ul class="main-menu__sub-menu" data-main-menu-submenu>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
                   </ul>
                 </li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Dolor</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Sit amet</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Consectetur</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">Adipiscing</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
               </ul>
             </div>
             <div class="main-menu__actions"><a class="main-menu__cta" href="#">Comprar ahora</a><a class="main-menu__cart" href="#" aria-label="Carrito de compras">
@@ -46,16 +46,67 @@
                   <path d="M6 8h12l-1 12H7L6 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
                   <path d="M9 8V7a3 3 0 0 1 6 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
                 </svg></a>
-              <button class="main-menu__hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainMenuNav"><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span></button>
+              <button class="main-menu__hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" data-main-menu-toggle><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span></button>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main>
+      <section class="main-slider" aria-label="Productos y beneficios destacados" data-main-slider>
+        <div class="main-slider__swiper swiper">
+          <div class="main-slider__wrapper swiper-wrapper">
+            <article class="main-slider__slide main-slider__slide--performance swiper-slide"><img class="main-slider__image" src="./assets/slide1.jpg" alt="Mujer entrenando con cuerdas de batalla" width="1024" height="683" loading="eager" fetchpriority="high">
+              <div class="main-slider__overlay" aria-hidden="true"></div>
+              <div class="main-container main-slider__content">
+                <div class="container main-slider__content-inner">
+                  <div class="main-slider__copy">
+                    <p class="main-slider__eyebrow">Energía para tu rutina</p>
+                    <h1 class="main-slider__title"><span class="main-slider__title-line">Apoyá tu rendimiento</span><span class="main-slider__title-line main-slider__title-line--accent">físico y mental</span></h1>
+                    <p class="main-slider__text">Fórmulas funcionales para acompañar tu energía, enfoque y recuperación cada día.</p>
+                    <div class="main-slider__actions"><a class="main-slider__button main-slider__button--primary" href="#">Descubrir productos</a><a class="main-slider__button main-slider__button--secondary" href="#">Comprar en línea</a></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="main-slider__slide main-slider__slide--gummies swiper-slide"><img class="main-slider__image" src="./assets/slide2.jpg" alt="Gomitas funcionales Recupé Plus de sabores naranja y frutos rojos" width="1024" height="683" loading="lazy" fetchpriority="auto">
+              <div class="main-slider__overlay" aria-hidden="true"></div>
+              <div class="main-container main-slider__content">
+                <div class="container main-slider__content-inner">
+                  <div class="main-slider__copy">
+                    <p class="main-slider__eyebrow">Bienestar que disfrutás</p>
+                    <h2 class="main-slider__title"><span class="main-slider__title-line">Gomitas</span><span class="main-slider__title-line main-slider__title-line--accent">funcionales</span></h2>
+                    <p class="main-slider__text">Una forma práctica y deliciosa de sumar vitaminas, antioxidantes y bienestar a tu rutina.</p>
+                    <div class="main-slider__actions"><a class="main-slider__button main-slider__button--primary" href="#">Conocer las gomitas</a><a class="main-slider__button main-slider__button--secondary" href="#">Comprar en línea</a></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="main-slider__slide main-slider__slide--mushrooms swiper-slide"><img class="main-slider__image" src="./assets/slide3.jpg" alt="Selección de hongos medicinales sobre una superficie de madera" width="1024" height="683" loading="lazy" fetchpriority="auto">
+              <div class="main-slider__overlay" aria-hidden="true"></div>
+              <div class="main-container main-slider__content">
+                <div class="container main-slider__content-inner">
+                  <div class="main-slider__copy">
+                    <p class="main-slider__eyebrow">Naturaleza con propósito</p>
+                    <h2 class="main-slider__title"><span class="main-slider__title-line">Hongos</span><span class="main-slider__title-line main-slider__title-line--accent">medicinales</span></h2>
+                    <p class="main-slider__text">Activos naturales seleccionados para acompañar tu enfoque, energía, descanso e inmunidad.</p>
+                    <div class="main-slider__actions"><a class="main-slider__button main-slider__button--primary" href="#">Explorar sus beneficios</a><a class="main-slider__button main-slider__button--secondary" href="#">Ver productos</a></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <button class="main-slider__nav main-slider__nav--prev" type="button" aria-label="Diapositiva anterior"><span class="main-slider__nav-icon" aria-hidden="true">←</span></button>
+          <button class="main-slider__nav main-slider__nav--next" type="button" aria-label="Diapositiva siguiente"><span class="main-slider__nav-icon" aria-hidden="true">→</span></button>
+          <div class="main-slider__footer">
+            <div class="main-slider__pagination swiper-pagination"></div>
+            <button class="main-slider__autoplay" type="button" aria-label="Pausar reproducción automática" aria-pressed="false" data-main-slider-autoplay><span class="main-slider__autoplay-icon" aria-hidden="true">Ⅱ</span><span class="main-slider__autoplay-label">Pausar</span></button>
+          </div>
+        </div>
+      </section>
       <section class="moment-slider">
-        <div class="main-container">
-          <div class="container moment-slider__inner">
+        <div class="main-container moment-slider__shell">
+          <div class="container moment-slider__container moment-slider__inner">
             <header class="moment-slider__header">
               <h2 class="moment-slider__title">¿Qué momento del día querés mejorar?</h2>
               <p class="moment-slider__subtitle">Sin sabés por dónde empezar, elegí el momento de tu rutina donde querés sentirte mejor.</p>
@@ -127,8 +178,8 @@
         </div>
       </section>
       <section class="format-cards">
-        <div class="main-container">
-          <div class="container format-cards__inner">
+        <div class="main-container format-cards__shell">
+          <div class="container format-cards__container format-cards__inner">
             <h2 class="format-cards__title">Dos formas simples de sumar bienestar a tu rutina.</h2>
             <div class="format-cards__grid">
               <article class="format-cards__card format-cards__card--gomitas">
@@ -158,8 +209,8 @@
         </div>
       </section>
       <section class="product-slider">
-        <div class="main-container">
-          <div class="container">
+        <div class="main-container product-slider__shell">
+          <div class="container product-slider__container">
             <div class="product-slider__group product-slider__group--gomitas">
               <div class="product-slider__inner">
                 <header class="product-slider__header">
@@ -342,8 +393,8 @@
         </div>
       </section>
       <section class="newsletter-banner">
-        <div class="main-container">
-          <div class="container newsletter-banner__inner">
+        <div class="main-container newsletter-banner__shell">
+          <div class="container newsletter-banner__container newsletter-banner__inner">
             <div class="newsletter-banner__card">
               <div class="newsletter-banner__intro"><span class="newsletter-banner__icon" aria-hidden="true">
                   <svg class="newsletter-banner__icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -368,8 +419,8 @@
         </div>
       </section>
       <section class="allies-slider">
-        <div class="main-container">
-          <div class="container allies-slider__inner">
+        <div class="main-container allies-slider__shell">
+          <div class="container allies-slider__container allies-slider__inner">
             <h2 class="allies-slider__title">También disponibles en nuestros aliados</h2>
             <div class="allies-slider__slider">
               <div class="allies-slider__swiper swiper">
@@ -417,18 +468,17 @@
           </div>
         </div>
       </section>
-      <section class="store-locator">
-        <div class="main-container">
-          <div class="container store-locator__inner">
+      <section class="store-locator" data-store-locator>
+        <div class="main-container store-locator__shell">
+          <div class="container store-locator__container store-locator__inner">
             <header class="store-locator__header">
               <h2 class="store-locator__title">Encontranos cerca de vos</h2>
               <p class="store-locator__subtitle">Buscá tu tienda más cercana.</p>
             </header>
             <div class="store-locator__layout">
               <div class="store-locator__panel">
-                <form class="store-locator__search" action="#" method="get">
-                  <label class="store-locator__sr-only" for="storeLocatorQuery">Buscar ubicación</label>
-                  <input class="store-locator__input" id="storeLocatorQuery" type="search" name="q" placeholder="Ingresá tu ubicación o código postal">
+                <form class="store-locator__search" action="#" method="get" data-store-locator-search>
+                  <input class="store-locator__input" type="search" name="q" placeholder="Ingresá tu ubicación o código postal" aria-label="Buscar ubicación">
                   <button class="store-locator__search-btn" type="submit" aria-label="Buscar">
                     <svg class="store-locator__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                       <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"></circle>
@@ -436,23 +486,24 @@
                     </svg>
                   </button>
                 </form>
+                <p class="visually-hidden" aria-live="polite" data-store-locator-status></p>
                 <ul class="store-locator__list">
-                  <li class="store-locator__item is-active" data-store="0">
-                    <button class="store-locator__item-btn" type="button"><span class="store-locator__item-icon" aria-hidden="true">
+                  <li class="store-locator__item store-locator__item--active" data-store="0">
+                    <button class="store-locator__item-btn" type="button" aria-pressed="true"><span class="store-locator__item-icon" aria-hidden="true">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                           <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.6"></path>
                           <circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"></circle>
                         </svg></span><span class="store-locator__item-content"><span class="store-locator__item-name">Auto Mercado</span><span class="store-locator__item-place">Escazú, San José</span></span><span class="store-locator__item-meta"><span class="store-locator__item-distance">1.2 km</span><span class="store-locator__item-arrow" aria-hidden="true">→</span></span></button>
                   </li>
                   <li class="store-locator__item" data-store="1">
-                    <button class="store-locator__item-btn" type="button"><span class="store-locator__item-icon" aria-hidden="true">
+                    <button class="store-locator__item-btn" type="button" aria-pressed="false"><span class="store-locator__item-icon" aria-hidden="true">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                           <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.6"></path>
                           <circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"></circle>
                         </svg></span><span class="store-locator__item-content"><span class="store-locator__item-name">GNC Multiplaza</span><span class="store-locator__item-place">Escazú, San José</span></span><span class="store-locator__item-meta"><span class="store-locator__item-distance">2.7 km</span><span class="store-locator__item-arrow" aria-hidden="true">→</span></span></button>
                   </li>
                   <li class="store-locator__item" data-store="2">
-                    <button class="store-locator__item-btn" type="button"><span class="store-locator__item-icon" aria-hidden="true">
+                    <button class="store-locator__item-btn" type="button" aria-pressed="false"><span class="store-locator__item-icon" aria-hidden="true">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                           <path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.6"></path>
                           <circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"></circle>
@@ -462,15 +513,15 @@
               </div>
               <div class="store-locator__map" aria-label="Mapa de tiendas">
                 <iframe class="store-locator__map-frame" title="Mapa de tiendas en San José" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=-84.170%2C9.900%2C-84.000%2C9.980&amp;layer=mapnik"></iframe>
-                <div class="store-locator__pins" aria-hidden="true"><span class="store-locator__pin store-locator__pin--green is-active" style="top: 42%; left: 28%;"></span><span class="store-locator__pin store-locator__pin--orange" style="top: 48%; left: 46%;"></span><span class="store-locator__pin store-locator__pin--purple" style="top: 55%; left: 68%;"></span></div>
+                <div class="store-locator__pins" aria-hidden="true"><span class="store-locator__pin store-locator__pin--green store-locator__pin--active" data-store="0" style="top: 42%; left: 28%;"></span><span class="store-locator__pin store-locator__pin--orange" data-store="1" style="top: 48%; left: 46%;"></span><span class="store-locator__pin store-locator__pin--purple" data-store="2" style="top: 55%; left: 68%;"></span></div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section class="ways-slider">
-        <div class="main-container">
-          <div class="container ways-slider__inner">
+        <div class="main-container ways-slider__shell">
+          <div class="container ways-slider__container ways-slider__inner">
             <h2 class="ways-slider__title">3 formas simples de conseguir tus productos</h2>
             <div class="ways-slider__slider">
               <button class="ways-slider__nav ways-slider__nav--prev" type="button" aria-label="Anterior"></button>
@@ -563,8 +614,8 @@
         </div>
       </section>
       <section class="reviews-slider">
-        <div class="main-container">
-          <div class="container reviews-slider__inner">
+        <div class="main-container reviews-slider__shell">
+          <div class="container reviews-slider__container reviews-slider__inner">
             <h2 class="reviews-slider__title">Personas que ya sumaron Recupé Plus a su rutina.</h2>
             <div class="reviews-slider__slider">
               <button class="reviews-slider__nav reviews-slider__nav--prev" type="button" aria-label="Anterior"></button>
@@ -735,8 +786,8 @@
         </div>
       </section>
       <section class="start-banner">
-        <div class="main-container">
-          <div class="container start-banner__inner">
+        <div class="main-container start-banner__shell">
+          <div class="container start-banner__container start-banner__inner">
             <div class="start-banner__card">
               <div class="start-banner__content">
                 <h2 class="start-banner__title">¿No sabés por dónde empezar?</h2>
@@ -753,8 +804,8 @@
         </div>
       </section>
       <section class="brand-story">
-        <div class="main-container">
-          <div class="container brand-story__inner">
+        <div class="main-container brand-story__shell">
+          <div class="container brand-story__container brand-story__inner">
             <div class="brand-story__layout">
               <div class="brand-story__media"><img class="brand-story__image" src="./assets/img2.jpg" alt="" width="720" height="540" loading="lazy"></div>
               <div class="brand-story__content">
@@ -767,8 +818,8 @@
         </div>
       </section>
       <section class="believe-cards">
-        <div class="main-container">
-          <div class="container believe-cards__inner">
+        <div class="main-container believe-cards__shell">
+          <div class="container believe-cards__container believe-cards__inner">
             <header class="believe-cards__header">
               <h2 class="believe-cards__title">Lo que creemos</h2>
               <p class="believe-cards__subtitle">Nuestros principios guían cada decisión que tomamos.</p>
@@ -823,8 +874,8 @@
         </div>
       </section>
       <section class="founders-cards">
-        <div class="main-container">
-          <div class="container founders-cards__inner">
+        <div class="main-container founders-cards__shell">
+          <div class="container founders-cards__container founders-cards__inner">
             <header class="founders-cards__header">
               <h2 class="founders-cards__title">Detrás de Recupé Plus</h2>
               <p class="founders-cards__subtitle">Dos amigas. Una misión compartida.</p>
@@ -851,8 +902,8 @@
         </div>
       </section>
       <section class="guide-slider">
-        <div class="main-container">
-          <div class="container guide-slider__inner">
+        <div class="main-container guide-slider__shell">
+          <div class="container guide-slider__container guide-slider__inner">
             <div class="guide-slider__slider">
               <button class="guide-slider__nav guide-slider__nav--prev" type="button" aria-label="Anterior"></button>
               <button class="guide-slider__nav guide-slider__nav--next" type="button" aria-label="Siguiente"></button>
@@ -931,8 +982,8 @@
         </div>
       </section>
       <section class="blog-slider">
-        <div class="main-container">
-          <div class="container blog-slider__inner">
+        <div class="main-container blog-slider__shell">
+          <div class="container blog-slider__container blog-slider__inner">
             <h2 class="blog-slider__title">Guías para sentirte mejor</h2>
             <div class="blog-slider__slider">
               <button class="blog-slider__nav blog-slider__nav--prev" type="button" aria-label="Anterior"></button>
@@ -970,9 +1021,9 @@
           </div>
         </div>
       </section>
-      <section class="blog-filter" data-per-page="6">
-        <div class="main-container">
-          <div class="container blog-filter__inner">
+      <section class="blog-filter" data-blog-filter data-per-page="6">
+        <div class="main-container blog-filter__shell">
+          <div class="container blog-filter__container blog-filter__inner">
             <div class="blog-filter__header">
               <h2 class="blog-filter__title">Guías</h2><a class="blog-filter__more" href="#"><span>Ver más</span><span class="blog-filter__more-arrow" aria-hidden="true">→</span></a>
             </div>
@@ -984,10 +1035,10 @@
               <div class="blog-filter__filters-swiper swiper">
                 <div class="blog-filter__filters-wrapper swiper-wrapper">
                   <div class="blog-filter__filters-slide swiper-slide">
-                    <button class="blog-filter__chip blog-filter__chip--active" type="button" data-filter="all">Todas</button>
+                    <button class="blog-filter__chip blog-filter__chip--active" type="button" data-filter="all" aria-pressed="true">Todas</button>
                   </div>
                   <div class="blog-filter__filters-slide swiper-slide">
-                    <button class="blog-filter__chip" type="button" data-filter="rutina">
+                    <button class="blog-filter__chip" type="button" data-filter="rutina" aria-pressed="false">
                       <svg class="blog-filter__chip-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"></circle>
                         <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -995,14 +1046,14 @@
                     </button>
                   </div>
                   <div class="blog-filter__filters-slide swiper-slide">
-                    <button class="blog-filter__chip" type="button" data-filter="descanso">
+                    <button class="blog-filter__chip" type="button" data-filter="descanso" aria-pressed="false">
                       <svg class="blog-filter__chip-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M18 14.5A7.5 7.5 0 0 1 9.5 6 6.5 6.5 0 1 0 18 14.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
                       </svg><span>Descanso</span>
                     </button>
                   </div>
                   <div class="blog-filter__filters-slide swiper-slide">
-                    <button class="blog-filter__chip" type="button" data-filter="ingredientes">
+                    <button class="blog-filter__chip" type="button" data-filter="ingredientes" aria-pressed="false">
                       <svg class="blog-filter__chip-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M5 19c4-1 6-5 7-10 1 5 3 9 7 10-3 2-11 2-14 0Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
                         <path d="M12 9V4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
@@ -1010,7 +1061,7 @@
                     </button>
                   </div>
                   <div class="blog-filter__filters-slide swiper-slide">
-                    <button class="blog-filter__chip" type="button" data-filter="hongos">
+                    <button class="blog-filter__chip" type="button" data-filter="hongos" aria-pressed="false">
                       <svg class="blog-filter__chip-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8H4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
                         <path d="M10 12v6a2 2 0 0 0 4 0v-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
@@ -1018,7 +1069,7 @@
                     </button>
                   </div>
                   <div class="blog-filter__filters-slide swiper-slide">
-                    <button class="blog-filter__chip" type="button" data-filter="bienestar">
+                    <button class="blog-filter__chip" type="button" data-filter="bienestar" aria-pressed="false">
                       <svg class="blog-filter__chip-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M12 19s-7-4.4-7-9a3.8 3.8 0 0 1 7-2 3.8 3.8 0 0 1 7 2c0 4.6-7 9-7 9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
                       </svg><span>Bienestar diario</span>
@@ -1161,8 +1212,8 @@
         </div>
       </section>
       <section class="community-banner">
-        <div class="main-container">
-          <div class="container community-banner__inner">
+        <div class="main-container community-banner__shell">
+          <div class="container community-banner__container community-banner__inner">
             <div class="community-banner__card"><img class="community-banner__deco community-banner__deco--start" src="./assets/img1.jpg" alt="" width="120" height="160" loading="lazy" aria-hidden="true"><img class="community-banner__deco community-banner__deco--end" src="./assets/img3.jpg" alt="" width="120" height="160" loading="lazy" aria-hidden="true">
               <div class="community-banner__content">
                 <div class="community-banner__copy">
@@ -1182,8 +1233,8 @@
         </div>
       </section>
       <section class="community-split">
-        <div class="main-container">
-          <div class="container community-split__inner">
+        <div class="main-container community-split__shell">
+          <div class="container community-split__container community-split__inner">
             <div class="community-split__layout">
               <div class="community-split__media"><img class="community-split__image" src="./assets/img2.jpg" alt="" width="720" height="560" loading="lazy"></div>
               <div class="community-split__content">
@@ -1205,8 +1256,8 @@
         </div>
       </section>
       <section class="help-guides">
-        <div class="main-container">
-          <div class="container help-guides__inner">
+        <div class="main-container help-guides__shell">
+          <div class="container help-guides__container help-guides__inner">
             <div class="help-guides__grid">
               <article class="help-guides__help">
                 <div class="help-guides__help-media"><img class="help-guides__help-image" src="./assets/img2.jpg" alt="" width="480" height="480" loading="lazy"></div>
@@ -1247,88 +1298,9 @@
         </div>
       </section>
     </main>
-    <footer class="alt-footer">
-      <div class="main-container">
-        <div class="container alt-footer__inner">
-          <div class="alt-footer__grid">
-            <div class="alt-footer__brand"><a class="alt-footer__logo" href="#"><img class="alt-footer__logo-img" src="./assets/logonegro.png" alt="Recupé Plus" width="140" height="80"></a>
-              <p class="alt-footer__text">Suplementos naturales en gomitas y cápsulas para cada momento de tu día.</p>
-              <ul class="alt-footer__social">
-                <li class="alt-footer__social-item"><a class="alt-footer__social-link" href="#" aria-label="Instagram">
-                    <svg class="alt-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"></rect>
-                      <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle>
-                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor"></circle>
-                    </svg></a></li>
-                <li class="alt-footer__social-item"><a class="alt-footer__social-link" href="#" aria-label="Facebook">
-                    <svg class="alt-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.2l.8-3H13V9c0-.6.4-1 1-1z" fill="currentColor"></path>
-                    </svg></a></li>
-                <li class="alt-footer__social-item"><a class="alt-footer__social-link" href="#" aria-label="TikTok">
-                    <svg class="alt-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M14 4c.4 2.2 1.8 3.8 4 4.2v2.4c-1.4-.1-2.7-.6-4-1.4v5.5A5.5 5.5 0 1 1 9.8 9.3v2.5a3 3 0 1 0 2.2 2.9V4h2z" fill="currentColor"></path>
-                    </svg></a></li>
-                <li class="alt-footer__social-item"><a class="alt-footer__social-link" href="#" aria-label="YouTube">
-                    <svg class="alt-footer__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <rect x="2" y="6" width="20" height="12" rx="3" stroke="currentColor" stroke-width="1.5"></rect>
-                      <path d="M10 9.5v5l5-2.5-5-2.5z" fill="currentColor"></path>
-                    </svg></a></li>
-              </ul>
-            </div>
-            <nav class="alt-footer__col" aria-label="Suplementos">
-              <h2 class="alt-footer__title">Suplementos</h2>
-              <ul class="alt-footer__list">
-                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Elegí según tu momento</a></li>
-                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Gomitas</a></li>
-                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Cápsulas</a></li>
-              </ul>
-            </nav>
-            <nav class="alt-footer__col" aria-label="Ayuda">
-              <h2 class="alt-footer__title">Ayuda</h2>
-              <ul class="alt-footer__list">
-                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Preguntas frecuentes</a></li>
-                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Envíos y pagos</a></li>
-                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Cambios y devoluciones</a></li>
-              </ul>
-            </nav>
-            <nav class="alt-footer__col" aria-label="Empresa">
-              <h2 class="alt-footer__title">Empresa</h2>
-              <ul class="alt-footer__list">
-                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Nosotros</a></li>
-                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Ingredientes</a></li>
-                <li class="alt-footer__item"><a class="alt-footer__link" href="#">Registro sanitario</a></li>
-              </ul>
-            </nav>
-            <div class="alt-footer__col alt-footer__col--contact">
-              <h2 class="alt-footer__title">Contacto</h2>
-              <ul class="alt-footer__contact">
-                <li class="alt-footer__contact-item"><a class="alt-footer__contact-link" href="#">
-                    <svg class="alt-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M12 3.2a8.3 8.3 0 0 0-7.2 12.4L4 20.8l5.4-.8A8.3 8.3 0 1 0 12 3.2Z" stroke="currentColor" stroke-width="1.5"></path>
-                      <path d="M9.2 9.4c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.6l-.4.5c-.1.2-.1.3 0 .5.4.7 1.1 1.4 1.8 1.8.2.1.3.1.5 0l.5-.4c.2-.1.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7A5 5 0 0 1 12 16.5 5 5 0 0 1 9.2 9.4Z" fill="currentColor"></path>
-                    </svg><span>Escribinos por WhatsApp</span></a></li>
-                <li class="alt-footer__contact-item"><a class="alt-footer__contact-link" href="mailto:hola@recupeplus.com">
-                    <svg class="alt-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
-                      <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                    </svg><span>hola@recupeplus.com</span></a></li>
-                <li class="alt-footer__contact-item"><a class="alt-footer__contact-link" href="tel:+50612345678">
-                    <svg class="alt-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M6 4h3l1 4-2 1a10 10 0 0 0 5 5l1-2 4 1v3a2 2 0 0 1-2 2A14 14 0 0 1 4 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
-                    </svg><span>+506 1234 5678</span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="alt-footer__bottom">
-            <p class="alt-footer__copy">© 2024 Recupe Plus. Todos los derechos reservados.</p>
-            <p class="alt-footer__legal"><a class="alt-footer__legal-link" href="#">Términos y condiciones</a><span class="alt-footer__legal-sep" aria-hidden="true">|</span><a class="alt-footer__legal-link" href="#">Política de privacidad</a></p>
-          </div>
-        </div>
-      </div>
-    </footer>
     <footer class="main-footer">
-      <div class="main-container">
-        <div class="container main-footer__inner">
+      <div class="main-container main-footer__shell">
+        <div class="container main-footer__container main-footer__inner">
           <div class="main-footer__grid">
             <div class="main-footer__brand"><a class="main-footer__logo" href="#"><img class="main-footer__logo-img" src="./assets/logoblanco.png" alt="Recupé Plus" width="140" height="32"></a>
               <p class="main-footer__slogan">Recuperá tu bienestar.</p>
@@ -1444,6 +1416,7 @@
       </div>
     </footer><a class="floating-button" href="style-guide.html">Style Guide</a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="index.js?t=1784394079198"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
