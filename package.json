@@ -1,10 +1,12 @@
 {
 	"name": "recupepluslp",
 	"version": "1.0.0",
+	"assetVersion": "1.0.1",
 	"description": "gh=pages link: https://kikeestradadev.github.io/recupepluslp",
 	"main": "index.js",
 	"homepage": "https://kikeestradadev.github.io/recupepluslp/",
 	"scripts": {
+		"build": "node scripts/bump-assets.cjs",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"deploy": "gh-pages -d public"
 	},

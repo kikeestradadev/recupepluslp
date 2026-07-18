@@ -3,6 +3,7 @@ block config
 	-let content 			= 'My Page'
 	-let siteName 			= 'GulpBoilerplate'
 	-let pageDescription 	= 'Here is the description Page.'
+include ../data/site-data
 include ../components/floating-button
 doctype html
 html(lang='es' prefix='og: http://ogp.me/ns#', class='no-js')
@@ -23,7 +24,7 @@ html(lang='es' prefix='og: http://ogp.me/ns#', class='no-js')
 		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
 		link(href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet")
 		link(rel="stylesheet" href="./assets/prism.css")
-		link(rel="stylesheet" href="styles.css")
+		link(rel="stylesheet" href=`styles.css?v=${siteData.assetVersion}`)
 		title= currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName
 	body(class=currentPage, itemscope itemtype="http://schema.org/WebPage")
 		//- here start the Main Header
@@ -42,11 +43,12 @@ html(lang='es' prefix='og: http://ogp.me/ns#', class='no-js')
 		include ../components/main-footer
 		block main-footer
 		//- here ends the Main Footer
+		include ../components/whatsapp-button
 		if currentPage === 'home'
 			+floatingButton('style-guide.html', 'Style Guide')
 		else if currentPage === 'style-guide'
 			+floatingButton('index.html', 'Home')
 		script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
 		script(src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js")
-		script(src="index.js")
+		script(src=`index.js?v=${siteData.assetVersion}`)
 		block scripts

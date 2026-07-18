@@ -15,6 +15,25 @@ Los componentes Pug, parciales Sass y módulos JS no se compilan individualmente
 
 Los recursos estáticos viven en `public/assets`. Swiper y Prism se cargan desde CDN.
 
+## Versión de CSS y JavaScript
+
+Para invalidar la caché de los assets:
+
+```sh
+npm run build
+```
+
+El comando incrementa `assetVersion` (`1.0.0` → `1.0.1`) y sincroniza
+`src/pug/data/site-data.pug`. Si Prepros está abierto, recompila las páginas y
+genera referencias como `styles.css?v=1.0.1` e `index.js?v=1.0.1`.
+
+## Integraciones pendientes de WordPress
+
+- El selector ES/EN de la navegación está preparado para que WPML o Polylang
+  reemplace sus enlaces desde `src/pug/data/main-menu-data.pug`.
+- El teléfono y mensaje del botón flotante de WhatsApp se configuran en
+  `src/pug/data/whatsapp-button-data.pug`. El número actual es un placeholder.
+
 ## Despliegue
 
 ```sh

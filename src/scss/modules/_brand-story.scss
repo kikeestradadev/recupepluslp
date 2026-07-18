@@ -113,8 +113,8 @@
 		}
 
 		&__media {
-			width: min(100%, 500px);
-			max-width: 500px;
+			width: min(100%, 680px);
+			max-width: 680px;
 			justify-self: center;
 			border-radius: 1.5rem;
 		}
@@ -129,14 +129,14 @@
 		padding-block: 4rem;
 
 		&__layout {
-			grid-template-columns: auto minmax(0, 1fr);
+			grid-template-columns: minmax(32rem, 42.5rem) minmax(0, 1fr);
 			gap: 3rem;
 			align-items: center;
 		}
 
 		&__media {
-			width: min(100%, 500px);
-			max-width: 500px;
+			width: 100%;
+			max-width: 680px;
 			justify-self: start;
 		}
 

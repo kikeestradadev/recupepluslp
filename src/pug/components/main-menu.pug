@@ -23,6 +23,21 @@ nav(class='main-menu' aria-label='Navegación principal' data-main-menu)
 
 			div(class='main-menu__actions')
 				a(class='main-menu__cta' href='#') Comprar ahora
+				details(class='main-menu__language')
+					summary(class='main-menu__language-toggle' aria-label='Cambiar idioma')
+						svg(class='main-menu__language-icon' width='20' height='20' viewBox='0 0 24 24' fill='none' aria-hidden='true')
+							circle(cx='12' cy='12' r='9' stroke='currentColor' stroke-width='1.5')
+							path(d='M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z' stroke='currentColor' stroke-width='1.5' stroke-linecap='round')
+						span(class='main-menu__language-label') ES / EN
+					ul(class='main-menu__language-list')
+						each language in mainMenuLanguages
+							li(class='main-menu__language-item')
+								a(
+									class=language.active ? 'main-menu__language-link main-menu__language-link--active' : 'main-menu__language-link'
+									href=language.href
+									lang=language.locale
+									aria-current=language.active ? 'page' : false
+								)= language.label
 				a(class='main-menu__cart' href='#' aria-label='Carrito de compras')
 					svg(class='main-menu__cart-icon' width='24' height='24' viewBox='0 0 24 24' fill='none' aria-hidden='true')
 						path(d='M6 8h12l-1 12H7L6 8z' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round')
