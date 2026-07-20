@@ -18,6 +18,7 @@ var mainMenu = function mainMenu() {
       if (mainMenuInstances.has(root)) return;
       var toggle = root.querySelector('[data-main-menu-toggle], .main-menu__hamburger');
       var panel = root.querySelector('[data-main-menu-panel], .main-menu__panel');
+      var languageToggle = root.querySelector('[data-main-menu-language], .main-menu__language');
       var dropdownItems = Array.from(root.querySelectorAll('.main-menu__item--has-children'));
       var desktopQuery = window.matchMedia('(min-width: 1280px)');
       var controller = new AbortController();
@@ -88,7 +89,30 @@ var mainMenu = function mainMenu() {
         closeDropdowns();
         if (panel) panel.setAttribute('aria-hidden', String(!desktopQuery.matches));
       };
+      var syncLanguageToggle = function syncLanguageToggle(locale) {
+        if (!languageToggle) return;
+        var nextLocale = locale === 'es' ? 'en' : 'es';
+        var nextLabel = languageToggle.getAttribute("data-".concat(nextLocale, "-label")) || (nextLocale === 'en' ? 'English' : 'Español');
+        languageToggle.setAttribute('data-locale', locale);
+        languageToggle.setAttribute('aria-label', "Cambiar a ".concat(nextLabel));
+        languageToggle.querySelectorAll('.main-menu__language-flag, [data-flag]').forEach(function (flag) {
+          flag.hidden = flag.getAttribute('data-flag') !== locale;
+        });
+      };
+      var onLanguageToggle = function onLanguageToggle() {
+        if (!languageToggle) return;
+        var currentLocale = languageToggle.getAttribute('data-locale') || 'es';
+        var nextLocale = currentLocale === 'es' ? 'en' : 'es';
+        var nextHref = languageToggle.getAttribute("data-".concat(nextLocale, "-href"));
+        syncLanguageToggle(nextLocale);
+        if (nextHref && nextHref !== '#') {
+          window.location.href = nextHref;
+        }
+      };
       toggle === null || toggle === void 0 || toggle.addEventListener('click', onToggle, {
+        signal: signal
+      });
+      languageToggle === null || languageToggle === void 0 || languageToggle.addEventListener('click', onLanguageToggle, {
         signal: signal
       });
       dropdownItems.forEach(function (item) {

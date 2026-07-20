@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/prism.css">
-    <link rel="stylesheet" href="styles.css?v=1.0.1">
+    <link rel="stylesheet" href="styles.css?v=1.0.3">
     <title>Style-guide | Style Guide</title>
   </head>
   <body class="style-guide" itemscope itemtype="http://schema.org/WebPage">
@@ -27,37 +27,40 @@
           <div class="container main-menu__container main-menu__inner"><a class="main-menu__logo" href="#"><img class="main-menu__logo-img" src="./assets/logonegro.png" alt="Recupé Plus" width="120" height="68"></a>
             <div class="main-menu__panel" data-main-menu-panel>
               <ul class="main-menu__list">
-                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
-                <li class="main-menu__item main-menu__item--has-children"><a class="main-menu__link" href="#" aria-expanded="false" data-main-menu-submenu-toggle>lorem Ipsum Dolor</a>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum</a></li>
+                <li class="main-menu__item main-menu__item--has-children"><a class="main-menu__link" href="#" aria-expanded="false" data-main-menu-submenu-toggle>lorem Ipsum</a>
                   <ul class="main-menu__sub-menu" data-main-menu-submenu>
-                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
-                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum</a></li>
                   </ul>
                 </li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum Dolor</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="#">lorem Ipsum</a></li>
               </ul>
             </div>
-            <div class="main-menu__actions"><a class="main-menu__cta" href="#">Comprar ahora</a>
-              <details class="main-menu__language">
-                <summary class="main-menu__language-toggle" aria-label="Cambiar idioma">
-                  <svg class="main-menu__language-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"></circle>
-                    <path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                  </svg><span class="main-menu__language-label">ES / EN</span>
-                </summary>
-                <ul class="main-menu__language-list">
-                  <li class="main-menu__language-item"><a class="main-menu__language-link main-menu__language-link--active" href="#" lang="es" aria-current="page">ES</a></li>
-                  <li class="main-menu__language-item"><a class="main-menu__language-link" href="#" lang="en">EN</a></li>
-                </ul>
-              </details><a class="main-menu__cart" href="#" aria-label="Carrito de compras">
+            <div class="main-menu__actions"><a class="main-menu__cta" href="#" aria-label="Comprar ahora"><span class="main-menu__cta-short">Comprar</span><span class="main-menu__cta-full">Comprar ahora</span></a><a class="main-menu__cart" href="#" aria-label="Carrito de compras">
                 <svg class="main-menu__cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M6 8h12l-1 12H7L6 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
                   <path d="M9 8V7a3 3 0 0 1 6 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
                 </svg></a>
+              <button class="main-menu__language" type="button" data-main-menu-language data-locale="es" data-es-href="#" data-en-href="#" data-es-label="Español" data-en-label="English" aria-label="Cambiar a English"><span class="main-menu__language-flag" data-flag="es" aria-hidden="true">
+                  <svg class="main-menu__language-flag-img" width="24" height="18" viewBox="0 0 24 18" aria-hidden="true">
+                    <rect width="24" height="18" fill="#c60b1e"></rect>
+                    <rect y="4.5" width="24" height="9" fill="#ffc400"></rect>
+                  </svg></span><span class="main-menu__language-flag" data-flag="en" hidden aria-hidden="true">
+                  <svg class="main-menu__language-flag-img" width="24" height="18" viewBox="0 0 24 18" aria-hidden="true">
+                    <rect width="24" height="18" fill="#b22234"></rect>
+                    <rect y="1.385" width="24" height="1.385" fill="#fff"></rect>
+                    <rect y="4.154" width="24" height="1.385" fill="#fff"></rect>
+                    <rect y="6.923" width="24" height="1.385" fill="#fff"></rect>
+                    <rect y="9.692" width="24" height="1.385" fill="#fff"></rect>
+                    <rect y="12.462" width="24" height="1.385" fill="#fff"></rect>
+                    <rect y="15.231" width="24" height="1.385" fill="#fff"></rect>
+                    <rect width="9.6" height="9.69" fill="#3c3b6e"></rect>
+                  </svg></span></button>
               <button class="main-menu__hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" data-main-menu-toggle><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span><span class="main-menu__hamburger-line"></span></button>
             </div>
           </div>
@@ -445,7 +448,7 @@
             <div class="alt-footer__col alt-footer__col--contact">
               <h2 class="alt-footer__title">Contacto</h2>
               <ul class="alt-footer__contact">
-                <li class="alt-footer__contact-item"><a class="alt-footer__contact-link" href="#">
+                <li class="alt-footer__contact-item"><a class="alt-footer__contact-link alt-footer__contact-link--whatsapp" href="#">
                     <svg class="alt-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                       <path d="M12 3.2a8.3 8.3 0 0 0-7.2 12.4L4 20.8l5.4-.8A8.3 8.3 0 1 0 12 3.2Z" stroke="currentColor" stroke-width="1.5"></path>
                       <path d="M9.2 9.4c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.6l-.4.5c-.1.2-.1.3 0 .5.4.7 1.1 1.4 1.8 1.8.2.1.3.1.5 0l.5-.4c.2-.1.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7A5 5 0 0 1 12 16.5 5 5 0 0 1 9.2 9.4Z" fill="currentColor"></path>
@@ -542,9 +545,10 @@
             <div class="main-footer__col main-footer__col--contact">
               <h2 class="main-footer__title">Contacto</h2>
               <ul class="main-footer__contact">
-                <li class="main-footer__contact-item"><a class="main-footer__contact-link" href="#">
+                <li class="main-footer__contact-item"><a class="main-footer__contact-link main-footer__contact-link--whatsapp" href="#">
                     <svg class="main-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                      <path d="M12 3.2a8.3 8.3 0 0 0-7.2 12.4L4 20.8l5.4-.8A8.3 8.3 0 1 0 12 3.2Z" stroke="currentColor" stroke-width="1.5"></path>
+                      <path d="M9.2 9.4c.2-.4.4-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.6l-.4.5c-.1.2-.1.3 0 .5.4.7 1.1 1.4 1.8 1.8.2.1.3.1.5 0l.5-.4c.2-.1.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7A5 5 0 0 1 12 16.5 5 5 0 0 1 9.2 9.4Z" fill="currentColor"></path>
                     </svg><span>Escribinos por WhatsApp</span></a></li>
                 <li class="main-footer__contact-item"><a class="main-footer__contact-link" href="mailto:hola@recupeplus.com">
                     <svg class="main-footer__contact-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -591,6 +595,6 @@
       </svg></a><a class="floating-button" href="index.html">Home</a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-    <script src="index.js?v=1.0.1"></script>
+    <script src="index.js?v=1.0.3"></script>
   </body>
 </html>
