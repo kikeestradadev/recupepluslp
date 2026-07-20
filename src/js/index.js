@@ -5,8 +5,10 @@ import alliesSlider from './modules/alliesSlider';
 import storeLocator from './modules/storeLocator';
 import waysSlider from './modules/waysSlider';
 import foundersCards from './modules/foundersCards';
+import believeCards from './modules/believeCards';
 import reviewsSlider from './modules/reviewsSlider';
 import guideSlider from './modules/guideSlider';
+import ingredientsSlider from './modules/ingredientsSlider';
 import blogSlider from './modules/blogSlider';
 import blogFilter from './modules/blogFilter';
 import mainSlider from './modules/mainSlider';
@@ -19,9 +21,11 @@ const initComponents = () => {
 	alliesSlider();
 	storeLocator();
 	waysSlider();
+	believeCards();
 	foundersCards();
 	reviewsSlider();
 	guideSlider();
+	ingredientsSlider();
 	blogSlider();
 	blogFilter();
 

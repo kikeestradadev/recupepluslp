@@ -37,11 +37,8 @@ html(lang='es' prefix='og: http://ogp.me/ns#', class='no-js')
 			block main-container
 		//- here ends the Main Container
 		//- El footer alternativo es una muestra exclusiva del style guide
-		if currentPage === 'style-guide'
-			include ../components/alt-footer
-		//- here start the Main Footer
-		include ../components/main-footer
-		block main-footer
+		
+		include ../components/alt-footer		
 		//- here ends the Main Footer
 		include ../components/whatsapp-button
 		if currentPage === 'home'

@@ -127,21 +127,36 @@
 		position: relative;
 		z-index: 1;
 		width: 100%;
-		max-width: 28rem;
+		
 	}
 
 	&__field {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.65rem;
+		width: 100%;
 
-		@media (width >= $sm) {
+		@media (width >= $m) {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) auto;
+			gap: 0.5rem;
+		}
+
+		@media (width >= $l) {
+			display: flex;
+			flex-direction: column;
+			gap: 0.65rem;
+		}
+
+		@media (width >= $lg) {
+			display: grid;
 			grid-template-columns: minmax(0, 1fr) auto;
 			gap: 0.5rem;
 		}
 	}
 
 	&__input {
+		display: block;
 		width: 100%;
 		min-height: 2.85rem;
 		padding: 0.7rem 1rem;
@@ -163,6 +178,8 @@
 	}
 
 	&__submit {
+		display: block;
+		width: 100%;
 		min-height: 2.85rem;
 		padding: 0.7rem 1.2rem;
 		border: 0;
@@ -180,6 +197,18 @@
 		&:focus-visible {
 			background: var(--color-orange-light, #ff4a00);
 			transform: translateY(-1px);
+		}
+
+		@media (width >= $m) {
+			width: auto;
+		}
+
+		@media (width >= $l) {
+			width: 100%;
+		}
+
+		@media (width >= $lg) {
+			width: auto;
 		}
 	}
 

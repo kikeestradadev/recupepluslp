@@ -1,0 +1,25 @@
+include ../data/ingredients-slider-data
+
+section(class='ingredients-slider')
+	div(class='main-container ingredients-slider__shell')
+		div(class='container ingredients-slider__container ingredients-slider__inner')
+			header(class='ingredients-slider__header')
+				h2(class='ingredients-slider__title')= ingredientsSliderData.title
+				p(class='ingredients-slider__subtitle')= ingredientsSliderData.subtitle
+
+			div(class='ingredients-slider__slider')
+				button(class='ingredients-slider__nav ingredients-slider__nav--prev' type='button' aria-label='Anterior')
+				button(class='ingredients-slider__nav ingredients-slider__nav--next' type='button' aria-label='Siguiente')
+
+				div(class='ingredients-slider__swiper swiper')
+					div(class='ingredients-slider__wrapper swiper-wrapper')
+						each item in ingredientsSliderData.items
+							article(class='ingredients-slider__slide swiper-slide')
+								div(class='ingredients-slider__card')
+									div(class='ingredients-slider__body')
+										h3(class='ingredients-slider__name')= item.title
+										p(class='ingredients-slider__text')= item.text
+									div(class='ingredients-slider__media')
+										img(class='ingredients-slider__image' src=item.img alt='' width='480' height='200' loading='lazy')
+
+					div(class='ingredients-slider__pagination swiper-pagination')
