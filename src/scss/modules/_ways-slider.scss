@@ -225,10 +225,10 @@
 			margin: 0;
 			background: #cfcfcf;
 			opacity: 1;
-		}
 
-		.swiper-pagination-bullet-active {
-			background: var(--color-purple, #7a29ff);
+			&.swiper-pagination-bullet-active {
+				background: var(--color-purple, #7a29ff);
+			}
 		}
 	}
 

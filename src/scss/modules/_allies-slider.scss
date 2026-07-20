@@ -93,10 +93,10 @@
 			margin: 0;
 			background: #cfcfcf;
 			opacity: 1;
-		}
 
-		.swiper-pagination-bullet-active {
-			background: var(--color-orange, #ff9100);
+			&.swiper-pagination-bullet-active {
+				background: var(--color-orange, #ff9100);
+			}
 		}
 	}
 

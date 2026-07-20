@@ -358,10 +358,10 @@
 			margin: 0;
 			background: #d5d5d5;
 			opacity: 1;
-		}
 
-		.swiper-pagination-bullet-active {
-			background: var(--blog-filter-orange, #ff9100);
+			&.swiper-pagination-bullet-active {
+				background: var(--blog-filter-orange, #ff9100);
+			}
 		}
 	}
 

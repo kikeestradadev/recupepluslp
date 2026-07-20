@@ -3,6 +3,10 @@ include ../data/guide-slider-data
 section(class='guide-slider')
 	div(class='main-container guide-slider__shell')
 		div(class='container guide-slider__container guide-slider__inner')
+			header(class='guide-slider__header')
+				h2(class='guide-slider__title')= guideSliderData.title
+				p(class='guide-slider__subtitle')= guideSliderData.subtitle
+
 			div(class='guide-slider__slider')
 				button(class='guide-slider__nav guide-slider__nav--prev' type='button' aria-label='Anterior')
 				button(class='guide-slider__nav guide-slider__nav--next' type='button' aria-label='Siguiente')
@@ -12,11 +16,11 @@ section(class='guide-slider')
 						each guide in guideSliderData.items
 							article(class='guide-slider__slide swiper-slide')
 								div(class='guide-slider__card')
-									div(class='guide-slider__icon')
-										img(class='guide-slider__icon-img' src=guide.image alt='' width='96' height='96' loading='lazy')
-									h3(class='guide-slider__name')= guide.title
-									p(class='guide-slider__text')= guide.text
-									p(class='guide-slider__product')= guide.product
+									div(class='guide-slider__media')
+										img(class='guide-slider__image' src=guide.image alt='' width='320' height='320' loading='lazy')
+									div(class='guide-slider__body')
+										h3(class='guide-slider__name')= guide.title
+										p(class='guide-slider__products')= guide.products
 
 					div(class='guide-slider__pagination swiper-pagination')
 

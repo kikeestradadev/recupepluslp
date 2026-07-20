@@ -286,12 +286,12 @@
 			background: rgba(255, 255, 255, 0.7);
 			opacity: 1;
 			transition: width 0.25s ease, background 0.25s ease;
-		}
 
-		.swiper-pagination-bullet-active {
-			width: 1.75rem;
-			border-radius: 999px;
-			background: #fff;
+			&.swiper-pagination-bullet-active {
+				width: 1.75rem;
+				border-radius: 999px;
+				background: #fff;
+			}
 		}
 	}
 
