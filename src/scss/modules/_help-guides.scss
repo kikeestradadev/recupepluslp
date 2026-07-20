@@ -118,7 +118,7 @@
 		min-height: 2.85rem;
 		padding: 0.7rem 1rem;
 		border-radius: 0.65rem;
-		background: var(--help-guides-orange);
+		background: var(--color-whatsapp, #25d366);
 		color: #fff;
 		font-size: 0.9375rem;
 		font-weight: 700;
@@ -127,7 +127,7 @@
 
 		&:hover,
 		&:focus-visible {
-			background: var(--color-orange-light, #ff4a00);
+			background: var(--color-whatsapp-dark, #1fbd59);
 			color: #fff;
 			text-decoration: none;
 			transform: translateY(-1px);

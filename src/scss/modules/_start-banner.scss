@@ -88,12 +88,12 @@
 		}
 
 		&--whatsapp {
-			background: var(--color-orange, #ff9100);
+			background: var(--color-whatsapp, #25d366);
 			color: #fff;
 
 			&:hover,
 			&:focus-visible {
-				background: var(--color-orange-light, #ff4a00);
+				background: var(--color-whatsapp-dark, #1fbd59);
 				color: #fff;
 			}
 		}

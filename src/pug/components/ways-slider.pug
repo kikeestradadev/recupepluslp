@@ -21,7 +21,10 @@ section(class='ways-slider')
 												circle(cx='12' cy='10' r='2.5' stroke='currentColor' stroke-width='1.8')
 										h3(class='ways-slider__name')= way.title
 										p(class='ways-slider__text')= way.text
-										a(class='ways-slider__cta' href=way.href)= way.cta
+										a(
+											class=way.theme === 'whatsapp' ? 'ways-slider__cta ways-slider__cta--whatsapp' : 'ways-slider__cta'
+											href=way.href
+										)= way.cta
 									div(class='ways-slider__media')
 										img(class='ways-slider__image' src=way.image alt='' width='280' height='360' loading='lazy')
 

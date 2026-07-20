@@ -12,6 +12,7 @@ const mainMenu = (scope = document) => {
 
 			const toggle = root.querySelector('[data-main-menu-toggle], .main-menu__hamburger');
 			const panel = root.querySelector('[data-main-menu-panel], .main-menu__panel');
+			const languageToggle = root.querySelector('[data-main-menu-language], .main-menu__language');
 			const dropdownItems = Array.from(
 				root.querySelectorAll('.main-menu__item--has-children')
 			);
@@ -101,7 +102,40 @@ const mainMenu = (scope = document) => {
 				if (panel) panel.setAttribute('aria-hidden', String(!desktopQuery.matches));
 			};
 
+			const syncLanguageToggle = (locale) => {
+				if (!languageToggle) return;
+
+				const nextLocale = locale === 'es' ? 'en' : 'es';
+				const nextLabel =
+					languageToggle.getAttribute(`data-${nextLocale}-label`) ||
+					(nextLocale === 'en' ? 'English' : 'Español');
+
+				languageToggle.setAttribute('data-locale', locale);
+				languageToggle.setAttribute('aria-label', `Cambiar a ${nextLabel}`);
+
+				languageToggle
+					.querySelectorAll('.main-menu__language-flag, [data-flag]')
+					.forEach((flag) => {
+						flag.hidden = flag.getAttribute('data-flag') !== locale;
+					});
+			};
+
+			const onLanguageToggle = () => {
+				if (!languageToggle) return;
+
+				const currentLocale = languageToggle.getAttribute('data-locale') || 'es';
+				const nextLocale = currentLocale === 'es' ? 'en' : 'es';
+				const nextHref = languageToggle.getAttribute(`data-${nextLocale}-href`);
+
+				syncLanguageToggle(nextLocale);
+
+				if (nextHref && nextHref !== '#') {
+					window.location.href = nextHref;
+				}
+			};
+
 			toggle?.addEventListener('click', onToggle, { signal });
+			languageToggle?.addEventListener('click', onLanguageToggle, { signal });
 
 			dropdownItems.forEach((item) => {
 				const trigger = item.querySelector(

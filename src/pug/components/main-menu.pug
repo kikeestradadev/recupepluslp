@@ -22,26 +22,51 @@ nav(class='main-menu' aria-label='Navegación principal' data-main-menu)
 								a(class='main-menu__link' href=item.href)= item.label
 
 			div(class='main-menu__actions')
-				a(class='main-menu__cta' href='#') Comprar ahora
-				details(class='main-menu__language')
-					summary(class='main-menu__language-toggle' aria-label='Cambiar idioma')
-						svg(class='main-menu__language-icon' width='20' height='20' viewBox='0 0 24 24' fill='none' aria-hidden='true')
-							circle(cx='12' cy='12' r='9' stroke='currentColor' stroke-width='1.5')
-							path(d='M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z' stroke='currentColor' stroke-width='1.5' stroke-linecap='round')
-						span(class='main-menu__language-label') ES / EN
-					ul(class='main-menu__language-list')
-						each language in mainMenuLanguages
-							li(class='main-menu__language-item')
-								a(
-									class=language.active ? 'main-menu__language-link main-menu__language-link--active' : 'main-menu__language-link'
-									href=language.href
-									lang=language.locale
-									aria-current=language.active ? 'page' : false
-								)= language.label
+				a(class='main-menu__cta' href='#' aria-label='Comprar ahora')
+					span(class='main-menu__cta-short') Comprar
+					span(class='main-menu__cta-full') Comprar ahora
 				a(class='main-menu__cart' href='#' aria-label='Carrito de compras')
 					svg(class='main-menu__cart-icon' width='24' height='24' viewBox='0 0 24 24' fill='none' aria-hidden='true')
 						path(d='M6 8h12l-1 12H7L6 8z' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round')
 						path(d='M9 8V7a3 3 0 0 1 6 0v1' stroke='currentColor' stroke-width='1.5' stroke-linecap='round')
+				-
+					const activeLanguage = mainMenuLanguages.find((language) => language.active) || mainMenuLanguages[0]
+					const nextLanguage = mainMenuLanguages.find((language) => language.locale !== activeLanguage.locale) || mainMenuLanguages[1]
+				button(
+					class='main-menu__language'
+					type='button'
+					data-main-menu-language
+					data-locale=activeLanguage.locale
+					data-es-href=mainMenuLanguages.find((language) => language.locale === 'es').href
+					data-en-href=mainMenuLanguages.find((language) => language.locale === 'en').href
+					data-es-label=mainMenuLanguages.find((language) => language.locale === 'es').label
+					data-en-label=mainMenuLanguages.find((language) => language.locale === 'en').label
+					aria-label=`Cambiar a ${nextLanguage.label}`
+				)
+					span(
+						class='main-menu__language-flag'
+						data-flag='es'
+						hidden=activeLanguage.locale !== 'es'
+						aria-hidden='true'
+					)
+						svg(class='main-menu__language-flag-img' width='24' height='18' viewBox='0 0 24 18' aria-hidden='true')
+							rect(width='24' height='18' fill='#c60b1e')
+							rect(y='4.5' width='24' height='9' fill='#ffc400')
+					span(
+						class='main-menu__language-flag'
+						data-flag='en'
+						hidden=activeLanguage.locale !== 'en'
+						aria-hidden='true'
+					)
+						svg(class='main-menu__language-flag-img' width='24' height='18' viewBox='0 0 24 18' aria-hidden='true')
+							rect(width='24' height='18' fill='#b22234')
+							rect(y='1.385' width='24' height='1.385' fill='#fff')
+							rect(y='4.154' width='24' height='1.385' fill='#fff')
+							rect(y='6.923' width='24' height='1.385' fill='#fff')
+							rect(y='9.692' width='24' height='1.385' fill='#fff')
+							rect(y='12.462' width='24' height='1.385' fill='#fff')
+							rect(y='15.231' width='24' height='1.385' fill='#fff')
+							rect(width='9.6' height='9.69' fill='#3c3b6e')
 
 				button(class='main-menu__hamburger' type='button' aria-label='Abrir menú' aria-expanded='false' data-main-menu-toggle)
 					span(class='main-menu__hamburger-line')

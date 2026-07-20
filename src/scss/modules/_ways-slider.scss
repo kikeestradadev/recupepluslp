@@ -178,6 +178,15 @@
 			text-decoration: none;
 			transform: translateY(-1px);
 		}
+
+		&--whatsapp {
+			background: var(--color-whatsapp, #25d366);
+
+			&:hover,
+			&:focus-visible {
+				background: var(--color-whatsapp-dark, #1fbd59);
+			}
+		}
 	}
 
 	&__media {

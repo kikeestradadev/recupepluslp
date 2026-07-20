@@ -149,6 +149,23 @@
 		}
 	}
 
+	&__contact-link--whatsapp {
+		color: var(--color-whatsapp, #25d366);
+
+		.alt-footer__contact-icon {
+			color: var(--color-whatsapp, #25d366);
+		}
+
+		&:hover,
+		&:focus-visible {
+			color: var(--color-whatsapp-dark, #1fbd59);
+
+			.alt-footer__contact-icon {
+				color: var(--color-whatsapp-dark, #1fbd59);
+			}
+		}
+	}
+
 	&__contact-icon {
 		flex-shrink: 0;
 		margin-top: 0.1rem;

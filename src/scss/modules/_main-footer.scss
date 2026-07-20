@@ -207,6 +207,15 @@
 			color: var(--footer-accent);
 			text-decoration: none;
 		}
+
+		&--whatsapp {
+			color: var(--color-whatsapp, #25d366);
+
+			&:hover,
+			&:focus-visible {
+				color: var(--color-whatsapp-dark, #1fbd59);
+			}
+		}
 	}
 
 	&__contact-icon {
