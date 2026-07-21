@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/prism.css">
-    <link rel="stylesheet" href="styles.css?v=1.0.13">
+    <link rel="stylesheet" href="styles.css?v=1.0.14">
     <title>Suplementos | Layouts</title>
   </head>
   <body class="suplementos" itemscope itemtype="http://schema.org/WebPage">
@@ -28,7 +28,13 @@
             <div class="main-menu__panel" data-main-menu-panel>
               <ul class="main-menu__list">
                 <li class="main-menu__item"><a class="main-menu__link" href="./">Inicio</a></li>
-                <li class="main-menu__item"><a class="main-menu__link" href="suplementos.html">Suplementos</a></li>
+                <li class="main-menu__item main-menu__item--has-children"><a class="main-menu__link" href="suplementos.html" aria-expanded="false" data-main-menu-submenu-toggle>Suplementos</a>
+                  <ul class="main-menu__sub-menu" data-main-menu-submenu>
+                    <li class="main-menu__item"><a class="main-menu__link" href="./">Elegí según tu momento</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="suplementos.html">Gomitas</a></li>
+                    <li class="main-menu__item"><a class="main-menu__link" href="suplementos.html">Cápsulas</a></li>
+                  </ul>
+                </li>
                 <li class="main-menu__item"><a class="main-menu__link" href="donde-comprar.html">Dónde comprar</a></li>
                 <li class="main-menu__item"><a class="main-menu__link" href="guias.html">Guías</a></li>
                 <li class="main-menu__item"><a class="main-menu__link" href="nosotros.html">Nosotros</a></li>
@@ -174,7 +180,7 @@
                     <div class="product-slider__wrapper swiper-wrapper">
                       <article class="product-slider__slide swiper-slide">
                         <div class="product-slider__card product-slider__card--memento">
-                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Memento" width="280" height="180" loading="lazy"></div>
+                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas_t.png" alt="Memento" width="280" height="180" loading="lazy"></div>
                           <div class="product-slider__body">
                             <h3 class="product-slider__name">Memento</h3>
                             <p class="product-slider__text">Para acompañar tus momentos de enfoque.</p><a class="product-slider__link" href="#">Conocer más →</a>
@@ -183,7 +189,7 @@
                       </article>
                       <article class="product-slider__slide swiper-slide">
                         <div class="product-slider__card product-slider__card--activity">
-                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Activity" width="280" height="180" loading="lazy"></div>
+                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas_t.png" alt="Activity" width="280" height="180" loading="lazy"></div>
                           <div class="product-slider__body">
                             <h3 class="product-slider__name">Activity</h3>
                             <p class="product-slider__text">Para activar tu energía antes de moverte.</p><a class="product-slider__link" href="#">Conocer más →</a>
@@ -192,7 +198,7 @@
                       </article>
                       <article class="product-slider__slide swiper-slide">
                         <div class="product-slider__card product-slider__card--recovery">
-                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Recovery" width="280" height="180" loading="lazy"></div>
+                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas_t.png" alt="Recovery" width="280" height="180" loading="lazy"></div>
                           <div class="product-slider__body">
                             <h3 class="product-slider__name">Recovery</h3>
                             <p class="product-slider__text">Para acompañar tu recuperación después de hacer ejercicio.</p><a class="product-slider__link" href="#">Conocer más →</a>
@@ -201,7 +207,7 @@
                       </article>
                       <article class="product-slider__slide swiper-slide">
                         <div class="product-slider__card product-slider__card--aremore">
-                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Are More" width="280" height="180" loading="lazy"></div>
+                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas_t.png" alt="Are More" width="280" height="180" loading="lazy"></div>
                           <div class="product-slider__body">
                             <h3 class="product-slider__name">Are More</h3>
                             <p class="product-slider__text">Hongos funcionales + vitamina C para tu bienestar diario.</p><a class="product-slider__link" href="#">Conocer más →</a>
@@ -210,7 +216,7 @@
                       </article>
                       <article class="product-slider__slide swiper-slide">
                         <div class="product-slider__card product-slider__card--memento">
-                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Memento Focus" width="280" height="180" loading="lazy"></div>
+                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas_t.png" alt="Memento Focus" width="280" height="180" loading="lazy"></div>
                           <div class="product-slider__body">
                             <h3 class="product-slider__name">Memento Focus</h3>
                             <p class="product-slider__text">Enfoque prolongado para tu día.</p><a class="product-slider__link" href="#">Conocer más →</a>
@@ -219,7 +225,7 @@
                       </article>
                       <article class="product-slider__slide swiper-slide">
                         <div class="product-slider__card product-slider__card--activity">
-                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Activity Boost" width="280" height="180" loading="lazy"></div>
+                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas_t.png" alt="Activity Boost" width="280" height="180" loading="lazy"></div>
                           <div class="product-slider__body">
                             <h3 class="product-slider__name">Activity Boost</h3>
                             <p class="product-slider__text">Energía extra antes de entrenar.</p><a class="product-slider__link" href="#">Conocer más →</a>
@@ -228,7 +234,7 @@
                       </article>
                       <article class="product-slider__slide swiper-slide">
                         <div class="product-slider__card product-slider__card--recovery">
-                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Recovery Soft" width="280" height="180" loading="lazy"></div>
+                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas_t.png" alt="Recovery Soft" width="280" height="180" loading="lazy"></div>
                           <div class="product-slider__body">
                             <h3 class="product-slider__name">Recovery Soft</h3>
                             <p class="product-slider__text">Recuperación suave post ejercicio.</p><a class="product-slider__link" href="#">Conocer más →</a>
@@ -237,7 +243,7 @@
                       </article>
                       <article class="product-slider__slide swiper-slide">
                         <div class="product-slider__card product-slider__card--aremore">
-                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas.jpeg" alt="Are More Daily" width="280" height="180" loading="lazy"></div>
+                          <div class="product-slider__media"><img class="product-slider__image" src="./assets/capsulas_t.png" alt="Are More Daily" width="280" height="180" loading="lazy"></div>
                           <div class="product-slider__body">
                             <h3 class="product-slider__name">Are More Daily</h3>
                             <p class="product-slider__text">Bienestar diario con hongos funcionales.</p><a class="product-slider__link" href="#">Conocer más →</a>
@@ -371,6 +377,6 @@
       </svg></a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-    <script src="index.js?v=1.0.13"></script>
+    <script src="index.js?v=1.0.14"></script>
   </body>
 </html>
