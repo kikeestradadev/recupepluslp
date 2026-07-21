@@ -1,0 +1,15 @@
+extends ../config/template
+
+append config
+	-currentPage		= "guias"
+	-siteName			= 'Layouts'
+	-content			= 'content'
+	-pageDescription	= 'Pagina inicial de MyBoilerplate'
+
+
+block main-container
+	include ../components/guides-banner
+	include ../components/blog-filter
+	include ../components/community-banner
+	include ../components/help-guides
+block scripts

@@ -4,7 +4,7 @@
 	--reviews-slider-container-max: var(--container, 1600px);
 	--reviews-slider-gutter: 15px;
 	--reviews-slider-card-width: 17rem;
-	padding-block: 2.5rem;
+	margin-bottom: var(--section-gap);
 	background: #f7f7f7;
 	overflow: hidden;
 
@@ -33,9 +33,10 @@
 		margin: 0 auto 1.75rem;
 		padding: 0 15px;
 		color: var(--header-color, #1f2024);
-		font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+		font-size: var(--section-title-size);
 		font-weight: 700;
 		line-height: 1.25;
+		text-transform: uppercase;
 		text-align: center;
 	}
 
@@ -203,7 +204,6 @@
 
 	@media (width >= $m) {
 		--reviews-slider-card-width: 20rem;
-		padding-block: 3.25rem;
 
 		&__card {
 			grid-template-columns: 6.25rem minmax(0, 1fr);
@@ -219,7 +219,6 @@
 
 	@media (width >= $l) {
 		--reviews-slider-card-width: 22rem;
-		padding-block: 4rem;
 
 		&__swiper {
 			padding-inline: 2.75rem;

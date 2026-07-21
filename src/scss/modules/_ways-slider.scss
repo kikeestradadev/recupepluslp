@@ -6,7 +6,7 @@
 	--ways-slider-card-width: min(20.5rem, calc(100vw - 2.5rem));
 	--ways-slider-card-height: auto;
 	--ways-slider-media-height: 9.5rem;
-	padding-block: 2.5rem;
+	margin-bottom: var(--section-gap);
 	background: #fff;
 	overflow: hidden;
 
@@ -35,9 +35,10 @@
 		margin: 0 auto 1.75rem;
 		padding: 0 15px;
 		color: var(--header-color, #1f2024);
-		font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+		font-size: var(--section-title-size);
 		font-weight: 700;
 		line-height: 1.25;
+		text-transform: uppercase;
 		text-align: center;
 	}
 
@@ -235,7 +236,6 @@
 	@media (width >= $m) {
 		--ways-slider-card-width: min(24rem, calc(100vw - 3rem));
 		--ways-slider-media-height: 11rem;
-		padding-block: 3.25rem;
 
 		&__content {
 			padding: 1.35rem 1.35rem 1.5rem;
@@ -261,7 +261,6 @@
 		--ways-slider-card-width: 35rem;
 		--ways-slider-card-height: 20rem;
 		--ways-slider-media-height: 100%;
-		padding-block: 4rem;
 
 		&__swiper {
 			padding-inline: 2.75rem;

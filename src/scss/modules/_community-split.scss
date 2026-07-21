@@ -5,7 +5,7 @@
 	--community-split-gutter: 15px;
 	--community-split-cta-bg: #e8dced;
 	--community-split-radius: 1rem;
-	padding-block: 2.5rem;
+	margin-bottom: var(--section-gap);
 
 	&__shell {
 		width: 100%;
@@ -63,16 +63,17 @@
 	&__title {
 		margin: 0;
 		color: var(--header-color, #1f2024);
-		font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+		font-size: var(--section-title-size);
 		font-weight: 800;
 		line-height: 1.2;
+		text-transform: uppercase;
 	}
 
 	&__text {
 		margin: 0;
 		max-width: 34rem;
 		color: #4a4a4a;
-		font-size: 0.9375rem;
+		font-size: var(--section-subtitle-size);
 		line-height: 1.5;
 	}
 
@@ -225,23 +226,14 @@
 	}
 
 	@media (width >= $m) {
-		padding-block: 3.25rem;
 
-		&__text {
-			font-size: 1rem;
-		}
 	}
 
 	@media (width >= $lg) {
-		padding-block: 4rem;
 		--community-split-radius: 1.15rem;
 
 		&__layout {
 			gap: 2.5rem;
-		}
-
-		&__title {
-			font-size: 1.875rem;
 		}
 
 		&__cta {

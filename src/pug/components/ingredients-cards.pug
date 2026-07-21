@@ -1,0 +1,26 @@
+include ../data/ingredients-cards-data
+
+section(class='ingredients-cards')
+	div(class='main-container ingredients-cards__shell')
+		div(class='container ingredients-cards__container ingredients-cards__inner')
+			h2(class='ingredients-cards__title')= ingredientsCardsData.title
+
+			div(class='ingredients-cards__grid')
+				each item in ingredientsCardsData.items
+					figure(class='ingredients-cards__item')
+						picture(class='ingredients-cards__picture')
+							source(
+								media='(width >= 960px)'
+								srcset=item.imageDesktop
+							)
+							img(
+								class='ingredients-cards__image'
+								src=item.imageMobile
+								alt=item.alt
+								width='480'
+								height='360'
+								loading='lazy'
+							)
+
+			div(class='ingredients-cards__actions')
+				a(class='ingredients-cards__cta' href=ingredientsCardsData.cta.href)= ingredientsCardsData.cta.label

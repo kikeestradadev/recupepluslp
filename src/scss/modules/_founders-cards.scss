@@ -7,7 +7,7 @@
 	--founders-cards-radius: 1rem;
 	--founders-cards-accent: var(--color-orange, #ff9100);
 	--founders-cards-card-width: min(20.5rem, calc(100vw - 2.5rem));
-	padding-block: 2.5rem 3rem;
+	margin-bottom: var(--section-gap);
 	background: #fff;
 	overflow: hidden;
 
@@ -40,16 +40,17 @@
 	&__title {
 		margin: 0 0 0.5rem;
 		color: var(--header-color, #1f2024);
-		font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+		font-size: var(--section-title-size);
 		font-weight: 800;
 		line-height: 1.2;
+		text-transform: uppercase;
 	}
 
 	&__subtitle {
 		margin: 0;
 		color: var(--header-color, #1f2024);
-		font-size: 0.9375rem;
-		line-height: 1.45;
+		font-size: var(--section-subtitle-size);
+		line-height: 1.5;
 	}
 
 	&__slider {
@@ -224,7 +225,6 @@
 
 	@media (width >= $m) {
 		--founders-cards-card-width: min(24rem, calc(100vw - 3rem));
-		padding-block: 3.25rem 3.5rem;
 
 		&__header {
 			margin-bottom: 2rem;
@@ -242,15 +242,6 @@
 	@media (width >= $l) {
 		--founders-cards-card-width: 32rem;
 		--founders-cards-radius: 1.15rem;
-		padding-block: 4rem;
-
-		&__title {
-			font-size: 1.75rem;
-		}
-
-		&__subtitle {
-			font-size: 1rem;
-		}
 
 		&__card {
 			grid-template-columns: minmax(7.5rem, 0.85fr) minmax(0, 1.25fr);

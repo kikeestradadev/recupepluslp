@@ -1,0 +1,18 @@
+include ../data/buy-banner-data
+
+section(class='buy-banner' aria-label=buyBannerData.alt)
+	figure(class='buy-banner__figure')
+		picture(class='buy-banner__picture')
+			source(
+				media='(width >= 960px)'
+				srcset=buyBannerData.imageDesktop
+			)
+			img(
+				class='buy-banner__image'
+				src=buyBannerData.imageMobile
+				alt=buyBannerData.alt
+				width='1600'
+				height='600'
+				loading='eager'
+				fetchpriority='high'
+			)

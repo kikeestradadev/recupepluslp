@@ -1,0 +1,14 @@
+extends ../config/template
+
+append config
+	-currentPage		= "suplementos"
+	-siteName			= 'Layouts'
+	-content			= 'content'
+	-pageDescription	= 'Pagina inicial de MyBoilerplate'
+
+
+block main-container
+	include ../components/supplements-banner
+	include ../components/product-slider
+	include ../components/supplements-features
+block scripts

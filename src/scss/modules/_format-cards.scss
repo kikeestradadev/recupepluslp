@@ -3,7 +3,7 @@
 	--format-cards-shell-max: 3500px;
 	--format-cards-container-max: 1600px;
 	--format-cards-gutter: 15px;
-	padding-block: 3rem;
+	margin-bottom: var(--section-gap);
 	background: #fff;
 
 	&__shell {
@@ -28,7 +28,7 @@
 		max-width: 42rem;
 		margin: 0 auto 2rem;
 		color: var(--header-color, #1f2024);
-		font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+		font-size: var(--section-title-size);
 		font-weight: 700;
 		letter-spacing: 0.02em;
 		line-height: 1.25;
@@ -54,15 +54,16 @@
 		align-items: center;
 		min-width: 0;
 		padding: 1.5rem;
+		border: 1px solid #e0e0e0;
 		border-radius: 1.25rem;
-		background: #f6f3ee;
+		background: #fff;
 
 		@media (width >= $l) {
 			padding: 1.75rem;
 		}
 
 		@media (width >= $lg) {
-			grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+			grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
 			gap: 1.5rem;
 			padding: 2rem 1.5rem 2rem 2rem;
 		}
@@ -101,7 +102,15 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 0.75rem;
+		width: 100%;
+		max-width: 400px;
 		min-width: 0;
+		margin-inline: auto;
+
+		@media (width >= $lg) {
+			max-width: none;
+			margin-inline: 0;
+		}
 	}
 
 	&__name {
@@ -182,7 +191,6 @@
 	}
 
 	@media (width >= $l) {
-		padding-block: 4rem;
 
 		&__title {
 			margin-bottom: 2.5rem;

@@ -1,0 +1,16 @@
+extends ../config/template
+
+append config
+	-currentPage		= "donde comprar"
+	-siteName			= 'Layouts'
+	-content			= 'content'
+	-pageDescription	= 'Pagina inicial de MyBoilerplate'
+
+
+block main-container
+	include ../components/buy-banner
+	include ../components/ways-slider
+	include ../components/store-locator
+	include ../components/allies-slider
+	include ../components/newsletter-banner
+block scripts

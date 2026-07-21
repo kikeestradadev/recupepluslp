@@ -4,6 +4,9 @@
 	/*text set up*/
 	--header-color			: #1F2024;
 	--paragraph-color		:#1F2024;
+	--section-title-size: clamp(1.25rem, 2.5vw, 1.75rem);
+	--section-subtitle-size: 0.9375rem;
+	--section-gap: 2.5rem;
 
 	/*breakpoints*/
 	--s: #{$s};
@@ -34,8 +37,14 @@
 	--color-fuchsia: #BA1CFF;
 
 
+	@media (width >= $m) {
+		--section-gap: 3.5rem;
+	}
+
 	@media (width >= $l) {
 		--header-height: 4.5rem;
+		--section-subtitle-size: 1rem;
+		--section-gap: 4rem;
 	}
 
 	//native color vars

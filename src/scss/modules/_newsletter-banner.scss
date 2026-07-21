@@ -3,7 +3,7 @@
 	--newsletter-banner-shell-max: 3500px;
 	--newsletter-banner-container-max: 1600px;
 	--newsletter-banner-gutter: 15px;
-	padding-block: 2.5rem;
+	margin-bottom: var(--section-gap);
 	background: #fff;
 
 	&__shell {
@@ -157,7 +157,6 @@
 	}
 
 	@media (width >= $l) {
-		padding-block: 3.5rem;
 
 		&__card {
 			grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.9fr);

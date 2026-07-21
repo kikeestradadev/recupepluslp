@@ -1,0 +1,18 @@
+include ../data/guides-banner-data
+
+section(class='guides-banner' aria-label=guidesBannerData.alt)
+	figure(class='guides-banner__figure')
+		picture(class='guides-banner__picture')
+			source(
+				media='(width >= 960px)'
+				srcset=guidesBannerData.imageDesktop
+			)
+			img(
+				class='guides-banner__image'
+				src=guidesBannerData.imageMobile
+				alt=guidesBannerData.alt
+				width='1600'
+				height='600'
+				loading='eager'
+				fetchpriority='high'
+			)

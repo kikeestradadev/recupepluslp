@@ -1,0 +1,18 @@
+include ../data/supplements-banner-data
+
+section(class='supplements-banner' aria-label=supplementsBannerData.alt)
+	figure(class='supplements-banner__figure')
+		picture(class='supplements-banner__picture')
+			source(
+				media='(width >= 960px)'
+				srcset=supplementsBannerData.imageDesktop
+			)
+			img(
+				class='supplements-banner__image'
+				src=supplementsBannerData.imageMobile
+				alt=supplementsBannerData.alt
+				width='1600'
+				height='600'
+				loading='eager'
+				fetchpriority='high'
+			)
