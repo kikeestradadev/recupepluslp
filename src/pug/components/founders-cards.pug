@@ -7,20 +7,12 @@ section(class='founders-cards')
 				h2(class='founders-cards__title')= foundersCardsData.title
 				p(class='founders-cards__subtitle')= foundersCardsData.subtitle
 
-			div(class='founders-cards__slider')
-				button(class='founders-cards__nav founders-cards__nav--prev' type='button' aria-label='Anterior')
-				button(class='founders-cards__nav founders-cards__nav--next' type='button' aria-label='Siguiente')
-
-				div(class='founders-cards__swiper swiper')
-					div(class='founders-cards__wrapper swiper-wrapper')
-						each person in foundersCardsData.items
-							article(class='founders-cards__slide swiper-slide')
-								div(class='founders-cards__card')
-									div(class='founders-cards__media')
-										img(class='founders-cards__image' src=person.img alt=person.name width='320' height='400' loading='lazy')
-									div(class='founders-cards__body')
-										h3(class='founders-cards__name')= person.name
-										p(class='founders-cards__role')= person.role
-										p(class='founders-cards__text')= person.text
-
-				div(class='founders-cards__pagination swiper-pagination')
+			div(class='founders-cards__grid')
+				each person in foundersCardsData.items
+					article(class='founders-cards__card')
+						div(class='founders-cards__media')
+							img(class='founders-cards__image' src=person.img alt=person.name width='320' height='400' loading='lazy')
+						div(class='founders-cards__body')
+							h3(class='founders-cards__name')= person.name
+							p(class='founders-cards__role')= person.role
+							p(class='founders-cards__text')= person.text

@@ -135,8 +135,8 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		height: 250px;
-		min-height: 250px;
+		height: auto;
+		min-height: 280px;
 		min-width: 0;
 		overflow: hidden;
 		border: 1px solid #e8e2da;
@@ -150,7 +150,7 @@
 		align-items: flex-start;
 		justify-content: space-between;
 		gap: 0.65rem;
-		flex: 1 1 60%;
+		flex: 1 1 50%;
 		min-height: 0;
 		padding: 1.15rem 1.1rem 0.95rem;
 	}
@@ -171,8 +171,9 @@
 	}
 
 	&__media {
-		flex: 0 0 40%;
+		flex: 0 0 50%;
 		width: 100%;
+		height: auto;
 		min-height: 0;
 		overflow: hidden;
 		background: #e8e2da;

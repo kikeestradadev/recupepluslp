@@ -1,0 +1,20 @@
+include ../data/about-story-data
+
+section(class='about-story')
+	div(class='main-container about-story__shell')
+		div(class='container about-story__container about-story__inner')
+			div(class='about-story__layout')
+				div(class='about-story__media')
+					img(
+						class='about-story__image'
+						src=aboutStoryData.image
+						alt=aboutStoryData.alt
+						width='720'
+						height='540'
+						loading='lazy'
+					)
+
+				div(class='about-story__content')
+					h2(class='about-story__title')= aboutStoryData.title
+					each paragraph in aboutStoryData.paragraphs
+						p(class='about-story__text')= paragraph

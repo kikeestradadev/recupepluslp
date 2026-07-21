@@ -4,7 +4,6 @@ import productSlider from './modules/productSlider';
 import alliesSlider from './modules/alliesSlider';
 import storeLocator from './modules/storeLocator';
 import waysSlider from './modules/waysSlider';
-import foundersCards from './modules/foundersCards';
 import believeCards from './modules/believeCards';
 import reviewsSlider from './modules/reviewsSlider';
 import guideSlider from './modules/guideSlider';
@@ -22,7 +21,6 @@ const initComponents = () => {
 	storeLocator();
 	waysSlider();
 	believeCards();
-	foundersCards();
 	reviewsSlider();
 	guideSlider();
 	ingredientsSlider();
