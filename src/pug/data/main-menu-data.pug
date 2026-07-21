@@ -1,7 +1,15 @@
 -
 	const mainMenuItems = [
 		{ label: 'Inicio', href: './' },
-		{ label: 'Suplementos', href: 'suplementos.html' },
+		{
+			label: 'Suplementos',
+			href: 'suplementos.html',
+			children: [
+				{ label: 'Elegí según tu momento', href: './' },
+				{ label: 'Gomitas', href: 'suplementos.html' },
+				{ label: 'Cápsulas', href: 'suplementos.html' }
+			]
+		},
 		{ label: 'Dónde comprar', href: 'donde-comprar.html' },
 		{ label: 'Guías', href: 'guias.html' },
 		{ label: 'Nosotros', href: 'nosotros.html' },
