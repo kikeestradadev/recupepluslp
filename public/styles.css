@@ -5034,6 +5034,15 @@ img {
   background: var(--color-whatsapp-dark, #1fbd59);
   color: #fff;
 }
+.start-banner__cta--primary {
+  border: 1px solid transparent;
+  background: var(--color-orange, #ff9100);
+  color: #fff;
+}
+.start-banner__cta--primary:hover, .start-banner__cta--primary:focus-visible {
+  background: var(--color-orange-light, #ff4a00);
+  color: #fff;
+}
 .start-banner__cta--secondary {
   border: 1px solid #d7d0c8;
   background: #fff;
