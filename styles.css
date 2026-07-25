@@ -8526,7 +8526,6 @@ img {
   --ingredients-cards-shell-max: var(--main-container, 3500px);
   --ingredients-cards-container-max: var(--container, 1600px);
   --ingredients-cards-gutter: 15px;
-  --ingredients-cards-orange: var(--color-orange, #ff9100);
   margin-bottom: var(--section-gap);
   background: #fff;
 }
@@ -8593,48 +8592,6 @@ img {
   width: 100%;
   height: auto;
 }
-.ingredients-cards__actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 2rem;
-}
-.ingredients-cards__cta {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 2.85rem;
-  padding: 0.7rem 1.35rem;
-  border: 1px solid var(--ingredients-cards-orange);
-  border-radius: 0.55rem;
-  background: transparent;
-  color: var(--ingredients-cards-orange);
-  font-size: 0.9375rem;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
-  -webkit-transition: background 0.2s ease, color 0.2s ease, -webkit-transform 0.2s ease;
-  transition: background 0.2s ease, color 0.2s ease, -webkit-transform 0.2s ease;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
-}
-.ingredients-cards__cta:hover, .ingredients-cards__cta:focus-visible {
-  background: var(--ingredients-cards-orange);
-  color: #fff;
-  text-decoration: none;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-}
 @media (width >= 960px) {
   .ingredients-cards__title {
     margin-bottom: 2.5rem;
@@ -8646,18 +8603,10 @@ img {
     max-width: none;
     margin-inline: 0;
   }
-  .ingredients-cards__actions {
-    margin-top: 2.25rem;
-  }
 }
 @media (width >= 1280px) {
   .ingredients-cards__grid {
     gap: 1.5rem;
-  }
-  .ingredients-cards__cta {
-    min-height: 3rem;
-    padding-inline: 1.5rem;
-    font-size: 1rem;
   }
 }
 
