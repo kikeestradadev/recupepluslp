@@ -91,33 +91,11 @@
 		}
 	}
 
-	&__deco {
-		position: absolute;
-		z-index: 0;
-		right: 0.5rem;
-		bottom: 0.5rem;
-		width: 3.5rem;
-		height: auto;
-		object-fit: cover;
-		opacity: 0.35;
-		pointer-events: none;
-		border-radius: 0.5rem;
-		mix-blend-mode: multiply;
-
-		@media (width >= $sm) {
-			width: 4.5rem;
-			right: 0.75rem;
-			top: 50%;
-			bottom: auto;
-			transform: translateY(-50%);
-		}
-	}
-
 	&__cta-title {
 		position: relative;
 		z-index: 1;
 		margin: 0 0 0.85rem;
-		max-width: 18rem;
+		width: 100%;
 		color: var(--header-color, #1f2024);
 		font-size: 1rem;
 		font-weight: 700;

@@ -40,10 +40,15 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 1.25rem;
+		width: 100%;
+		max-width: 640px;
+		margin-inline: auto;
 
 		@media (width >= $l) {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 			gap: 1.5rem;
+			max-width: none;
+			margin-inline: 0;
 		}
 	}
 
@@ -102,14 +107,7 @@
 		align-items: flex-start;
 		gap: 0.75rem;
 		width: 100%;
-		max-width: 400px;
 		min-width: 0;
-		margin-inline: auto;
-
-		@media (width >= $lg) {
-			max-width: none;
-			margin-inline: 0;
-		}
 	}
 
 	&__name {
@@ -183,7 +181,6 @@
 	&__image {
 		display: block;
 		width: 100%;
-		max-width: 400px;
 		height: auto;
 		margin: 0 auto;
 		object-fit: contain;

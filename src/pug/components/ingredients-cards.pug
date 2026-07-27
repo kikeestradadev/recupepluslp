@@ -7,17 +7,18 @@ section(class='ingredients-cards')
 
 			div(class='ingredients-cards__grid')
 				each item in ingredientsCardsData.items
-					figure(class='ingredients-cards__item')
-						picture(class='ingredients-cards__picture')
-							source(
-								media='(width >= 960px)'
-								srcset=item.imageDesktop
-							)
+					article(class='ingredients-cards__card')
+						div(class='ingredients-cards__media')
 							img(
 								class='ingredients-cards__image'
-								src=item.imageMobile
+								src=item.image
 								alt=item.alt
-								width='480'
-								height='360'
+								width='900'
+								height='640'
 								loading='lazy'
 							)
+						div(class='ingredients-cards__body')
+							h3(class='ingredients-cards__name')= item.title
+							ul(class='ingredients-cards__list')
+								each bullet in item.bullets
+									li(class='ingredients-cards__bullet')= bullet

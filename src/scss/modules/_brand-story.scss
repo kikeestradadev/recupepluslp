@@ -29,6 +29,9 @@
 		grid-template-columns: 1fr;
 		gap: 1.5rem;
 		align-items: center;
+		width: 100%;
+		max-width: 640px;
+		margin-inline: auto;
 	}
 
 	&__media {
@@ -107,19 +110,20 @@
 		&__layout {
 			grid-template-columns: 1fr;
 			gap: 1.75rem;
+			max-width: 680px;
 		}
 
 		&__media {
-			width: min(100%, 680px);
-			max-width: 680px;
-			justify-self: center;
+			width: 100%;
+			max-width: none;
+			justify-self: stretch;
 			border-radius: 1.5rem;
 		}
 
 		&__content {
 			width: 100%;
-			max-width: 680px;
-			margin-inline: auto;
+			max-width: none;
+			margin-inline: 0;
 			gap: 1rem;
 			padding: 0;
 		}
@@ -131,6 +135,8 @@
 			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 			gap: 3rem;
 			align-items: center;
+			max-width: none;
+			margin-inline: 0;
 		}
 
 		&__media {

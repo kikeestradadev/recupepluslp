@@ -2,16 +2,25 @@ include ../data/main-banner-data
 
 section(class='main-banner' aria-label='Recuperá tu bienestar')
 	div(class='main-banner__layout')
-		div(class='main-banner__media')
-			img(
-				class='main-banner__image'
-				src=mainBannerData.image
-				alt=mainBannerData.alt
-				width='1200'
-				height='900'
-				loading='eager'
-				fetchpriority='high'
-			)
+		figure(class='main-banner__media')
+			picture(class='main-banner__picture')
+				source(
+					media='(width >= 960px)'
+					srcset=mainBannerData.imageDesktop
+				)
+				source(
+					media='(width >= 640px)'
+					srcset=mainBannerData.imageTablet
+				)
+				img(
+					class='main-banner__image'
+					src=mainBannerData.imageMobile
+					alt=mainBannerData.alt
+					width='1200'
+					height='900'
+					loading='eager'
+					fetchpriority='high'
+				)
 
 		div(class='main-banner__content')
 			div(class='main-banner__copy')
