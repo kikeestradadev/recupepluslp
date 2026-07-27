@@ -26,12 +26,6 @@
 		background: var(--main-banner-bg);
 	}
 
-	&__picture {
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
-
 	&__image {
 		display: block;
 		position: absolute;
@@ -82,15 +76,6 @@
 		&--accent {
 			color: var(--main-banner-orange);
 		}
-	}
-
-	&__text {
-		display: none;
-		margin: 0.65rem 0 0;
-		color: var(--main-banner-text);
-		font-size: clamp(0.875rem, 2.4vw, 1.0625rem);
-		font-weight: 400;
-		line-height: 1.45;
 	}
 
 	&__actions {
@@ -152,35 +137,9 @@
 		flex-shrink: 0;
 	}
 
-	&__note {
-		display: none;
-		align-items: start;
-		justify-content: flex-start;
-		gap: 0.45rem;
-		margin: 1rem 0 0;
-		color: var(--main-banner-text);
-		font-size: 0.75rem;
-		font-weight: 400;
-		line-height: 1.35;
-	}
-
-	&__note-icon {
-		display: block;
-		flex-shrink: 0;
-		color: var(--main-banner-text);
-	}
-
 	@media (width >= $m) {
 		&__content {
 			padding: 2rem 1.5rem;
-		}
-
-		&__text {
-			display: block;
-		}
-
-		&__note {
-			display: inline-flex;
 		}
 
 		&__actions {
@@ -209,10 +168,6 @@
 		&__title {
 			font-size: clamp(2.75rem, 4.2vw, 4rem);
 		}
-
-		&__text {
-			max-width: 28rem;
-		}
 	}
 
 	@media (width >= $lg) {
@@ -227,10 +182,6 @@
 
 		&__title {
 			font-size: clamp(3.25rem, 4vw, 4.5rem);
-		}
-
-		&__text {
-			font-size: 1.125rem;
 		}
 
 		&__button {
