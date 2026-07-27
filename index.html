@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/prism.css">
-    <link rel="stylesheet" href="styles.css?v=1.0.16">
+    <link rel="stylesheet" href="styles.css?v=1.0.17">
     <title>Home | Layouts</title>
   </head>
   <body class="home" itemscope itemtype="http://schema.org/WebPage">
@@ -64,7 +64,12 @@
     <main>
       <section class="main-banner" aria-label="Recuperá tu bienestar">
         <div class="main-banner__layout">
-          <div class="main-banner__media"><img class="main-banner__image" src="./assets/img2.jpg" alt="Mujer disfrutando un momento de bienestar con Recupé Plus" width="1200" height="900" loading="eager" fetchpriority="high"></div>
+          <figure class="main-banner__media">
+            <picture class="main-banner__picture">
+              <source media="(width &gt;= 960px)" srcset="./assets/drive_24_julio/home_slider_1/slider_1_a.webp">
+              <source media="(width &gt;= 640px)" srcset="./assets/drive_24_julio/home_slider_1/slider_1_b.webp"><img class="main-banner__image" src="./assets/drive_24_julio/home_slider_1/slider_1_c.webp" alt="Mujer disfrutando un momento de bienestar con Recupé Plus" width="1200" height="900" loading="eager" fetchpriority="high">
+            </picture>
+          </figure>
           <div class="main-banner__content">
             <div class="main-banner__copy">
               <h1 class="main-banner__title"><span class="main-banner__title-line">Recuperá tu</span><span class="main-banner__title-line main-banner__title-line--accent">bienestar.</span></h1>
@@ -98,37 +103,37 @@
               <div class="moment-slider__swiper swiper">
                 <div class="moment-slider__wrapper swiper-wrapper">
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/empezar_día.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/empezar_día.webp" alt="" width="280" height="180" loading="lazy"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Al empezar el día</h3>
                         <p class="moment-slider__card-text">C•Maglife - Antiox Vitamin</p>
                       </div></a></article>
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/estudias.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/estudias.webp" alt="" width="280" height="180" loading="lazy"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Cuando trabajás o estudiás</h3>
                         <p class="moment-slider__card-text">Memotre - Antiox Vitamin</p>
                       </div></a></article>
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/entrenar.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/entrenar.webp" alt="" width="280" height="180" loading="lazy"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Antes de entrenar o moverte</h3>
                         <p class="moment-slider__card-text">Activity - Memotre</p>
                       </div></a></article>
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/despues_entrenar.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/despues_entrenar.webp" alt="" width="280" height="180" loading="lazy"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Después de hacer ejercicio</h3>
                         <p class="moment-slider__card-text">Recovery - Antiox Vitamin</p>
                       </div></a></article>
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/todos.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/todos.webp" alt="" width="280" height="180" loading="lazy"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Todos los días</h3>
                         <p class="moment-slider__card-text">C•Maglife - Vitamin Antiox - Memotre</p>
                       </div></a></article>
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/dormir.jpg" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio//momento/dormir.webp" alt="" width="280" height="180" loading="lazy"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Antes de dormir</h3>
                         <p class="moment-slider__card-text">Serenity - Memotre</p>
@@ -176,21 +181,50 @@
           <div class="container ingredients-cards__container ingredients-cards__inner">
             <h2 class="ingredients-cards__title">Ingredientes elegidos con intención.</h2>
             <div class="ingredients-cards__grid">
-              <figure class="ingredients-cards__item">
-                <picture class="ingredients-cards__picture">
-                  <source media="(width &gt;= 960px)" srcset="./assets/ingrediente_dk_1.png"><img class="ingredients-cards__image" src="./assets/ingrediente_mb_1.png" alt="" width="480" height="360" loading="lazy">
-                </picture>
-              </figure>
-              <figure class="ingredients-cards__item">
-                <picture class="ingredients-cards__picture">
-                  <source media="(width &gt;= 960px)" srcset="./assets/ingrediente_dk_2.png"><img class="ingredients-cards__image" src="./assets/ingrediente_mb_2.png" alt="" width="480" height="360" loading="lazy">
-                </picture>
-              </figure>
-              <figure class="ingredients-cards__item">
-                <picture class="ingredients-cards__picture">
-                  <source media="(width &gt;= 960px)" srcset="./assets/ingrediente_dk_3.png"><img class="ingredients-cards__image" src="./assets/ingrediente_mb_3.png" alt="" width="480" height="360" loading="lazy">
-                </picture>
-              </figure>
+              <article class="ingredients-cards__card">
+                <div class="ingredients-cards__media"><img class="ingredients-cards__image" src="./assets/drive_24_julio/ing/ing_1.webp" alt="Vitamina C y magnesio" width="900" height="640" loading="lazy"></div>
+                <div class="ingredients-cards__body">
+                  <h3 class="ingredients-cards__name">Micronutrientes</h3>
+                  <ul class="ingredients-cards__list">
+                    <li class="ingredients-cards__bullet">Vitamina C</li>
+                    <li class="ingredients-cards__bullet">Magnesio</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="ingredients-cards__card">
+                <div class="ingredients-cards__media"><img class="ingredients-cards__image" src="./assets/drive_24_julio/ing/ing_2.webp" alt="Activos naturales" width="900" height="640" loading="lazy"></div>
+                <div class="ingredients-cards__body">
+                  <h3 class="ingredients-cards__name">Activos naturales</h3>
+                  <ul class="ingredients-cards__list">
+                    <li class="ingredients-cards__bullet">Ashwagandha</li>
+                    <li class="ingredients-cards__bullet">Manzanilla</li>
+                    <li class="ingredients-cards__bullet">Cúrcuma</li>
+                    <li class="ingredients-cards__bullet">Jengibre</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="ingredients-cards__card">
+                <div class="ingredients-cards__media"><img class="ingredients-cards__image" src="./assets/drive_24_julio/ing/ing_3.webp" alt="Antioxidantes naturales" width="900" height="640" loading="lazy"></div>
+                <div class="ingredients-cards__body">
+                  <h3 class="ingredients-cards__name">Antioxidantes</h3>
+                  <ul class="ingredients-cards__list">
+                    <li class="ingredients-cards__bullet">Mora</li>
+                    <li class="ingredients-cards__bullet">Maracuyá</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="ingredients-cards__card">
+                <div class="ingredients-cards__media"><img class="ingredients-cards__image" src="./assets/drive_24_julio/ing/ing_4.webp" alt="Hongos medicinales" width="900" height="640" loading="lazy"></div>
+                <div class="ingredients-cards__body">
+                  <h3 class="ingredients-cards__name">Hongos</h3>
+                  <ul class="ingredients-cards__list">
+                    <li class="ingredients-cards__bullet">Lion's Mane</li>
+                    <li class="ingredients-cards__bullet">Cordyceps</li>
+                    <li class="ingredients-cards__bullet">Reishi</li>
+                    <li class="ingredients-cards__bullet">Turkey Tail</li>
+                  </ul>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -199,7 +233,7 @@
         <div class="main-container brand-story__shell">
           <div class="container brand-story__container brand-story__inner">
             <div class="brand-story__layout">
-              <div class="brand-story__media"><img class="brand-story__image" src="./assets/drive_24_julio/fundadoras/fundadoras.jpg" alt="" width="720" height="540" loading="lazy"></div>
+              <div class="brand-story__media"><img class="brand-story__image" src="./assets/drive_24_julio/fundadoras/fundadoras.webp" alt="" width="720" height="540" loading="lazy"></div>
               <div class="brand-story__content">
                 <h2 class="brand-story__title">Una marca costarricense creada para hacer más simple cuidarte.</h2>
                 <p class="brand-story__text">Recupé Plus nace con una idea clara: ayudar a las personas a sentirse mejor todos los días con productos ricos, prácticos y fáciles de sumar a su rutina.</p>
@@ -393,8 +427,7 @@
                       <path d="M12 3a9 9 0 0 0-7.8 13.4L3.5 20.5l4.2-.7A9 9 0 1 0 12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
                       <path d="M9.2 9.4c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.3l.7 1.7c.1.2 0 .4-.1.5l-.4.5c-.1.1-.1.3 0 .5.4.7 1.1 1.4 1.9 1.9.2.1.4.1.5 0l.5-.4c.2-.1.4-.2.5-.1l1.7.7c.3.1.3.3.3.5v.5c0 .2 0 .4-.4.6A5.4 5.4 0 0 1 12 16.8 5.5 5.5 0 0 1 9.2 9.4z" fill="currentColor"></path>
                     </svg><span>Escribir por WhatsApp</span></a><a class="start-banner__cta start-banner__cta--primary" href="suplementos.html">Ver productos</a></div>
-              </div>
-              <div class="start-banner__media"><img class="start-banner__image" src="./assets/drive_24_julio/ws/ws.png" alt="" width="720" height="480" loading="lazy"></div>
+              </div><img class="start-banner__image" src="./assets/drive_24_julio/ws/ws.webp" alt="" width="720" height="480" loading="lazy">
             </div>
           </div>
         </div>
@@ -447,7 +480,7 @@
               <div class="community-split__content">
                 <h2 class="community-split__title">Más que productos, una comunidad.</h2>
                 <p class="community-split__text">Te acompañamos con guías, recomendaciones, lanzamientos y contenido pensado para ayudarte a sentirte mejor, todos los días.</p>
-                <div class="community-split__cta"><img class="community-split__deco" src="./assets/img3.jpg" alt="" width="80" height="120" loading="lazy" aria-hidden="true">
+                <div class="community-split__cta">
                   <p class="community-split__cta-title">Sumate a la comunidad Recupé Plus.</p>
                   <form class="community-split__form" action="#" method="post">
                     <label class="community-split__sr-only" for="communitySplitEmail">Tu correo electrónico</label>
@@ -547,6 +580,6 @@
       </svg></a><a class="floating-button" href="style-guide.html">Style Guide</a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-    <script src="index.js?v=1.0.16"></script>
+    <script src="index.js?v=1.0.17"></script>
   </body>
 </html>
