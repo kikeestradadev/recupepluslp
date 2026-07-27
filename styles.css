@@ -7085,6 +7085,7 @@ img {
   color: var(--main-banner-orange);
 }
 .main-banner__text {
+  display: none;
   margin: 0.65rem 0 0;
   color: var(--main-banner-text);
   font-size: clamp(0.875rem, 2.4vw, 1.0625rem);
@@ -7156,9 +7157,7 @@ img {
       flex-shrink: 0;
 }
 .main-banner__note {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: none;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
@@ -7181,6 +7180,14 @@ img {
 @media (width >= 640px) {
   .main-banner__content {
     padding: 2rem 1.5rem;
+  }
+  .main-banner__text {
+    display: block;
+  }
+  .main-banner__note {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
   .main-banner__actions {
     -webkit-box-orient: horizontal;
