@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/prism.css">
-    <link rel="stylesheet" href="styles.css?v=1.0.20">
+    <link rel="stylesheet" href="styles.css?v=1.0.21">
     <title>Home | Layouts</title>
   </head>
   <body class="home" itemscope itemtype="http://schema.org/WebPage">
@@ -63,17 +63,37 @@
     </header>
     <main>
       <section class="main-banner" aria-label="Recuperá tu bienestar">
-        <div class="main-banner__layout">
-          <figure class="main-banner__media"><img class="main-banner__image" src="./assets/drive_24_julio/home_slider_1/slider_1_a.webp" alt="Mujer disfrutando un momento de bienestar con Recupé Plus" width="1200" height="900" loading="eager" fetchpriority="high"></figure>
-          <div class="main-banner__content">
-            <div class="main-banner__copy">
-              <h1 class="main-banner__title"><span class="main-banner__title-line">Recuperá tu</span><span class="main-banner__title-line main-banner__title-line--accent">bienestar.</span></h1>
-              <div class="main-banner__actions"><a class="main-banner__button main-banner__button--primary" href="suplementos.html">Ver productos</a><a class="main-banner__button main-banner__button--whatsapp" href="#">
-                  <svg class="main-banner__button-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M12 3a9 9 0 0 0-7.8 13.4L3.5 20.5l4.2-.7A9 9 0 1 0 12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
-                    <path d="M9.2 9.4c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.3l.7 1.7c.1.2 0 .4-.1.5l-.4.5c-.1.1-.1.3 0 .5.4.7 1.1 1.4 1.9 1.9.2.1.4.1.5 0l.5-.4c.2-.1.4-.2.5-.1l1.7.7c.3.1.3.3.3.5v.5c0 .2 0 .4-.4.6A5.4 5.4 0 0 1 12 16.8 5.5 5.5 0 0 1 9.2 9.4z" fill="currentColor"></path>
-                  </svg><span>Escribir por WhatsApp</span></a></div>
+        <div class="main-banner__slider">
+          <button class="main-banner__nav main-banner__nav--prev" type="button" aria-label="Anterior"></button>
+          <button class="main-banner__nav main-banner__nav--next" type="button" aria-label="Siguiente"></button>
+          <div class="main-banner__swiper swiper">
+            <div class="main-banner__wrapper swiper-wrapper">
+              <article class="main-banner__slide swiper-slide">
+                <figure class="main-banner__media">
+                  <picture class="main-banner__picture">
+                    <source media="(width &gt;= 1280px)" srcset="./assets/drive_24_julio/home_slider_1/slider_1_a.webp">
+                    <source media="(width &gt;= 960px)" srcset="./assets/drive_24_julio/home_slider_1/slider_1_b.webp"><img class="main-banner__image" src="./assets/drive_24_julio/home_slider_1/slider_1_c.webp" alt="Mujer disfrutando un momento de bienestar con Recupé Plus" width="1200" height="900" loading="eager" fetchpriority="high">
+                  </picture>
+                </figure>
+              </article>
+              <article class="main-banner__slide swiper-slide">
+                <figure class="main-banner__media">
+                  <picture class="main-banner__picture">
+                    <source media="(width &gt;= 1280px)" srcset="./assets/drive_24_julio/home_slider_2/slider_1_a.webp">
+                    <source media="(width &gt;= 960px)" srcset="./assets/drive_24_julio/home_slider_2/slider_1_b.webp"><img class="main-banner__image" src="./assets/drive_24_julio/home_slider_2/slider_1_c.webp" alt="Productos Recupé Plus para tu rutina diaria" width="1200" height="900" loading="lazy">
+                  </picture>
+                </figure>
+              </article>
+              <article class="main-banner__slide swiper-slide">
+                <figure class="main-banner__media">
+                  <picture class="main-banner__picture">
+                    <source media="(width &gt;= 1280px)" srcset="./assets/drive_24_julio/home_slider_3/slider_1_a.webp">
+                    <source media="(width &gt;= 960px)" srcset="./assets/drive_24_julio/home_slider_3/slider_1_b.webp"><img class="main-banner__image" src="./assets/drive_24_julio/home_slider_3/slider_1_c.webp" alt="Bienestar con ingredientes naturales Recupé Plus" width="1200" height="900" loading="lazy">
+                  </picture>
+                </figure>
+              </article>
             </div>
+            <div class="main-banner__pagination swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -144,7 +164,7 @@
                   <ul class="format-cards__list">
                     <li class="format-cards__item">Vitamin - Antiox</li>
                     <li class="format-cards__item">C+Maglife - Serenity</li>
-                  </ul><a class="format-cards__cta" href="suplementos.html">Ver gomitas</a>
+                  </ul><a class="format-cards__cta" href="suplementos.html#gomitas">Ver gomitas</a>
                 </div>
                 <div class="format-cards__media"><img class="format-cards__image" src="./assets/drive_24_julio/dos_formas/gomitas/gomitas.png" alt="Gomitas Recupé Plus" width="480" height="360" loading="lazy"></div>
               </article>
@@ -155,7 +175,7 @@
                   <ul class="format-cards__list">
                     <li class="format-cards__item">Memotre - Activity</li>
                     <li class="format-cards__item">Recovery - Ave More</li>
-                  </ul><a class="format-cards__cta" href="suplementos.html">Ver cápsulas</a>
+                  </ul><a class="format-cards__cta" href="suplementos.html#capsulas">Ver cápsulas</a>
                 </div>
                 <div class="format-cards__media"><img class="format-cards__image" src="./assets/drive_24_julio/dos_formas/gomitas/gomitas.png" alt="Cápsulas Recupé Plus" width="480" height="360" loading="lazy"></div>
               </article>
@@ -224,7 +244,7 @@
               <div class="brand-story__content">
                 <h2 class="brand-story__title">Una marca costarricense creada para hacer más simple cuidarte.</h2>
                 <p class="brand-story__text">Recupé Plus nace con una idea clara: ayudar a las personas a sentirse mejor todos los días con productos ricos, prácticos y fáciles de sumar a su rutina.</p>
-                <p class="brand-story__text">Detrás de la marca hay fundadoras comprometidas con educar, acompañar y crear una comunidad alrededor de hábitos simples de bienestar.</p><a class="brand-story__cta" href="#">Conocé nuestra historia</a>
+                <p class="brand-story__text">Detrás de la marca hay fundadoras comprometidas con educar, acompañar y crear una comunidad alrededor de hábitos simples de bienestar.</p><a class="brand-story__cta" href="nosotros.html">Conocé nuestra historia</a>
               </div>
             </div>
           </div>
@@ -241,7 +261,7 @@
                 <div class="reviews-slider__wrapper swiper-wrapper">
                   <article class="reviews-slider__slide swiper-slide">
                     <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/rating.jpeg" alt="" width="120" height="120" loading="lazy"></div>
+                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/drive_24_julio/test/test_1.webp" alt="" width="120" height="120" loading="lazy"></div>
                       <div class="reviews-slider__body">
                         <blockquote class="reviews-slider__quote">“Me encanta porque es rico y fácil de tomar todos los días.”</blockquote>
                         <p class="reviews-slider__author">— Mariana, 38</p>
@@ -267,7 +287,7 @@
                   </article>
                   <article class="reviews-slider__slide swiper-slide">
                     <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/rating.jpeg" alt="" width="120" height="120" loading="lazy"></div>
+                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/drive_24_julio/test/test_2.webp" alt="" width="120" height="120" loading="lazy"></div>
                       <div class="reviews-slider__body">
                         <blockquote class="reviews-slider__quote">“Serenity se volvió parte de mi rutina de noche.”</blockquote>
                         <p class="reviews-slider__author">— Andrés, 45</p>
@@ -293,7 +313,7 @@
                   </article>
                   <article class="reviews-slider__slide swiper-slide">
                     <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/rating.jpeg" alt="" width="120" height="120" loading="lazy"></div>
+                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/drive_24_julio/test/test_3.webp" alt="" width="120" height="120" loading="lazy"></div>
                       <div class="reviews-slider__body">
                         <blockquote class="reviews-slider__quote">“Memento me acompaña en días de mucho trabajo.”</blockquote>
                         <p class="reviews-slider__author">— Carolina, 34</p>
@@ -319,7 +339,7 @@
                   </article>
                   <article class="reviews-slider__slide swiper-slide">
                     <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/rating.jpeg" alt="" width="120" height="120" loading="lazy"></div>
+                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/drive_24_julio/test/test_4.webp" alt="" width="120" height="120" loading="lazy"></div>
                       <div class="reviews-slider__body">
                         <blockquote class="reviews-slider__quote">“Me encanta porque es rico y fácil de tomar todos los días.”</blockquote>
                         <p class="reviews-slider__author">— Mariana, 38</p>
@@ -345,36 +365,10 @@
                   </article>
                   <article class="reviews-slider__slide swiper-slide">
                     <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/rating.jpeg" alt="" width="120" height="120" loading="lazy"></div>
+                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/drive_24_julio/test/test_5.webp" alt="" width="120" height="120" loading="lazy"></div>
                       <div class="reviews-slider__body">
                         <blockquote class="reviews-slider__quote">“Serenity se volvió parte de mi rutina de noche.”</blockquote>
                         <p class="reviews-slider__author">— Andrés, 45</p>
-                        <div class="reviews-slider__rating" aria-label="5 de 5 estrellas">
-                          <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
-                          </svg>
-                          <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
-                          </svg>
-                          <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
-                          </svg>
-                          <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
-                          </svg>
-                          <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="reviews-slider__slide swiper-slide">
-                    <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/rating.jpeg" alt="" width="120" height="120" loading="lazy"></div>
-                      <div class="reviews-slider__body">
-                        <blockquote class="reviews-slider__quote">“Memento me acompaña en días de mucho trabajo.”</blockquote>
-                        <p class="reviews-slider__author">— Carolina, 34</p>
                         <div class="reviews-slider__rating" aria-label="5 de 5 estrellas">
                           <svg class="reviews-slider__star" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M12 2.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20.4l1.1-6.5L2.6 9.3l6.5-.9L12 2.5z" fill="currentColor"></path>
@@ -428,28 +422,28 @@
               <button class="blog-slider__nav blog-slider__nav--next" type="button" aria-label="Siguiente"></button>
               <div class="blog-slider__swiper swiper">
                 <div class="blog-slider__wrapper swiper-wrapper">
-                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="guias.html">
                       <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/item_filtro.png" alt="" width="320" height="200" loading="lazy"></div>
                       <h3 class="blog-slider__name">¿Cómo elegir tu Recupé Plus según tu rutina?</h3></a></article>
-                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="guias.html">
                       <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/item_filtro.png" alt="" width="320" height="200" loading="lazy"></div>
                       <h3 class="blog-slider__name">Hongos medicinales: qué son y cómo sumarlos a tu día.</h3></a></article>
-                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="guias.html">
                       <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/item_filtro.png" alt="" width="320" height="200" loading="lazy"></div>
                       <h3 class="blog-slider__name">Cómo crear un ritual simple antes de dormir.</h3></a></article>
-                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="guias.html">
                       <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/item_filtro.png" alt="" width="320" height="200" loading="lazy"></div>
                       <h3 class="blog-slider__name">Vitamina C, magnesio y antioxidantes: cuándo elegir cada uno.</h3></a></article>
-                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="guias.html">
                       <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/item_filtro.png" alt="" width="320" height="200" loading="lazy"></div>
                       <h3 class="blog-slider__name">¿Cómo elegir tu Recupé Plus según tu rutina?</h3></a></article>
-                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="guias.html">
                       <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/item_filtro.png" alt="" width="320" height="200" loading="lazy"></div>
                       <h3 class="blog-slider__name">Hongos medicinales: qué son y cómo sumarlos a tu día.</h3></a></article>
-                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="guias.html">
                       <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/item_filtro.png" alt="" width="320" height="200" loading="lazy"></div>
                       <h3 class="blog-slider__name">Cómo crear un ritual simple antes de dormir.</h3></a></article>
-                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="#">
+                  <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="guias.html">
                       <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/item_filtro.png" alt="" width="320" height="200" loading="lazy"></div>
                       <h3 class="blog-slider__name">Vitamina C, magnesio y antioxidantes: cuándo elegir cada uno.</h3></a></article>
                 </div>
@@ -567,6 +561,6 @@
       </svg></a><a class="floating-button" href="style-guide.html">Style Guide</a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-    <script src="index.js?v=1.0.20"></script>
+    <script src="index.js?v=1.0.21"></script>
   </body>
 </html>

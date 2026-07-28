@@ -4,7 +4,7 @@ section(class='product-slider')
 	div(class='main-container product-slider__shell')
 		div(class='container product-slider__container')
 			each group in productSliderData.groups
-				div(class=['product-slider__group', `product-slider__group--${group.key}`])
+				div(class=['product-slider__group', `product-slider__group--${group.key}`] id=group.key)
 					div(class='product-slider__inner')
 						header(class='product-slider__header')
 							h2(class='product-slider__title')= group.title

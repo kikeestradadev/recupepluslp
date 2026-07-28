@@ -11,10 +11,12 @@ import ingredientsSlider from './modules/ingredientsSlider';
 import blogSlider from './modules/blogSlider';
 import blogFilter from './modules/blogFilter';
 import mainSlider from './modules/mainSlider';
+import mainBanner from './modules/mainBanner';
 
 const initComponents = () => {
 	mainMenu();
 	mainSlider();
+	mainBanner();
 	momentSlider();
 	productSlider();
 	alliesSlider();

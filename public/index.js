@@ -1033,6 +1033,56 @@ var mainSlider = function mainSlider() {
 };
 /* harmony default export */ __webpack_exports__["default"] = (mainSlider);
 
+/***/ }),
+/* 14 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var mainBanner = function mainBanner() {
+  var scope = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document;
+  var instances = [];
+  var roots = scope.querySelectorAll('.main-banner');
+  if (roots.length > 0 && typeof Swiper !== 'undefined') {
+    roots.forEach(function (root) {
+      var swiperEl = root.querySelector('.main-banner__swiper');
+      if (!swiperEl) return;
+      if (swiperEl.swiper) {
+        instances.push(swiperEl.swiper);
+        return;
+      }
+      var prevEl = root.querySelector('.main-banner__nav--prev');
+      var nextEl = root.querySelector('.main-banner__nav--next');
+      var paginationEl = root.querySelector('.main-banner__pagination');
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var instance = new Swiper(swiperEl, {
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        speed: prefersReducedMotion ? 0 : 900,
+        loop: true,
+        grabCursor: true,
+        autoplay: prefersReducedMotion ? false : {
+          delay: 6000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        },
+        pagination: {
+          el: paginationEl,
+          clickable: true
+        },
+        navigation: {
+          prevEl: prevEl,
+          nextEl: nextEl
+        }
+      });
+      instances.push(instance);
+    });
+  }
+  return instances;
+};
+/* harmony default export */ __webpack_exports__["default"] = (mainBanner);
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -1090,6 +1140,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_blogSlider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
 /* harmony import */ var _modules_blogFilter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
 /* harmony import */ var _modules_mainSlider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(13);
+/* harmony import */ var _modules_mainBanner__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(14);
+
 
 
 
@@ -1106,6 +1158,7 @@ __webpack_require__.r(__webpack_exports__);
 var initComponents = function initComponents() {
   (0,_modules_mainMenu__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_modules_mainSlider__WEBPACK_IMPORTED_MODULE_12__["default"])();
+  (0,_modules_mainBanner__WEBPACK_IMPORTED_MODULE_13__["default"])();
   (0,_modules_momentSlider__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_modules_productSlider__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_modules_alliesSlider__WEBPACK_IMPORTED_MODULE_3__["default"])();
