@@ -6114,11 +6114,14 @@ img {
   .main-banner__content {
     left: 5rem;
     right: auto;
-    width: min(50%, 36rem);
-    padding: 2rem 3rem 2rem 1.5rem;
+    width: min(65%, 46.8rem);
+    padding: 0;
   }
   .main-banner__copy {
-    max-width: 32rem;
+    max-width: 41.6rem;
+  }
+  .main-banner__text {
+    max-width: 36.4rem;
   }
   .main-banner__title {
     font-size: clamp(2.75rem, 4.2vw, 4rem);
@@ -6127,11 +6130,11 @@ img {
 @media (width >= 1280px) {
   .main-banner__content {
     left: 5.5rem;
-    width: min(48%, 40rem);
-    padding: 3.5rem 4rem 3.5rem 2rem;
+    width: min(62.4%, 52rem);
+    padding: 0;
   }
   .main-banner__copy {
-    max-width: 34rem;
+    max-width: 44.2rem;
   }
   .main-banner__title {
     font-size: clamp(3.25rem, 4vw, 4.5rem);

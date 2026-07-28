@@ -263,12 +263,16 @@
 		&__content {
 			left: 5rem;
 			right: auto;
-			width: min(50%, 36rem);
-			padding: 2rem 3rem 2rem 1.5rem;
+			width: min(65%, 46.8rem);
+			padding: 0;
 		}
 
 		&__copy {
-			max-width: 32rem;
+			max-width: 41.6rem;
+		}
+
+		&__text {
+			max-width: 36.4rem;
 		}
 
 		&__title {
@@ -279,12 +283,12 @@
 	@media (width >= $lg) {
 		&__content {
 			left: 5.5rem;
-			width: min(48%, 40rem);
-			padding: 3.5rem 4rem 3.5rem 2rem;
+			width: min(62.4%, 52rem);
+			padding: 0;
 		}
 
 		&__copy {
-			max-width: 34rem;
+			max-width: 44.2rem;
 		}
 
 		&__title {
