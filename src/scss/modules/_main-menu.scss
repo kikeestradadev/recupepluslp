@@ -275,6 +275,7 @@
 		border-radius: 0.5rem;
 		background: var(--color-orange, #ff9100);
 		color: #fff;
+		text-shadow: var(--text-shadow-white);
 		font-size: 0.9375rem;
 		font-weight: 600;
 		line-height: 1;
@@ -285,6 +286,7 @@
 		&:focus-visible {
 			background: var(--color-orange-light, #ff4a00);
 			color: #fff;
+			text-shadow: var(--text-shadow-white);
 			text-decoration: none;
 			transform: translateY(-1px);
 		}

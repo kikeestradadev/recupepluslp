@@ -80,6 +80,7 @@
 	&__card--gomitas &__cta {
 		background: var(--color-orange, #ff9100);
 		color: #fff;
+		text-shadow: var(--text-shadow-white);
 	}
 
 	&__card--gomitas &__cta:hover,
@@ -94,6 +95,7 @@
 	&__card--capsulas &__cta {
 		background: var(--header-color, #1f2024);
 		color: #fff;
+		text-shadow: var(--text-shadow-white);
 	}
 
 	&__card--capsulas &__cta:hover,

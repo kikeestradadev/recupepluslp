@@ -192,9 +192,11 @@
 			border-color: var(--blog-filter-orange, #ff9100);
 			background: var(--blog-filter-orange, #ff9100);
 			color: #fff;
+			text-shadow: var(--text-shadow-white);
 
 			.blog-filter__chip-icon {
 				color: #fff;
+				text-shadow: var(--text-shadow-white);
 			}
 		}
 	}
@@ -401,6 +403,7 @@
 			border-color: var(--blog-filter-orange, #ff9100);
 			background: var(--blog-filter-orange, #ff9100);
 			color: #fff;
+			text-shadow: var(--text-shadow-white);
 			cursor: default;
 		}
 

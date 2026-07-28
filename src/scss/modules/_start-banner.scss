@@ -3,7 +3,8 @@
 	--start-banner-shell-max: 3500px;
 	--start-banner-container-max: 1600px;
 	--start-banner-gutter: 15px;
-	--start-banner-bg: #f6f1ea;
+	--start-banner-bg: #c3a189;
+	--start-banner-bg-light: #ddc4b0;
 	margin-bottom: var(--section-gap);
 	background: #fff;
 
@@ -31,7 +32,10 @@
 		flex-direction: column;
 		overflow: hidden;
 		border-radius: 1.25rem;
-		background: var(--start-banner-bg);
+		background:
+			linear-gradient(135deg, rgba(255, 255, 255, 0.38) 0%, transparent 52%),
+			linear-gradient(45deg, rgba(255, 255, 255, 0.22) 0%, transparent 48%),
+			linear-gradient(160deg, var(--start-banner-bg-light) 0%, var(--start-banner-bg) 60%, #b89176 100%);
 	}
 
 	&__content {
@@ -93,11 +97,13 @@
 		&--whatsapp {
 			background: var(--color-whatsapp, #25d366);
 			color: #fff;
+			text-shadow: var(--text-shadow-white);
 
 			&:hover,
 			&:focus-visible {
 				background: var(--color-whatsapp-dark, #1fbd59);
 				color: #fff;
+				text-shadow: var(--text-shadow-white);
 			}
 		}
 
@@ -105,11 +111,13 @@
 			border: 1px solid transparent;
 			background: var(--color-orange, #ff9100);
 			color: #fff;
+			text-shadow: var(--text-shadow-white);
 
 			&:hover,
 			&:focus-visible {
 				background: var(--color-orange-light, #ff4a00);
 				color: #fff;
+				text-shadow: var(--text-shadow-white);
 			}
 		}
 

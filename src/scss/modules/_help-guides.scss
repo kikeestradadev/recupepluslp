@@ -120,6 +120,7 @@
 		border-radius: 0.65rem;
 		background: var(--color-whatsapp, #25d366);
 		color: #fff;
+		text-shadow: var(--text-shadow-white);
 		font-size: 0.9375rem;
 		font-weight: 700;
 		text-decoration: none;
@@ -129,6 +130,7 @@
 		&:focus-visible {
 			background: var(--color-whatsapp-dark, #1fbd59);
 			color: #fff;
+			text-shadow: var(--text-shadow-white);
 			text-decoration: none;
 			transform: translateY(-1px);
 		}
