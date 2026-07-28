@@ -23,6 +23,7 @@
 	}
 
 	&__slide {
+		position: relative;
 		overflow: hidden;
 	}
 
@@ -73,21 +74,25 @@
 	}
 
 	&__title {
-		display: flex;
-		flex-direction: column;
-		gap: 0.05em;
 		margin: 0;
 		color: #fff;
 		text-shadow: var(--text-shadow-white);
 		font-size: clamp(2rem, 8vw, 3.25rem);
 		font-weight: 800;
-		line-height: 1.02;
+		line-height: 1.05;
 		letter-spacing: -0.03em;
 		text-transform: uppercase;
+		text-wrap: balance;
 	}
 
-	&__title-line {
-		display: block;
+	&__text {
+		margin: 0.85rem 0 0;
+		max-width: 28rem;
+		color: #fff;
+		text-shadow: var(--text-shadow-white);
+		font-size: clamp(0.9375rem, 2.2vw, 1.125rem);
+		font-weight: 400;
+		line-height: 1.5;
 	}
 
 	&__actions {
