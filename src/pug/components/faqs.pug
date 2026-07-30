@@ -1,0 +1,17 @@
+include ../data/faqs-data
+
+section(class='faqs' id='faqs' aria-labelledby='faqs-title')
+	div(class='main-container faqs__shell')
+		div(class='container faqs__container')
+			div(class='faqs__header')
+				h2(class='faqs__title' id='faqs-title')= faqsData.title
+				p(class='faqs__intro')= faqsData.text
+
+			div(class='faqs__list')
+				each faq in faqsData.items
+					details(class='faqs__item')
+						summary(class='faqs__question')
+							span(class='faqs__question-text')= faq.question
+							span(class='faqs__arrow' aria-hidden='true')
+						div(class='faqs__answer')
+							p= faq.answer

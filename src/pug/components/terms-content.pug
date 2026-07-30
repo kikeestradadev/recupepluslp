@@ -1,0 +1,16 @@
+include ../data/terms-content-data
+
+section(class='terms-content' aria-labelledby='terms-content-title')
+	div(class='main-container terms-content__shell')
+		div(class='container terms-content__container')
+			header(class='terms-content__header')
+				h1(class='terms-content__title' id='terms-content-title')= termsContentData.title
+				p(class='terms-content__updated')= termsContentData.updatedAt
+				p(class='terms-content__intro')= termsContentData.intro
+
+			div(class='terms-content__body')
+				each section in termsContentData.sections
+					section(class='terms-content__section')
+						h2(class='terms-content__section-title')= section.title
+						each paragraph in section.paragraphs
+							p(class='terms-content__text')= paragraph

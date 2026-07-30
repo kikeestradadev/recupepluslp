@@ -1,0 +1,16 @@
+include ../data/returns-content-data
+
+section(class='returns-content' aria-labelledby='returns-content-title')
+	div(class='main-container returns-content__shell')
+		div(class='container returns-content__container')
+			header(class='returns-content__header')
+				h1(class='returns-content__title' id='returns-content-title')= returnsContentData.title
+				p(class='returns-content__updated')= returnsContentData.updatedAt
+				p(class='returns-content__intro')= returnsContentData.intro
+
+			div(class='returns-content__body')
+				each section in returnsContentData.sections
+					section(class='returns-content__section')
+						h2(class='returns-content__section-title')= section.title
+						each paragraph in section.paragraphs
+							p(class='returns-content__text')= paragraph

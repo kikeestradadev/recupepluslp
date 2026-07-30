@@ -355,4 +355,15 @@
 	&__payments {
 		letter-spacing: 0.01em;
 	}
+
+	&__credit-link {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover,
+		&:focus-visible {
+			color: var(--footer-accent);
+			text-decoration: underline;
+		}
+	}
 }

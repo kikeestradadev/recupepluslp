@@ -1,0 +1,16 @@
+include ../data/privacy-content-data
+
+section(class='privacy-content' aria-labelledby='privacy-content-title')
+	div(class='main-container privacy-content__shell')
+		div(class='container privacy-content__container')
+			header(class='privacy-content__header')
+				h1(class='privacy-content__title' id='privacy-content-title')= privacyContentData.title
+				p(class='privacy-content__updated')= privacyContentData.updatedAt
+				p(class='privacy-content__intro')= privacyContentData.intro
+
+			div(class='privacy-content__body')
+				each section in privacyContentData.sections
+					section(class='privacy-content__section')
+						h2(class='privacy-content__section-title')= section.title
+						each paragraph in section.paragraphs
+							p(class='privacy-content__text')= paragraph

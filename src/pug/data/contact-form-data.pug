@@ -1,0 +1,38 @@
+-
+	const contactFormData = {
+		formTitle: 'Contáctenos',
+		infoTitle: 'Información de contacto',
+		submitLabel: 'Enviar',
+		fields: [
+			{ id: 'contact-name', name: 'name', type: 'text', label: 'Nombre', placeholder: 'Nombre', required: true },
+			{ id: 'contact-email', name: 'email', type: 'email', label: 'Email', placeholder: 'Email', required: true },
+			{ id: 'contact-phone', name: 'phone', type: 'tel', label: 'Teléfono', placeholder: 'Teléfono', required: false },
+			{ id: 'contact-message', name: 'message', type: 'textarea', label: 'Comentario', placeholder: 'Comentario', required: true }
+		],
+		infoItems: [
+			{
+				type: 'address',
+				label: 'Dirección',
+				text: 'Santa Ana, 100 mts sur del Centro Comercial Santa Ana 2000, Bodegas, Local 1',
+				href: null
+			},
+			{
+				type: 'whatsapp',
+				label: 'WhatsApp',
+				text: '8512-8000',
+				href: 'https://wa.me/50685128000'
+			},
+			{
+				type: 'email',
+				label: 'Email',
+				text: 'hola@recupeplus.com',
+				href: 'mailto:hola@recupeplus.com'
+			},
+			{
+				type: 'schedule',
+				label: 'Horario de atención telefónica',
+				text: 'de lun-vie, 8:00 a.m. a 4:00 p.m.',
+				href: null
+			}
+		]
+	}
