@@ -4,8 +4,12 @@ section(class='supplements-banner' aria-label=supplementsBannerData.alt)
 	figure(class='supplements-banner__figure')
 		picture(class='supplements-banner__picture')
 			source(
-				media='(width >= 960px)'
+				media='(width >= 1280px)'
 				srcset=supplementsBannerData.imageDesktop
+			)
+			source(
+				media='(width >= 1024px)'
+				srcset=supplementsBannerData.imageTablet
 			)
 			img(
 				class='supplements-banner__image'
@@ -16,3 +20,8 @@ section(class='supplements-banner' aria-label=supplementsBannerData.alt)
 				loading='eager'
 				fetchpriority='high'
 			)
+
+		div(class='supplements-banner__content')
+			div(class='supplements-banner__copy')
+				h1(class='supplements-banner__title')= supplementsBannerData.title
+				p(class='supplements-banner__text')= supplementsBannerData.text

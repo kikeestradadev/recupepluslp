@@ -95,69 +95,6 @@
 		line-height: 1.5;
 	}
 
-	&__actions {
-		display: flex;
-		flex-direction: column;
-		gap: 0.55rem;
-		width: 100%;
-		margin-top: 1rem;
-	}
-
-	&__button {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: 0.5rem;
-		width: 100%;
-		min-height: 2.65rem;
-		padding: 0.65rem 1.15rem;
-		border: 1px solid transparent;
-		border-radius: 0.65rem;
-		font-size: 0.9375rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		text-decoration: none;
-		transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-
-		&:hover,
-		&:focus-visible {
-			text-decoration: none;
-			transform: translateY(-1px);
-		}
-
-		&--primary {
-			background: var(--color-orange, #ff9100);
-			color: #fff;
-			text-shadow: var(--text-shadow-white);
-
-			&:hover,
-			&:focus-visible {
-				background: var(--color-orange-light, #ff4a00);
-				color: #fff;
-				text-shadow: var(--text-shadow-white);
-			}
-		}
-
-		&--whatsapp {
-			background: var(--color-whatsapp, #25d366);
-			color: #fff;
-			text-shadow: var(--text-shadow-white);
-
-			&:hover,
-			&:focus-visible {
-				background: var(--color-whatsapp-dark, #1fbd59);
-				color: #fff;
-				text-shadow: var(--text-shadow-white);
-			}
-		}
-	}
-
-	&__button-icon {
-		display: block;
-		flex-shrink: 0;
-	}
-
 	&__nav {
 		display: none;
 		position: absolute;
@@ -245,18 +182,6 @@
 		&__content {
 			padding: 2rem 1.5rem;
 		}
-
-		&__actions {
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: flex-start;
-		}
-
-		&__button {
-			width: auto;
-			min-width: 11rem;
-			padding-inline: 1.35rem;
-		}
 	}
 
 	@media (width >= $l) {
@@ -293,11 +218,6 @@
 
 		&__title {
 			font-size: clamp(3.25rem, 4vw, 4.5rem);
-		}
-
-		&__button {
-			min-height: 3.15rem;
-			font-size: 1rem;
 		}
 	}
 }
