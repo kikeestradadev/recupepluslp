@@ -74,18 +74,26 @@ section(class='product-showcase' data-product-showcase)
 						a(href=productShowcaseData.category.href)= productShowcaseData.category.label
 
 			div(class='product-showcase__tabs' data-product-tabs)
-				div(class='product-showcase__tablist' role='tablist' aria-label='Información del producto')
-					each tab in productShowcaseData.tabs
-						button(
-							class=tab.active ? 'product-showcase__tab product-showcase__tab--active' : 'product-showcase__tab'
-							type='button'
-							role='tab'
-							id=`product-tab-${tab.id}`
-							aria-controls=`product-panel-${tab.id}`
-							aria-selected=tab.active ? 'true' : 'false'
-							tabindex=tab.active ? '0' : '-1'
-							data-product-tab=tab.id
-						)= tab.label
+				div(class='product-showcase__tabs-bar')
+					button(class='product-showcase__tabs-nav product-showcase__tabs-nav--prev' type='button' aria-label='Tabs anteriores')
+					button(class='product-showcase__tabs-nav product-showcase__tabs-nav--next' type='button' aria-label='Tabs siguientes')
+					div(class='product-showcase__tabs-fade product-showcase__tabs-fade--start' aria-hidden='true')
+					div(class='product-showcase__tabs-fade product-showcase__tabs-fade--end' aria-hidden='true')
+
+					div(class='product-showcase__tabs-swiper swiper' data-product-tabs-swiper)
+						div(class='product-showcase__tabs-wrapper swiper-wrapper' role='tablist' aria-label='Información del producto')
+							each tab in productShowcaseData.tabs
+								div(class='product-showcase__tabs-slide swiper-slide')
+									button(
+										class=tab.active ? 'product-showcase__tab product-showcase__tab--active' : 'product-showcase__tab'
+										type='button'
+										role='tab'
+										id=`product-tab-${tab.id}`
+										aria-controls=`product-panel-${tab.id}`
+										aria-selected=tab.active ? 'true' : 'false'
+										tabindex=tab.active ? '0' : '-1'
+										data-product-tab=tab.id
+									)= tab.label
 
 				div(
 					class=productShowcaseData.tabs[0].active ? 'product-showcase__panel product-showcase__panel--active' : 'product-showcase__panel'

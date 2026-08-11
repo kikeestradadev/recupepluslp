@@ -11,16 +11,19 @@ const productShowcase = (scope = document) => {
 		const thumbs = Array.from(root.querySelectorAll('[data-product-thumb]'));
 		const stage = root.querySelector('[data-product-stage]');
 		const zoom = root.querySelector('[data-product-zoom]');
-		const qtyRoot = root.querySelector('[data-product-qty]');
 		const qtyInput = root.querySelector('[data-product-qty-input]');
 		const qtyDec = root.querySelector('[data-product-qty-dec]');
 		const qtyInc = root.querySelector('[data-product-qty-inc]');
 		const cartForm = root.querySelector('[data-product-cart]');
+		const tabsSwiperEl = root.querySelector('[data-product-tabs-swiper]');
+		const tabsPrev = root.querySelector('.product-showcase__tabs-nav--prev');
+		const tabsNext = root.querySelector('.product-showcase__tabs-nav--next');
 		const tabs = Array.from(root.querySelectorAll('[data-product-tab]'));
 		const panels = Array.from(root.querySelectorAll('[data-product-panel]'));
 		const desktopQuery = window.matchMedia('(min-width: 960px)');
 		const controller = new AbortController();
 		const { signal } = controller;
+		let tabsSwiper = null;
 
 		const setActiveThumb = (thumb) => {
 			if (!stage || !thumb) return;
@@ -59,6 +62,41 @@ const productShowcase = (scope = document) => {
 				panel.classList.toggle('product-showcase__panel--active', isActive);
 				panel.hidden = !isActive;
 			});
+		};
+
+		const destroyTabsSwiper = () => {
+			if (!tabsSwiper) return;
+			tabsSwiper.destroy(true, true);
+			tabsSwiper = null;
+		};
+
+		const enhanceMobileTabs = () => {
+			if (typeof window.Swiper === 'undefined' || !tabsSwiperEl || tabsSwiper) return;
+
+			try {
+				tabsSwiper = new window.Swiper(tabsSwiperEl, {
+					slidesPerView: 'auto',
+					loop: false,
+					spaceBetween: 30,
+					freeMode: true,
+					grabCursor: true,
+					watchOverflow: true,
+					navigation: {
+						prevEl: tabsPrev,
+						nextEl: tabsNext
+					}
+				});
+			} catch (error) {
+				tabsSwiper = null;
+			}
+		};
+
+		const updateTabsEnhancement = () => {
+			if (desktopQuery.matches) {
+				destroyTabsSwiper();
+				return;
+			}
+			enhanceMobileTabs();
 		};
 
 		const onZoomMove = (event) => {
@@ -130,6 +168,13 @@ const productShowcase = (scope = document) => {
 				'click',
 				() => {
 					activateTab(tab.dataset.productTab);
+					if (tabsSwiper) {
+						const slide = tab.closest('.swiper-slide');
+						const slideIndex = slide
+							? Array.from(slide.parentElement.children).indexOf(slide)
+							: tabs.indexOf(tab);
+						tabsSwiper.slideTo(slideIndex);
+					}
 				},
 				{ signal }
 			);
@@ -157,13 +202,30 @@ const productShowcase = (scope = document) => {
 					const nextTab = tabs[nextIndex];
 					activateTab(nextTab.dataset.productTab);
 					nextTab.focus();
+					if (tabsSwiper) {
+						const slide = nextTab.closest('.swiper-slide');
+						const slideIndex = slide
+							? Array.from(slide.parentElement.children).indexOf(slide)
+							: nextIndex;
+						tabsSwiper.slideTo(slideIndex);
+					}
 				},
 				{ signal }
 			);
 		});
 
+		updateTabsEnhancement();
+		if (typeof desktopQuery.addEventListener === 'function') {
+			desktopQuery.addEventListener('change', updateTabsEnhancement, { signal });
+		} else if (typeof desktopQuery.addListener === 'function') {
+			const onChange = () => updateTabsEnhancement();
+			desktopQuery.addListener(onChange);
+			signal.addEventListener('abort', () => desktopQuery.removeListener(onChange), { once: true });
+		}
+
 		productShowcaseInstances.set(root, {
 			destroy() {
+				destroyTabsSwiper();
 				controller.abort();
 				productShowcaseInstances.delete(root);
 			}
