@@ -38,51 +38,7 @@
 		background: var(--community-banner-bg);
 	}
 
-	&__deco {
-		position: absolute;
-		z-index: 0;
-		width: 4.5rem;
-		height: auto;
-		object-fit: cover;
-		opacity: 0.35;
-		pointer-events: none;
-		border-radius: 0.75rem;
-		mix-blend-mode: multiply;
-
-		&--start {
-			top: 0.75rem;
-			left: 0.5rem;
-			transform: rotate(-8deg);
-		}
-
-		&--end {
-			right: 0.5rem;
-			bottom: 0.75rem;
-			transform: rotate(8deg);
-		}
-
-		@media (width >= $l) {
-			width: 6.5rem;
-			opacity: 0.45;
-
-			&--start {
-				top: 50%;
-				left: 1rem;
-				transform: translateY(-50%) rotate(-6deg);
-			}
-
-			&--end {
-				top: 50%;
-				right: 1rem;
-				bottom: auto;
-				transform: translateY(-50%) rotate(6deg);
-			}
-		}
-	}
-
 	&__content {
-		position: relative;
-		z-index: 1;
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 1.25rem;
@@ -233,22 +189,19 @@
 	}
 
 	@media (width >= $l) {
-
 		&__card {
-			padding: 1.75rem 7.5rem;
+			padding: 1.75rem 2rem;
 		}
 
 		&__content {
 			grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.95fr);
 			gap: 2rem;
 		}
-
 	}
 
 	@media (width >= $lg) {
 		&__card {
-			padding: 2rem 8.5rem;
+			padding: 2rem 2.5rem;
 		}
-
 	}
 }

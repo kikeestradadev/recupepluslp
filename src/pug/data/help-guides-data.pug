@@ -1,3 +1,5 @@
+include ./blog-posts-data
+
 -
 	const helpGuidesData = {
 		help: {
@@ -15,22 +17,6 @@
 		},
 		guides: {
 			title: 'Explorá más guías',
-			items: [
-				{
-					title: 'Elegí según tu momento',
-					img: './assets/producto_1.png',
-					href: '#'
-				},
-				{
-					title: 'Gomitas',
-					img: './assets/producto_1.png',
-					href: '#'
-				},
-				{
-					title: 'Cápsulas',
-					img: './assets/producto_1.png',
-					href: '#'
-				}
-			]
+			items: blogPosts.slice(0, 3)
 		}
 	}

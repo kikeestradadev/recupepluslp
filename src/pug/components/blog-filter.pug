@@ -49,7 +49,7 @@ section(class='blog-filter' data-blog-filter data-per-page=blogFilterData.perPag
 				each post in blogFilterData.posts
 					article(class='blog-filter__card' data-category=post.category)
 						a(class='blog-filter__media' href=post.href)
-							img(class='blog-filter__image' src=post.img alt='' width='400' height='260' loading='lazy')
+							img(class='blog-filter__image' src=post.image alt='' width='400' height='260' loading='lazy')
 						p(class='blog-filter__category')= post.label
 						h3(class='blog-filter__name')
 							a(href=post.href)= post.title
@@ -64,7 +64,7 @@ section(class='blog-filter' data-blog-filter data-per-page=blogFilterData.perPag
 							article(class='blog-filter__slide swiper-slide' data-category=post.category)
 								div(class='blog-filter__card')
 									a(class='blog-filter__media' href=post.href)
-										img(class='blog-filter__image' src=post.img alt='' width='400' height='260' loading='lazy')
+										img(class='blog-filter__image' src=post.image alt='' width='400' height='260' loading='lazy')
 									p(class='blog-filter__category')= post.label
 									h3(class='blog-filter__name')
 										a(href=post.href)= post.title
