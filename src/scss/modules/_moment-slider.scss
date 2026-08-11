@@ -211,11 +211,37 @@
 	}
 
 	&__card-text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		align-self: center;
+		gap: 0.2rem;
 		margin: 0;
+		padding: 0;
+		list-style: none;
 		color: #5a5a5a;
 		font-size: 0.825rem;
 		font-weight: 400;
 		line-height: 1.35;
+		text-align: left;
+	}
+
+	&__card-text-item {
+		position: relative;
+		margin: 0;
+		padding-left: 0.85rem;
+		text-align: left;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0.45em;
+			left: 0;
+			width: 0.3rem;
+			height: 0.3rem;
+			border-radius: 50%;
+			background: currentColor;
+		}
 	}
 
 	@media (width >= $m) {

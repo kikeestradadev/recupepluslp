@@ -48,4 +48,7 @@ section(class='main-banner' aria-label=mainBannerData.ariaLabel)
 
 								p(class='main-banner__text')= slide.subtitle
 
+								if slide.cta
+									a(class='main-banner__cta' href=slide.cta.href)= slide.cta.label
+
 			div(class='main-banner__pagination swiper-pagination')

@@ -3,10 +3,12 @@ block config
 	-let content 			= 'My Page'
 	-let siteName 			= 'GulpBoilerplate'
 	-let pageDescription 	= 'Here is the description Page.'
+	-let pageTitle 			= null
+	-let pageLang 			= 'es'
 include ../data/site-data
 include ../components/floating-button
 doctype html
-html(lang='es' prefix='og: http://ogp.me/ns#', class='no-js')
+html(lang=pageLang prefix='og: http://ogp.me/ns#', class='no-js')
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -14,7 +16,7 @@ html(lang='es' prefix='og: http://ogp.me/ns#', class='no-js')
 		meta(name="theme-color", content="#0096D9")
 		link(rel="shortcut icon", type="image/png", href="./assets/img/icon_1024.png")
 		link(rel="apple-touch-icon", href="./assets/img/icon_1024.png")
-		meta(name="description", content="Breve descripción del sitio web que ayuda en el SEO.")
+		meta(name="description", content=pageDescription)
 		meta(http-equiv="Content-Security-Policy", content="upgrade-insecure-requests")
 		meta(http-equiv="Cache-Control", content="no-cache, no-store, must-revalidate")
 		meta(http-equiv="Expires", content="0")
@@ -25,7 +27,7 @@ html(lang='es' prefix='og: http://ogp.me/ns#', class='no-js')
 		link(href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet")
 		link(rel="stylesheet" href="./assets/prism.css")
 		link(rel="stylesheet" href=`styles.css?v=${siteData.assetVersion}`)
-		title= currentPage.slice(0,1).toUpperCase() + currentPage.slice(1) + " | " + siteName
+		title= (pageTitle || (currentPage.slice(0,1).toUpperCase() + currentPage.slice(1))) + " | " + siteName
 	body(class=currentPage, itemscope itemtype="http://schema.org/WebPage")
 		//- here start the Main Header
 		header(class='main-header')

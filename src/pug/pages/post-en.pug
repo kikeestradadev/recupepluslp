@@ -1,0 +1,16 @@
+extends ../config/template
+
+append config
+	include ../data/post-content-en-data
+	-currentPage		= "post-en"
+	-pageLang			= "en"
+	-siteName			= 'Recupé Plus'
+	-content			= 'content'
+	-pageTitle			= postContentData.metaTitle
+	-pageDescription	= postContentData.metaDescription
+
+block main-container
+	include ../data/post-banner-en-data
+	include ../components/post-banner
+	include ../components/post-content
+block scripts

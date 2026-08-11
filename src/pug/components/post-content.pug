@@ -1,0 +1,60 @@
+section(class='post-content' aria-labelledby='post-content-title')
+	div(class='main-container post-content__shell')
+		div(class='container post-content__container')
+			header(class='post-content__header')
+				h1(class='post-content__title' id='post-content-title')= postContentData.title
+
+			div(class='post-content__body')
+				if postContentData.paragraphs
+					each paragraph in postContentData.paragraphs
+						p(class='post-content__text')= paragraph
+
+				each section in postContentData.sections
+					section(class='post-content__section')
+						h2(class='post-content__section-title')= section.title
+
+						if section.paragraphs
+							each paragraph in section.paragraphs
+								p(class='post-content__text')= paragraph
+
+						if section.image
+							figure(class='post-content__figure')
+								img(
+									class='post-content__image'
+									src=section.image.src
+									alt=section.image.alt
+									width='400'
+									height='400'
+									loading='lazy'
+								)
+								if section.image.caption
+									figcaption(class='post-content__caption')= section.image.caption
+
+						if section.paragraphsAfter
+							each paragraph in section.paragraphsAfter
+								p(class='post-content__text')= paragraph
+
+						if section.table
+							div(class='post-content__table-wrap')
+								table(class='post-content__table')
+									if section.table.caption
+										caption(class='post-content__table-caption')= section.table.caption
+									thead(class='post-content__thead')
+										tr(class='post-content__row')
+											each header in section.table.headers
+												th(class='post-content__th' scope='col')= header
+									tbody(class='post-content__tbody')
+										each row in section.table.rows
+											tr(class='post-content__row')
+												each cell in row
+													td(class='post-content__td')= cell
+
+						if section.list
+							if section.list.type === 'ol'
+								ol(class='post-content__list post-content__list--ordered')
+									each item in section.list.items
+										li(class='post-content__list-item')= item
+							else
+								ul(class='post-content__list')
+									each item in section.list.items
+										li(class='post-content__list-item')= item

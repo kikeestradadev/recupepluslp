@@ -95,6 +95,33 @@
 		line-height: 1.5;
 	}
 
+	&__cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.75rem;
+		margin-top: 1.15rem;
+		padding: 0.7rem 1.35rem;
+		border: 1px solid transparent;
+		border-radius: 0.65rem;
+		background: var(--color-orange, #ff9100);
+		color: #fff;
+		font-size: 0.9375rem;
+		font-weight: 700;
+		line-height: 1;
+		text-decoration: none;
+		text-shadow: var(--text-shadow-white);
+		transition: background 0.2s ease, transform 0.2s ease;
+
+		&:hover,
+		&:focus-visible {
+			background: var(--color-orange-light, #ff4a00);
+			color: #fff;
+			text-decoration: none;
+			transform: translateY(-1px);
+		}
+	}
+
 	&__nav {
 		display: none;
 		position: absolute;
