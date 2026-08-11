@@ -20,8 +20,6 @@ section(class='moment-slider')
 										img(class='moment-slider__image' src=moment.image alt='' width='280' height='180' loading='lazy')
 									div(class='moment-slider__body')
 										h3(class='moment-slider__card-title')= moment.title
-										ul(class='moment-slider__card-text')
-											each product in moment.products
-												li(class='moment-slider__card-text-item')= product
+										p(class='moment-slider__card-text')= moment.text
 
 					div(class='moment-slider__pagination swiper-pagination')
