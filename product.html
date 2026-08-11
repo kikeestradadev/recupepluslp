@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/prism.css">
-    <link rel="stylesheet" href="styles.css?v=1.0.34">
+    <link rel="stylesheet" href="styles.css?v=1.0.36">
     <title>Vitamin - Recupé Plus</title>
   </head>
   <body class="product" itemscope itemtype="http://schema.org/WebPage">
@@ -103,10 +103,24 @@
               </div>
             </div>
             <div class="product-showcase__tabs" data-product-tabs>
-              <div class="product-showcase__tablist" role="tablist" aria-label="Información del producto">
-                <button class="product-showcase__tab product-showcase__tab--active" type="button" role="tab" id="product-tab-descripcion" aria-controls="product-panel-descripcion" aria-selected="true" tabindex="0" data-product-tab="descripcion">Descripción</button>
-                <button class="product-showcase__tab" type="button" role="tab" id="product-tab-adicional" aria-controls="product-panel-adicional" aria-selected="false" tabindex="-1" data-product-tab="adicional">Información adicional</button>
-                <button class="product-showcase__tab" type="button" role="tab" id="product-tab-valoraciones" aria-controls="product-panel-valoraciones" aria-selected="false" tabindex="-1" data-product-tab="valoraciones">Valoraciones (0)</button>
+              <div class="product-showcase__tabs-bar">
+                <button class="product-showcase__tabs-nav product-showcase__tabs-nav--prev" type="button" aria-label="Tabs anteriores"></button>
+                <button class="product-showcase__tabs-nav product-showcase__tabs-nav--next" type="button" aria-label="Tabs siguientes"></button>
+                <div class="product-showcase__tabs-fade product-showcase__tabs-fade--start" aria-hidden="true"></div>
+                <div class="product-showcase__tabs-fade product-showcase__tabs-fade--end" aria-hidden="true"></div>
+                <div class="product-showcase__tabs-swiper swiper" data-product-tabs-swiper>
+                  <div class="product-showcase__tabs-wrapper swiper-wrapper" role="tablist" aria-label="Información del producto">
+                    <div class="product-showcase__tabs-slide swiper-slide">
+                      <button class="product-showcase__tab product-showcase__tab--active" type="button" role="tab" id="product-tab-descripcion" aria-controls="product-panel-descripcion" aria-selected="true" tabindex="0" data-product-tab="descripcion">Descripción</button>
+                    </div>
+                    <div class="product-showcase__tabs-slide swiper-slide">
+                      <button class="product-showcase__tab" type="button" role="tab" id="product-tab-adicional" aria-controls="product-panel-adicional" aria-selected="false" tabindex="-1" data-product-tab="adicional">Información adicional</button>
+                    </div>
+                    <div class="product-showcase__tabs-slide swiper-slide">
+                      <button class="product-showcase__tab" type="button" role="tab" id="product-tab-valoraciones" aria-controls="product-panel-valoraciones" aria-selected="false" tabindex="-1" data-product-tab="valoraciones">Valoraciones (0)</button>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="product-showcase__panel product-showcase__panel--active" role="tabpanel" id="product-panel-descripcion" aria-labelledby="product-tab-descripcion" data-product-panel="descripcion">
                 <h2 class="product-showcase__panel-title">RECUPÉ PLUS VITAMIN</h2>
@@ -263,6 +277,6 @@
       </svg></a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-    <script src="index.js?v=1.0.34"></script>
+    <script src="index.js?v=1.0.36"></script>
   </body>
 </html>

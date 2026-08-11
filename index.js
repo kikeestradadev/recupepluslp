@@ -957,16 +957,19 @@ var productShowcase = function productShowcase() {
     var thumbs = Array.from(root.querySelectorAll('[data-product-thumb]'));
     var stage = root.querySelector('[data-product-stage]');
     var zoom = root.querySelector('[data-product-zoom]');
-    var qtyRoot = root.querySelector('[data-product-qty]');
     var qtyInput = root.querySelector('[data-product-qty-input]');
     var qtyDec = root.querySelector('[data-product-qty-dec]');
     var qtyInc = root.querySelector('[data-product-qty-inc]');
     var cartForm = root.querySelector('[data-product-cart]');
+    var tabsSwiperEl = root.querySelector('[data-product-tabs-swiper]');
+    var tabsPrev = root.querySelector('.product-showcase__tabs-nav--prev');
+    var tabsNext = root.querySelector('.product-showcase__tabs-nav--next');
     var tabs = Array.from(root.querySelectorAll('[data-product-tab]'));
     var panels = Array.from(root.querySelectorAll('[data-product-panel]'));
     var desktopQuery = window.matchMedia('(min-width: 960px)');
     var controller = new AbortController();
     var signal = controller.signal;
+    var tabsSwiper = null;
     var setActiveThumb = function setActiveThumb(thumb) {
       var _thumb$getAttribute;
       if (!stage || !thumb) return;
@@ -998,6 +1001,37 @@ var productShowcase = function productShowcase() {
         panel.classList.toggle('product-showcase__panel--active', isActive);
         panel.hidden = !isActive;
       });
+    };
+    var destroyTabsSwiper = function destroyTabsSwiper() {
+      if (!tabsSwiper) return;
+      tabsSwiper.destroy(true, true);
+      tabsSwiper = null;
+    };
+    var enhanceMobileTabs = function enhanceMobileTabs() {
+      if (typeof window.Swiper === 'undefined' || !tabsSwiperEl || tabsSwiper) return;
+      try {
+        tabsSwiper = new window.Swiper(tabsSwiperEl, {
+          slidesPerView: 'auto',
+          loop: false,
+          spaceBetween: 30,
+          freeMode: true,
+          grabCursor: true,
+          watchOverflow: true,
+          navigation: {
+            prevEl: tabsPrev,
+            nextEl: tabsNext
+          }
+        });
+      } catch (error) {
+        tabsSwiper = null;
+      }
+    };
+    var updateTabsEnhancement = function updateTabsEnhancement() {
+      if (desktopQuery.matches) {
+        destroyTabsSwiper();
+        return;
+      }
+      enhanceMobileTabs();
     };
     var onZoomMove = function onZoomMove(event) {
       if (!zoom || !stage || !desktopQuery.matches) return;
@@ -1049,6 +1083,11 @@ var productShowcase = function productShowcase() {
     tabs.forEach(function (tab) {
       tab.addEventListener('click', function () {
         activateTab(tab.dataset.productTab);
+        if (tabsSwiper) {
+          var slide = tab.closest('.swiper-slide');
+          var slideIndex = slide ? Array.from(slide.parentElement.children).indexOf(slide) : tabs.indexOf(tab);
+          tabsSwiper.slideTo(slideIndex);
+        }
       }, {
         signal: signal
       });
@@ -1071,12 +1110,34 @@ var productShowcase = function productShowcase() {
         var nextTab = tabs[nextIndex];
         activateTab(nextTab.dataset.productTab);
         nextTab.focus();
+        if (tabsSwiper) {
+          var slide = nextTab.closest('.swiper-slide');
+          var slideIndex = slide ? Array.from(slide.parentElement.children).indexOf(slide) : nextIndex;
+          tabsSwiper.slideTo(slideIndex);
+        }
       }, {
         signal: signal
       });
     });
+    updateTabsEnhancement();
+    if (typeof desktopQuery.addEventListener === 'function') {
+      desktopQuery.addEventListener('change', updateTabsEnhancement, {
+        signal: signal
+      });
+    } else if (typeof desktopQuery.addListener === 'function') {
+      var onChange = function onChange() {
+        return updateTabsEnhancement();
+      };
+      desktopQuery.addListener(onChange);
+      signal.addEventListener('abort', function () {
+        return desktopQuery.removeListener(onChange);
+      }, {
+        once: true
+      });
+    }
     productShowcaseInstances.set(root, {
       destroy: function destroy() {
+        destroyTabsSwiper();
         controller.abort();
         productShowcaseInstances.delete(root);
       }
