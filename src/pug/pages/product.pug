@@ -1,0 +1,14 @@
+extends ../config/template
+
+append config
+	include ../data/product-showcase-data
+	-currentPage		= "product"
+	-pageLang			= "es"
+	-siteName			= 'Recupé Plus'
+	-content			= 'content'
+	-pageTitle			= productShowcaseData.metaTitle
+	-pageDescription	= productShowcaseData.metaDescription
+
+block main-container
+	include ../components/product-showcase
+block scripts

@@ -213,9 +213,12 @@
 	}
 
 	&__media {
+		display: block;
 		aspect-ratio: 1 / 1;
 		overflow: hidden;
 		background: #fff;
+		color: inherit;
+		text-decoration: none;
 	}
 
 	&__image {
@@ -241,6 +244,16 @@
 		font-size: 1.125rem;
 		font-weight: 700;
 		line-height: 1.15;
+	}
+
+	&__name-link {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover,
+		&:focus-visible {
+			text-decoration: underline;
+		}
 	}
 
 	&__text {

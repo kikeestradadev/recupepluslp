@@ -1,0 +1,127 @@
+-
+	var productShowcaseImagesBase = './assets/drive_24_julio/dos_formas'
+	var productShowcaseData = {
+		metaTitle: 'Vitamin',
+		metaDescription: 'Gomitas Vitamin con mora y vitamina C para cuidar tus defensas todos los días.',
+		breadcrumbs: [
+			{ label: 'Inicio', href: './' },
+			{ label: 'Gomitas', href: 'suplementos.html#gomitas' },
+			{ label: 'Vitamin', href: null }
+		],
+		gallery: [
+			{
+				src: `${productShowcaseImagesBase}/gomitas/individuales/vitamin.webp`,
+				alt: 'Vitamin - imagen 1'
+			},
+			{
+				src: `${productShowcaseImagesBase}/gomitas/gomitas_1.webp`,
+				alt: 'Vitamin - imagen 2'
+			}
+		],
+		name: 'Vitamin',
+		price: '₡8 900',
+		priceNote: 'IVA incluido',
+		category: {
+			label: 'Gomitas Funcionales',
+			href: 'suplementos.html#gomitas'
+		},
+		shortDescription: [
+			'Suplemento alimenticio en gomitas a base de mora y vitamina C.',
+			'Apoya tus defensas todos los días con una fórmula práctica y deliciosa. Ideal para sumar bienestar a tu rutina sin complicarte.'
+		],
+		quantity: {
+			min: 1,
+			max: 20,
+			value: 1
+		},
+		addToCartLabel: 'Añadir al carrito',
+		wishlistLabel: 'Agregar a lista de deseos',
+		tabs: [
+			{
+				id: 'descripcion',
+				label: 'Descripción',
+				active: true
+			},
+			{
+				id: 'adicional',
+				label: 'Información adicional',
+				active: false
+			},
+			{
+				id: 'valoraciones',
+				label: 'Valoraciones (0)',
+				active: false
+			}
+		],
+		description: {
+			title: 'RECUPÉ PLUS VITAMIN',
+			intro: [
+				'Nuestras gomitas Vitamin combinan el sabor de la mora con vitamina C para acompañar tu sistema inmune de forma simple y cotidiana.',
+				'Pensadas para quienes buscan un hábito fácil: una gomita rica, práctica y con activos pensados para tu bienestar diario.'
+			],
+			benefitsTitle: 'Beneficios de Vitamin en tu rutina:',
+			benefits: [
+				{
+					title: 'Defensas:',
+					text: 'La vitamina C contribuye al funcionamiento normal del sistema inmunológico y ayuda a proteger las células del estrés oxidativo.'
+				},
+				{
+					title: 'Antioxidantes:',
+					text: 'La mora aporta antocianinas y otros compuestos que acompañan una rutina enfocada en el bienestar celular.'
+				},
+				{
+					title: 'Hábitos simples:',
+					text: 'Formato gomita para sumar constancia sin fricción: ideal para la oficina, el gym o el día a día.'
+				},
+				{
+					title: 'Bienestar diario:',
+					text: 'Una opción práctica para complementar alimentación y estilo de vida activos.'
+				}
+			],
+			outro: 'Al integrar Vitamin en tu rutina, sumás un apoyo concreto a tus defensas con un producto pensado para disfrutarse todos los días.'
+		},
+		additional: {
+			rows: [
+				{ label: 'Marca', value: 'Recupé Plus' },
+				{ label: 'Formato', value: 'Gomitas' },
+				{ label: 'Activos', value: 'Mora, Vitamina C' }
+			]
+		},
+		reviews: {
+			emptyTitle: 'Valoraciones',
+			emptyText: 'No hay valoraciones aún.',
+			cta: 'Sé el primero en valorar “Vitamin”'
+		},
+		related: {
+			title: 'Productos relacionados',
+			items: [
+				{
+					name: 'Activity',
+					category: 'Hongos Medicinales',
+					price: '₡25 000',
+					priceNote: 'IVA incluido',
+					image: `${productShowcaseImagesBase}/capsulas/individuales/activity.webp`,
+					href: 'product.html',
+					text: 'Para activar tu energía antes de moverte.'
+				},
+				{
+					name: 'Memento',
+					category: 'Hongos Medicinales',
+					price: '₡25 000',
+					priceNote: 'IVA incluido',
+					image: `${productShowcaseImagesBase}/capsulas/individuales/momento.webp`,
+					href: 'product.html',
+					text: 'Para acompañar tus momentos de enfoque.'
+				},
+				{
+					name: 'Recovery',
+					category: 'Hongos Medicinales',
+					price: '₡25 000',
+					priceNote: 'IVA incluido',
+					image: `${productShowcaseImagesBase}/capsulas/individuales/recovery.webp`,
+					href: 'product.html',
+					text: 'Para acompañar tu recuperación después de hacer ejercicio.'
+				}
+			]
+		}
+	}

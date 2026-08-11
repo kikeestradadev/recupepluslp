@@ -19,10 +19,11 @@ section(class='product-slider')
 									each product in group.items
 										article(class='product-slider__slide swiper-slide')
 											div(class=['product-slider__card', `product-slider__card--${product.modifier}`])
-												div(class='product-slider__media')
+												a(class='product-slider__media' href=product.href)
 													img(class='product-slider__image' src=product.image alt=product.name width='280' height='180' loading='lazy')
 												div(class='product-slider__body')
-													h3(class='product-slider__name')= product.name
+													h3(class='product-slider__name')
+														a(class='product-slider__name-link' href=product.href)= product.name
 													p(class='product-slider__text')= product.text
 													a(class='product-slider__link' href=product.href) Conocer más →
 

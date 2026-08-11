@@ -1,0 +1,149 @@
+include ../data/product-showcase-data
+
+section(class='product-showcase' data-product-showcase)
+	div(class='main-container product-showcase__shell')
+		div(class='container product-showcase__container product-showcase__inner')
+			nav(class='product-showcase__breadcrumbs' aria-label='Miga de pan')
+				ol(class='product-showcase__crumbs')
+					each crumb, index in productShowcaseData.breadcrumbs
+						li(class='product-showcase__crumb')
+							if crumb.href
+								a(class='product-showcase__crumb-link' href=crumb.href)= crumb.label
+							else
+								span(class='product-showcase__crumb-current' aria-current='page')= crumb.label
+							if index < productShowcaseData.breadcrumbs.length - 1
+								span(class='product-showcase__crumb-sep' aria-hidden='true') /
+
+			div(class='product-showcase__layout')
+				div(class='product-showcase__gallery')
+					div(class='product-showcase__thumbs' role='list')
+						each image, index in productShowcaseData.gallery
+							button(
+								class=index === 0 ? 'product-showcase__thumb product-showcase__thumb--active' : 'product-showcase__thumb'
+								type='button'
+								role='listitem'
+								data-product-thumb
+								data-src=image.src
+								aria-label=`Ver ${image.alt}`
+								aria-pressed=index === 0 ? 'true' : 'false'
+							)
+								img(class='product-showcase__thumb-image' src=image.src alt='' width='80' height='80' loading='lazy')
+
+					div(class='product-showcase__stage' data-product-zoom)
+						img(
+							class='product-showcase__stage-image'
+							src=productShowcaseData.gallery[0].src
+							alt=productShowcaseData.gallery[0].alt
+							width='720'
+							height='720'
+							data-product-stage
+						)
+						span(class='product-showcase__zoom-hint' aria-hidden='true') Ampliar
+
+				div(class='product-showcase__summary')
+					h1(class='product-showcase__title')= productShowcaseData.name
+					p(class='product-showcase__price')
+						span(class='product-showcase__price-value')= productShowcaseData.price
+						span(class='product-showcase__price-note')= productShowcaseData.priceNote
+
+					div(class='product-showcase__excerpt')
+						each paragraph in productShowcaseData.shortDescription
+							p= paragraph
+
+					form(class='product-showcase__cart' action='#' method='post' data-product-cart)
+						div(class='product-showcase__qty' data-product-qty)
+							button(class='product-showcase__qty-btn' type='button' data-product-qty-dec aria-label='Disminuir cantidad') −
+							input(
+								class='product-showcase__qty-input'
+								type='number'
+								name='quantity'
+								min=productShowcaseData.quantity.min
+								max=productShowcaseData.quantity.max
+								value=productShowcaseData.quantity.value
+								inputmode='numeric'
+								aria-label='Cantidad'
+								data-product-qty-input
+							)
+							button(class='product-showcase__qty-btn' type='button' data-product-qty-inc aria-label='Aumentar cantidad') +
+						button(class='product-showcase__add' type='submit')= productShowcaseData.addToCartLabel
+
+					button(class='product-showcase__wishlist' type='button')= productShowcaseData.wishlistLabel
+
+					p(class='product-showcase__meta')
+						span Categoría:
+						a(href=productShowcaseData.category.href)= productShowcaseData.category.label
+
+			div(class='product-showcase__tabs' data-product-tabs)
+				div(class='product-showcase__tablist' role='tablist' aria-label='Información del producto')
+					each tab in productShowcaseData.tabs
+						button(
+							class=tab.active ? 'product-showcase__tab product-showcase__tab--active' : 'product-showcase__tab'
+							type='button'
+							role='tab'
+							id=`product-tab-${tab.id}`
+							aria-controls=`product-panel-${tab.id}`
+							aria-selected=tab.active ? 'true' : 'false'
+							tabindex=tab.active ? '0' : '-1'
+							data-product-tab=tab.id
+						)= tab.label
+
+				div(
+					class=productShowcaseData.tabs[0].active ? 'product-showcase__panel product-showcase__panel--active' : 'product-showcase__panel'
+					role='tabpanel'
+					id='product-panel-descripcion'
+					aria-labelledby='product-tab-descripcion'
+					data-product-panel='descripcion'
+				)
+					h2(class='product-showcase__panel-title')= productShowcaseData.description.title
+					each paragraph in productShowcaseData.description.intro
+						p(class='product-showcase__panel-text')= paragraph
+					p(class='product-showcase__panel-text')= productShowcaseData.description.benefitsTitle
+					ol(class='product-showcase__benefits')
+						each benefit, index in productShowcaseData.description.benefits
+							li(class='product-showcase__benefit')
+								h3(class='product-showcase__benefit-title') #{index + 1}. #{benefit.title}
+								p(class='product-showcase__benefit-text')= benefit.text
+					p(class='product-showcase__panel-text')= productShowcaseData.description.outro
+
+				div(
+					class='product-showcase__panel'
+					role='tabpanel'
+					id='product-panel-adicional'
+					aria-labelledby='product-tab-adicional'
+					hidden
+					data-product-panel='adicional'
+				)
+					table(class='product-showcase__table')
+						tbody
+							each row in productShowcaseData.additional.rows
+								tr
+									th(scope='row')= row.label
+									td= row.value
+
+				div(
+					class='product-showcase__panel'
+					role='tabpanel'
+					id='product-panel-valoraciones'
+					aria-labelledby='product-tab-valoraciones'
+					hidden
+					data-product-panel='valoraciones'
+				)
+					h2(class='product-showcase__panel-title')= productShowcaseData.reviews.emptyTitle
+					p(class='product-showcase__panel-text')= productShowcaseData.reviews.emptyText
+					p(class='product-showcase__panel-cta')= productShowcaseData.reviews.cta
+
+			section(class='product-showcase__related')
+				h2(class='product-showcase__related-title')= productShowcaseData.related.title
+				div(class='product-showcase__related-grid')
+					each item in productShowcaseData.related.items
+						article(class='product-showcase__related-card')
+							a(class='product-showcase__related-media' href=item.href)
+								img(class='product-showcase__related-image' src=item.image alt=item.name width='280' height='280' loading='lazy')
+							p(class='product-showcase__related-category')= item.category
+							h3(class='product-showcase__related-name')
+								a(href=item.href)= item.name
+							p(class='product-showcase__related-price')
+								span= item.price
+								span(class='product-showcase__related-price-note')= item.priceNote
+							p(class='product-showcase__related-text')= item.text
+							a(class='product-showcase__related-link' href=item.href) Ver producto →
