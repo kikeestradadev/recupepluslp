@@ -13,4 +13,20 @@ section(class='start-banner')
 							span Escribir por WhatsApp
 						a(class='start-banner__cta start-banner__cta--primary' href='suplementos.html') Ver productos
 
-				img(class='start-banner__image' src='./assets/drive_24_julio/ws/ws.webp' alt='' width='720' height='480' loading='lazy')
+				picture(class='start-banner__picture')
+					source(
+						media='(width >= 1280px)'
+						srcset='./assets/drive_24_julio/ws/ws_dk.webp'
+					)
+					source(
+						media='(width >= 960px)'
+						srcset='./assets/drive_24_julio/ws/ws_tb.webp'
+					)
+					img(
+						class='start-banner__image'
+						src='./assets/drive_24_julio/ws/ws_mb.webp'
+						alt=''
+						width='720'
+						height='480'
+						loading='lazy'
+					)
