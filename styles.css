@@ -75,8 +75,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -3062,7 +3061,7 @@ img {
 .product-slider__card--serenity {
   --product-accent: #7a29ff;
 }
-.product-slider__card--memento {
+.product-slider__card--momento {
   --product-accent: #00beda;
 }
 .product-slider__card--activity {
