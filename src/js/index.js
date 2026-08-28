@@ -11,6 +11,7 @@ import ingredientsSlider from './modules/ingredientsSlider';
 import blogSlider from './modules/blogSlider';
 import blogFilter from './modules/blogFilter';
 import productShowcase from './modules/productShowcase';
+import mushroomsSplit from './modules/mushroomsSplit';
 import mainSlider from './modules/mainSlider';
 import mainBanner from './modules/mainBanner';
 
@@ -21,6 +22,7 @@ const initComponents = () => {
 	momentSlider();
 	productSlider();
 	productShowcase();
+	mushroomsSplit();
 	alliesSlider();
 	storeLocator();
 	waysSlider();
