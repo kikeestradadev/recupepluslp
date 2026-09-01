@@ -4,8 +4,7 @@
 	--ways-slider-container-max: var(--container, 1600px);
 	--ways-slider-gutter: 15px;
 	--ways-slider-card-width: min(20.5rem, calc(100vw - 2.5rem));
-	--ways-slider-card-height: auto;
-	--ways-slider-media-height: 9.5rem;
+	--ways-slider-card-height: 26rem;
 	margin-bottom: var(--section-gap);
 	background: #fff;
 	overflow: hidden;
@@ -119,7 +118,7 @@
 	&__card {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr);
-		grid-template-rows: var(--ways-slider-media-height) auto;
+		grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
@@ -134,17 +133,43 @@
 		justify-content: center;
 		gap: 0.65rem;
 		min-width: 0;
+		min-height: 0;
 		padding: 1.15rem 1.1rem 1.35rem;
 		grid-row: 2;
 	}
 
+	&__heading {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		width: 100%;
+		min-width: 0;
+	}
+
 	&__icon {
 		display: inline-flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		width: 1.75rem;
+		height: 1.75rem;
 		color: var(--color-purple, #7a29ff);
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+			overflow: visible;
+		}
+
+		&--whatsapp {
+			color: var(--color-whatsapp, #25d366);
+		}
 	}
 
 	&__name {
 		margin: 0;
+		min-width: 0;
 		color: var(--header-color, #1f2024);
 		font-size: 1.125rem;
 		font-weight: 700;
@@ -199,7 +224,8 @@
 	&__media {
 		grid-row: 1;
 		min-width: 0;
-		height: var(--ways-slider-media-height);
+		min-height: 0;
+		height: 100%;
 		overflow: hidden;
 		background: #e8e0f5;
 	}
@@ -209,6 +235,7 @@
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: top;
 	}
 
 	&__pagination {
@@ -238,7 +265,7 @@
 
 	@media (width >= $m) {
 		--ways-slider-card-width: min(24rem, calc(100vw - 3rem));
-		--ways-slider-media-height: 11rem;
+		--ways-slider-card-height: 28rem;
 
 		&__content {
 			padding: 1.35rem 1.35rem 1.5rem;
@@ -247,6 +274,11 @@
 
 		&__name {
 			font-size: 1.25rem;
+		}
+
+		&__icon {
+			width: 1.95rem;
+			height: 1.95rem;
 		}
 
 		&__text {
@@ -263,7 +295,6 @@
 	@media (width >= $l) {
 		--ways-slider-card-width: 35rem;
 		--ways-slider-card-height: 20rem;
-		--ways-slider-media-height: 100%;
 
 		&__swiper {
 			padding-inline: 2.75rem;
@@ -290,6 +321,11 @@
 
 		&__name {
 			font-size: 1.375rem;
+		}
+
+		&__icon {
+			width: 2.15rem;
+			height: 2.15rem;
 		}
 
 		&__text {

@@ -4,15 +4,19 @@ section(class='buy-banner' aria-label=buyBannerData.alt)
 	figure(class='buy-banner__figure')
 		picture(class='buy-banner__picture')
 			source(
-				media='(width >= 960px)'
+				media='(width >= 1280px)'
 				srcset=buyBannerData.imageDesktop
+			)
+			source(
+				media='(width >= 765px)'
+				srcset=buyBannerData.imageTablet
 			)
 			img(
 				class='buy-banner__image'
 				src=buyBannerData.imageMobile
 				alt=buyBannerData.alt
-				width='1600'
-				height='600'
+				width='500'
+				height='625'
 				loading='eager'
 				fetchpriority='high'
 			)

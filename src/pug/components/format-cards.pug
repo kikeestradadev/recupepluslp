@@ -1,31 +1,26 @@
+include ../data/format-cards-data
+
 section(class='format-cards')
 	div(class='main-container format-cards__shell')
 		div(class='container format-cards__container format-cards__inner')
-			h2(class='format-cards__title') Dos formas simples de sumar bienestar a tu rutina.
+			h2(class='format-cards__title')= formatCardsData.title
 
 			div(class='format-cards__grid')
-				article(class='format-cards__card format-cards__card--gomitas')
-					div(class='format-cards__content')
-						h3(class='format-cards__name') Gomitas
-						p(class='format-cards__text') Ricas, prácticas y fáciles de sumar todos los días.
-						ul(class='format-cards__list')
-							li(class='format-cards__item') Antiox
-							li(class='format-cards__item') C-Magnific
-							li(class='format-cards__item') Vitamin
-							li(class='format-cards__item') Serenity
-							li(class='format-cards__item') Are More
-						a(class='format-cards__cta' href='suplementos.html#gomitas') Ver gomitas
-					div(class='format-cards__media')
-						img(class='format-cards__image' src='./assets/drive_24_julio/dos_formas/gomitas2.webp' alt='Gomitas Recupé Plus' width='480' height='360' loading='lazy')
-
-				article(class='format-cards__card format-cards__card--capsulas')
-					div(class='format-cards__content')
-						h3(class='format-cards__name') Cápsulas
-						p(class='format-cards__text') Productos especializados con ingredientes clínicamente respaldados para tu recuperación e inmunidad.
-						ul(class='format-cards__list')
-							li(class='format-cards__item') Activity
-							li(class='format-cards__item') Momento
-							li(class='format-cards__item') Recovery
-						a(class='format-cards__cta' href='suplementos.html#capsulas') Ver cápsulas
-					div(class='format-cards__media')
-						img(class='format-cards__image' src='./assets/drive_24_julio/dos_formas/capsulas2.webp' alt='Cápsulas Recupé Plus' width='480' height='360' loading='lazy')
+				each card in formatCardsData.items
+					article(class=`format-cards__card format-cards__card--${card.modifier}`)
+						div(class='format-cards__content')
+							h3(class='format-cards__name')= card.title
+							p(class='format-cards__text')= card.text
+							ul(class='format-cards__list')
+								each product in card.products
+									li(class='format-cards__item')= product
+							a(class='format-cards__cta' href=card.href)= card.cta
+						div(class='format-cards__media')
+							img(
+								class='format-cards__image'
+								src=card.image
+								alt=card.alt
+								width=card.width
+								height=card.height
+								loading='lazy'
+							)
