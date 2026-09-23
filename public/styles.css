@@ -2743,10 +2743,8 @@ img {
 }
 @media (width >= 1600px) {
   .format-cards__card {
-    -ms-grid-columns: minmax(0, 2fr) 1.5rem minmax(0, 3fr);
-    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
     gap: 1.5rem;
-    padding: 2rem 1.5rem 2rem 2rem;
+    padding: 2rem;
   }
 }
 .format-cards__card--gomitas .format-cards__name {
@@ -3937,7 +3935,7 @@ img {
   --allies-slider-shell-max: var(--main-container, 3500px);
   --allies-slider-container-max: var(--container, 1600px);
   --allies-slider-gutter: 15px;
-  --allies-slider-card-width: 8.5rem;
+  --allies-slider-card-width: 11rem;
   margin-bottom: var(--section-gap);
   background: #fff;
   overflow: hidden;
@@ -3996,18 +3994,16 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  min-height: 4.5rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid #e6e6e6;
+  padding: 0;
+  border: 0;
   border-radius: 0.75rem;
-  background: #fff;
+  background: transparent;
+  overflow: hidden;
 }
 .allies-slider__logo {
   display: block;
   width: 100%;
-  max-width: 5.5rem;
   height: auto;
-  max-height: 2.5rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -4040,28 +4036,12 @@ img {
 }
 @media (width >= 640px) {
   .allies-slider {
-    --allies-slider-card-width: 9.5rem;
-  }
-  .allies-slider__card {
-    min-height: 5rem;
-    padding: 0.875rem 1.1rem;
-  }
-  .allies-slider__logo {
-    max-width: 6rem;
-    max-height: 2.75rem;
+    --allies-slider-card-width: 12.5rem;
   }
 }
 @media (width >= 960px) {
   .allies-slider {
-    --allies-slider-card-width: 10.5rem;
-  }
-  .allies-slider__card {
-    min-height: 5.25rem;
-    border-radius: 0.875rem;
-  }
-  .allies-slider__logo {
-    max-width: 6.5rem;
-    max-height: 3rem;
+    --allies-slider-card-width: 14rem;
   }
 }
 
