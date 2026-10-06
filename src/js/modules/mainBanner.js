@@ -26,7 +26,6 @@ const mainBanner = (scope = document) => {
 				},
 				speed: prefersReducedMotion ? 0 : 900,
 				loop: true,
-				autoHeight: true,
 				grabCursor: true,
 				autoplay: prefersReducedMotion
 					? false

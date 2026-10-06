@@ -1,29 +1,34 @@
-
 .buy-banner {
 	margin-bottom: var(--section-gap);
 	background: #fff;
 	overflow: clip;
 
 	&__figure {
+		position: relative;
 		display: block;
 		width: 100%;
-		height: calc(100vh - var(--header-height, 3.5rem));
-		height: calc(100svh - var(--header-height, 3.5rem));
+		aspect-ratio: 500 / 625;
+		height: auto;
 		margin: 0;
 		overflow: hidden;
 	}
 
-	&__picture {
+	&__picture,
+	&__image {
 		display: block;
 		width: 100%;
 		height: 100%;
 	}
 
-	&__image {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center center;
+	@media (width >= $m) {
+		&__figure {
+			aspect-ratio: 960 / 600;
+		}
+	}
+
+	@media (width >= $lg) {
+		&__figure {
+			aspect-ratio: 1920 / 720;
+		}
 	}
 }
