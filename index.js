@@ -1336,7 +1336,6 @@ var mainBanner = function mainBanner() {
         },
         speed: prefersReducedMotion ? 0 : 900,
         loop: true,
-        autoHeight: true,
         grabCursor: true,
         autoplay: prefersReducedMotion ? false : {
           delay: 6000,
