@@ -1,6 +1,7 @@
 include ../data/main-banner-data
 
 section(class='main-banner' aria-label=mainBannerData.ariaLabel)
+	h1(class='visually-hidden')= mainBannerData.title
 	div(class='main-banner__slider')
 		button(class='main-banner__nav main-banner__nav--prev' type='button' aria-label='Anterior')
 		button(class='main-banner__nav main-banner__nav--next' type='button' aria-label='Siguiente')
@@ -16,39 +17,15 @@ section(class='main-banner' aria-label=mainBannerData.ariaLabel)
 									srcset=slide.imageDesktop
 								)
 								source(
-									media='(width >= 960px)'
+									media='(width >= 640px)'
 									srcset=slide.imageTablet
 								)
-								if index === 0
-									img(
-										class='main-banner__image'
-										src=slide.imageMobile
-										alt=slide.alt
-										width='1200'
-										height='900'
-										loading='eager'
-										fetchpriority='high'
-									)
-								else
-									img(
-										class='main-banner__image'
-										src=slide.imageMobile
-										alt=slide.alt
-										width='1200'
-										height='900'
-										loading='lazy'
-									)
-
-						div(class='main-banner__content')
-							div(class='main-banner__copy')
-								if index === 0
-									h1(class='main-banner__title')= slide.title
-								else
-									h2(class='main-banner__title')= slide.title
-
-								p(class='main-banner__text')= slide.subtitle
-
-								if slide.cta
-									a(class='main-banner__cta' href=slide.cta.href)= slide.cta.label
+								img(
+									class='main-banner__image'
+									src=slide.imageMobile
+									alt=slide.alt
+									loading=index === 0 ? 'eager' : 'lazy'
+									fetchpriority=index === 0 ? 'high' : 'auto'
+								)
 
 			div(class='main-banner__pagination swiper-pagination')
