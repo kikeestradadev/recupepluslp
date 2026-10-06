@@ -10,22 +10,23 @@ section(class='main-banner' aria-label=mainBannerData.ariaLabel)
 			div(class='main-banner__wrapper swiper-wrapper')
 				each slide, index in mainBannerData.items
 					article(class='main-banner__slide swiper-slide')
-						figure(class='main-banner__media')
-							picture(class='main-banner__picture')
-								source(
-									media='(width >= 1280px)'
-									srcset=slide.imageDesktop
-								)
-								source(
-									media='(width >= 640px)'
-									srcset=slide.imageTablet
-								)
-								img(
-									class='main-banner__image'
-									src=slide.imageMobile
-									alt=slide.alt
-									loading=index === 0 ? 'eager' : 'lazy'
-									fetchpriority=index === 0 ? 'high' : 'auto'
-								)
+						picture
+							source(
+								srcset=slide.imageDesktop
+								media='(min-width: 960px)'
+							)
+							source(
+								srcset=slide.imageTablet
+								media='(min-width: 640px)'
+							)
+							img(
+								class='main-banner__image'
+								src=slide.imageMobile
+								alt=slide.alt
+								width='500'
+								height='625'
+								fetchpriority=index === 0 ? 'high' : 'auto'
+								decoding='async'
+							)
 
 			div(class='main-banner__pagination swiper-pagination')

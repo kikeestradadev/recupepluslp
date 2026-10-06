@@ -1,7 +1,6 @@
 .main-banner {
-	--main-banner-bg: #fff;
-	background: var(--main-banner-bg);
 	margin-bottom: var(--section-gap);
+	background: #fff;
 	overflow: clip;
 
 	&__slider {
@@ -10,50 +9,13 @@
 	}
 
 	&__swiper {
-		position: relative;
 		width: 100%;
-		aspect-ratio: 500 / 625;
-		height: auto;
 	}
 
-	&__swiper.swiper-fade {
-		.main-banner__wrapper {
-			height: 100%;
-			transform: none !important;
-			transition: none;
-		}
-
-		.main-banner__slide {
-			position: absolute;
-			inset: 0;
-			width: 100% !important;
-			height: 100% !important;
-			transform: none !important;
-			opacity: 0 !important;
-			transition: opacity 0.9s ease;
-		}
-
-		.main-banner__slide.swiper-slide-active {
-			opacity: 1 !important;
-			z-index: 1;
-		}
-	}
-
-	&__slide {
-		overflow: hidden;
-	}
-
-	&__media,
-	&__picture,
 	&__image {
 		display: block;
 		width: 100%;
-		height: 100%;
-	}
-
-	&__media {
-		margin: 0;
-		background: var(--main-banner-bg);
+		height: auto;
 	}
 
 	&__nav {
@@ -70,7 +32,6 @@
 		box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
 		cursor: pointer;
 		transform: translateY(-50%);
-		transition: background 0.2s ease, opacity 0.2s ease;
 
 		&::before {
 			content: '';
@@ -136,24 +97,6 @@
 				background: var(--color-orange, #ff9100);
 				opacity: 1;
 			}
-		}
-	}
-
-	@media (width >= $m) {
-		&__swiper {
-			aspect-ratio: 960 / 600;
-		}
-	}
-
-	@media (width >= $lg) {
-		&__swiper {
-			aspect-ratio: 1920 / 720;
-		}
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		&__swiper.swiper-fade .main-banner__slide {
-			transition: none;
 		}
 	}
 }

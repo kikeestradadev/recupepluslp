@@ -15,25 +15,14 @@ const mainBanner = (scope = document) => {
 			const prevEl = root.querySelector('.main-banner__nav--prev');
 			const nextEl = root.querySelector('.main-banner__nav--next');
 			const paginationEl = root.querySelector('.main-banner__pagination');
-			const prefersReducedMotion = window.matchMedia(
-				'(prefers-reduced-motion: reduce)'
-			).matches;
 
 			const instance = new Swiper(swiperEl, {
-				effect: 'fade',
-				fadeEffect: {
-					crossFade: true,
-				},
-				speed: prefersReducedMotion ? 0 : 900,
+				speed: 0,
 				loop: true,
-				grabCursor: true,
-				autoplay: prefersReducedMotion
-					? false
-					: {
-							delay: 6000,
-							disableOnInteraction: false,
-							pauseOnMouseEnter: true,
-						},
+				autoplay: {
+					delay: 6000,
+					disableOnInteraction: false,
+				},
 				pagination: {
 					el: paginationEl,
 					clickable: true,

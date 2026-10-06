@@ -2,20 +2,21 @@ include ../data/buy-banner-data
 
 section(class='buy-banner' aria-label=buyBannerData.title)
 	h1(class='visually-hidden')= buyBannerData.title
-	figure(class='buy-banner__figure')
-		picture(class='buy-banner__picture')
-			source(
-				media='(width >= 1280px)'
-				srcset=buyBannerData.imageDesktop
-			)
-			source(
-				media='(width >= 640px)'
-				srcset=buyBannerData.imageTablet
-			)
-			img(
-				class='buy-banner__image'
-				src=buyBannerData.imageMobile
-				alt=buyBannerData.alt
-				loading='eager'
-				fetchpriority='high'
-			)
+	picture
+		source(
+			srcset=buyBannerData.imageDesktop
+			media='(min-width: 960px)'
+		)
+		source(
+			srcset=buyBannerData.imageTablet
+			media='(min-width: 640px)'
+		)
+		img(
+			class='buy-banner__image'
+			src=buyBannerData.imageMobile
+			alt=buyBannerData.alt
+			width='500'
+			height='625'
+			fetchpriority='high'
+			decoding='async'
+		)
