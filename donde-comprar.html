@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/prism.css">
-    <link rel="stylesheet" href="styles.css?v=1.0.46">
+    <link rel="stylesheet" href="styles.css?v=1.0.47">
     <title>Dónde comprar - Recupé Plus</title>
   </head>
   <body class="donde comprar" itemscope itemtype="http://schema.org/WebPage">
@@ -64,12 +64,10 @@
     <main>
       <section class="buy-banner" aria-label="Dónde comprar">
         <h1 class="visually-hidden">Dónde comprar</h1>
-        <figure class="buy-banner__figure">
-          <picture class="buy-banner__picture">
-            <source media="(width &gt;= 1280px)" srcset="./assets/slider_comprar/donde_comprar_desktop.webp">
-            <source media="(width &gt;= 640px)" srcset="./assets/slider_comprar/donde_comprar_tablet.webp"><img class="buy-banner__image" src="./assets/slider_comprar/donde_comprar_mobile.webp" alt="¿Dónde querés comprar Recupé Plus?" loading="eager" fetchpriority="high">
-          </picture>
-        </figure>
+        <picture>
+          <source srcset="./assets/slider_comprar/donde_comprar_desktop.webp" media="(min-width: 960px)">
+          <source srcset="./assets/slider_comprar/donde_comprar_tablet.webp" media="(min-width: 640px)"><img class="buy-banner__image" src="./assets/slider_comprar/donde_comprar_mobile.webp" alt="¿Dónde querés comprar Recupé Plus?" width="500" height="625" fetchpriority="high" decoding="async">
+        </picture>
       </section>
       <section class="ways-slider">
         <div class="main-container ways-slider__shell">
@@ -333,6 +331,6 @@
       </svg></a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-    <script src="index.js?v=1.0.46"></script>
+    <script src="index.js?v=1.0.47"></script>
   </body>
 </html>

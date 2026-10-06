@@ -1328,19 +1328,12 @@ var mainBanner = function mainBanner() {
       var prevEl = root.querySelector('.main-banner__nav--prev');
       var nextEl = root.querySelector('.main-banner__nav--next');
       var paginationEl = root.querySelector('.main-banner__pagination');
-      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var instance = new Swiper(swiperEl, {
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true
-        },
-        speed: prefersReducedMotion ? 0 : 900,
+        speed: 0,
         loop: true,
-        grabCursor: true,
-        autoplay: prefersReducedMotion ? false : {
+        autoplay: {
           delay: 6000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true
+          disableOnInteraction: false
         },
         pagination: {
           el: paginationEl,

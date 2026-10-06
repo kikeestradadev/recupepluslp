@@ -7096,9 +7096,8 @@ img {
 }
 
 .main-banner {
-  --main-banner-bg: #fff;
-  background: var(--main-banner-bg);
   margin-bottom: var(--section-gap);
+  background: #fff;
   overflow: clip;
 }
 .main-banner__slider {
@@ -7106,44 +7105,12 @@ img {
   width: 100%;
 }
 .main-banner__swiper {
-  position: relative;
   width: 100%;
-  aspect-ratio: 500/625;
-  height: auto;
 }
-.main-banner__swiper.swiper-fade .main-banner__wrapper {
-  height: 100%;
-  -webkit-transform: none !important;
-          transform: none !important;
-  -webkit-transition: none;
-  transition: none;
-}
-.main-banner__swiper.swiper-fade .main-banner__slide {
-  position: absolute;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
-  -webkit-transform: none !important;
-          transform: none !important;
-  opacity: 0 !important;
-  -webkit-transition: opacity 0.9s ease;
-  transition: opacity 0.9s ease;
-}
-.main-banner__swiper.swiper-fade .main-banner__slide.swiper-slide-active {
-  opacity: 1 !important;
-  z-index: 1;
-}
-.main-banner__slide {
-  overflow: hidden;
-}
-.main-banner__media, .main-banner__picture, .main-banner__image {
+.main-banner__image {
   display: block;
   width: 100%;
-  height: 100%;
-}
-.main-banner__media {
-  margin: 0;
-  background: var(--main-banner-bg);
+  height: auto;
 }
 .main-banner__nav {
   display: none;
@@ -7161,8 +7128,6 @@ img {
   cursor: pointer;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: background 0.2s ease, opacity 0.2s ease;
-  transition: background 0.2s ease, opacity 0.2s ease;
 }
 .main-banner__nav::before {
   content: "";
@@ -7226,22 +7191,6 @@ img {
 .main-banner__pagination.swiper-pagination-horizontal .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: var(--color-orange, #ff9100);
   opacity: 1;
-}
-@media (width >= 640px) {
-  .main-banner__swiper {
-    aspect-ratio: 960/600;
-  }
-}
-@media (width >= 1280px) {
-  .main-banner__swiper {
-    aspect-ratio: 1920/720;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .main-banner__swiper.swiper-fade .main-banner__slide {
-    -webkit-transition: none;
-    transition: none;
-  }
 }
 
 .about-banner {
@@ -7640,31 +7589,11 @@ img {
 .buy-banner {
   margin-bottom: var(--section-gap);
   background: #fff;
-  overflow: clip;
 }
-.buy-banner__figure {
-  position: relative;
+.buy-banner__image {
   display: block;
   width: 100%;
-  aspect-ratio: 500/625;
   height: auto;
-  margin: 0;
-  overflow: hidden;
-}
-.buy-banner__picture, .buy-banner__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-@media (width >= 640px) {
-  .buy-banner__figure {
-    aspect-ratio: 960/600;
-  }
-}
-@media (width >= 1280px) {
-  .buy-banner__figure {
-    aspect-ratio: 1920/720;
-  }
 }
 
 .guides-banner {
@@ -7690,31 +7619,11 @@ img {
 .supplements-banner {
   margin-bottom: var(--section-gap);
   background: #fff;
-  overflow: clip;
 }
-.supplements-banner__figure {
-  position: relative;
+.supplements-banner__image {
   display: block;
   width: 100%;
-  aspect-ratio: 500/625;
   height: auto;
-  margin: 0;
-  overflow: hidden;
-}
-.supplements-banner__picture, .supplements-banner__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-@media (width >= 640px) {
-  .supplements-banner__figure {
-    aspect-ratio: 960/600;
-  }
-}
-@media (width >= 1280px) {
-  .supplements-banner__figure {
-    aspect-ratio: 1920/720;
-  }
 }
 
 .supplements-features {
