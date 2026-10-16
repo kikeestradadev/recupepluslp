@@ -46,11 +46,10 @@ section(class='store-locator' data-store-locator)
 
 				div(class='store-locator__map' aria-label='Mapa de tiendas')
 					iframe(
-						class='store-locator__map-frame'
+						class='store-locator__map-frame lazyload'
 						title='Mapa de tiendas en San José'
-						loading='lazy'
 						referrerpolicy='no-referrer-when-downgrade'
-						src='https://www.openstreetmap.org/export/embed.html?bbox=-84.170%2C9.900%2C-84.000%2C9.980&layer=mapnik'
+						data-src='https://www.openstreetmap.org/export/embed.html?bbox=-84.170%2C9.900%2C-84.000%2C9.980&layer=mapnik'
 					)
 					div(class='store-locator__pins' aria-hidden='true')
 						span(class='store-locator__pin store-locator__pin--green store-locator__pin--active' data-store='0' style='top: 42%; left: 28%;')

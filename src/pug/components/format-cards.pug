@@ -17,10 +17,9 @@ section(class='format-cards')
 							a(class='format-cards__cta' href=card.href)= card.cta
 						div(class='format-cards__media')
 							img(
-								class='format-cards__image'
-								src=card.image
+								class='format-cards__image lazyload'
+								data-src=card.image
 								alt=card.alt
 								width=card.width
 								height=card.height
-								loading='lazy'
 							)

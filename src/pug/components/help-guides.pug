@@ -6,7 +6,7 @@ section(class='help-guides')
 			div(class='help-guides__grid')
 				article(class='help-guides__help')
 					div(class='help-guides__help-media')
-						img(class='help-guides__help-image' src=helpGuidesData.help.image alt='' width='480' height='480' loading='lazy')
+						img(class='help-guides__help-image lazyload' data-src=helpGuidesData.help.image alt='' width='480' height='480')
 					div(class='help-guides__help-body')
 						h2(class='help-guides__help-title')= helpGuidesData.help.title
 						p(class='help-guides__help-text')= helpGuidesData.help.text
@@ -28,7 +28,7 @@ section(class='help-guides')
 						each item in helpGuidesData.guides.items
 							article(class='help-guides__guide')
 								a(class='help-guides__guide-media' href=item.href)
-									img(class='help-guides__guide-image' src=item.image alt='' width='280' height='180' loading='lazy')
+									img(class='help-guides__guide-image lazyload' data-src=item.image alt='' width='280' height='180')
 								div(class='help-guides__guide-body')
 									h3(class='help-guides__guide-name')= item.title
 									a(class='help-guides__guide-link' href=item.href)

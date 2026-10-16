@@ -15,7 +15,7 @@ section(class='reviews-slider')
 							article(class='reviews-slider__slide swiper-slide')
 								div(class='reviews-slider__card')
 									div(class='reviews-slider__media')
-										img(class='reviews-slider__image' src=review.image alt='' width='120' height='120' loading='lazy')
+										img(class='reviews-slider__image lazyload' data-src=review.image alt='' width='120' height='120')
 									div(class='reviews-slider__body')
 										blockquote(class='reviews-slider__quote')= `“${review.quote}”`
 										p(class='reviews-slider__author')= `— ${review.author}`

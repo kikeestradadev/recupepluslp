@@ -6,12 +6,11 @@ section(class='about-story')
 			div(class='about-story__layout')
 				div(class='about-story__media')
 					img(
-						class='about-story__image'
-						src=aboutStoryData.image
+						class='about-story__image lazyload'
+						data-src=aboutStoryData.image
 						alt=aboutStoryData.alt
 						width='720'
 						height='540'
-						loading='lazy'
 					)
 
 				div(class='about-story__content')

@@ -140,13 +140,13 @@ section(class='product-showcase' data-product-showcase)
 					p(class='product-showcase__panel-text')= productShowcaseData.reviews.emptyText
 					p(class='product-showcase__panel-cta')= productShowcaseData.reviews.cta
 
-			section(class='product-showcase__related')
+			section(class='product-showcase__related' data-lazy-component)
 				h2(class='product-showcase__related-title')= productShowcaseData.related.title
 				div(class='product-showcase__related-grid')
 					each item in productShowcaseData.related.items
 						article(class='product-showcase__related-card')
 							a(class='product-showcase__related-media' href=item.href)
-								img(class='product-showcase__related-image' src=item.image alt=item.name width='280' height='280' loading='lazy')
+								img(class='product-showcase__related-image lazyload' data-src=item.image alt=item.name width='280' height='280')
 							p(class='product-showcase__related-category')= item.category
 							h3(class='product-showcase__related-name')
 								a(href=item.href)= item.name

@@ -15,7 +15,7 @@ section(class='blog-slider')
 							article(class='blog-slider__slide swiper-slide')
 								a(class='blog-slider__card' href=post.href)
 									div(class='blog-slider__media')
-										img(class='blog-slider__image' src=post.image alt='' width='320' height='200' loading='lazy')
+										img(class='blog-slider__image lazyload' data-src=post.image alt='' width='320' height='200')
 									h3(class='blog-slider__name')= post.title
 
 					div(class='blog-slider__pagination swiper-pagination')

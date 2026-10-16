@@ -11,7 +11,7 @@ section(class='founders-cards')
 				each person in foundersCardsData.items
 					article(class='founders-cards__card')
 						div(class='founders-cards__media')
-							img(class='founders-cards__image' src=person.img alt=person.name width='320' height='400' loading='lazy')
+							img(class='founders-cards__image lazyload' data-src=person.img alt=person.name width='320' height='400')
 						div(class='founders-cards__body')
 							h3(class='founders-cards__name')= person.name
 							p(class='founders-cards__role')= person.role

@@ -1,3 +1,4 @@
+import componentLoader from './modules/componentLoader';
 import mainMenu from './modules/mainMenu';
 import momentSlider from './modules/momentSlider';
 import productSlider from './modules/productSlider';
@@ -15,22 +16,11 @@ import mushroomsSplit from './modules/mushroomsSplit';
 import mainSlider from './modules/mainSlider';
 import mainBanner from './modules/mainBanner';
 
-const initComponents = () => {
+const initEagerComponents = () => {
 	mainMenu();
 	mainSlider();
 	mainBanner();
-	momentSlider();
-	productSlider();
 	productShowcase();
-	mushroomsSplit();
-	alliesSlider();
-	storeLocator();
-	waysSlider();
-	believeCards();
-	reviewsSlider();
-	guideSlider();
-	ingredientsSlider();
-	blogSlider();
 	blogFilter();
 
 	if (
@@ -39,6 +29,27 @@ const initComponents = () => {
 	) {
 		window.Prism.highlightAll();
 	}
+};
+
+const initComponents = () => {
+	document.documentElement.classList.remove('no-js');
+	document.documentElement.classList.add('js');
+	document.documentElement.dataset.componentsReady = 'true';
+
+	initEagerComponents();
+	componentLoader([
+		{ selector: '.moment-slider', init: momentSlider },
+		{ selector: '.product-slider', init: productSlider },
+		{ selector: '.mushrooms-split', init: mushroomsSplit },
+		{ selector: '.allies-slider', init: alliesSlider },
+		{ selector: '.store-locator', init: storeLocator },
+		{ selector: '.ways-slider', init: waysSlider },
+		{ selector: '.believe-cards', init: believeCards },
+		{ selector: '.reviews-slider', init: reviewsSlider },
+		{ selector: '.guide-slider', init: guideSlider },
+		{ selector: '.ingredients-slider', init: ingredientsSlider },
+		{ selector: '.blog-slider', init: blogSlider },
+	]);
 };
 
 if (document.readyState === 'loading') {

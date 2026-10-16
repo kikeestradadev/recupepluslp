@@ -17,7 +17,7 @@ section(class='moment-slider')
 							article(class='moment-slider__slide swiper-slide')
 								a(class='moment-slider__card' href=moment.href)
 									div(class='moment-slider__media')
-										img(class='moment-slider__image' src=moment.image alt='' width='280' height='180' loading='lazy')
+										img(class='moment-slider__image lazyload' data-src=moment.image alt='' width='280' height='180')
 									div(class='moment-slider__body')
 										h3(class='moment-slider__card-title')= moment.title
 										p(class='moment-slider__card-text')= moment.text

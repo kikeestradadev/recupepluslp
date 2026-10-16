@@ -24,12 +24,11 @@ section(class='mushrooms-split' aria-labelledby='mushrooms-split-title')
 								article(class=`mushrooms-split__item mushrooms-split__slide swiper-slide mushrooms-split__item--${item.modifier}`)
 									div(class='mushrooms-split__icon')
 										img(
-											class='mushrooms-split__image'
-											src=item.image
+											class='mushrooms-split__image lazyload'
+											data-src=item.image
 											alt=''
 											width='1260'
 											height='1260'
-											loading='lazy'
 										)
 									h3(class='mushrooms-split__name visually-hidden')= item.title
 									p(class='mushrooms-split__item-text')= item.text

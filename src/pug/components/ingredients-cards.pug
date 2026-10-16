@@ -10,12 +10,11 @@ section(class='ingredients-cards')
 					article(class='ingredients-cards__card')
 						div(class='ingredients-cards__media')
 							img(
-								class='ingredients-cards__image'
-								src=item.image
+								class='ingredients-cards__image lazyload'
+								data-src=item.image
 								alt=item.alt
 								width='900'
 								height='640'
-								loading='lazy'
 							)
 						div(class='ingredients-cards__body')
 							h3(class='ingredients-cards__name')= item.title

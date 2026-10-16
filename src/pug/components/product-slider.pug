@@ -20,7 +20,7 @@ section(class='product-slider')
 										article(class='product-slider__slide swiper-slide')
 											div(class=['product-slider__card', `product-slider__card--${product.modifier}`])
 												a(class='product-slider__media' href=product.href)
-													img(class='product-slider__image' src=product.image alt=product.name width='280' height='180' loading='lazy')
+													img(class='product-slider__image lazyload' data-src=product.image alt=product.name width='280' height='180')
 												div(class='product-slider__body')
 													h3(class='product-slider__name')
 														a(class='product-slider__name-link' href=product.href)= product.name

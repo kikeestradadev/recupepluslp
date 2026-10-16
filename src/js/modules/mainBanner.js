@@ -1,3 +1,5 @@
+import { markExistingSlider, withSliderLoader } from './sliderLoader';
+
 const mainBanner = (scope = document) => {
 	const instances = [];
 	const roots = scope.querySelectorAll('.main-banner');
@@ -8,6 +10,7 @@ const mainBanner = (scope = document) => {
 			if (!swiperEl) return;
 
 			if (swiperEl.swiper) {
+				markExistingSlider(root);
 				instances.push(swiperEl.swiper);
 				return;
 			}
@@ -16,22 +19,29 @@ const mainBanner = (scope = document) => {
 			const nextEl = root.querySelector('.main-banner__nav--next');
 			const paginationEl = root.querySelector('.main-banner__pagination');
 
-			const instance = new Swiper(swiperEl, {
-				speed: 0,
-				loop: true,
-				autoplay: {
-					delay: 6000,
-					disableOnInteraction: false,
-				},
-				pagination: {
-					el: paginationEl,
-					clickable: true,
-				},
-				navigation: {
-					prevEl,
-					nextEl,
-				},
-			});
+			const instance = new Swiper(
+				swiperEl,
+				withSliderLoader(root, {
+					effect: 'fade',
+					fadeEffect: {
+						crossFade: true,
+					},
+					speed: 900,
+					loop: true,
+					autoplay: {
+						delay: 6000,
+						disableOnInteraction: false,
+					},
+					pagination: {
+						el: paginationEl,
+						clickable: true,
+					},
+					navigation: {
+						prevEl,
+						nextEl,
+					},
+				})
+			);
 
 			instances.push(instance);
 		});

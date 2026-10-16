@@ -20,12 +20,11 @@ section(class='post-content' aria-labelledby='post-content-title')
 						if section.image
 							figure(class='post-content__figure')
 								img(
-									class='post-content__image'
-									src=section.image.src
+									class='post-content__image lazyload'
+									data-src=section.image.src
 									alt=section.image.alt
 									width='400'
 									height='400'
-									loading='lazy'
 								)
 								if section.image.caption
 									figcaption(class='post-content__caption')= section.image.caption

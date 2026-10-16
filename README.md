@@ -13,7 +13,13 @@ Abre la raíz del repositorio en Prepros. `prepros.config` define cuatro entrada
 
 Los componentes Pug, parciales Sass y módulos JS no se compilan individualmente. Sass usa `@import`; `styles.scss` carga primero los breakpoints globales y después el resto del proyecto.
 
-Los recursos estáticos viven en `public/assets`. Swiper y Prism se cargan desde CDN.
+Los recursos estáticos viven en `public/assets`. Swiper, Prism y lazysizes se cargan desde CDN.
+
+## Lazy loading
+
+[lazysizes 5.3.2](https://github.com/aFarkas/lazysizes) se incluye en `src/pug/config/template.pug` y difiere la descarga de imágenes, `<picture>` e iframes marcados con la clase `lazyload` y `data-src` / `data-srcset`. El primer `section` de cada página se mantiene inmediato para no retrasar el primer pantallazo. El resto reserva su lugar, muestra un indicador de carga y solo entonces inicializa su JavaScript, cuando el bloque se acerca al viewport.
+
+Los módulos Swiper usan además `sliderLoader.js`: cada raíz recibe `slider-loader` y, al dispararse `imagesReady` (o en `init` si no hay imágenes con `src` pendientes), `slider-loader--ready`, con un fade del `.swiper`. Eso convive con el reveal por sección de `componentLoader`.
 
 ## Versión de CSS y JavaScript
 

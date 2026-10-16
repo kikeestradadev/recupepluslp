@@ -6,13 +6,14 @@ section(class='main-slider' aria-label=mainSliderData.ariaLabel data-main-slider
 			each slide, index in mainSliderData.items
 				article(class=['main-slider__slide', `main-slider__slide--${slide.theme}`, 'swiper-slide'])
 					img(
-						class='main-slider__image'
-						src=slide.image
+						class=index === 0 ? 'main-slider__image' : 'main-slider__image lazyload'
+						src=index === 0 ? slide.image : false
+						data-src=index === 0 ? false : slide.image
 						alt=slide.alt
 						width='1024'
 						height='683'
-						loading=index === 0 ? 'eager' : 'lazy'
-						fetchpriority=index === 0 ? 'high' : 'auto'
+						loading=index === 0 ? 'eager' : false
+						fetchpriority=index === 0 ? 'high' : false
 					)
 					div(class='main-slider__overlay' aria-hidden='true')
 					div(class='main-container main-slider__content')

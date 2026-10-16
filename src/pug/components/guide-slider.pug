@@ -17,7 +17,7 @@ section(class='guide-slider')
 							article(class='guide-slider__slide swiper-slide')
 								div(class='guide-slider__card')
 									div(class='guide-slider__media')
-										img(class='guide-slider__image' src=guide.image alt='' width='320' height='320' loading='lazy')
+										img(class='guide-slider__image lazyload' data-src=guide.image alt='' width='320' height='320')
 									div(class='guide-slider__body')
 										h3(class='guide-slider__name')= guide.title
 										p(class='guide-slider__products')= guide.products

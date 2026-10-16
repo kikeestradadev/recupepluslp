@@ -1,3 +1,5 @@
+import { markExistingSlider, withSliderLoader } from './sliderLoader';
+
 const reviewsSlider = (scope = document) => {
 	const instances = [];
 	const roots = scope.querySelectorAll('.reviews-slider');
@@ -8,6 +10,7 @@ const reviewsSlider = (scope = document) => {
 			if (!swiperEl) return;
 
 			if (swiperEl.swiper) {
+				markExistingSlider(root);
 				instances.push(swiperEl.swiper);
 				return;
 			}
@@ -15,28 +18,31 @@ const reviewsSlider = (scope = document) => {
 			const prevEl = root.querySelector('.reviews-slider__nav--prev');
 			const nextEl = root.querySelector('.reviews-slider__nav--next');
 			const paginationEl = root.querySelector('.reviews-slider__pagination');
-			const instance = new Swiper(swiperEl, {
-				slidesPerView: 'auto',
-				loop: false,
-				spaceBetween: 16,
-				grabCursor: true,
-				pagination: {
-					el: paginationEl,
-					clickable: true,
-				},
-				navigation: {
-					prevEl,
-					nextEl,
-				},
-				breakpoints: {
-					640: {
-						spaceBetween: 20,
+			const instance = new Swiper(
+				swiperEl,
+				withSliderLoader(root, {
+					slidesPerView: 'auto',
+					loop: false,
+					spaceBetween: 16,
+					grabCursor: true,
+					pagination: {
+						el: paginationEl,
+						clickable: true,
 					},
-					960: {
-						spaceBetween: 24,
+					navigation: {
+						prevEl,
+						nextEl,
 					},
-				},
-			});
+					breakpoints: {
+						640: {
+							spaceBetween: 20,
+						},
+						960: {
+							spaceBetween: 24,
+						},
+					},
+				})
+			);
 
 			instances.push(instance);
 		});

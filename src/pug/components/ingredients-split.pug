@@ -46,10 +46,9 @@ section(class='ingredients-split' aria-labelledby='ingredients-split-title')
 
 				div(class='ingredients-split__media')
 					img(
-						class='ingredients-split__image'
-						src=ingredientsSplitData.image
+						class='ingredients-split__image lazyload'
+						data-src=ingredientsSplitData.image
 						alt=ingredientsSplitData.alt
 						width='720'
 						height='720'
-						loading='lazy'
 					)

@@ -20,6 +20,6 @@ section(class='ingredients-slider')
 										h3(class='ingredients-slider__name')= item.title
 										p(class='ingredients-slider__text')= item.text
 									div(class='ingredients-slider__media')
-										img(class='ingredients-slider__image' src=item.img alt='' width='480' height='200' loading='lazy')
+										img(class='ingredients-slider__image lazyload' data-src=item.img alt='' width='480' height='200')
 
 					div(class='ingredients-slider__pagination swiper-pagination')
