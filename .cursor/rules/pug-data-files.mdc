@@ -11,14 +11,14 @@ Todo contenido estructurado utilizado por componentes Pug vive en `src/pug/data/
 ## Convención
 
 ```text
-src/pug/components/main-menu.pug
+src/pug/components/{page}/main-menu.pug
 src/pug/data/main-menu-data.pug
 ```
 
-Desde un componente, incluye los datos así:
+Desde un componente (en `components/{page}/`), incluye los datos así:
 
 ```pug
-include ../data/main-menu-data
+include ../../data/main-menu-data
 ```
 
 ## Reglas

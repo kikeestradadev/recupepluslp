@@ -8,7 +8,7 @@ description: Crea y modifica sliders Pug separando todo su contenido en un archi
 Cada slider requiere dos archivos simétricos:
 
 ```text
-src/pug/components/allies-slider.pug
+src/pug/components/donde-comprar/allies-slider.pug
 src/pug/data/allies-slider-data.pug
 ```
 

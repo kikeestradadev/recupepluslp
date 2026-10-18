@@ -1,0 +1,22 @@
+include ../../data/supplements-banner-data
+
+section(class='supplements-banner' aria-label=supplementsBannerData.title)
+	h1(class='visually-hidden')= supplementsBannerData.title
+	picture
+		source(
+			srcset=supplementsBannerData.imageDesktop
+			media='(min-width: 960px)'
+		)
+		source(
+			srcset=supplementsBannerData.imageTablet
+			media='(min-width: 640px)'
+		)
+		img(
+			class='supplements-banner__image'
+			src=supplementsBannerData.imageMobile
+			alt=supplementsBannerData.alt
+			width='500'
+			height='625'
+			fetchpriority='high'
+			decoding='async'
+		)

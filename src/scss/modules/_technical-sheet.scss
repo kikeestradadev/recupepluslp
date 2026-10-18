@@ -1,0 +1,361 @@
+.technical-sheet {
+	--technical-sheet-accent: var(--color-orange, #ff9100);
+	--technical-sheet-ink: var(--header-color, #1f2024);
+	--technical-sheet-muted: #6b675f;
+	--technical-sheet-line: #e8e4dc;
+	--technical-sheet-soft: #f7f5f1;
+	margin-top: -1.5rem;
+	margin-bottom: var(--section-gap);
+	padding-block: 0 2rem;
+	background: #fff;
+
+	&__shell {
+		box-sizing: border-box;
+		width: 100%;
+		max-width: var(--main-container, 3500px);
+		margin-inline: auto;
+		padding-inline: 15px;
+	}
+
+	&__container {
+		width: 100%;
+		max-width: var(--container, 1600px);
+		margin-inline: auto;
+	}
+
+	&__panel {
+		display: grid;
+		gap: 1.5rem;
+		padding: 1.25rem;
+		border: 1px solid var(--technical-sheet-line);
+		background: #fff;
+		min-width: 0;
+		overflow: hidden;
+	}
+
+	&__intro {
+		display: grid;
+		gap: 1.25rem;
+		padding-bottom: 1.25rem;
+		border-bottom: 1px solid var(--technical-sheet-line);
+		min-width: 0;
+	}
+
+	&__media {
+		margin: 0;
+		width: 11rem;
+		max-width: 100%;
+		min-width: 0;
+	}
+
+	&__product-image {
+		display: block;
+		width: 100%;
+		max-width: 11rem;
+		height: auto;
+		aspect-ratio: 1;
+		object-fit: contain;
+		background: var(--technical-sheet-soft);
+	}
+
+	&__intro-copy {
+		min-width: 0;
+		max-width: 100%;
+		overflow-wrap: anywhere;
+	}
+
+	&__header {
+		margin-bottom: 1rem;
+	}
+
+	&__eyebrow {
+		margin: 0 0 0.35rem;
+		color: var(--technical-sheet-muted);
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	&__brand {
+		margin: 0 0 0.25rem;
+		color: var(--technical-sheet-accent);
+		font-size: 0.8125rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		margin: 0;
+		color: var(--technical-sheet-accent);
+		font-size: clamp(1.75rem, 4vw, 2.5rem);
+		font-weight: 800;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+	}
+
+	&__type {
+		margin: 0.5rem 0 0;
+		max-width: 38rem;
+		color: var(--technical-sheet-ink);
+		font-size: 0.975rem;
+		line-height: 1.5;
+	}
+
+	&__presentation {
+		margin: 0.5rem 0 0;
+		color: var(--technical-sheet-ink);
+		font-size: 0.9375rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+
+	&__highlights {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem 1rem;
+		margin: 0 0 0.85rem;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__highlight {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	&__highlight-image {
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+		object-fit: cover;
+		background: var(--technical-sheet-soft);
+	}
+
+	&__highlight-label {
+		color: var(--technical-sheet-ink);
+		font-size: 0.8125rem;
+		font-weight: 600;
+	}
+
+	&__badges {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__badge {
+		display: inline-flex;
+		align-items: center;
+		min-height: 2rem;
+		padding: 0.3rem 0.7rem;
+		border: 1px solid var(--technical-sheet-line);
+		background: var(--technical-sheet-soft);
+		color: var(--technical-sheet-ink);
+		font-size: 0.75rem;
+		font-weight: 600;
+		line-height: 1.2;
+	}
+
+	&__body {
+		display: grid;
+		gap: 1.5rem;
+		min-width: 0;
+	}
+
+	&__meta {
+		display: grid;
+		gap: 1rem;
+		min-width: 0;
+	}
+
+	&__block {
+		padding: 0.85rem 1rem;
+		background: var(--technical-sheet-soft);
+	}
+
+	&__block-title {
+		margin: 0 0 0.35rem;
+		color: var(--technical-sheet-ink);
+		font-size: 0.8125rem;
+		font-weight: 700;
+		line-height: 1.3;
+		text-transform: uppercase;
+	}
+
+	&__block-text {
+		margin: 0;
+		color: var(--paragraph-color, #1f2024);
+		font-size: 0.9rem;
+		line-height: 1.55;
+	}
+
+	&__tables {
+		display: grid;
+		gap: 1.25rem;
+		min-width: 0;
+	}
+
+	&__table-wrap {
+		min-width: 0;
+		max-width: 100%;
+		overflow-x: auto;
+	}
+
+	&__table-title {
+		margin: 0 0 0.65rem;
+		color: var(--technical-sheet-ink);
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 1.3;
+	}
+
+	&__nutrition-meta {
+		display: grid;
+		gap: 0.25rem;
+		margin-bottom: 0.65rem;
+	}
+
+	&__nutrition-item {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem 0.75rem;
+		margin: 0;
+		font-size: 0.875rem;
+		line-height: 1.4;
+	}
+
+	&__nutrition-label {
+		color: var(--technical-sheet-muted);
+	}
+
+	&__nutrition-value {
+		color: var(--technical-sheet-ink);
+		font-weight: 700;
+	}
+
+	&__table {
+		width: 100%;
+		max-width: 100%;
+		table-layout: fixed;
+		border-collapse: collapse;
+		border: 1px solid var(--technical-sheet-line);
+		background: #fff;
+	}
+
+	&__cell {
+		padding: 0.55rem 0.7rem;
+		border-bottom: 1px solid var(--technical-sheet-line);
+		color: var(--technical-sheet-ink);
+		font-size: 0.85rem;
+		line-height: 1.4;
+		text-align: left;
+		vertical-align: top;
+
+		&--label,
+		&--head,
+		&--nutrient {
+			font-weight: 700;
+		}
+
+		&--label {
+			width: 38%;
+			background: var(--technical-sheet-soft);
+		}
+
+		&--head {
+			background: var(--technical-sheet-soft);
+			border-bottom: 1px solid var(--technical-sheet-line);
+			font-size: 0.75rem;
+			text-transform: uppercase;
+			letter-spacing: 0.03em;
+		}
+
+		&--value,
+		&--nutrient {
+			overflow-wrap: anywhere;
+			word-break: break-word;
+		}
+
+		&--amount,
+		&--dv {
+			white-space: normal;
+		}
+
+		&--dv {
+			text-align: right;
+		}
+	}
+
+	&__row:last-child &__cell {
+		border-bottom: 0;
+	}
+
+	&__row--indent &__cell--nutrient {
+		padding-left: 1.5rem;
+		font-weight: 500;
+	}
+
+	&__cell-note {
+		display: block;
+		margin-top: 0.2rem;
+		color: var(--technical-sheet-muted);
+		font-size: 0.75rem;
+		font-weight: 400;
+	}
+
+	&__footnote {
+		margin: 0.65rem 0 0;
+		color: var(--technical-sheet-muted);
+		font-size: 0.75rem;
+		line-height: 1.45;
+	}
+
+	@media (width >= $m) {
+		padding-block: 0 2.5rem;
+
+		&__panel {
+			gap: 1.75rem;
+			padding: 1.5rem 1.75rem;
+		}
+
+		&__intro {
+			/* Fixed media track — avoid `auto` + huge intrinsic PNG widths
+			   collapsing the copy column to 0. */
+			grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+			align-items: start;
+			gap: 1.5rem;
+		}
+	}
+
+	/* Four meta blocks (uso / ingredientes / indicaciones / almacenamiento)
+	   and tables side-by-side only from 960px up */
+	@media (width >= 960px) {
+		&__meta {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 0.85rem 1rem;
+		}
+
+		&__tables {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 1.25rem;
+			align-items: start;
+		}
+	}
+
+	@media (width >= $l) {
+		margin-top: -2rem;
+		padding-block: 0 3rem;
+
+		&__panel {
+			padding: 1.75rem 2rem;
+		}
+	}
+}

@@ -6,7 +6,7 @@ block config
 	-let pageTitle 			= null
 	-let pageLang 			= 'es'
 include ../data/site-data
-include ../components/floating-button
+include ../components/shared/floating-button
 doctype html
 html(lang=pageLang prefix='og: http://ogp.me/ns#', class='no-js')
 	head
@@ -41,7 +41,7 @@ html(lang=pageLang prefix='og: http://ogp.me/ns#', class='no-js')
 	body(class=currentPage, itemscope itemtype="http://schema.org/WebPage")
 		//- here start the Main Header
 		header(class='main-header')
-			include ../components/main-menu
+			include ../components/shared/main-menu
 			block main-header
 		//- here ends the Main Header
 		//- here start the Main Container
@@ -50,9 +50,9 @@ html(lang=pageLang prefix='og: http://ogp.me/ns#', class='no-js')
 		//- here ends the Main Container
 		//- El footer alternativo es una muestra exclusiva del style guide
 		
-		include ../components/alt-footer		
+		include ../components/shared/alt-footer		
 		//- here ends the Main Footer
-		include ../components/whatsapp-button
+		include ../components/shared/whatsapp-button
 		if currentPage === 'home'
 			+floatingButton('style-guide.html', 'Style Guide')
 		else if currentPage === 'style-guide'

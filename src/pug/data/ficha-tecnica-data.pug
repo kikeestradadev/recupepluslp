@@ -1,0 +1,167 @@
+//-
+	Schema estándar de ficha técnica (JSON-compatible).
+	Intercambiar este objeto por el de otro producto mantiene el mismo layout.
+	Campos: productName, type, presentation, usage, ingredients, indications,
+	storage, badges, productImage, ingredientHighlights, specifications,
+	nutrition (portion / servings + table).
+-
+	var fichaTecnicaData = {
+		slug: 'activity',
+		brand: 'Recupé Plus',
+		productName: 'Activity',
+		type: 'Suplemento alimenticio en cápsulas a base de hongos: Cordyceps y Melena de León',
+		presentation: {
+			summary: '90 CÁPSULAS / 71,8 G',
+			units: 90,
+			unitLabel: 'cápsulas',
+			netWeight: '71,8 g'
+		},
+		productImage: {
+			src: './assets/activity/01_frontal.png',
+			alt: 'Activity — envase Recupé Plus'
+		},
+		ingredientHighlights: [
+			{
+				id: 'cordyceps',
+				label: 'Cordyceps',
+				image: './assets/drive_24_julio/placeholder-ingredient.svg'
+			},
+			{
+				id: 'lions-mane',
+				label: 'Melena de León',
+				image: './assets/drive_24_julio/placeholder-ingredient.svg'
+			}
+		],
+		usage: {
+			title: 'Instrucciones de Uso',
+			text: 'Consumo máximo diario 2 cápsulas al día.'
+		},
+		ingredients: {
+			title: 'Ingredientes',
+			text: 'Extracto de Cordyceps, extracto de Melena de León (Lion’s Mane) e hidroxipropilmetilcelulosa (cápsula).'
+		},
+		indications: {
+			title: 'Indicaciones',
+			text: 'Este producto no es para el diagnóstico, tratamiento, cura o prevención de ninguna enfermedad y no sustituye una dieta balanceada. No apto para mujeres embarazadas, en periodo de lactancia ni para niños. Mantener fuera del alcance de los niños.'
+		},
+		storage: {
+			title: 'Condiciones de Almacenamiento',
+			text: 'Manténgase en lugar fresco y seco.'
+		},
+		badges: [
+			{ id: 'organic', label: 'Ingredientes Orgánicos' },
+			{ id: 'gluten-free', label: 'Libre de Gluten' },
+			{ id: 'vegan', label: 'Vegano' },
+			{ id: 'costa-rica', label: 'De Costa Rica' }
+		],
+		specifications: {
+			title: 'Especificaciones',
+			rows: [
+				{
+					label: 'Nombre del Producto',
+					value: 'Activity — suplemento alimenticio en cápsulas a base de hongos: Cordyceps y Lion’s Mane'
+				},
+				{
+					label: 'Fabricado en CR por',
+					value: 'ISOLATE CR SRL'
+				},
+				{
+					label: 'País de Origen',
+					value: 'Costa Rica'
+				},
+				{
+					label: 'Características',
+					value: 'Cápsulas de hongos color café claro'
+				},
+				{
+					label: 'Descripción',
+					value: 'Antioxidante natural que aumenta la energía y el rendimiento físico y disminuye la fatiga'
+				},
+				{
+					label: 'Consumo Máximo Diario',
+					value: '2 cápsulas al día'
+				},
+				{
+					label: 'Presentación',
+					value: 'Disponible en distintas presentaciones (1–90+ unidades) en bolsas y envases'
+				},
+				{
+					label: 'Vida Útil',
+					value: '2 años'
+				},
+				{
+					label: 'Registro Sanitario',
+					value: 'SD-CR-23-11670'
+				}
+			]
+		},
+		nutrition: {
+			title: 'Datos del Suplemento',
+			portionLabel: 'Tamaño de la porción',
+			portion: '2 cápsulas',
+			servingsLabel: 'Porciones por envase',
+			servings: '45',
+			headers: {
+				nutrient: '',
+				amount: 'Por porción',
+				dailyValue: '% Valor Diario*'
+			},
+			rows: [
+				{
+					nutrient: 'Valor energético',
+					amount: '16 kcal / 67 kJ',
+					dailyValue: null,
+					indent: false
+				},
+				{
+					nutrient: 'Carbohidratos totales',
+					amount: '2 g',
+					dailyValue: '0.67%',
+					indent: false
+				},
+				{
+					nutrient: 'Fibra dietética',
+					amount: '2 g',
+					dailyValue: '*',
+					indent: false
+				},
+				{
+					nutrient: 'Grasa total',
+					amount: '0 g',
+					dailyValue: '0%',
+					indent: false
+				},
+				{
+					nutrient: 'Grasa saturada',
+					amount: '0 g',
+					dailyValue: '0%',
+					indent: true
+				},
+				{
+					nutrient: 'Proteína',
+					amount: '2 g',
+					dailyValue: '2.67%',
+					indent: false
+				},
+				{
+					nutrient: 'Sodio',
+					amount: '0 mg',
+					dailyValue: '0%',
+					indent: false
+				},
+				{
+					nutrient: 'Extracto de Cordyceps',
+					amount: '924 mg',
+					dailyValue: '*',
+					indent: false
+				},
+				{
+					nutrient: 'Extracto de Lion’s Mane',
+					amount: '396 mg',
+					dailyValue: '*',
+					indent: false
+				}
+			],
+			footnote: '*Los porcentajes de Valor Diario se basan en una dieta de 2,000 kcal según valores de referencia de la FDA. El asterisco indica que no se ha establecido un % Valor Diario.'
+		}
+	}

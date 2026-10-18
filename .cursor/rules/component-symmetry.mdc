@@ -14,7 +14,7 @@ _main-menu.scss
 mainMenu.js
 ```
 
-- Pug: `src/pug/components/kebab-case.pug`
+- Pug: `src/pug/components/{page}/kebab-case.pug`
 - SCSS: `src/scss/modules/_kebab-case.scss`
 - JS opcional: `src/js/modules/camelCase.js`
 - Bloque BEM: `.kebab-case`

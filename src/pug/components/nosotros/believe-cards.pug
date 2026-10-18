@@ -1,0 +1,25 @@
+include ../../data/believe-cards-data
+
+section(class='believe-cards')
+	div(class='main-container believe-cards__shell')
+		div(class='container believe-cards__container believe-cards__inner')
+			header(class='believe-cards__header')
+				h2(class='believe-cards__title')= believeCardsData.title
+				p(class='believe-cards__subtitle')= believeCardsData.subtitle
+
+			div(class='believe-cards__slider')
+				button(class='believe-cards__nav believe-cards__nav--prev' type='button' aria-label='Anterior')
+				button(class='believe-cards__nav believe-cards__nav--next' type='button' aria-label='Siguiente')
+
+				div(class='believe-cards__swiper swiper')
+					div(class='believe-cards__wrapper swiper-wrapper')
+						each item in believeCardsData.items
+							article(class='believe-cards__slide swiper-slide')
+								div(class='believe-cards__card')
+									div(class='believe-cards__body')
+										h3(class='believe-cards__name')= item.title
+										p(class='believe-cards__text')= item.text
+									div(class='believe-cards__media')
+										img(class='believe-cards__image lazyload' data-src=item.img alt='' width='1254' height='1254')
+
+					div(class='believe-cards__pagination swiper-pagination')

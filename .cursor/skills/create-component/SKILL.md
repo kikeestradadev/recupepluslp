@@ -10,11 +10,13 @@ description: Crea componentes simétricos Pug, SCSS y JavaScript con BEM para el
 Usa el mismo nombre base en las capas necesarias:
 
 ```text
-src/pug/components/main-menu.pug
+src/pug/components/{page}/main-menu.pug
 src/pug/data/main-menu-data.pug
 src/scss/modules/_main-menu.scss
 src/js/modules/mainMenu.js
 ```
+
+Los parciales Pug viven en `src/pug/components/{page}/`, donde `{page}` es el nombre de la página (`index`, `product`, `shared`, etc.).
 
 El bloque BEM es `.main-menu`.
 
@@ -57,9 +59,9 @@ const mainMenu = () => {
 export default mainMenu;
 ```
 
-5. Si tiene contenido estructurado, crea `src/pug/data/{name}-data.pug`, inclúyelo con `include ../data/{name}-data` y recórrelo con `each`.
+5. Si tiene contenido estructurado, crea `src/pug/data/{name}-data.pug`, inclúyelo con `include ../../data/{name}-data` (desde la subcarpeta de página) y recórrelo con `each`.
 6. Impórtalo en `src/js/index.js` y ejecútalo dentro de `initComponents`.
-7. Incluye el Pug desde la página correspondiente.
+7. Incluye el Pug desde la página correspondiente con `include ../components/{page}/{name}`.
 8. Documenta en `README.md` cualquier asset o CDN nuevo.
 
 ## Restricciones

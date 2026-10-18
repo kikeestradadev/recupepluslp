@@ -1,33 +1,38 @@
 -
 	var productShowcaseImagesBase = './assets/drive_24_julio/dos_formas'
+	var productShowcaseGalleryBase = './assets/activity'
 	var productShowcaseData = {
-		metaTitle: 'Vitamin',
-		metaDescription: 'Gomitas Vitamin con mora y vitamina C para cuidar tus defensas todos los días.',
+		metaTitle: 'Activity',
+		metaDescription: 'Cápsulas Activity con Cordyceps y Melena de León para acompañar tu energía y movimiento.',
 		breadcrumbs: [
 			{ label: 'Inicio', href: './' },
-			{ label: 'Gomitas', href: 'suplementos.html#gomitas' },
-			{ label: 'Vitamin', href: null }
+			{ label: 'Cápsulas', href: 'suplementos.html#capsulas' },
+			{ label: 'Activity', href: null }
 		],
 		gallery: [
 			{
-				src: `${productShowcaseImagesBase}/gomitas/individuales/vitamin.webp`,
-				alt: 'Vitamin - imagen 1'
+				src: `${productShowcaseGalleryBase}/01_frontal.png`,
+				alt: 'Activity - frontal'
 			},
 			{
-				src: `${productShowcaseImagesBase}/gomitas/gomitas_1.webp`,
-				alt: 'Vitamin - imagen 2'
+				src: `${productShowcaseGalleryBase}/03_acostado.png`,
+				alt: 'Activity - costado'
+			},
+			{
+				src: `${productShowcaseGalleryBase}/04_sobre_mesa.png`,
+				alt: 'Activity - sobremesa'
 			}
 		],
-		name: 'Vitamin',
-		price: '₡8 900',
+		name: 'Activity',
+		price: '₡25 000',
 		priceNote: 'IVA incluido',
 		category: {
-			label: 'Gomitas Funcionales',
-			href: 'suplementos.html#gomitas'
+			label: 'Hongos Medicinales',
+			href: 'suplementos.html#capsulas'
 		},
 		shortDescription: [
-			'Suplemento alimenticio en gomitas a base de mora y vitamina C.',
-			'Apoya tus defensas todos los días con una fórmula práctica y deliciosa. Ideal para sumar bienestar a tu rutina sin complicarte.'
+			'Suplemento en cápsulas con Cordyceps y Melena de León.',
+			'Pensado para acompañar tu energía antes de moverte y sumar foco a tu rutina diaria.'
 		],
 		quantity: {
 			min: 1,
@@ -54,56 +59,47 @@
 			}
 		],
 		description: {
-			title: 'RECUPÉ PLUS VITAMIN',
+			title: 'RECUPÉ PLUS ACTIVITY',
 			intro: [
-				'Nuestras gomitas Vitamin combinan el sabor de la mora con vitamina C para acompañar tu sistema inmune de forma simple y cotidiana.',
-				'Pensadas para quienes buscan un hábito fácil: una gomita rica, práctica y con activos pensados para tu bienestar diario.'
+				'Activity combina Cordyceps y Melena de León para acompañar tus días de movimiento con una fórmula práctica en cápsulas.',
+				'Pensada para quienes buscan energía y foco sin complicar su rutina diaria.'
 			],
-			benefitsTitle: 'Beneficios de Vitamin en tu rutina:',
+			benefitsTitle: 'Beneficios de Activity en tu rutina:',
 			benefits: [
 				{
-					title: 'Defensas:',
-					text: 'La vitamina C contribuye al funcionamiento normal del sistema inmunológico y ayuda a proteger las células del estrés oxidativo.'
+					title: 'Energía:',
+					text: 'El Cordyceps acompaña tu vitalidad antes de entrenar o moverte.'
 				},
 				{
-					title: 'Antioxidantes:',
-					text: 'La mora aporta antocianinas y otros compuestos que acompañan una rutina enfocada en el bienestar celular.'
+					title: 'Foco:',
+					text: 'La Melena de León suma apoyo a tu concentración en el día a día.'
 				},
 				{
 					title: 'Hábitos simples:',
-					text: 'Formato gomita para sumar constancia sin fricción: ideal para la oficina, el gym o el día a día.'
+					text: 'Formato cápsula fácil de integrar a tu rutina, en casa o fuera.'
 				},
 				{
 					title: 'Bienestar diario:',
 					text: 'Una opción práctica para complementar alimentación y estilo de vida activos.'
 				}
 			],
-			outro: 'Al integrar Vitamin en tu rutina, sumás un apoyo concreto a tus defensas con un producto pensado para disfrutarse todos los días.'
+			outro: 'Al integrar Activity en tu rutina, sumás un apoyo concreto a tu energía y movimiento con un producto pensado para el día a día.'
 		},
 		additional: {
 			rows: [
 				{ label: 'Marca', value: 'Recupé Plus' },
-				{ label: 'Formato', value: 'Gomitas' },
-				{ label: 'Activos', value: 'Mora, Vitamina C' }
+				{ label: 'Formato', value: 'Cápsulas' },
+				{ label: 'Activos', value: 'Cordyceps, Melena de León' }
 			]
 		},
 		reviews: {
 			emptyTitle: 'Valoraciones',
 			emptyText: 'No hay valoraciones aún.',
-			cta: 'Sé el primero en valorar “Vitamin”'
+			cta: 'Sé el primero en valorar “Activity”'
 		},
 		related: {
 			title: 'Productos relacionados',
 			items: [
-				{
-					name: 'Activity',
-					category: 'Hongos Medicinales',
-					price: '₡25 000',
-					priceNote: 'IVA incluido',
-					image: `${productShowcaseImagesBase}/capsulas/individuales/activity.webp`,
-					href: 'product.html',
-					text: 'Para activar tu energía antes de moverte.'
-				},
 				{
 					name: 'Momento',
 					category: 'Hongos Medicinales',
@@ -121,6 +117,15 @@
 					image: `${productShowcaseImagesBase}/capsulas/individuales/recovery.webp`,
 					href: 'product.html',
 					text: 'Para acompañar tu recuperación después de hacer ejercicio.'
+				},
+				{
+					name: 'Vitamin',
+					category: 'Gomitas Funcionales',
+					price: '₡8 900',
+					priceNote: 'IVA incluido',
+					image: `${productShowcaseImagesBase}/gomitas/individuales/vitamin.webp`,
+					href: 'product.html',
+					text: 'Para cuidar tus defensas todos los días.'
 				}
 			]
 		}
