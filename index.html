@@ -3,6 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+      window.setTimeout(function () {
+      	if (document.documentElement.dataset.componentsReady === 'true') return;
+      	document.querySelectorAll('.lazy-sections > section:not(:first-of-type), [data-lazy-component]').forEach(function (section) {
+      		section.classList.add('component-loader--ready');
+      		section.setAttribute('aria-busy', 'false');
+      	});
+      }, 8000);
+    </script>
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#0096D9">
     <link rel="shortcut icon" type="image/png" href="./assets/drive_24_julio/favco.png">
@@ -17,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/prism.css">
-    <link rel="stylesheet" href="styles.css?v=1.0.48">
+    <link rel="stylesheet" href="styles.css?v=1.0.49">
     <title>Home Recupé - Recupé Plus</title>
   </head>
   <body class="home" itemscope itemtype="http://schema.org/WebPage">
@@ -61,7 +72,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="lazy-sections">
       <section class="main-banner" aria-label="Recupé Plus">
         <h1 class="visually-hidden">Recupé Plus</h1>
         <div class="main-banner__slider">
@@ -105,37 +116,37 @@
               <div class="moment-slider__swiper swiper">
                 <div class="moment-slider__wrapper swiper-wrapper">
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio/momento/empezar_dia.webp" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image lazyload" data-src="./assets/drive_24_julio/momento/empezar_dia.webp" alt="" width="280" height="180"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Al empezar el día</h3>
                         <p class="moment-slider__card-text">Vitamin, C-Magnific, Antiox</p>
                       </div></a></article>
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio/momento/estudias.webp" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image lazyload" data-src="./assets/drive_24_julio/momento/estudias.webp" alt="" width="280" height="180"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Cuando trabajás o estudiás</h3>
                         <p class="moment-slider__card-text">Momento o Activity</p>
                       </div></a></article>
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio/momento/entrenar.webp" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image lazyload" data-src="./assets/drive_24_julio/momento/entrenar.webp" alt="" width="280" height="180"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Antes de entrenar o moverte</h3>
                         <p class="moment-slider__card-text">Activity o Momento</p>
                       </div></a></article>
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio/momento/despues_entrenar.webp" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image lazyload" data-src="./assets/drive_24_julio/momento/despues_entrenar.webp" alt="" width="280" height="180"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Después de hacer ejercicio o un día fuerte.</h3>
                         <p class="moment-slider__card-text">Recovery o Antiox</p>
                       </div></a></article>
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/drive_24_julio/momento/todos.webp" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image lazyload" data-src="./assets/drive_24_julio/momento/todos.webp" alt="" width="280" height="180"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Todos los días</h3>
                         <p class="moment-slider__card-text">Are More, Antiox, Vitamin o C-Magnific</p>
                       </div></a></article>
                   <article class="moment-slider__slide swiper-slide"><a class="moment-slider__card" href="suplementos.html">
-                      <div class="moment-slider__media"><img class="moment-slider__image" src="./assets/dormir.webp" alt="" width="280" height="180" loading="lazy"></div>
+                      <div class="moment-slider__media"><img class="moment-slider__image lazyload" data-src="./assets/dormir.webp" alt="" width="280" height="180"></div>
                       <div class="moment-slider__body">
                         <h3 class="moment-slider__card-title">Antes de dormir</h3>
                         <p class="moment-slider__card-text">Serenity</p>
@@ -164,7 +175,7 @@
                     <li class="format-cards__item">Are More</li>
                   </ul><a class="format-cards__cta" href="suplementos.html#gomitas">Ver gomitas</a>
                 </div>
-                <div class="format-cards__media"><img class="format-cards__image" src="./assets/drive_22_set/Home/dos_formas/gom.webp" alt="Gomitas Recupé Plus" width="1920" height="598" loading="lazy"></div>
+                <div class="format-cards__media"><img class="format-cards__image lazyload" data-src="./assets/drive_22_set/Home/dos_formas/gom.webp" alt="Gomitas Recupé Plus" width="1920" height="598"></div>
               </article>
               <article class="format-cards__card format-cards__card--capsulas">
                 <div class="format-cards__content">
@@ -176,7 +187,7 @@
                     <li class="format-cards__item">Recovery</li>
                   </ul><a class="format-cards__cta" href="suplementos.html#capsulas">Ver cápsulas</a>
                 </div>
-                <div class="format-cards__media"><img class="format-cards__image" src="./assets/drive_22_set/Home/dos_formas/cap.webp" alt="Cápsulas Recupé Plus" width="1920" height="585" loading="lazy"></div>
+                <div class="format-cards__media"><img class="format-cards__image lazyload" data-src="./assets/drive_22_set/Home/dos_formas/cap.webp" alt="Cápsulas Recupé Plus" width="1920" height="585"></div>
               </article>
             </div>
           </div>
@@ -188,7 +199,7 @@
             <h2 class="ingredients-cards__title">Ingredientes elegidos con intención.</h2>
             <div class="ingredients-cards__grid">
               <article class="ingredients-cards__card">
-                <div class="ingredients-cards__media"><img class="ingredients-cards__image" src="./assets/drive_24_julio/ing/ing_1.webp" alt="Vitamina C y magnesio" width="900" height="640" loading="lazy"></div>
+                <div class="ingredients-cards__media"><img class="ingredients-cards__image lazyload" data-src="./assets/drive_24_julio/ing/ing_1.webp" alt="Vitamina C y magnesio" width="900" height="640"></div>
                 <div class="ingredients-cards__body">
                   <h3 class="ingredients-cards__name">Micronutrientes</h3>
                   <ul class="ingredients-cards__list">
@@ -198,7 +209,7 @@
                 </div>
               </article>
               <article class="ingredients-cards__card">
-                <div class="ingredients-cards__media"><img class="ingredients-cards__image" src="./assets/drive_24_julio/ing/ing_2.webp" alt="Activos naturales" width="900" height="640" loading="lazy"></div>
+                <div class="ingredients-cards__media"><img class="ingredients-cards__image lazyload" data-src="./assets/drive_24_julio/ing/ing_2.webp" alt="Activos naturales" width="900" height="640"></div>
                 <div class="ingredients-cards__body">
                   <h3 class="ingredients-cards__name">Activos naturales</h3>
                   <ul class="ingredients-cards__list">
@@ -210,7 +221,7 @@
                 </div>
               </article>
               <article class="ingredients-cards__card">
-                <div class="ingredients-cards__media"><img class="ingredients-cards__image" src="./assets/drive_24_julio/ing/ing_3.webp" alt="Antioxidantes naturales" width="900" height="640" loading="lazy"></div>
+                <div class="ingredients-cards__media"><img class="ingredients-cards__image lazyload" data-src="./assets/drive_24_julio/ing/ing_3.webp" alt="Antioxidantes naturales" width="900" height="640"></div>
                 <div class="ingredients-cards__body">
                   <h3 class="ingredients-cards__name">Antioxidantes</h3>
                   <ul class="ingredients-cards__list">
@@ -220,7 +231,7 @@
                 </div>
               </article>
               <article class="ingredients-cards__card">
-                <div class="ingredients-cards__media"><img class="ingredients-cards__image" src="./assets/drive_24_julio/ing/ing_4.webp" alt="Hongos medicinales" width="900" height="640" loading="lazy"></div>
+                <div class="ingredients-cards__media"><img class="ingredients-cards__image lazyload" data-src="./assets/drive_24_julio/ing/ing_4.webp" alt="Hongos medicinales" width="900" height="640"></div>
                 <div class="ingredients-cards__body">
                   <h3 class="ingredients-cards__name">Hongos</h3>
                   <ul class="ingredients-cards__list">
@@ -239,7 +250,7 @@
         <div class="main-container brand-story__shell">
           <div class="container brand-story__container brand-story__inner">
             <div class="brand-story__layout">
-              <div class="brand-story__media"><img class="brand-story__image" src="./assets/drive_24_julio/fundadoras/fundadoras.webp" alt="" width="720" height="540" loading="lazy"></div>
+              <div class="brand-story__media"><img class="brand-story__image lazyload" data-src="./assets/drive_24_julio/fundadoras/fundadoras.webp" alt="" width="720" height="540"></div>
               <div class="brand-story__content">
                 <h2 class="brand-story__title">Una marca costarricense creada para hacer más simple cuidarte.</h2>
                 <p class="brand-story__text">Recupé Plus nace con una idea clara: ayudar a las personas a sentirse mejor todos los días con productos ricos, prácticos y fáciles de sumar a su rutina.</p>
@@ -260,7 +271,7 @@
                 <div class="reviews-slider__wrapper swiper-wrapper">
                   <article class="reviews-slider__slide swiper-slide">
                     <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/drive_24_julio/test/test_1.webp" alt="" width="120" height="120" loading="lazy"></div>
+                      <div class="reviews-slider__media"><img class="reviews-slider__image lazyload" data-src="./assets/drive_24_julio/test/test_1.webp" alt="" width="120" height="120"></div>
                       <div class="reviews-slider__body">
                         <blockquote class="reviews-slider__quote">“Me encanta porque es rico y fácil de tomar todos los días.”</blockquote>
                         <p class="reviews-slider__author">— Mariana, 38</p>
@@ -286,7 +297,7 @@
                   </article>
                   <article class="reviews-slider__slide swiper-slide">
                     <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/drive_24_julio/test/test_2.webp" alt="" width="120" height="120" loading="lazy"></div>
+                      <div class="reviews-slider__media"><img class="reviews-slider__image lazyload" data-src="./assets/drive_24_julio/test/test_2.webp" alt="" width="120" height="120"></div>
                       <div class="reviews-slider__body">
                         <blockquote class="reviews-slider__quote">“Serenity se volvió parte de mi rutina de noche.”</blockquote>
                         <p class="reviews-slider__author">— Andrés, 45</p>
@@ -312,7 +323,7 @@
                   </article>
                   <article class="reviews-slider__slide swiper-slide">
                     <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/drive_24_julio/test/test_3.webp" alt="" width="120" height="120" loading="lazy"></div>
+                      <div class="reviews-slider__media"><img class="reviews-slider__image lazyload" data-src="./assets/drive_24_julio/test/test_3.webp" alt="" width="120" height="120"></div>
                       <div class="reviews-slider__body">
                         <blockquote class="reviews-slider__quote">“Momento me acompaña en días de mucho trabajo.”</blockquote>
                         <p class="reviews-slider__author">— Carolina, 34</p>
@@ -338,7 +349,7 @@
                   </article>
                   <article class="reviews-slider__slide swiper-slide">
                     <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/drive_24_julio/test/test_4.webp" alt="" width="120" height="120" loading="lazy"></div>
+                      <div class="reviews-slider__media"><img class="reviews-slider__image lazyload" data-src="./assets/drive_24_julio/test/test_4.webp" alt="" width="120" height="120"></div>
                       <div class="reviews-slider__body">
                         <blockquote class="reviews-slider__quote">“Me encanta porque es rico y fácil de tomar todos los días.”</blockquote>
                         <p class="reviews-slider__author">— Mariana, 38</p>
@@ -364,7 +375,7 @@
                   </article>
                   <article class="reviews-slider__slide swiper-slide">
                     <div class="reviews-slider__card">
-                      <div class="reviews-slider__media"><img class="reviews-slider__image" src="./assets/drive_24_julio/test/test_5.webp" alt="" width="120" height="120" loading="lazy"></div>
+                      <div class="reviews-slider__media"><img class="reviews-slider__image lazyload" data-src="./assets/drive_24_julio/test/test_5.webp" alt="" width="120" height="120"></div>
                       <div class="reviews-slider__body">
                         <blockquote class="reviews-slider__quote">“Serenity se volvió parte de mi rutina de noche.”</blockquote>
                         <p class="reviews-slider__author">— Andrés, 45</p>
@@ -409,8 +420,8 @@
                     </svg><span>Escribir por WhatsApp</span></a><a class="start-banner__cta start-banner__cta--primary" href="suplementos.html">Ver productos</a></div>
               </div>
               <picture class="start-banner__picture">
-                <source media="(width &gt;= 1280px)" srcset="./assets/drive_24_julio/ws/ws_dk.webp">
-                <source media="(width &gt;= 960px)" srcset="./assets/drive_24_julio/ws/ws_tb.webp"><img class="start-banner__image" src="./assets/drive_24_julio/ws/ws_mb.webp" alt="" width="720" height="480" loading="lazy">
+                <source media="(width &gt;= 1280px)" data-srcset="./assets/drive_24_julio/ws/ws_dk.webp">
+                <source media="(width &gt;= 960px)" data-srcset="./assets/drive_24_julio/ws/ws_tb.webp"><img class="start-banner__image lazyload" data-src="./assets/drive_24_julio/ws/ws_mb.webp" alt="" width="720" height="480">
               </picture>
             </div>
           </div>
@@ -426,40 +437,40 @@
               <div class="blog-slider__swiper swiper">
                 <div class="blog-slider__wrapper swiper-wrapper">
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/1.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/1.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">¿Cómo elegir tu Recupé Plus según tu rutina?</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/2.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/2.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Hongos medicinales: qué son y cómo sumarlos a tu día.</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/3.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/3.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Cómo crear un ritual simple antes de dormir.</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/5.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/5.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Vitamina C, magnesio y antioxidantes: cuándo elegir cada uno.</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/6.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/6.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Energía constante: hábitos simples para empezar el día.</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/7.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/7.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Recuperación después de entrenar: qué tener en cuenta.</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/8.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/8.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Bienestar diario: cómo armar una rutina realista.</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/9.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/9.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Guía rápida para acompañar tu concentración.</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/10.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/10.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Rituales de descanso que sí puedes mantener.</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/11.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/11.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Cómo leer una etiqueta de suplementos sin volverte loco.</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/12.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/12.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Guía rápida de hongos funcionales para principiantes.</h3></a></article>
                   <article class="blog-slider__slide swiper-slide"><a class="blog-slider__card" href="post.html">
-                      <div class="blog-slider__media"><img class="blog-slider__image" src="./assets/drive_24_julio/guias/blogimages/13.png" alt="" width="320" height="200" loading="lazy"></div>
+                      <div class="blog-slider__media"><img class="blog-slider__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/13.png" alt="" width="320" height="200"></div>
                       <h3 class="blog-slider__name">Pequeños cambios que mejoran tu bienestar diario.</h3></a></article>
                 </div>
                 <div class="blog-slider__pagination swiper-pagination"></div>
@@ -472,7 +483,7 @@
         <div class="main-container community-split__shell">
           <div class="container community-split__container community-split__inner">
             <div class="community-split__layout">
-              <div class="community-split__media"><img class="community-split__image" src="./assets/drive_24_julio/comunidad/comunidad.webp" alt="" width="720" height="560" loading="lazy"></div>
+              <div class="community-split__media"><img class="community-split__image lazyload" data-src="./assets/drive_24_julio/comunidad/comunidad.webp" alt="" width="720" height="560"></div>
               <div class="community-split__content">
                 <h2 class="community-split__title">Más que productos, una comunidad.</h2>
                 <p class="community-split__text">Te acompañamos con guías, recomendaciones, lanzamientos y contenido pensado para ayudarte a sentirte mejor, todos los días.</p>
@@ -641,8 +652,15 @@
       <svg class="whatsapp-button__icon" width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <path fill="currentColor" d="M16.03 3C8.84 3 3 8.78 3 15.91c0 2.5.72 4.93 2.08 7.01L3.7 28l5.23-1.36a13.08 13.08 0 0 0 7.1 2.04C23.22 28.68 29 22.9 29 15.91S23.22 3 16.03 3Zm0 23.5c-2.22 0-4.38-.65-6.22-1.88l-.45-.27-3.1.8.83-3.01-.3-.47a10.6 10.6 0 0 1-1.64-5.76c0-5.9 4.88-10.72 10.88-10.72 6 0 10.82 4.82 10.82 10.72 0 5.9-4.82 10.59-10.82 10.59Zm5.95-7.94c-.33-.16-1.92-.94-2.22-1.05-.3-.11-.52-.16-.74.16-.22.33-.85 1.05-1.04 1.27-.19.22-.38.24-.71.08-.33-.16-1.38-.5-2.63-1.6a9.78 9.78 0 0 1-1.82-2.24c-.19-.32-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.43-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.1-1.14 2.68s1.17 3.12 1.33 3.33c.16.22 2.3 3.48 5.57 4.88.78.33 1.39.53 1.86.68.78.24 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.53.27-.76.27-1.4.19-1.54-.08-.13-.3-.21-.63-.37Z"></path>
       </svg></a><a class="floating-button" href="style-guide.html">Style Guide</a>
+    <script>
+      window.lazySizesConfig = window.lazySizesConfig || {};
+      window.lazySizesConfig.expand = 480;
+      window.lazySizesConfig.expFactor = 1.5;
+      window.lazySizesConfig.iframeLoadMode = 1;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-    <script src="index.js?v=1.0.48"></script>
+    <script src="index.js?v=1.0.49"></script>
   </body>
 </html>

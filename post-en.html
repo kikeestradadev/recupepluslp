@@ -3,6 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+      window.setTimeout(function () {
+      	if (document.documentElement.dataset.componentsReady === 'true') return;
+      	document.querySelectorAll('.lazy-sections > section:not(:first-of-type), [data-lazy-component]').forEach(function (section) {
+      		section.classList.add('component-loader--ready');
+      		section.setAttribute('aria-busy', 'false');
+      	});
+      }, 8000);
+    </script>
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#0096D9">
     <link rel="shortcut icon" type="image/png" href="./assets/drive_24_julio/favco.png">
@@ -17,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/prism.css">
-    <link rel="stylesheet" href="styles.css?v=1.0.33">
+    <link rel="stylesheet" href="styles.css?v=1.0.49">
     <title>What Is Holistic Health? A Beginner’s Guide to Whole-Body Wellness - Recupé Plus</title>
   </head>
   <body class="post-en" itemscope itemtype="http://schema.org/WebPage">
@@ -61,7 +72,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="lazy-sections">
       <section class="post-banner" aria-label="How to choose your Recupe Plus for your routine">
         <figure class="post-banner__figure"><img class="post-banner__image" src="./assets/drive_24_julio/guias/blogimages/1.png" alt="How to choose your Recupe Plus for your routine" width="1600" height="900" loading="eager" fetchpriority="high"></figure>
       </section>
@@ -123,10 +134,10 @@
                 <h2 class="post-content__section-title">How Does Nutrition and Supplementation Fuel the Body Naturally?</h2>
                 <p class="post-content__text">Eating whole, nutrient-dense foods is one of the best ways to support your body. Fruits, vegetables, whole grains, healthy fats, and lean proteins provide the nutrients your cells need to function properly. These foods are also rich in antioxidants, vitamins, and minerals that fight inflammation and protect against disease.</p>
                 <p class="post-content__text">Functional ingredients like medicinal mushrooms offer even more support. Reishi, Cordyceps, Lion’s Mane, and Turkey Tail are used in holistic practices for their immune-boosting, energy-supporting, and brain-enhancing properties.</p>
-                <figure class="post-content__figure"><img class="post-content__image" src="./assets/drive_24_julio/guias/blogimages/2.png" alt="Natural ingredients and medicinal mushrooms for wellness" width="400" height="400" loading="lazy">
+                <figure class="post-content__figure"><img class="post-content__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/2.png" alt="Natural ingredients and medicinal mushrooms for wellness" width="400" height="400">
                   <figcaption class="post-content__caption">Medicinal mushrooms can add functional support to a holistic routine.</figcaption>
                 </figure>
-                <p class="post-content__text">The Recupe Plus line of supplements is designed to target specific health goals. Recupe Plus Recovery helps with muscle recovery and stress reduction after physical activity. Recupe Plus Activity supports physical endurance and energy. Recupe Plus Memento enhances mental clarity and focus. Recupe Plus Armor strengthens immune defenses with powerful antioxidants and Vitamin C.</p>
+                <p class="post-content__text">The Recupe Plus line of supplements is designed to target specific health goals. Recupe Plus Recovery helps with muscle recovery and stress reduction after physical activity. Recupe Plus Activity supports physical endurance and energy. Recupe Plus Momento enhances mental clarity and focus. Recupe Plus Armor strengthens immune defenses with powerful antioxidants and Vitamin C.</p>
                 <p class="post-content__text">Other natural supplements play an important role as well. C-MAGNIFIC combines magnesium and Vitamin C to support muscle, nerve, and cardiovascular health. ANTIOX blends turmeric, ginger, and honey for anti-inflammatory and digestive support. SERENITY includes ashwagandha and chamomile to reduce stress and improve sleep quality.</p>
               </section>
               <section class="post-content__section">
@@ -139,7 +150,7 @@
                 <h2 class="post-content__section-title">Why Is Sleep So Important for Recovery and Wellness?</h2>
                 <p class="post-content__text">Sleep is one of the most important factors in healing, energy, and clarity. Poor sleep can lead to inflammation, weight gain, fatigue, and mental fog.</p>
                 <p class="post-content__text">There are simple ways to improve sleep naturally. Reducing screen time at night helps your body prepare for rest. Relaxation techniques like breathwork and meditation calm the nervous system.</p>
-                <figure class="post-content__figure"><img class="post-content__image" src="./assets/drive_24_julio/guias/blogimages/6.png" alt="Restful evening wellness ritual" width="400" height="400" loading="lazy">
+                <figure class="post-content__figure"><img class="post-content__image lazyload" data-src="./assets/drive_24_julio/guias/blogimages/6.png" alt="Restful evening wellness ritual" width="400" height="400">
                   <figcaption class="post-content__caption">A calm environment and simple habits help improve sleep quality.</figcaption>
                 </figure>
                 <p class="post-content__text">You can also support sleep with targeted supplements. Recupe Plus Serenity is designed to ease stress and promote relaxation. Magnesium from C-MAGNIFIC helps calm the body and supports deeper sleep. Creating a dark, cool, and quiet sleep environment also improves rest and recovery.</p>
@@ -149,7 +160,7 @@
                 <p class="post-content__text">Chronic stress is behind many common health problems including heart disease, anxiety, and inflammation. Holistic health approaches reduce stress by treating the body and mind together.</p>
                 <p class="post-content__text">Breathwork techniques like box breathing or deep diaphragmatic breathing calm the nervous system. Daily mindfulness or short meditation practices improve focus and mood.</p>
                 <p class="post-content__text">Adaptogens like ashwagandha, found in SERENITY, help regulate cortisol levels and reduce anxiety. Gentle movement like yoga or nature walks provide a physical release that lowers stress and improves resilience.</p>
-                <p class="post-content__text">Recupe Plus Memento supports mental clarity and cognitive function. It helps you stay focused and sharp while also managing the effects of stress.</p>
+                <p class="post-content__text">Recupe Plus Momento supports mental clarity and cognitive function. It helps you stay focused and sharp while also managing the effects of stress.</p>
               </section>
               <section class="post-content__section">
                 <h2 class="post-content__section-title">How Does Detoxification and Immune Support Fit into Holistic Health?</h2>
@@ -168,7 +179,7 @@
                   <li class="post-content__list-item">For energy and stamina: Recupe Plus Activity</li>
                   <li class="post-content__list-item">For stress and better sleep: Recupe Plus Serenity</li>
                   <li class="post-content__list-item">For immune support: Recupe Plus Armor and ANTIOX</li>
-                  <li class="post-content__list-item">For mental clarity and focus: Recupe Plus Memento</li>
+                  <li class="post-content__list-item">For mental clarity and focus: Recupe Plus Momento</li>
                 </ul>
               </section>
               <section class="post-content__section">
@@ -259,8 +270,15 @@
       <svg class="whatsapp-button__icon" width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <path fill="currentColor" d="M16.03 3C8.84 3 3 8.78 3 15.91c0 2.5.72 4.93 2.08 7.01L3.7 28l5.23-1.36a13.08 13.08 0 0 0 7.1 2.04C23.22 28.68 29 22.9 29 15.91S23.22 3 16.03 3Zm0 23.5c-2.22 0-4.38-.65-6.22-1.88l-.45-.27-3.1.8.83-3.01-.3-.47a10.6 10.6 0 0 1-1.64-5.76c0-5.9 4.88-10.72 10.88-10.72 6 0 10.82 4.82 10.82 10.72 0 5.9-4.82 10.59-10.82 10.59Zm5.95-7.94c-.33-.16-1.92-.94-2.22-1.05-.3-.11-.52-.16-.74.16-.22.33-.85 1.05-1.04 1.27-.19.22-.38.24-.71.08-.33-.16-1.38-.5-2.63-1.6a9.78 9.78 0 0 1-1.82-2.24c-.19-.32-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.43-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.1-1.14 2.68s1.17 3.12 1.33 3.33c.16.22 2.3 3.48 5.57 4.88.78.33 1.39.53 1.86.68.78.24 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.53.27-.76.27-1.4.19-1.54-.08-.13-.3-.21-.63-.37Z"></path>
       </svg></a>
+    <script>
+      window.lazySizesConfig = window.lazySizesConfig || {};
+      window.lazySizesConfig.expand = 480;
+      window.lazySizesConfig.expFactor = 1.5;
+      window.lazySizesConfig.iframeLoadMode = 1;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-    <script src="index.js?v=1.0.33"></script>
+    <script src="index.js?v=1.0.49"></script>
   </body>
 </html>
