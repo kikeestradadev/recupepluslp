@@ -21,6 +21,10 @@
 			{
 				src: `${productShowcaseGalleryBase}/04_sobre_mesa.png`,
 				alt: 'Activity - sobremesa'
+			},
+			{
+				src: `${productShowcaseGalleryBase}/05_ficha_tecnica.png`,
+				alt: 'imagen de ficha técnica'
 			}
 		],
 		name: 'Activity',
@@ -31,8 +35,8 @@
 			href: 'suplementos.html#capsulas'
 		},
 		shortDescription: [
-			'Suplemento en cápsulas con Cordyceps y Melena de León.',
-			'Pensado para acompañar tu energía antes de moverte y sumar foco a tu rutina diaria.'
+			'Suplemento alimenticio en cápsulas a base de hongos: CORDYCEPS y LION’S MANE.',
+			'Aumenta la energía, el rendimiento físico, mejora el estado de ánimo, refuerza la salud cognitiva, modera la circulación y el azúcar en la sangre, disminuye el estrés, la fatiga y el agotamiento, gracias a su contenido en antioxidantes. Hace más fácil los entrenamientos de alta intensidad y levantamiento de pesas, a diferencia de los suplementos tradicionales de pre entrenamiento.'
 		],
 		quantity: {
 			min: 1,
@@ -61,35 +65,37 @@
 		description: {
 			title: 'RECUPÉ PLUS ACTIVITY',
 			intro: [
-				'Activity combina Cordyceps y Melena de León para acompañar tus días de movimiento con una fórmula práctica en cápsulas.',
-				'Pensada para quienes buscan energía y foco sin complicar su rutina diaria.'
+				'Nuestra cápsula contiene el 70% de Cordyceps (Cordyceps sinensis) y 30% de Melena de León (Hericium erinaceus), ofreciendo beneficios sinérgicos debido a sus varias propiedades energizantes y antioxidantes.'
 			],
-			benefitsTitle: 'Beneficios de Activity en tu rutina:',
+			benefitsTitle: null,
 			benefits: [
 				{
-					title: 'Energía:',
-					text: 'El Cordyceps acompaña tu vitalidad antes de entrenar o moverte.'
+					title: 'Refuerzo del sistema inmunológico:',
+					text: 'Tanto el Cordyceps como la Melena de León tienen propiedades que fortalecen el sistema inmunológico, ayudando al cuerpo a combatir enfermedades e infecciones de manera más efectiva. Esta combinación puede ofrecer una protección adicional al sistema inmune.'
 				},
 				{
-					title: 'Foco:',
-					text: 'La Melena de León suma apoyo a tu concentración en el día a día.'
+					title: 'Mejora de la resistencia física:',
+					text: 'El Cordyceps es conocido por aumentar la resistencia y la capacidad de ejercicio al mejorar la utilización de oxígeno y optimizar la producción de energía en el cuerpo. La Melena de León también contribuye a mejorar la resistencia física y el rendimiento deportivo, lo que hace que esta combinación sea beneficiosa para quienes buscan mejorar su condición física.'
 				},
 				{
-					title: 'Hábitos simples:',
-					text: 'Formato cápsula fácil de integrar a tu rutina, en casa o fuera.'
+					title: 'Apoyo a la salud respiratoria:',
+					text: 'El Cordyceps ha sido tradicionalmente utilizado para apoyar la salud respiratoria y mejorar la función pulmonar, lo que puede ser beneficioso para personas con condiciones respiratorias como el asma. La Melena de León también tiene efectos positivos en la salud pulmonar y la función respiratoria.'
 				},
 				{
-					title: 'Bienestar diario:',
-					text: 'Una opción práctica para complementar alimentación y estilo de vida activos.'
+					title: 'Propiedades antioxidantes:',
+					text: 'Ambos hongos contienen compuestos antioxidantes que pueden ayudar a combatir el estrés oxidativo y proteger las células del daño causado por los radicales libres, contribuyendo así a la salud celular y al envejecimiento saludable.'
+				},
+				{
+					title: 'Regulación del estrés y la ansiedad:',
+					text: 'Los adaptógenos como el Cordyceps y la Melena de León tienen propiedades que reducen los niveles de estrés y ansiedad, promoviendo así un mejor equilibrio emocional y mental.'
 				}
 			],
-			outro: 'Al integrar Activity en tu rutina, sumás un apoyo concreto a tu energía y movimiento con un producto pensado para el día a día.'
+			outro: null
 		},
 		additional: {
 			rows: [
 				{ label: 'Marca', value: 'Recupé Plus' },
-				{ label: 'Formato', value: 'Cápsulas' },
-				{ label: 'Activos', value: 'Cordyceps, Melena de León' }
+				{ label: 'Hongos', value: 'Cordyceps, Lion’s Mane' }
 			]
 		},
 		reviews: {
@@ -101,13 +107,22 @@
 			title: 'Productos relacionados',
 			items: [
 				{
-					name: 'Momento',
+					name: 'Are More',
+					category: 'Hongos Medicinales',
+					price: '₡15 000',
+					priceNote: 'IVA incluido',
+					image: `${productShowcaseImagesBase}/gomitas/individuales/more.webp`,
+					href: 'product.html',
+					text: 'Suplemento alimenticio en gomitas a base de hongos: TURKEY TAIL, LION\'S MANE y CORDYCEPS. Refuerza el sistema inmunológico, actúa como antiinflamatorio, antibacteriano, antiviral, antialérgico, anticancerígeno, antitumoral, gastroprotector y hepatoprotector natural, por su contenido de antioxidantes. Esta fórmula además, viene reforzada con Vitamina C, otro conocido que apoya la inmunidad corporal.'
+				},
+				{
+					name: 'Memento',
 					category: 'Hongos Medicinales',
 					price: '₡25 000',
 					priceNote: 'IVA incluido',
 					image: `${productShowcaseImagesBase}/capsulas/individuales/momento.webp`,
 					href: 'product.html',
-					text: 'Para acompañar tus momentos de enfoque.'
+					text: 'Suplemento alimenticio en cápsulas a base de hongos: LION\'S MANE y CORDYCEPS. Potencia el rendimiento mental y de enfoque, contrarresta el daño celular y declive cognitivo, reduce el estrés, aumenta el riego sanguíneo y brinda calma en general, por el contenido de antioxidantes. En el deporte, mejora la conexión entre la mente y el sistema muscular para generar mayores resultados en la resistencia y recuperación. Antioxidante natural que aumenta la energía y el rendimiento físico, y disminuye la fatiga.'
 				},
 				{
 					name: 'Recovery',
@@ -116,16 +131,7 @@
 					priceNote: 'IVA incluido',
 					image: `${productShowcaseImagesBase}/capsulas/individuales/recovery.webp`,
 					href: 'product.html',
-					text: 'Para acompañar tu recuperación después de hacer ejercicio.'
-				},
-				{
-					name: 'Vitamin',
-					category: 'Gomitas Funcionales',
-					price: '₡8 900',
-					priceNote: 'IVA incluido',
-					image: `${productShowcaseImagesBase}/gomitas/individuales/vitamin.webp`,
-					href: 'product.html',
-					text: 'Para cuidar tus defensas todos los días.'
+					text: 'Suplemento alimenticio en cápsulas a base de hongos: REISHI, CORDYCEPS y LION\'S MANE. Proporciona recuperación mental y muscular al organismo, reduce el estrés, fatiga y agotamiento físico y mental, antiinflamatorio, brinda bienestar en general por su contenido en antioxidantes. Sirve para la recuperación después de un duro entrenamiento o competencia, una enfermedad o intervención quirúrgica.'
 				}
 			]
 		}

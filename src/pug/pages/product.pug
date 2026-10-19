@@ -2,7 +2,6 @@ extends ../config/template
 
 append config
 	include ../data/product-showcase-data
-	include ../data/ficha-tecnica-data
 	-currentPage		= "product"
 	-pageLang			= "es"
 	-siteName			= 'Recupé Plus'
@@ -12,5 +11,4 @@ append config
 
 block main-container
 	include ../components/product/product-showcase
-	include ../components/product/technical-sheet
 block scripts

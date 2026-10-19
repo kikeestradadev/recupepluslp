@@ -4,7 +4,7 @@
 	--product-showcase-container-max: var(--container, 1600px);
 	--product-showcase-gutter: 15px;
 	--product-showcase-accent: var(--color-orange, #ff9100);
-	margin-bottom: 1.5rem;
+	margin-bottom: var(--section-gap);
 	background: #fff;
 	overflow: hidden;
 

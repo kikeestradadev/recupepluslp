@@ -105,13 +105,15 @@ section(class='product-showcase' data-product-showcase)
 					h2(class='product-showcase__panel-title')= productShowcaseData.description.title
 					each paragraph in productShowcaseData.description.intro
 						p(class='product-showcase__panel-text')= paragraph
-					p(class='product-showcase__panel-text')= productShowcaseData.description.benefitsTitle
+					if productShowcaseData.description.benefitsTitle
+						p(class='product-showcase__panel-text')= productShowcaseData.description.benefitsTitle
 					ol(class='product-showcase__benefits')
 						each benefit, index in productShowcaseData.description.benefits
 							li(class='product-showcase__benefit')
 								h3(class='product-showcase__benefit-title') #{index + 1}. #{benefit.title}
 								p(class='product-showcase__benefit-text')= benefit.text
-					p(class='product-showcase__panel-text')= productShowcaseData.description.outro
+					if productShowcaseData.description.outro
+						p(class='product-showcase__panel-text')= productShowcaseData.description.outro
 
 				div(
 					class='product-showcase__panel'
