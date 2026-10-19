@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/prism.css">
-    <link rel="stylesheet" href="styles.css?v=1.0.51">
+    <link rel="stylesheet" href="styles.css?v=1.0.52">
     <title>Suplementos - Recupé Plus</title>
   </head>
   <body class="suplementos" itemscope itemtype="http://schema.org/WebPage">
@@ -46,11 +46,13 @@
                 <li class="main-menu__item"><a class="main-menu__link" href="contacto.html">Contacto</a></li>
               </ul>
             </div>
-            <div class="main-menu__actions"><a class="main-menu__cta" href="#" aria-label="Comprar ahora"><span class="main-menu__cta-short">Comprar</span><span class="main-menu__cta-full">Comprar ahora</span></a><a class="main-menu__cart" href="#" aria-label="Carrito de compras">
+            <div class="main-menu__actions"><a class="main-menu__cta" href="#" aria-label="Comprar ahora"><span class="main-menu__cta-short">Comprar</span><span class="main-menu__cta-full">Comprar ahora</span></a>
+              <button class="main-menu__cart" type="button" data-cart-drawer-open aria-label="Carrito de compras" aria-expanded="false" aria-haspopup="dialog" aria-controls="cart-drawer">
                 <svg class="main-menu__cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M6 8h12l-1 12H7L6 8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
                   <path d="M9 8V7a3 3 0 0 1 6 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                </svg></a>
+                </svg><span class="main-menu__cart-badge" data-cart-drawer-badge aria-hidden="true">3</span>
+              </button>
               <button class="main-menu__language" type="button" data-main-menu-language data-locale="es" data-es-href="#" data-en-href="#" data-es-label="Español" data-en-label="English" aria-label="Cambiar a English"><span class="main-menu__language-flag" data-flag="es" aria-hidden="true">
                   <svg class="main-menu__language-flag-img" width="24" height="18" viewBox="0 0 24 18" aria-hidden="true">
                     <rect width="24" height="18" fill="#c60b1e"></rect>
@@ -408,6 +410,51 @@
       <svg class="whatsapp-button__icon" width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
         <path fill="currentColor" d="M16.03 3C8.84 3 3 8.78 3 15.91c0 2.5.72 4.93 2.08 7.01L3.7 28l5.23-1.36a13.08 13.08 0 0 0 7.1 2.04C23.22 28.68 29 22.9 29 15.91S23.22 3 16.03 3Zm0 23.5c-2.22 0-4.38-.65-6.22-1.88l-.45-.27-3.1.8.83-3.01-.3-.47a10.6 10.6 0 0 1-1.64-5.76c0-5.9 4.88-10.72 10.88-10.72 6 0 10.82 4.82 10.82 10.72 0 5.9-4.82 10.59-10.82 10.59Zm5.95-7.94c-.33-.16-1.92-.94-2.22-1.05-.3-.11-.52-.16-.74.16-.22.33-.85 1.05-1.04 1.27-.19.22-.38.24-.71.08-.33-.16-1.38-.5-2.63-1.6a9.78 9.78 0 0 1-1.82-2.24c-.19-.32-.02-.5.14-.66.15-.14.33-.38.49-.57.16-.19.22-.33.33-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.43-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.1-1.14 2.68s1.17 3.12 1.33 3.33c.16.22 2.3 3.48 5.57 4.88.78.33 1.39.53 1.86.68.78.24 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.53.27-.76.27-1.4.19-1.54-.08-.13-.3-.21-.63-.37Z"></path>
       </svg></a>
+    <aside class="cart-drawer woocommerce widget_shopping_cart" id="cart-drawer" data-cart-drawer aria-hidden="true">
+      <div class="cart-drawer__backdrop" data-cart-drawer-close tabindex="-1" aria-hidden="true"></div>
+      <div class="cart-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title" data-cart-drawer-panel>
+        <header class="cart-drawer__header">
+          <h2 class="cart-drawer__title" id="cart-drawer-title">Tu carrito</h2><span class="cart-drawer__count" data-cart-drawer-count>3</span>
+          <button class="cart-drawer__close" type="button" data-cart-drawer-close aria-label="Cerrar carrito">
+            <svg class="cart-drawer__close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </header>
+        <div class="cart-drawer__body widget_shopping_cart_content" data-cart-drawer-content>
+          <ul class="cart-drawer__list woocommerce-mini-cart cart_list product_list_widget" data-cart-drawer-list>
+            <li class="cart-drawer__item woocommerce-mini-cart-item mini_cart_item" data-cart-item data-cart-item-id="activity" data-unit-price="25000"><a class="cart-drawer__remove remove remove_from_cart_button" href="#" aria-label="Quitar Activity del carrito" data-cart-item-remove><span aria-hidden="true">×</span></a><a class="cart-drawer__thumb-link" href="product.html"><img class="cart-drawer__thumb attachment-woocommerce_thumbnail" src="./assets/drive_24_julio/dos_formas/capsulas/individuales/activity.webp" alt="Activity" width="72" height="72" loading="lazy"></a>
+              <div class="cart-drawer__details"><a class="cart-drawer__name" href="product.html">Activity</a>
+                <p class="cart-drawer__variation">Cápsulas · Cordyceps + Lion’s Mane</p>
+                <div class="cart-drawer__meta">
+                  <div class="cart-drawer__quantity quantity" data-cart-item-qty>
+                    <button class="cart-drawer__qty-btn" type="button" data-cart-item-decrease aria-label="Disminuir cantidad de Activity">−</button>
+                    <input class="cart-drawer__qty-input qty" type="number" min="1" max="99" step="1" value="1" inputmode="numeric" aria-label="Cantidad de Activity" data-cart-item-input readonly>
+                    <button class="cart-drawer__qty-btn" type="button" data-cart-item-increase aria-label="Aumentar cantidad de Activity">+</button>
+                  </div><span class="cart-drawer__price amount" data-cart-item-total>₡25 000</span>
+                </div>
+              </div>
+            </li>
+            <li class="cart-drawer__item woocommerce-mini-cart-item mini_cart_item" data-cart-item data-cart-item-id="recovery" data-unit-price="25000"><a class="cart-drawer__remove remove remove_from_cart_button" href="#" aria-label="Quitar Recovery del carrito" data-cart-item-remove><span aria-hidden="true">×</span></a><a class="cart-drawer__thumb-link" href="product.html"><img class="cart-drawer__thumb attachment-woocommerce_thumbnail" src="./assets/drive_24_julio/dos_formas/capsulas/individuales/recovery.webp" alt="Recovery" width="72" height="72" loading="lazy"></a>
+              <div class="cart-drawer__details"><a class="cart-drawer__name" href="product.html">Recovery</a>
+                <p class="cart-drawer__variation">Cápsulas · Reishi + Cordyceps + Lion’s Mane</p>
+                <div class="cart-drawer__meta">
+                  <div class="cart-drawer__quantity quantity" data-cart-item-qty>
+                    <button class="cart-drawer__qty-btn" type="button" data-cart-item-decrease aria-label="Disminuir cantidad de Recovery">−</button>
+                    <input class="cart-drawer__qty-input qty" type="number" min="1" max="99" step="1" value="2" inputmode="numeric" aria-label="Cantidad de Recovery" data-cart-item-input readonly>
+                    <button class="cart-drawer__qty-btn" type="button" data-cart-item-increase aria-label="Aumentar cantidad de Recovery">+</button>
+                  </div><span class="cart-drawer__price amount" data-cart-item-total>₡50 000</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <footer class="cart-drawer__footer">
+            <p class="cart-drawer__subtotal woocommerce-mini-cart__total total"><strong>Subtotal</strong><span class="cart-drawer__subtotal-value amount" data-cart-drawer-subtotal>₡75 000</span></p>
+            <p class="cart-drawer__actions woocommerce-mini-cart__buttons buttons"><a class="cart-drawer__checkout button checkout wc-forward" href="#">Finalizar compra</a></p>
+          </footer>
+        </div>
+      </div>
+    </aside>
     <script>
       window.lazySizesConfig = window.lazySizesConfig || {};
       window.lazySizesConfig.expand = 480;
@@ -417,6 +464,6 @@
     <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
-    <script src="index.js?v=1.0.51"></script>
+    <script src="index.js?v=1.0.52"></script>
   </body>
 </html>
