@@ -1,0 +1,42 @@
+//-
+	Demo cart for the design-only drawer.
+	Swap `items` for an empty array to preview the empty state.
+	Structure mirrors WooCommerce mini-cart fragments for later wiring.
+-
+	var cartDrawerData = {
+		title: 'Tu carrito',
+		emptyMessage: 'Tu carrito está vacío.',
+		continueLabel: 'Seguir comprando',
+		subtotalLabel: 'Subtotal',
+		checkoutLabel: 'Finalizar compra',
+		checkoutHref: '#',
+		currency: '₡',
+		items: [
+			{
+				id: 'activity',
+				name: 'Activity',
+				href: 'product.html',
+				image: './assets/drive_24_julio/dos_formas/capsulas/individuales/activity.webp',
+				variation: 'Cápsulas · Cordyceps + Lion’s Mane',
+				unitPrice: 25000,
+				unitPriceLabel: '₡25 000',
+				quantity: 1,
+				lineTotalLabel: '₡25 000',
+				removeLabel: 'Quitar Activity del carrito'
+			},
+			{
+				id: 'recovery',
+				name: 'Recovery',
+				href: 'product.html',
+				image: './assets/drive_24_julio/dos_formas/capsulas/individuales/recovery.webp',
+				variation: 'Cápsulas · Reishi + Cordyceps + Lion’s Mane',
+				unitPrice: 25000,
+				unitPriceLabel: '₡25 000',
+				quantity: 2,
+				lineTotalLabel: '₡50 000',
+				removeLabel: 'Quitar Recovery del carrito'
+			}
+		],
+		subtotalLabelValue: '₡75 000',
+		itemCount: 3
+	}

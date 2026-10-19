@@ -1,4 +1,5 @@
 include ../../data/main-menu-data.pug
+include ../../data/cart-drawer-data
 
 nav(class='main-menu' aria-label='Navegación principal' data-main-menu)
 	div(class='main-container main-menu__shell')
@@ -25,10 +26,19 @@ nav(class='main-menu' aria-label='Navegación principal' data-main-menu)
 				a(class='main-menu__cta' href='#' aria-label='Comprar ahora')
 					span(class='main-menu__cta-short') Comprar
 					span(class='main-menu__cta-full') Comprar ahora
-				a(class='main-menu__cart' href='#' aria-label='Carrito de compras')
+				button(
+					class='main-menu__cart'
+					type='button'
+					data-cart-drawer-open
+					aria-label='Carrito de compras'
+					aria-expanded='false'
+					aria-haspopup='dialog'
+					aria-controls='cart-drawer'
+				)
 					svg(class='main-menu__cart-icon' width='24' height='24' viewBox='0 0 24 24' fill='none' aria-hidden='true')
 						path(d='M6 8h12l-1 12H7L6 8z' stroke='currentColor' stroke-width='1.5' stroke-linejoin='round')
 						path(d='M9 8V7a3 3 0 0 1 6 0v1' stroke='currentColor' stroke-width='1.5' stroke-linecap='round')
+					span(class='main-menu__cart-badge' data-cart-drawer-badge aria-hidden='true')= cartDrawerData.itemCount
 				-
 					const activeLanguage = mainMenuLanguages.find((language) => language.active) || mainMenuLanguages[0]
 					const nextLanguage = mainMenuLanguages.find((language) => language.locale !== activeLanguage.locale) || mainMenuLanguages[1]

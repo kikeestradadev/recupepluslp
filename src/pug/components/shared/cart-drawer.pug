@@ -1,0 +1,102 @@
+include ../../data/cart-drawer-data
+
+-
+	const cartDrawerHasItems = cartDrawerData.items && cartDrawerData.items.length > 0
+
+aside(
+	class='cart-drawer woocommerce widget_shopping_cart'
+	id='cart-drawer'
+	data-cart-drawer
+	aria-hidden='true'
+)
+	div(class='cart-drawer__backdrop' data-cart-drawer-close tabindex='-1' aria-hidden='true')
+	div(
+		class='cart-drawer__panel'
+		role='dialog'
+		aria-modal='true'
+		aria-labelledby='cart-drawer-title'
+		data-cart-drawer-panel
+	)
+		header(class='cart-drawer__header')
+			h2(class='cart-drawer__title' id='cart-drawer-title')= cartDrawerData.title
+			if cartDrawerHasItems
+				span(class='cart-drawer__count' data-cart-drawer-count)= cartDrawerData.itemCount
+			button(
+				class='cart-drawer__close'
+				type='button'
+				data-cart-drawer-close
+				aria-label='Cerrar carrito'
+			)
+				svg(class='cart-drawer__close-icon' width='20' height='20' viewBox='0 0 24 24' fill='none' aria-hidden='true')
+					path(d='M6 6l12 12M18 6L6 18' stroke='currentColor' stroke-width='1.75' stroke-linecap='round')
+
+		div(class='cart-drawer__body widget_shopping_cart_content' data-cart-drawer-content)
+			if !cartDrawerHasItems
+				div(class='cart-drawer__empty')
+					p(class='cart-drawer__empty-message woocommerce-mini-cart__empty-message')= cartDrawerData.emptyMessage
+					button(
+						class='cart-drawer__continue'
+						type='button'
+						data-cart-drawer-close
+					)= cartDrawerData.continueLabel
+			else
+				ul(class='cart-drawer__list woocommerce-mini-cart cart_list product_list_widget' data-cart-drawer-list)
+					each item in cartDrawerData.items
+						li(
+							class='cart-drawer__item woocommerce-mini-cart-item mini_cart_item'
+							data-cart-item
+							data-cart-item-id=item.id
+							data-unit-price=item.unitPrice
+						)
+							a(class='cart-drawer__remove remove remove_from_cart_button' href='#' aria-label=item.removeLabel data-cart-item-remove)
+								span(aria-hidden='true') ×
+							a(class='cart-drawer__thumb-link' href=item.href)
+								img(
+									class='cart-drawer__thumb attachment-woocommerce_thumbnail'
+									src=item.image
+									alt=item.name
+									width='72'
+									height='72'
+									loading='lazy'
+								)
+							div(class='cart-drawer__details')
+								a(class='cart-drawer__name' href=item.href)= item.name
+								if item.variation
+									p(class='cart-drawer__variation')= item.variation
+								div(class='cart-drawer__meta')
+									div(class='cart-drawer__quantity quantity' data-cart-item-qty)
+										button(
+											class='cart-drawer__qty-btn'
+											type='button'
+											data-cart-item-decrease
+											aria-label=`Disminuir cantidad de ${item.name}`
+										) −
+										input(
+											class='cart-drawer__qty-input qty'
+											type='number'
+											min='1'
+											max='99'
+											step='1'
+											value=item.quantity
+											inputmode='numeric'
+											aria-label=`Cantidad de ${item.name}`
+											data-cart-item-input
+											readonly
+										)
+										button(
+											class='cart-drawer__qty-btn'
+											type='button'
+											data-cart-item-increase
+											aria-label=`Aumentar cantidad de ${item.name}`
+										) +
+									span(class='cart-drawer__price amount' data-cart-item-total)= item.lineTotalLabel
+
+				footer(class='cart-drawer__footer')
+					p(class='cart-drawer__subtotal woocommerce-mini-cart__total total')
+						strong= cartDrawerData.subtotalLabel
+						span(class='cart-drawer__subtotal-value amount' data-cart-drawer-subtotal)= cartDrawerData.subtotalLabelValue
+					p(class='cart-drawer__actions woocommerce-mini-cart__buttons buttons')
+						a(
+							class='cart-drawer__checkout button checkout wc-forward'
+							href=cartDrawerData.checkoutHref
+						)= cartDrawerData.checkoutLabel

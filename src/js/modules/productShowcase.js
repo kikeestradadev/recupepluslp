@@ -18,12 +18,17 @@ const productShowcase = (scope = document) => {
 		const tabsSwiperEl = root.querySelector('[data-product-tabs-swiper]');
 		const tabsPrev = root.querySelector('.product-showcase__tabs-nav--prev');
 		const tabsNext = root.querySelector('.product-showcase__tabs-nav--next');
+		const relatedSwiperEl = root.querySelector('[data-product-related-swiper]');
+		const relatedPrev = root.querySelector('[data-product-related-prev]');
+		const relatedNext = root.querySelector('[data-product-related-next]');
+		const relatedPagination = root.querySelector('[data-product-related-pagination]');
 		const tabs = Array.from(root.querySelectorAll('[data-product-tab]'));
 		const panels = Array.from(root.querySelectorAll('[data-product-panel]'));
 		const desktopQuery = window.matchMedia('(min-width: 960px)');
 		const controller = new AbortController();
 		const { signal } = controller;
 		let tabsSwiper = null;
+		let relatedSwiper = null;
 
 		const setActiveThumb = (thumb) => {
 			if (!stage || !thumb) return;
@@ -68,6 +73,44 @@ const productShowcase = (scope = document) => {
 			if (!tabsSwiper) return;
 			tabsSwiper.destroy(true, true);
 			tabsSwiper = null;
+		};
+
+		const destroyRelatedSwiper = () => {
+			if (!relatedSwiper) return;
+			relatedSwiper.destroy(true, true);
+			relatedSwiper = null;
+		};
+
+		const initRelatedSwiper = () => {
+			if (typeof window.Swiper === 'undefined' || !relatedSwiperEl || relatedSwiper) return;
+
+			try {
+				relatedSwiper = new window.Swiper(relatedSwiperEl, {
+					slidesPerView: 'auto',
+					loop: false,
+					spaceBetween: 16,
+					grabCursor: true,
+					watchOverflow: true,
+					pagination: {
+						el: relatedPagination,
+						clickable: true
+					},
+					navigation: {
+						prevEl: relatedPrev,
+						nextEl: relatedNext
+					},
+					breakpoints: {
+						640: {
+							spaceBetween: 20
+						},
+						960: {
+							spaceBetween: 24
+						}
+					}
+				});
+			} catch (error) {
+				relatedSwiper = null;
+			}
 		};
 
 		const enhanceMobileTabs = () => {
@@ -215,6 +258,7 @@ const productShowcase = (scope = document) => {
 		});
 
 		updateTabsEnhancement();
+		initRelatedSwiper();
 		if (typeof desktopQuery.addEventListener === 'function') {
 			desktopQuery.addEventListener('change', updateTabsEnhancement, { signal });
 		} else if (typeof desktopQuery.addListener === 'function') {
@@ -226,6 +270,7 @@ const productShowcase = (scope = document) => {
 		productShowcaseInstances.set(root, {
 			destroy() {
 				destroyTabsSwiper();
+				destroyRelatedSwiper();
 				controller.abort();
 				productShowcaseInstances.delete(root);
 			}

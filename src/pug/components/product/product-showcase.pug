@@ -144,16 +144,29 @@ section(class='product-showcase' data-product-showcase)
 
 			section(class='product-showcase__related' data-lazy-component)
 				h2(class='product-showcase__related-title')= productShowcaseData.related.title
-				div(class='product-showcase__related-grid')
-					each item in productShowcaseData.related.items
-						article(class='product-showcase__related-card')
-							a(class='product-showcase__related-media' href=item.href)
-								img(class='product-showcase__related-image lazyload' data-src=item.image alt=item.name width='280' height='280')
-							p(class='product-showcase__related-category')= item.category
-							h3(class='product-showcase__related-name')
-								a(href=item.href)= item.name
-							p(class='product-showcase__related-price')
-								span= item.price
-								span(class='product-showcase__related-price-note')= item.priceNote
-							p(class='product-showcase__related-text')= item.text
-							a(class='product-showcase__related-link' href=item.href) Ver producto →
+				div(class='product-showcase__related-slider')
+					button(
+						class='product-showcase__related-nav product-showcase__related-nav--prev'
+						type='button'
+						aria-label='Productos relacionados anteriores'
+						data-product-related-prev
+					)
+					button(
+						class='product-showcase__related-nav product-showcase__related-nav--next'
+						type='button'
+						aria-label='Productos relacionados siguientes'
+						data-product-related-next
+					)
+					div(class='product-showcase__related-swiper swiper' data-product-related-swiper)
+						div(class='product-showcase__related-wrapper swiper-wrapper')
+							each item in productShowcaseData.related.items
+								article(class='product-showcase__related-card swiper-slide')
+									a(class='product-showcase__related-media' href=item.href)
+										img(class='product-showcase__related-image lazyload' data-src=item.image alt=item.name width='280' height='280')
+									h3(class='product-showcase__related-name')
+										a(href=item.href)= item.name
+									p(class='product-showcase__related-price')
+										span= item.price
+										span(class='product-showcase__related-price-note')= item.priceNote
+									a(class='product-showcase__related-link' href=item.href) Ver producto →
+						div(class='product-showcase__related-pagination swiper-pagination' data-product-related-pagination)

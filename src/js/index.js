@@ -1,6 +1,8 @@
 import componentLoader from './modules/componentLoader';
 import mainMenu from './modules/mainMenu';
+import cartDrawer from './modules/cartDrawer';
 import momentSlider from './modules/momentSlider';
+
 import productSlider from './modules/productSlider';
 import alliesSlider from './modules/alliesSlider';
 import storeLocator from './modules/storeLocator';
@@ -18,6 +20,7 @@ import mainBanner from './modules/mainBanner';
 
 const initEagerComponents = () => {
 	mainMenu();
+	cartDrawer();
 	mainSlider();
 	mainBanner();
 	productShowcase();
